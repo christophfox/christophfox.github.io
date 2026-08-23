@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Christoph Fox | Großwerden – Sozialisation, Entwicklung und Identität</title>
+  <title>Christoph Fox | Großwerden, Sozialisation und Entwicklung</title>
 
   <meta name="description"
-        content="Christoph Fox – Großwerden, Sozialisation, Entwicklung und Identität. Zwei Bücher über das Werden des Menschen.">
+        content="Christoph Fox – Bücher über Großwerden, Sozialisation, Entwicklung und Identität.">
 
   <meta name="author" content="Christoph Fox">
 
   <meta name="keywords"
-        content="Christoph Fox, Großwerden, Sozialisation, Entwicklung, Identität, Subjekt, Handeln, Klein Wild Groß Fähig">
+        content="Christoph Fox, Großwerden, Sozialisation, Entwicklung, Identität, Klein Wild Groß Fähig, Subjekt, Handeln">
+
+
+  <!-- Open Graph -->
 
   <meta property="og:title"
         content="Christoph Fox | Großwerden">
@@ -26,19 +30,29 @@
   <style>
 
     :root {
-      --cream: #f5eee3;
-      --paper: #fffaf3;
-      --ink: #181412;
-      --soft: #625950;
 
-      /* Fuchsfell im Abendlicht */
-      --fox: #9f4d32;
-      --fox-dark: #713522;
-      --fox-light: #c77a5d;
-      --fox-glow: #d89a78;
+      /* Papier */
+      --paper: #fffaf2;
+      --paper-warm: #f8efe2;
 
-      --line: #d8c7b6;
-      --shadow: rgba(69, 35, 22, 0.15);
+      /* Abendlicht */
+      --sun: #e4b07d;
+      --gold: #c98758;
+
+      /* Fuchsfell */
+      --fox-light: #c87952;
+      --fox: #a34e32;
+      --fox-dark: #713421;
+      --fox-deep: #452217;
+
+      /* Schatten */
+      --night: #211511;
+
+      --ink: #191412;
+      --soft: #655950;
+
+      --line: #ddc9b5;
+
     }
 
 
@@ -53,11 +67,32 @@
 
 
     body {
+
       margin: 0;
-      background: var(--cream);
+
       color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       line-height: 1.7;
+
+      background:
+
+        radial-gradient(
+          circle at 75% 5%,
+          rgba(228,176,125,0.20),
+          transparent 30%
+        ),
+
+        linear-gradient(
+          145deg,
+          #f8f0e4,
+          #f2e6d7
+        );
+
     }
 
 
@@ -67,556 +102,1095 @@
 
 
     .container {
+
       width: min(1120px, 90%);
+
       margin: 0 auto;
+
     }
 
 
-    /* =========================
-       HEADER / MENU
-       ========================= */
+
+    /* ===============================
+       HEADER
+       =============================== */
 
     header {
+
       position: sticky;
+
       top: 0;
-      z-index: 20;
 
-      background: rgba(245, 238, 227, 0.94);
-      backdrop-filter: blur(12px);
+      z-index: 100;
 
-      border-bottom: 1px solid var(--line);
+      background:
+        rgba(248,239,226,0.93);
+
+      backdrop-filter:
+        blur(14px);
+
+      border-bottom:
+        1px solid var(--line);
+
     }
 
 
     .header-inner {
+
       min-height: 82px;
 
       display: flex;
-      justify-content: space-between;
+
       align-items: center;
 
-      gap: 30px;
+      justify-content: space-between;
+
     }
 
 
     .identity {
+
       text-decoration: none;
+
     }
 
 
     .name {
+
       font-size: 1.45rem;
-      letter-spacing: 0.01em;
+
+      letter-spacing:
+        0.01em;
+
     }
 
 
     .topic {
-      margin-top: 1px;
+
+      margin-top: 2px;
 
       color: var(--fox);
 
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.65rem;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 0.64rem;
+
       font-weight: 700;
 
-      letter-spacing: 0.17em;
-      text-transform: uppercase;
+      letter-spacing:
+        0.17em;
+
+      text-transform:
+        uppercase;
+
     }
 
 
+    /* DESKTOP MENU */
+
     nav {
+
       display: flex;
-      gap: 28px;
+
+      gap: 27px;
+
     }
 
 
     nav a {
+
       position: relative;
 
       text-decoration: none;
 
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.72rem;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 0.71rem;
+
       font-weight: 700;
 
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      letter-spacing:
+        0.08em;
 
-      color: #3d3732;
-    }
+      text-transform:
+        uppercase;
 
+      color:
+        #433831;
 
-    nav a::after {
-      content: "";
-
-      position: absolute;
-      left: 0;
-      bottom: -7px;
-
-      width: 0;
-      height: 2px;
-
-      background: var(--fox);
-
-      transition: width 0.2s ease;
     }
 
 
     nav a:hover {
-      color: var(--fox-dark);
+
+      color:
+        var(--fox);
+
     }
 
 
-    nav a:hover::after {
-      width: 100%;
-    }
+    nav a::after {
 
-
-    /* =========================
-       HERO
-       ========================= */
-
-    .hero {
-      min-height: 78vh;
-
-      display: flex;
-      align-items: center;
-
-      position: relative;
-      overflow: hidden;
-
-      background:
-        radial-gradient(
-          circle at 85% 55%,
-          rgba(159, 77, 50, 0.13),
-          transparent 35%
-        );
-    }
-
-
-    .hero::before {
       content: "";
 
       position: absolute;
 
-      width: 650px;
-      height: 650px;
+      left: 0;
 
-      right: -300px;
-      bottom: -350px;
+      bottom: -7px;
 
-      border-radius: 50%;
+      width: 0;
 
-      background: var(--fox);
-
-      opacity: 0.08;
-    }
-
-
-    .hero-content {
-      max-width: 900px;
-
-      position: relative;
-      z-index: 1;
-    }
-
-
-    .eyebrow {
-      color: var(--fox);
-
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.74rem;
-      font-weight: 700;
-
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-
-      margin-bottom: 25px;
-    }
-
-
-    h1 {
-      margin: 0 0 35px;
-
-      font-size: clamp(3.5rem, 9vw, 7.8rem);
-
-      line-height: 0.89;
-      font-weight: 400;
-
-      letter-spacing: -0.065em;
-    }
-
-
-    .hero-text {
-      max-width: 780px;
-
-      font-size: clamp(1.2rem, 2.3vw, 1.55rem);
-
-      color: #403a34;
-    }
-
-
-    .fox-line {
-      width: 125px;
-      height: 4px;
-
-      margin-top: 45px;
+      height: 2px;
 
       background:
         linear-gradient(
           90deg,
           var(--fox-dark),
-          var(--fox-light)
+          var(--sun)
         );
+
+      transition:
+        width .2s ease;
+
     }
 
 
-    /* =========================
-       GENERAL SECTIONS
-       ========================= */
+    nav a:hover::after {
+
+      width: 100%;
+
+    }
+
+
+
+    /* HAMBURGER */
+
+    .menu-button {
+
+      display: none;
+
+      border: none;
+
+      background: none;
+
+      padding: 8px;
+
+      cursor: pointer;
+
+    }
+
+
+    .menu-button span {
+
+      display: block;
+
+      width: 25px;
+
+      height: 2px;
+
+      margin: 5px 0;
+
+      background:
+        var(--fox-dark);
+
+    }
+
+
+    .mobile-menu {
+
+      display: none;
+
+      border-top:
+        1px solid var(--line);
+
+      background:
+        rgba(255,250,242,.98);
+
+    }
+
+
+    .mobile-menu.open {
+
+      display: block;
+
+    }
+
+
+    .mobile-menu a {
+
+      display: block;
+
+      padding: 16px 5%;
+
+      border-bottom:
+        1px solid var(--line);
+
+      text-decoration: none;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: .78rem;
+
+      font-weight: 700;
+
+      letter-spacing:
+        .08em;
+
+      text-transform:
+        uppercase;
+
+      color:
+        var(--fox-dark);
+
+    }
+
+
+
+    /* ===============================
+       HERO – FUCHSFELL IM ABENDLICHT
+       =============================== */
+
+    .hero {
+
+      min-height: 82vh;
+
+      display: flex;
+
+      align-items: center;
+
+      position: relative;
+
+      overflow: hidden;
+
+
+      background:
+
+        radial-gradient(
+          ellipse at 82% 28%,
+          rgba(228,176,125,.48),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          ellipse at 70% 70%,
+          rgba(163,78,50,.16),
+          transparent 42%
+        ),
+
+        linear-gradient(
+          125deg,
+          #f8f0e4 0%,
+          #f6e4d0 42%,
+          #d49a70 72%,
+          #9f4b31 115%
+        );
+
+    }
+
+
+    .hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 700px;
+
+      height: 700px;
+
+      right: -300px;
+
+      top: -260px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(255,222,177,.62),
+          rgba(201,125,82,.18) 45%,
+          transparent 70%
+        );
+
+      filter:
+        blur(12px);
+
+    }
+
+
+    .hero::after {
+
+      content: "";
+
+      position: absolute;
+
+      bottom: -130px;
+
+      left: -100px;
+
+      width: 650px;
+
+      height: 240px;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(69,31,19,.15),
+          transparent
+        );
+
+      filter:
+        blur(30px);
+
+      transform:
+        rotate(-8deg);
+
+    }
+
+
+    .hero-content {
+
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 900px;
+
+    }
+
+
+    .eyebrow {
+
+      color:
+        var(--fox-dark);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: .74rem;
+
+      font-weight: 700;
+
+      letter-spacing:
+        .2em;
+
+      text-transform:
+        uppercase;
+
+      margin-bottom:
+        25px;
+
+    }
+
+
+    h1 {
+
+      margin:
+        0 0 35px;
+
+      font-size:
+        clamp(3.5rem, 9vw, 7.8rem);
+
+      line-height:
+        .88;
+
+      font-weight:
+        400;
+
+      letter-spacing:
+        -.065em;
+
+      color:
+        #211511;
+
+    }
+
+
+    .hero-text {
+
+      max-width:
+        780px;
+
+      font-size:
+        clamp(1.2rem, 2.3vw, 1.55rem);
+
+      color:
+        #49352d;
+
+    }
+
+
+    .fox-line {
+
+      width:
+        150px;
+
+      height:
+        5px;
+
+      margin-top:
+        45px;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          var(--fox-deep),
+          var(--fox),
+          var(--sun)
+        );
+
+      box-shadow:
+        0 4px 18px
+        rgba(113,52,33,.25);
+
+    }
+
+
+
+    /* ===============================
+       SECTIONS
+       =============================== */
 
     section {
-      padding: 110px 0;
 
-      border-top: 1px solid var(--line);
+      padding:
+        110px 0;
+
+      border-top:
+        1px solid var(--line);
+
     }
 
 
     .label {
-      color: var(--fox);
 
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
+      color:
+        var(--fox);
 
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-      margin-bottom: 18px;
+      font-size:
+        .72rem;
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        .18em;
+
+      text-transform:
+        uppercase;
+
+      margin-bottom:
+        18px;
+
     }
 
 
     h2 {
-      margin: 0 0 30px;
 
-      font-size: clamp(2.6rem, 5vw, 4.8rem);
+      margin:
+        0 0 30px;
 
-      line-height: 1;
-      font-weight: 400;
+      font-size:
+        clamp(2.6rem, 5vw, 4.8rem);
 
-      letter-spacing: -0.045em;
+      line-height:
+        1;
+
+      font-weight:
+        400;
+
+      letter-spacing:
+        -.045em;
+
     }
 
 
     .intro {
-      max-width: 790px;
 
-      font-size: 1.2rem;
+      max-width:
+        790px;
 
-      color: #48413a;
+      font-size:
+        1.2rem;
+
+      color:
+        #4d423b;
+
     }
 
 
-    /* =========================
+
+    /* ===============================
        BOOKS
-       ========================= */
+       =============================== */
 
     .books {
-      display: grid;
 
-      grid-template-columns: 1fr 1fr;
+      display:
+        grid;
 
-      gap: 35px;
+      grid-template-columns:
+        1fr 1fr;
 
-      margin-top: 65px;
+      gap:
+        35px;
+
+      margin-top:
+        65px;
+
     }
 
 
     .book {
-      background: var(--paper);
 
-      border: 1px solid var(--line);
+      background:
+        rgba(255,250,243,.88);
 
-      padding: 35px;
+      border:
+        1px solid var(--line);
+
+      padding:
+        35px;
 
       box-shadow:
-        0 18px 45px rgba(70, 35, 20, 0.07);
+
+        0 20px 50px
+        rgba(75,35,20,.09);
+
     }
 
 
     .cover-wrap {
+
       background:
+
         linear-gradient(
           145deg,
-          #e9ddd0,
-          #dfc5b2
+          #e8d2bd,
+          #d8a17d,
+          #b76547
         );
 
-      display: flex;
+      display:
+        flex;
 
-      justify-content: center;
-      align-items: center;
+      justify-content:
+        center;
 
-      min-height: 440px;
+      align-items:
+        center;
 
-      padding: 25px;
+      min-height:
+        440px;
 
-      margin-bottom: 32px;
+      padding:
+        25px;
+
+      margin-bottom:
+        32px;
+
     }
 
 
     .cover {
-      width: 100%;
 
-      max-width: 300px;
-      max-height: 470px;
+      width:
+        100%;
 
-      object-fit: contain;
+      max-width:
+        300px;
 
-      display: block;
+      max-height:
+        470px;
+
+      object-fit:
+        contain;
+
+      display:
+        block;
 
       box-shadow:
-        0 20px 35px var(--shadow);
+
+        0 22px 40px
+        rgba(54,25,15,.27);
+
     }
 
 
     .book-number {
-      color: var(--fox);
 
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
+      color:
+        var(--fox);
 
-      letter-spacing: 0.16em;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size:
+        .72rem;
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        .16em;
+
     }
 
 
     .book h3 {
-      margin: 18px 0 7px;
 
-      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      margin:
+        18px 0 7px;
 
-      line-height: 1.05;
-      font-weight: 400;
+      font-size:
+        clamp(1.8rem, 3vw, 2.7rem);
+
+      line-height:
+        1.05;
+
+      font-weight:
+        400;
+
     }
 
 
     .subtitle {
-      color: var(--soft);
 
-      font-style: italic;
+      color:
+        var(--soft);
 
-      margin-bottom: 25px;
+      font-style:
+        italic;
+
+      margin-bottom:
+        25px;
+
     }
 
 
     .book p {
-      color: #48413a;
+
+      color:
+        #4b4039;
+
     }
 
 
     .meta {
-      margin-top: 28px;
 
-      padding-top: 20px;
+      margin-top:
+        28px;
 
-      border-top: 1px solid var(--line);
+      padding-top:
+        20px;
 
-      color: var(--soft);
+      border-top:
+        1px solid var(--line);
 
-      font-family: Arial, Helvetica, sans-serif;
+      color:
+        var(--soft);
 
-      font-size: 0.76rem;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-      line-height: 1.7;
+      font-size:
+        .76rem;
+
     }
 
 
     .book-link {
-      display: inline-block;
 
-      margin-top: 25px;
+      display:
+        inline-block;
 
-      padding: 12px 19px;
+      margin-top:
+        25px;
 
-      border: 1px solid var(--fox);
+      padding:
+        12px 19px;
 
-      color: var(--fox-dark);
+      border:
+        1px solid var(--fox);
 
-      text-decoration: none;
+      color:
+        var(--fox-dark);
 
-      font-family: Arial, Helvetica, sans-serif;
+      text-decoration:
+        none;
 
-      font-size: 0.72rem;
-      font-weight: 700;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      font-size:
+        .72rem;
 
-      transition: 0.2s ease;
+      font-weight:
+        700;
+
+      letter-spacing:
+        .08em;
+
+      text-transform:
+        uppercase;
+
+      transition:
+        .2s ease;
+
     }
 
 
     .book-link:hover {
-      background: var(--fox);
 
-      color: #fffaf3;
+      background:
+        var(--fox);
+
+      color:
+        #fffaf3;
+
     }
 
 
-    /* =========================
-       DARK SECTION
-       ========================= */
+
+    /* ===============================
+       DARK FUCHSROT SECTION
+       =============================== */
 
     .connection {
+
+      color:
+        #fff6ec;
+
       background:
+
         radial-gradient(
-          circle at 85% 20%,
-          rgba(199, 122, 93, 0.18),
+          circle at 78% 20%,
+          rgba(199,122,93,.28),
           transparent 30%
         ),
-        #191411;
 
-      color: #f7f0e6;
+        linear-gradient(
+          135deg,
+          #261510,
+          #3b1b12 55%,
+          #4a2417
+        );
+
     }
 
 
     .connection .label {
-      color: var(--fox-glow);
+
+      color:
+        var(--fox-glow);
+
     }
 
 
     .connection h2 {
-      color: #fffaf2;
+
+      color:
+        #fff8ef;
+
     }
 
 
     .connection-text {
-      max-width: 850px;
 
-      font-size: clamp(1.35rem, 2.8vw, 2rem);
+      max-width:
+        850px;
 
-      line-height: 1.5;
+      font-size:
+        clamp(1.35rem, 2.8vw, 2rem);
+
+      line-height:
+        1.5;
+
     }
 
 
     .connection-text em {
-      color: var(--fox-glow);
+
+      color:
+        var(--sun);
+
     }
 
 
-    /* =========================
+
+    /* ===============================
        ABOUT
-       ========================= */
+       =============================== */
 
     .about {
-      display: grid;
 
-      grid-template-columns: 0.8fr 1.2fr;
+      display:
+        grid;
 
-      gap: 80px;
+      grid-template-columns:
+        .8fr 1.2fr;
+
+      gap:
+        80px;
+
     }
 
 
     .about-name {
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
 
-      line-height: 0.95;
+      font-size:
+        clamp(2.5rem, 5vw, 4.5rem);
+
+      line-height:
+        .95;
+
     }
 
 
     .about p {
-      font-size: 1.12rem;
 
-      color: #48413a;
+      font-size:
+        1.12rem;
+
+      color:
+        #4b4039;
+
     }
 
 
-    /* =========================
+
+    /* ===============================
+       KONTAKT
+       =============================== */
+
+    .contact {
+
+      background:
+        linear-gradient(
+          135deg,
+          #f5e5d5,
+          #edd2bd
+        );
+
+    }
+
+
+    .contact-box {
+
+      max-width:
+        760px;
+
+    }
+
+
+    .contact-box p {
+
+      font-size:
+        1.18rem;
+
+      color:
+        #4c3d34;
+
+    }
+
+
+    .contact-button {
+
+      display:
+        inline-block;
+
+      margin-top:
+        20px;
+
+      padding:
+        13px 22px;
+
+      background:
+        var(--fox);
+
+      color:
+        #fffaf3;
+
+      text-decoration:
+        none;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size:
+        .75rem;
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        .08em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+
+    /* ===============================
        IMPRESSUM
-       ========================= */
+       =============================== */
 
     .impressum {
-      background: #eee5da;
+
+      background:
+        #eee3d5;
+
     }
 
 
     .impressum-box {
-      max-width: 760px;
+
+      max-width:
+        760px;
+
     }
 
 
     .impressum p {
-      color: #514940;
+
+      color:
+        #51463e;
+
     }
 
 
-    /* =========================
+
+    /* ===============================
        FOOTER
-       ========================= */
+       =============================== */
 
     footer {
-      border-top: 1px solid var(--line);
 
-      padding: 35px 0;
+      border-top:
+        1px solid var(--line);
 
-      font-family: Arial, Helvetica, sans-serif;
+      padding:
+        35px 0;
 
-      font-size: 0.72rem;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-      color: var(--soft);
+      font-size:
+        .72rem;
+
+      color:
+        var(--soft);
+
     }
 
 
-    /* =========================
+
+    /* ===============================
        MOBILE
-       ========================= */
+       =============================== */
 
     @media (max-width: 760px) {
 
       .header-inner {
-        min-height: 75px;
+
+        min-height:
+          72px;
+
       }
 
 
       nav {
-        gap: 14px;
+
+        display:
+          none;
+
       }
 
 
-      nav a {
-        font-size: 0.62rem;
+      .menu-button {
+
+        display:
+          block;
+
       }
 
 
       .hero {
-        min-height: 74vh;
+
+        min-height:
+          75vh;
+
       }
 
 
       section {
-        padding: 75px 0;
+
+        padding:
+          75px 0;
+
       }
 
 
       .books,
       .about {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
 
 
       .book {
-        padding: 25px;
+
+        padding:
+          25px;
+
       }
 
 
       .cover-wrap {
-        min-height: 390px;
+
+        min-height:
+          390px;
+
       }
 
 
       h1 {
-        font-size: 4.2rem;
+
+        font-size:
+          4.2rem;
+
       }
 
     }
@@ -626,12 +1200,11 @@
 </head>
 
 
+
 <body>
 
 
-<!-- =========================
-     HEADER
-     ========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -652,23 +1225,54 @@
 
     <nav>
 
-      <a href="#start">
-        Start
-      </a>
+      <a href="#start">Start</a>
 
-      <a href="#buecher">
-        Bücher
-      </a>
+      <a href="#buecher">Bücher</a>
 
-      <a href="#autor">
-        Über mich
-      </a>
+      <a href="#autor">Über mich</a>
 
-      <a href="#impressum">
-        Impressum
-      </a>
+      <a href="#kontakt">Kontakt / Anfragen</a>
+
+      <a href="#impressum">Impressum</a>
 
     </nav>
+
+
+    <button
+      class="menu-button"
+      onclick="toggleMenu()"
+      aria-label="Menü öffnen">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </div>
+
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <a href="#start" onclick="closeMenu()">
+      Start
+    </a>
+
+    <a href="#buecher" onclick="closeMenu()">
+      Bücher
+    </a>
+
+    <a href="#autor" onclick="closeMenu()">
+      Über mich
+    </a>
+
+    <a href="#kontakt" onclick="closeMenu()">
+      Kontakt / Anfragen
+    </a>
+
+    <a href="#impressum" onclick="closeMenu()">
+      Impressum
+    </a>
 
   </div>
 
@@ -679,9 +1283,7 @@
 <main>
 
 
-<!-- =========================
-     START
-     ========================= -->
+<!-- START -->
 
 <section class="hero" id="start">
 
@@ -715,9 +1317,7 @@
 
 
 
-<!-- =========================
-     BÜCHER
-     ========================= -->
+<!-- BÜCHER -->
 
 <section id="buecher">
 
@@ -744,11 +1344,10 @@
     </p>
 
 
-
     <div class="books">
 
 
-      <!-- BUCH 1 -->
+      <!-- SOZIALISATION -->
 
       <article class="book">
 
@@ -811,7 +1410,7 @@
 
 
 
-      <!-- BUCH 2 -->
+      <!-- KLEIN WILD GROSS FÄHIG -->
 
       <article class="book">
 
@@ -880,11 +1479,9 @@
 
 
 
-<!-- =========================
-     GEDANKE
-     ========================= -->
+<!-- GEDANKE -->
 
-<section id="gedanke" class="connection">
+<section class="connection" id="gedanke">
 
   <div class="container">
 
@@ -943,9 +1540,7 @@
 
 
 
-<!-- =========================
-     ÜBER MICH
-     ========================= -->
+<!-- ÜBER MICH -->
 
 <section id="autor">
 
@@ -959,8 +1554,10 @@
 
 
       <div class="about-name">
+
         Christoph<br>
         Fox
+
       </div>
 
     </div>
@@ -1003,16 +1600,55 @@
 
 
 
-<!-- =========================
-     IMPRESSUM
-     ========================= -->
+<!-- KONTAKT -->
 
-<section id="impressum" class="impressum">
+<section class="contact" id="kontakt">
+
+  <div class="container contact-box">
+
+    <div class="label">
+      Kontakt
+    </div>
+
+
+    <h2>
+      Kontakt / Anfragen
+    </h2>
+
+
+    <p>
+
+      Für Fragen zu den Büchern, Lesungen,
+      Veranstaltungen, Interviews oder anderen
+      Anfragen können Sie gerne Kontakt aufnehmen.
+
+    </p>
+
+
+    <!-- E-Mail-Adresse später einsetzen -->
+
+    <a
+      class="contact-button"
+      href="mailto:DEINE-EMAIL@BEISPIEL.DE">
+
+      E-Mail schreiben →
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- IMPRESSUM -->
+
+<section class="impressum" id="impressum">
 
   <div class="container impressum-box">
 
     <div class="label">
-      Impressum
+      Rechtliches
     </div>
 
 
@@ -1029,7 +1665,11 @@
     <p>
 
       <strong>Christoph Fox</strong><br>
-      <!-- Hier später deine vollständige ladungsfähige Anschrift eintragen -->
+
+      <!--
+      Hier später die vollständige
+      ladungsfähige Anschrift einsetzen.
+      -->
 
     </p>
 
@@ -1037,16 +1677,20 @@
     <p>
 
       E-Mail:<br>
-      <!-- Hier später deine geschäftliche E-Mail-Adresse eintragen -->
+
+      <!--
+      Hier später die echte
+      E-Mail-Adresse einsetzen.
+      -->
 
     </p>
 
 
     <p>
 
-      <strong>Hinweis:</strong><br>
-      Die vollständigen Anbieterangaben werden vor der
-      Veröffentlichung der Website ergänzt.
+      Die vollständigen Anbieterangaben
+      werden vor der Veröffentlichung
+      der Website ergänzt.
 
     </p>
 
@@ -1059,10 +1703,6 @@
 
 
 
-<!-- =========================
-     FOOTER
-     ========================= -->
-
 <footer>
 
   <div class="container">
@@ -1072,6 +1712,31 @@
   </div>
 
 </footer>
+
+
+
+<script>
+
+  function toggleMenu() {
+
+    const menu =
+      document.getElementById("mobileMenu");
+
+    menu.classList.toggle("open");
+
+  }
+
+
+  function closeMenu() {
+
+    const menu =
+      document.getElementById("mobileMenu");
+
+    menu.classList.remove("open");
+
+  }
+
+</script>
 
 
 </body>
