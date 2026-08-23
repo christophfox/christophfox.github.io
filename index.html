@@ -3,42 +3,210 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Christoph Fox | Großwerden, Sozialisation und Identität</title>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-<meta name="description" content="Christoph Fox über Großwerden, Sozialisation, Entwicklung, Identität und die Frage, wie Menschen zu dem werden, was sie sind.">
+<title>
+  Christoph Fox | Autor über Sozialisation, Entwicklung und Identität
+</title>
 
-<meta name="author" content="Christoph Fox">
+<meta
+  name="description"
+  content="Christoph Fox – Autor über Sozialisation, Entwicklung, Identität und Handlungsfähigkeit. Die Bücher Sozialisation. Subjekt, Handeln und Identität sowie Klein. Wild. Groß. Fähig."
+>
 
-<meta name="keywords" content="Christoph Fox, Sozialisation, Großwerden, Entwicklung, Identität, Subjekt, Handeln, Erziehung, Gesellschaft">
+<meta
+  name="author"
+  content="Christoph Fox"
+>
 
-<meta property="og:title" content="Christoph Fox">
-<meta property="og:description" content="Wie werden wir zu dem, was wir sind? Bücher über Großwerden, Sozialisation, Entwicklung und Identität.">
-<meta property="og:type" content="website">
+<meta
+  name="robots"
+  content="index, follow, max-image-preview:large"
+>
+
+<meta
+  name="theme-color"
+  content="#9d4d32"
+>
+
+<!--
+  CANONICAL:
+  Sobald die endgültige Domain feststeht,
+  hier die echte Adresse einsetzen.
+
+  Beispiel:
+  <link rel="canonical" href="https://www.deinedomain.de/">
+-->
+
+<meta
+  property="og:type"
+  content="website"
+>
+
+<meta
+  property="og:locale"
+  content="de_DE"
+>
+
+<meta
+  property="og:title"
+  content="Christoph Fox | Autor"
+>
+
+<meta
+  property="og:description"
+  content="Bücher und Gedanken über Sozialisation, Entwicklung, Identität und Handlungsfähigkeit."
+>
+
+<meta
+  property="og:site_name"
+  content="Christoph Fox"
+>
+
+<meta
+  property="og:image"
+  content="IMG_0191.jpeg"
+>
+
+<meta
+  name="twitter:card"
+  content="summary_large_image"
+>
+
+<meta
+  name="twitter:title"
+  content="Christoph Fox | Autor"
+>
+
+<meta
+  name="twitter:description"
+  content="Bücher und Gedanken über Sozialisation, Entwicklung, Identität und Handlungsfähigkeit."
+>
+
+<meta
+  name="twitter:image"
+  content="IMG_0191.jpeg"
+>
+
+
+<!-- =========================
+     STRUCTURED DATA / SEO
+========================= -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "#christoph-fox",
+
+    "name": "Christoph Fox",
+
+    "description": "Autor und Dozent mit den Schwerpunkten Sozialisation, Entwicklung, Identität und Handlungsfähigkeit.",
+
+    "email": "mailto:mail@herrfox.de",
+
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ratingen",
+      "postalCode": "40882",
+      "addressCountry": "DE"
+    }
+  },
+
+  "about": [
+    "Sozialisation",
+    "Entwicklung",
+    "Identität",
+    "Handlungsfähigkeit"
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+
+  "name": "Sozialisation. Subjekt, Handeln und Identität",
+
+  "author": {
+    "@type": "Person",
+    "name": "Christoph Fox"
+  },
+
+  "isbn": "9783961380381",
+
+  "datePublished": "2017",
+
+  "numberOfPages": 306,
+
+  "inLanguage": "de",
+
+  "description": "Ein subjektorientierter Ansatz zur Sozialisation mit den Schwerpunkten Subjekt, Handeln, Identität und kompetente Handlungsfähigkeit."
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+
+  "name": "Klein. Wild. Groß. Fähig. – Entwicklung. Vier Akte.",
+
+  "author": {
+    "@type": "Person",
+    "name": "Christoph Fox"
+  },
+
+  "isbn": "9783759296108",
+
+  "inLanguage": "de",
+
+  "description": "Ein Buch über Entwicklung, Großwerden und die Entstehung eigener Handlungsfähigkeit."
+}
+</script>
+
 
 <style>
 
+/* =========================================
+   GRUNDLAGEN
+========================================= */
+
 :root {
-  --paper: #fffaf2;
-  --paper-warm: #f7eee2;
 
-  --sun: #e2ad79;
-  --sun-light: #f1c99b;
+  --paper: #fffaf3;
+  --paper-warm: #f6ecdf;
 
-  --fox-light: #c87850;
-  --fox: #a44e32;
-  --fox-dark: #713421;
-  --fox-deep: #432016;
+  --fox-light: #d98a5d;
+  --fox: #ad5435;
+  --fox-dark: #74331f;
+  --fox-deep: #421c11;
 
-  --ink: #191311;
-  --soft: #665951;
+  --gold: #efbf88;
+  --gold-light: #f7d4a8;
 
-  --line: #ddc9b5;
+  --ink: #1b1411;
+  --soft: #65574e;
 
-  --scroll-light-x: 78%;
-  --scroll-light-y: 25%;
-  --scroll-light-opacity: .48;
+  --line: #dfcbb8;
+
+  --light-x: 78%;
+  --light-y: 22%;
+  --light-strength: .72;
+
+  --light-shift: 0px;
+  --light-shift-y: 0px;
+
 }
 
 * {
@@ -50,6 +218,7 @@ html {
 }
 
 body {
+
   margin: 0;
 
   color: var(--ink);
@@ -62,54 +231,65 @@ body {
   line-height: 1.7;
 
   background:
+
     radial-gradient(
-      circle at 75% 5%,
-      rgba(228,176,125,.20),
-      transparent 30%
+      ellipse at 75% 0%,
+      rgba(222,158,111,.22),
+      transparent 35%
     ),
 
     linear-gradient(
       145deg,
-      #f8f0e4,
-      #f2e6d7
+      #faf3e9,
+      #f1e4d6
     );
+
 }
 
 a {
   color: inherit;
 }
 
-.container {
-  width: min(1120px, 90%);
-  margin: 0 auto;
-}
 
-
-/* =========================
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
 header {
+
   position: sticky;
   top: 0;
 
-  z-index: 100;
+  z-index: 1000;
 
   background:
-    rgba(248,239,226,.93);
+    rgba(249,240,227,.91);
 
-  backdrop-filter: blur(14px);
+  backdrop-filter:
+    blur(15px);
 
   border-bottom:
-    1px solid var(--line);
+    1px solid
+    rgba(125,75,52,.16);
+
 }
 
 .header-inner {
+
   min-height: 82px;
 
+  width:
+    min(1120px, 90%);
+
+  margin:
+    0 auto;
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
 }
 
 .identity {
@@ -117,60 +297,84 @@ header {
 }
 
 .name {
-  font-size: 1.45rem;
 
-  letter-spacing: .01em;
+  font-size:
+    1.5rem;
+
+  letter-spacing:
+    -.02em;
+
 }
 
 .topic {
+
   margin-top: 2px;
 
-  color: var(--fox);
+  color:
+    var(--fox);
 
   font-family:
     Arial,
     Helvetica,
     sans-serif;
 
-  font-size: .64rem;
+  font-size:
+    .62rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .17em;
+  letter-spacing:
+    .16em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
+
 }
 
 
-/* =========================
-   DESKTOP MENU
-========================= */
+/* =========================================
+   DESKTOP NAV
+========================================= */
 
 nav {
-  display: flex;
 
-  gap: 24px;
+  display:
+    flex;
+
+  gap:
+    23px;
+
 }
 
 nav a {
-  position: relative;
 
-  text-decoration: none;
+  position:
+    relative;
+
+  text-decoration:
+    none;
 
   font-family:
     Arial,
     Helvetica,
     sans-serif;
 
-  font-size: .68rem;
+  font-size:
+    .67rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .07em;
+  letter-spacing:
+    .07em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  color: #433831;
+  color:
+    #493a33;
+
 }
 
 nav a:hover {
@@ -178,9 +382,11 @@ nav a:hover {
 }
 
 nav a::after {
+
   content: "";
 
-  position: absolute;
+  position:
+    absolute;
 
   left: 0;
   bottom: -7px;
@@ -192,11 +398,12 @@ nav a::after {
     linear-gradient(
       90deg,
       var(--fox-dark),
-      var(--sun)
+      var(--gold)
     );
 
   transition:
-    width .2s ease;
+    width .25s ease;
+
 }
 
 nav a:hover::after {
@@ -204,42 +411,49 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================
    MOBILE MENU
-========================= */
+========================================= */
 
 .menu-button {
+
   display: none;
 
-  border: none;
+  border: 0;
 
   background: none;
 
   padding: 8px;
 
   cursor: pointer;
+
 }
 
 .menu-button span {
+
   display: block;
 
-  width: 25px;
+  width: 26px;
   height: 2px;
 
   margin: 5px 0;
 
   background:
     var(--fox-dark);
+
 }
 
 .mobile-menu {
+
   display: none;
 
-  border-top:
-    1px solid var(--line);
-
   background:
-    rgba(255,250,242,.98);
+    rgba(255,250,243,.98);
+
+  border-top:
+    1px solid
+    var(--line);
+
 }
 
 .mobile-menu.open {
@@ -247,12 +461,15 @@ nav a:hover::after {
 }
 
 .mobile-menu a {
+
   display: block;
 
-  padding: 16px 5%;
+  padding:
+    16px 5%;
 
   border-bottom:
-    1px solid var(--line);
+    1px solid
+    var(--line);
 
   text-decoration: none;
 
@@ -261,192 +478,263 @@ nav a:hover::after {
     Helvetica,
     sans-serif;
 
-  font-size: .78rem;
+  font-size:
+    .74rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .08em;
+  letter-spacing:
+    .08em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  color: var(--fox-dark);
+  color:
+    var(--fox-dark);
+
 }
 
 
-/* =========================
+/* =========================================
    HERO
-========================= */
+========================================= */
 
 .hero {
-  min-height: 82vh;
 
-  display: flex;
+  min-height:
+    86vh;
 
-  align-items: center;
+  display:
+    flex;
 
-  position: relative;
+  align-items:
+    center;
 
-  overflow: hidden;
+  position:
+    relative;
+
+  overflow:
+    hidden;
 
   background:
 
     radial-gradient(
-      ellipse at var(--scroll-light-x) var(--scroll-light-y),
+      ellipse at
+      var(--light-x)
+      var(--light-y),
 
       rgba(
-        228,
-        176,
-        125,
-        var(--scroll-light-opacity)
+        246,
+        189,
+        126,
+        var(--light-strength)
       ),
 
-      transparent 30%
+      transparent 34%
     ),
 
     radial-gradient(
-      ellipse at 70% 70%,
-
-      rgba(163,78,50,.16),
-
-      transparent 42%
+      ellipse at 62% 76%,
+      rgba(170,76,43,.22),
+      transparent 43%
     ),
 
     linear-gradient(
       125deg,
-      #f8f0e4 0%,
-      #f6e4d0 42%,
-      #d49a70 72%,
-      #9f4b31 115%
+      #fbf3e7 0%,
+      #f7dfc8 38%,
+      #d58b61 70%,
+      #9f492f 112%
     );
+
 }
 
 
 /*
-  Das große warme Abendlicht.
-  Seine Position und Stärke werden
-  beim Scrollen ganz leicht verändert.
+  Starkes Abendlicht.
+  Das ist bewusst größer und sichtbarer
+  als in der vorherigen Version.
 */
 
 .hero::before {
+
   content: "";
 
-  position: absolute;
+  position:
+    absolute;
 
-  width: 700px;
-  height: 700px;
+  width:
+    900px;
+
+  height:
+    900px;
 
   right:
-    calc(-300px + var(--scroll-light-shift, 0px));
+    calc(-380px + var(--light-shift));
 
   top:
-    calc(-260px + var(--scroll-light-shift-y, 0px));
+    calc(-390px + var(--light-shift-y));
 
-  border-radius: 50%;
+  border-radius:
+    50%;
 
   background:
 
     radial-gradient(
       circle,
 
-      rgba(255,222,177,.62),
+      rgba(255,231,193,.88)
+      0%,
 
-      rgba(201,125,82,.18) 45%,
+      rgba(239,177,116,.55)
+      25%,
 
-      transparent 70%
+      rgba(201,116,72,.20)
+      52%,
+
+      transparent 72%
     );
 
-  filter: blur(12px);
+  filter:
+    blur(10px);
 
-  opacity:
-    calc(.72 + var(--scroll-light-extra, 0));
+  pointer-events:
+    none;
 
-  transition:
-    opacity .15s linear;
 }
 
+
+/*
+  Zweite Lichtschicht –
+  dadurch wirkt es eher wie Licht
+  auf Fell als wie ein Farbverlauf.
+*/
+
 .hero::after {
+
   content: "";
 
-  position: absolute;
+  position:
+    absolute;
 
-  bottom: -130px;
-  left: -100px;
+  width:
+    1100px;
 
-  width: 650px;
-  height: 240px;
+  height:
+    360px;
+
+  left:
+    calc(-300px + var(--light-shift));
+
+  bottom:
+    -170px;
 
   background:
 
-    linear-gradient(
-      90deg,
-      rgba(69,31,19,.15),
-      transparent
+    radial-gradient(
+      ellipse,
+      rgba(255,208,158,.25),
+      transparent 70%
     );
 
-  filter: blur(30px);
+  filter:
+    blur(30px);
 
   transform:
-    translateX(var(--shadow-shift, 0px))
     rotate(-8deg);
+
+  pointer-events:
+    none;
+
 }
 
+
 .hero-content {
-  position: relative;
 
-  z-index: 2;
+  position:
+    relative;
 
-  max-width: 900px;
+  z-index:
+    2;
+
+  width:
+    min(1120px, 90%);
+
+  margin:
+    0 auto;
+
 }
 
 .eyebrow {
-  color: var(--fox-dark);
+
+  color:
+    var(--fox-dark);
 
   font-family:
     Arial,
     Helvetica,
     sans-serif;
 
-  font-size: .74rem;
+  font-size:
+    .73rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .2em;
+  letter-spacing:
+    .2em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  margin-bottom: 25px;
+  margin-bottom:
+    25px;
+
 }
 
 h1 {
+
   margin:
     0 0 35px;
 
   font-size:
     clamp(3.5rem, 9vw, 7.8rem);
 
-  line-height: .88;
+  line-height:
+    .88;
 
-  font-weight: 400;
+  font-weight:
+    400;
 
-  letter-spacing: -.065em;
+  letter-spacing:
+    -.065em;
 
-  color: #211511;
 }
 
 .hero-text {
-  max-width: 790px;
+
+  max-width:
+    800px;
 
   font-size:
     clamp(1.2rem, 2.3vw, 1.55rem);
 
-  color: #49352d;
+  color:
+    #49352d;
+
 }
 
 .fox-line {
-  width: 150px;
-  height: 5px;
 
-  margin-top: 45px;
+  width:
+    170px;
+
+  height:
+    5px;
+
+  margin-top:
+    45px;
 
   background:
 
@@ -454,539 +742,750 @@ h1 {
       90deg,
       var(--fox-deep),
       var(--fox),
-      var(--sun)
+      var(--gold)
     );
 
   box-shadow:
-    0 4px 18px
-    rgba(113,52,33,.25);
+    0 5px 20px
+    rgba(105,43,26,.25);
+
 }
 
 
-/* =========================
-   FUCHSDETAIL
-========================= */
-
-.fox-mark {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  margin: 0 auto;
-
-  width: 100%;
-  height: 90px;
-
-  color:
-    rgba(113,52,33,.28);
-
-  font-size: 3.2rem;
-
-  line-height: 1;
-
-  user-select: none;
-}
-
-.fox-mark::before {
-  content: "◆";
-
-  transform:
-    rotate(45deg);
-
-  font-size: 1.1rem;
-
-  margin-right: 15px;
-}
-
-.fox-mark::after {
-  content: "◆";
-
-  transform:
-    rotate(45deg);
-
-  font-size: 1.1rem;
-
-  margin-left: 15px;
-}
-
-
-/* =========================
+/* =========================================
    SECTIONS
-========================= */
+========================================= */
 
 section {
-  padding: 110px 0;
+
+  padding:
+    110px 0;
 
   border-top:
-    1px solid var(--line);
+    1px solid
+    var(--line);
+
+}
+
+.container {
+
+  width:
+    min(1120px, 90%);
+
+  margin:
+    0 auto;
+
 }
 
 .label {
-  color: var(--fox);
+
+  color:
+    var(--fox);
 
   font-family:
     Arial,
     Helvetica,
     sans-serif;
 
-  font-size: .72rem;
+  font-size:
+    .71rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .18em;
+  letter-spacing:
+    .18em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  margin-bottom: 18px;
+  margin-bottom:
+    18px;
+
 }
 
 h2 {
+
   margin:
     0 0 30px;
 
   font-size:
     clamp(2.6rem, 5vw, 4.8rem);
 
-  line-height: 1;
+  line-height:
+    1;
 
-  font-weight: 400;
+  font-weight:
+    400;
 
-  letter-spacing: -.045em;
+  letter-spacing:
+    -.045em;
+
 }
 
 .intro {
-  max-width: 800px;
 
-  font-size: 1.2rem;
+  max-width:
+    800px;
 
-  color: #4d423b;
+  font-size:
+    1.2rem;
+
+  color:
+    #4d423b;
+
 }
 
 
-/* =========================
+/* =========================================
    BÜCHER
-========================= */
+========================================= */
 
 .books {
-  display: grid;
+
+  display:
+    grid;
 
   grid-template-columns:
     1fr 1fr;
 
-  gap: 35px;
+  gap:
+    55px;
 
-  margin-top: 65px;
+  margin-top:
+    65px;
+
 }
 
 .book {
+
+  position:
+    relative;
+
   background:
-    rgba(255,251,244,.92);
+    rgba(255,250,243,.55);
 
-  border:
-    1px solid
-    rgba(125,75,52,.10);
+  padding:
+    8px;
 
-  padding: 35px;
+  /*
+    Kein brauner Rahmen mehr.
+    Nur eine sehr dezente Lichtkante.
+  */
 
   box-shadow:
-
-    0 20px 50px
-    rgba(69,34,20,.08),
-
-    0 3px 12px
-    rgba(69,34,20,.05);
+    0 28px 70px
+    rgba(67,31,18,.09);
 
   transition:
+    transform .3s ease,
+    box-shadow .3s ease;
 
-    transform .25s ease,
-
-    box-shadow .25s ease;
 }
 
 .book:hover {
+
   transform:
-    translateY(-4px);
+    translateY(-6px);
 
   box-shadow:
+    0 35px 85px
+    rgba(67,31,18,.15);
 
-    0 28px 60px
-    rgba(69,34,20,.13),
-
-    0 5px 18px
-    rgba(69,34,20,.07);
 }
 
+
+/*
+  Cover-Fläche ohne Rahmen.
+*/
+
 .cover-wrap {
-  position: relative;
+
+  position:
+    relative;
+
+  min-height:
+    480px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  overflow:
+    hidden;
 
   background:
 
     radial-gradient(
-      ellipse at 72% 18%,
-      rgba(239,190,143,.55),
-      transparent 38%
+      ellipse at 75% 20%,
+      rgba(255,220,177,.72),
+      transparent 35%
     ),
 
     linear-gradient(
       145deg,
-      #f2dfca 0%,
-      #dfb18f 55%,
-      #b96b4b 100%
+      #f4e0cb,
+      #dfaa83 58%,
+      #bd6848
     );
 
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  min-height: 440px;
-
-  padding: 25px;
-
-  margin-bottom: 32px;
-
-  box-shadow:
-    inset 0 0 70px
-    rgba(255,220,177,.18);
 }
 
+
+/*
+  Warmes Licht hinter dem Buch.
+*/
+
+.cover-wrap::before {
+
+  content: "";
+
+  position:
+    absolute;
+
+  width:
+    430px;
+
+  height:
+    430px;
+
+  top:
+    -180px;
+
+  right:
+    -130px;
+
+  border-radius:
+    50%;
+
+  background:
+
+    radial-gradient(
+      circle,
+      rgba(255,227,190,.7),
+      transparent 68%
+    );
+
+  filter:
+    blur(12px);
+
+}
+
+
+/*
+  Das Buch selbst.
+  Kein sichtbarer Kasten mehr.
+*/
+
 .cover {
-  width: 100%;
 
-  max-width: 300px;
+  position:
+    relative;
 
-  max-height: 470px;
+  z-index:
+    2;
 
-  object-fit: contain;
+  width:
+    auto;
 
-  display: block;
+  max-width:
+    72%;
 
-  box-shadow:
+  max-height:
+    455px;
 
-    0 24px 42px
-    rgba(54,25,15,.28);
+  object-fit:
+    contain;
+
+  display:
+    block;
+
+  /*
+    realistischer Buchschatten
+  */
+
+  filter:
+    drop-shadow(
+      18px 24px 18px
+      rgba(55,24,14,.30)
+    );
 
   transition:
-    transform .25s ease;
+    transform .35s ease,
+    filter .35s ease;
+
 }
 
 .book:hover .cover {
+
   transform:
-    translateY(-2px);
+    translateY(-8px)
+    rotate(-.35deg);
+
+  filter:
+    drop-shadow(
+      22px 31px 22px
+      rgba(55,24,14,.34)
+    );
+
 }
 
+
 .book-number {
-  color: var(--fox);
+
+  margin-top:
+    32px;
+
+  color:
+    var(--fox);
 
   font-family:
     Arial,
     Helvetica,
     sans-serif;
 
-  font-size: .72rem;
+  font-size:
+    .72rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .16em;
+  letter-spacing:
+    .16em;
+
 }
 
 .book h3 {
+
   margin:
-    18px 0 7px;
+    17px 0 7px;
 
   font-size:
     clamp(1.8rem, 3vw, 2.7rem);
 
-  line-height: 1.05;
+  line-height:
+    1.05;
 
-  font-weight: 400;
+  font-weight:
+    400;
+
 }
 
 .subtitle {
-  color: var(--soft);
 
-  font-style: italic;
+  color:
+    var(--soft);
 
-  margin-bottom: 25px;
+  font-style:
+    italic;
+
+  margin-bottom:
+    25px;
+
 }
 
 .book p {
-  color: #4b4039;
+
+  color:
+    #4b4039;
+
 }
 
 .meta {
-  margin-top: 28px;
 
-  padding-top: 20px;
+  margin-top:
+    28px;
+
+  padding-top:
+    20px;
 
   border-top:
-    1px solid var(--line);
+    1px solid
+    var(--line);
 
-  color: var(--soft);
+  color:
+    var(--soft);
 
   font-family:
     Arial,
     Helvetica,
     sans-serif;
 
-  font-size: .76rem;
+  font-size:
+    .76rem;
+
 }
 
 .book-link {
-  display: inline-block;
 
-  margin-top: 25px;
+  display:
+    inline-block;
 
-  padding: 12px 19px;
+  margin-top:
+    25px;
+
+  padding:
+    12px 19px;
 
   border:
-    1px solid var(--fox);
+    1px solid
+    var(--fox);
 
   color:
     var(--fox-dark);
 
-  text-decoration: none;
+  text-decoration:
+    none;
 
   font-family:
     Arial,
     Helvetica,
     sans-serif;
 
-  font-size: .72rem;
+  font-size:
+    .72rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .08em;
+  letter-spacing:
+    .08em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  transition: .2s ease;
+  transition:
+    .2s ease;
+
 }
 
 .book-link:hover {
+
   background:
     var(--fox);
 
   color:
     #fffaf3;
+
 }
 
 
-/* =========================
-   AUFKLAPPBARE BUCHINFOS
-========================= */
+/* =========================================
+   AUFKLAPPBARE TEXTE
+========================================= */
 
 .book-extra {
-  max-height: 0;
 
-  overflow: hidden;
+  max-height:
+    0;
 
-  opacity: 0;
+  overflow:
+    hidden;
+
+  opacity:
+    0;
 
   transition:
-
-    max-height .45s ease,
-
+    max-height .5s ease,
     opacity .35s ease;
+
 }
 
 .book.open .book-extra {
-  max-height: 800px;
 
-  opacity: 1;
+  max-height:
+    800px;
+
+  opacity:
+    1;
+
 }
 
 .more-button {
-  margin-top: 24px;
 
-  padding: 0;
+  margin-top:
+    24px;
 
-  border: none;
+  padding:
+    0;
 
-  background: none;
+  border:
+    none;
 
-  color: var(--fox);
+  background:
+    none;
 
-  cursor: pointer;
+  color:
+    var(--fox);
+
+  cursor:
+    pointer;
 
   font-family:
     Arial,
     Helvetica,
     sans-serif;
 
-  font-size: .72rem;
+  font-size:
+    .72rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .08em;
+  letter-spacing:
+    .08em;
 
-  text-transform: uppercase;
-}
+  text-transform:
+    uppercase;
 
-.more-button:hover {
-  color:
-    var(--fox-dark);
-}
-
-.book-extra h4 {
-  margin-top: 28px;
-
-  margin-bottom: 5px;
-
-  color:
-    var(--fox-dark);
-
-  font-size: 1.2rem;
-
-  font-weight: 400;
 }
 
 
-/* =========================
-   FRAGE
-========================= */
+/* =========================================
+   FUCHS-SIGNET
+   KEIN EMOJI
+========================================= */
 
-.question {
-  text-align: center;
+.fox-sign {
+
+  width:
+    100%;
+
+  height:
+    130px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  overflow:
+    hidden;
 
   background:
+    var(--paper);
+
+}
+
+.fox-silhouette {
+
+  width:
+    90px;
+
+  height:
+    70px;
+
+  opacity:
+    .18;
+
+  filter:
+    drop-shadow(
+      0 12px 12px
+      rgba(66,30,17,.18)
+    );
+
+}
+
+
+/* =========================================
+   FRAGE
+========================================= */
+
+.question {
+
+  text-align:
+    center;
+
+  background:
+
+    radial-gradient(
+      ellipse at 70% 0%,
+      rgba(220,148,96,.32),
+      transparent 45%
+    ),
 
     linear-gradient(
       145deg,
       #f8eee2,
-      #efd8c3
+      #efd5bd
     );
+
 }
 
 .question-inner {
-  max-width: 850px;
 
-  margin: 0 auto;
+  max-width:
+    850px;
+
+  margin:
+    0 auto;
+
 }
 
 .question-mark {
+
   color:
     var(--fox);
 
-  font-family:
-    Georgia,
-    serif;
+  font-size:
+    4rem;
 
-  font-size: 4rem;
+  line-height:
+    1;
 
-  line-height: 1;
+  margin-bottom:
+    20px;
 
-  margin-bottom: 20px;
-}
-
-.question h2 {
-  margin-bottom: 25px;
 }
 
 .question-text {
+
   font-size:
     clamp(1.45rem, 3vw, 2.25rem);
 
-  line-height: 1.4;
+  line-height:
+    1.4;
 
   color:
     #4a352c;
+
 }
 
 .question-small {
-  margin-top: 30px;
+
+  margin-top:
+    30px;
 
   font-family:
     Arial,
     Helvetica,
     sans-serif;
 
-  font-size: .68rem;
+  font-size:
+    .68rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .16em;
+  letter-spacing:
+    .16em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
   color:
     var(--fox);
+
 }
 
 
-/* =========================
+/* =========================================
    GEDANKEN
-========================= */
+========================================= */
 
 .thoughts {
+
   background:
     var(--paper);
+
 }
 
 .thoughts-intro {
-  max-width: 760px;
 
-  font-size: 1.2rem;
+  max-width:
+    760px;
+
+  font-size:
+    1.2rem;
 
   color:
     #4d423b;
+
 }
 
 .thought {
-  max-width: 850px;
 
-  margin-top: 55px;
+  max-width:
+    850px;
 
-  padding-top: 35px;
+  margin-top:
+    55px;
+
+  padding-top:
+    35px;
 
   border-top:
-    1px solid var(--line);
+    1px solid
+    var(--line);
+
 }
 
 .thought-title {
+
   font-size:
     clamp(1.9rem, 4vw, 3rem);
 
-  line-height: 1.1;
+  line-height:
+    1.1;
 
-  margin-bottom: 18px;
+  margin-bottom:
+    18px;
+
 }
 
 .thought-text {
-  font-size: 1.12rem;
+
+  font-size:
+    1.12rem;
 
   color:
     #51453d;
+
 }
 
 .thought-date {
-  margin-top: 18px;
+
+  margin-top:
+    18px;
 
   font-family:
     Arial,
     Helvetica,
     sans-serif;
 
-  font-size: .65rem;
+  font-size:
+    .65rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .13em;
+  letter-spacing:
+    .13em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
   color:
     var(--fox);
+
 }
 
 
-/* =========================
+/* =========================================
    VERBINDUNG
-========================= */
+========================================= */
 
 .connection {
+
   color:
     #fff6ec;
 
@@ -994,102 +1493,141 @@ h2 {
 
     radial-gradient(
       circle at 78% 20%,
-      rgba(199,122,93,.28),
+      rgba(205,123,76,.30),
       transparent 30%
     ),
 
     linear-gradient(
       135deg,
-      #261510,
-      #3b1b12 55%,
-      #4a2417
+      #25140f,
+      #3c1b12 55%,
+      #4b2417
     );
+
 }
 
 .connection .label {
+
   color:
-    var(--sun-light);
+    var(--gold-light);
+
 }
 
 .connection h2 {
+
   color:
     #fff8ef;
+
 }
 
 .connection-text {
-  max-width: 850px;
+
+  max-width:
+    850px;
 
   font-size:
     clamp(1.35rem, 2.8vw, 2rem);
 
-  line-height: 1.5;
+  line-height:
+    1.5;
+
 }
 
 .connection-text em {
+
   color:
-    var(--sun);
+    var(--gold);
+
 }
 
 
-/* =========================
+/* =========================================
    AUTOR
-========================= */
+========================================= */
 
 .about {
-  display: grid;
+
+  display:
+    grid;
 
   grid-template-columns:
     .8fr 1.2fr;
 
-  gap: 80px;
+  gap:
+    80px;
+
 }
 
 .about-name {
+
   font-size:
     clamp(2.5rem, 5vw, 4.5rem);
 
-  line-height: .95;
+  line-height:
+    .95;
+
 }
 
 .about p {
-  font-size: 1.12rem;
+
+  font-size:
+    1.12rem;
 
   color:
     #4b4039;
+
 }
 
 
-/* =========================
+/* =========================================
    KONTAKT
-========================= */
+========================================= */
 
 .contact {
+
   background:
+
+    radial-gradient(
+      ellipse at 80% 10%,
+      rgba(218,140,91,.30),
+      transparent 40%
+    ),
 
     linear-gradient(
       135deg,
       #f5e5d5,
-      #edd2bd
+      #edd0b9
     );
+
 }
 
 .contact-box {
-  max-width: 760px;
+
+  max-width:
+    760px;
+
 }
 
 .contact-box p {
-  font-size: 1.18rem;
+
+  font-size:
+    1.18rem;
 
   color:
     #4c3d34;
+
 }
 
 .contact-button {
-  display: inline-block;
 
-  margin-top: 20px;
+  display:
+    inline-block;
 
-  padding: 13px 22px;
+  margin-top:
+    20px;
+
+  padding:
+    13px 22px;
 
   background:
     var(--fox);
@@ -1097,49 +1635,64 @@ h2 {
   color:
     #fffaf3;
 
-  text-decoration: none;
+  text-decoration:
+    none;
 
   font-family:
     Arial,
     Helvetica,
     sans-serif;
 
-  font-size: .75rem;
+  font-size:
+    .75rem;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: .08em;
+  letter-spacing:
+    .08em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
+
 }
 
 
-/* =========================
+/* =========================================
    IMPRESSUM
-========================= */
+========================================= */
 
 .impressum {
+
   background:
     #eee3d5;
+
 }
 
 .impressum-box {
-  max-width: 760px;
+
+  max-width:
+    760px;
+
 }
 
 .impressum p {
+
   color:
     #51463e;
+
 }
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer {
+
   border-top:
-    1px solid var(--line);
+    1px solid
+    var(--line);
 
   padding:
     35px 0;
@@ -1149,16 +1702,18 @@ footer {
     Helvetica,
     sans-serif;
 
-  font-size: .72rem;
+  font-size:
+    .72rem;
 
   color:
     var(--soft);
+
 }
 
 
-/* =========================
+/* =========================================
    MOBILE
-========================= */
+========================================= */
 
 @media (max-width: 760px) {
 
@@ -1175,33 +1730,51 @@ footer {
   }
 
   .hero {
-    min-height: 75vh;
+    min-height: 78vh;
   }
 
   section {
-    padding:
-      75px 0;
+    padding: 75px 0;
   }
 
   .books,
   .about {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
   .book {
-    padding:
-      25px;
+    padding: 7px;
   }
 
   .cover-wrap {
-    min-height:
-      390px;
+    min-height: 410px;
+  }
+
+  .cover {
+    max-width: 78%;
   }
 
   h1 {
-    font-size:
-      4.2rem;
+    font-size: 4.2rem;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
   }
 
 }
@@ -1214,11 +1787,18 @@ footer {
 <body>
 
 
+<!-- =====================================
+     HEADER
+===================================== -->
+
 <header>
 
-  <div class="container header-inner">
+  <div class="header-inner">
 
-    <a class="identity" href="#start">
+    <a
+      class="identity"
+      href="#start"
+      aria-label="Christoph Fox Startseite">
 
       <div class="name">
         Christoph Fox
@@ -1231,19 +1811,31 @@ footer {
     </a>
 
 
-    <nav>
+    <nav aria-label="Hauptnavigation">
 
-      <a href="#start">Start</a>
+      <a href="#start">
+        Start
+      </a>
 
-      <a href="#buecher">Bücher</a>
+      <a href="#buecher">
+        Bücher
+      </a>
 
-      <a href="#gedanken">Gedanken</a>
+      <a href="#gedanken">
+        Gedanken
+      </a>
 
-      <a href="#autor">Über mich</a>
+      <a href="#autor">
+        Über mich
+      </a>
 
-      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt">
+        Kontakt
+      </a>
 
-      <a href="#impressum">Impressum</a>
+      <a href="#impressum">
+        Impressum
+      </a>
 
     </nav>
 
@@ -1251,7 +1843,8 @@ footer {
     <button
       class="menu-button"
       onclick="toggleMenu()"
-      aria-label="Menü öffnen">
+      aria-label="Menü öffnen"
+      aria-expanded="false">
 
       <span></span>
       <span></span>
@@ -1299,24 +1892,26 @@ footer {
 <main>
 
 
-<!-- =========================
+<!-- =====================================
      HERO
-========================= -->
+===================================== -->
 
 <section
   class="hero"
   id="start">
 
-  <div class="container hero-content">
+  <div class="hero-content">
 
     <div class="eyebrow">
       Christoph Fox · Autor
     </div>
 
+
     <h1>
       Wie werden wir<br>
       zu dem, was wir sind?
     </h1>
+
 
     <div class="hero-text">
 
@@ -1329,6 +1924,7 @@ footer {
 
     </div>
 
+
     <div class="fox-line"></div>
 
   </div>
@@ -1337,9 +1933,9 @@ footer {
 
 
 
-<!-- =========================
+<!-- =====================================
      BÜCHER
-========================= -->
+===================================== -->
 
 <section id="buecher">
 
@@ -1349,10 +1945,12 @@ footer {
       Die Bücher
     </div>
 
+
     <h2>
       Zwei Bücher.<br>
       Eine große Frage.
     </h2>
+
 
     <p class="intro">
 
@@ -1371,7 +1969,9 @@ footer {
     <div class="books">
 
 
-      <!-- SOZIALISATION -->
+      <!-- =================================
+           BUCH 1
+      ================================== -->
 
       <article
         class="book"
@@ -1382,7 +1982,9 @@ footer {
           <img
             class="cover"
             src="IMG_1937.jpeg"
-            alt="Buchcover Sozialisation. Subjekt, Handeln und Identität von Christoph Fox">
+            alt="Buchcover Sozialisation. Subjekt, Handeln und Identität von Christoph Fox"
+            loading="lazy"
+          >
 
         </div>
 
@@ -1430,11 +2032,10 @@ footer {
 
             Das Buch fragt danach, wie Menschen
             in ihrer sozialen Welt zu Subjekten werden.
-            Es geht um Sozialisation nicht als bloße
-            Anpassung, sondern als ein Verhältnis
+            Sozialisation erscheint dabei nicht als
+            bloße Anpassung, sondern als Verhältnis
             zwischen Prägung, eigenem Handeln,
-            Identität und zunehmender
-            Handlungsfähigkeit.
+            Identität und Handlungsfähigkeit.
 
           </p>
 
@@ -1488,7 +2089,9 @@ footer {
 
 
 
-      <!-- KLEIN WILD GROSS FÄHIG -->
+      <!-- =================================
+           BUCH 2
+      ================================== -->
 
       <article
         class="book"
@@ -1499,7 +2102,9 @@ footer {
           <img
             class="cover"
             src="IMG_0191.jpeg"
-            alt="Buchcover Klein. Wild. Groß. Fähig. von Christoph Fox">
+            alt="Buchcover Klein. Wild. Groß. Fähig. – Entwicklung. Vier Akte. von Christoph Fox"
+            loading="lazy"
+          >
 
         </div>
 
@@ -1588,7 +2193,6 @@ footer {
 
         <div class="meta">
 
-          140 Seiten<br>
           ISBN 978-3-7592-9610-8
 
         </div>
@@ -1596,11 +2200,9 @@ footer {
 
         <a
           class="book-link"
-          href="https://www.thalia.de/shop/home/artikeldetails/A1075028145"
-          target="_blank"
-          rel="noopener noreferrer">
+          href="#kontakt">
 
-          Bei tolino ansehen →
+          Buch ansehen / Anfrage →
 
         </a>
 
@@ -1615,19 +2217,109 @@ footer {
 
 
 
-<!-- =========================
-     FUCHSDETAIL
-========================= -->
+<!-- =====================================
+     FUCHS-SIGNET
+===================================== -->
 
-<div class="fox-mark">
-  <span>🦊</span>
+<div
+  class="fox-sign"
+  aria-hidden="true">
+
+  <svg
+    class="fox-silhouette"
+    viewBox="0 0 160 110"
+    xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+
+      <linearGradient
+        id="foxGradient"
+        x1="0"
+        y1="0"
+        x2="1"
+        y2="1">
+
+        <stop
+          offset="0%"
+          stop-color="#e1a06f"
+        />
+
+        <stop
+          offset="50%"
+          stop-color="#a84e32"
+        />
+
+        <stop
+          offset="100%"
+          stop-color="#542314"
+        />
+
+      </linearGradient>
+
+    </defs>
+
+
+    <!-- stilisierter Fuchskopf -->
+
+    <path
+      d="
+        M80 101
+        C62 91 42 83 28 67
+        C19 57 16 44 18 25
+        L48 42
+        C58 35 68 31 80 31
+        C92 31 102 35 112 42
+        L142 25
+        C144 44 141 57 132 67
+        C118 83 98 91 80 101
+        Z
+      "
+      fill="url(#foxGradient)"
+    />
+
+
+    <!-- Augen-Schatten -->
+
+    <path
+      d="
+        M45 55
+        C55 47 65 47 73 53
+        C64 56 55 59 45 55
+        Z
+
+        M115 55
+        C105 47 95 47 87 53
+        C96 56 105 59 115 55
+        Z
+      "
+      fill="#3c180e"
+      opacity=".72"
+    />
+
+
+    <!-- Nase -->
+
+    <path
+      d="
+        M72 69
+        L80 65
+        L88 69
+        L80 76
+        Z
+      "
+      fill="#32130c"
+    />
+
+
+  </svg>
+
 </div>
 
 
 
-<!-- =========================
+<!-- =====================================
      FRAGE
-========================= -->
+===================================== -->
 
 <section class="question">
 
@@ -1637,9 +2329,11 @@ footer {
       ?
     </div>
 
+
     <div class="label">
       Eine Frage zum Weiterdenken
     </div>
+
 
     <div class="question-text">
 
@@ -1648,6 +2342,7 @@ footer {
       wer wir sein sollen?
 
     </div>
+
 
     <div class="question-small">
       Christoph Fox
@@ -1659,9 +2354,9 @@ footer {
 
 
 
-<!-- =========================
+<!-- =====================================
      GEDANKEN
-========================= -->
+===================================== -->
 
 <section
   class="thoughts"
@@ -1672,6 +2367,7 @@ footer {
     <div class="label">
       Gedanken
     </div>
+
 
     <h2>
       Über das<br>
@@ -1727,9 +2423,9 @@ footer {
 
 
 
-<!-- =========================
-     ZUSAMMENHANG
-========================= -->
+<!-- =====================================
+     VERBINDUNG DER BÜCHER
+===================================== -->
 
 <section class="connection">
 
@@ -1759,9 +2455,7 @@ footer {
 
         Andere Menschen prägen uns.
         Familien, Freunde, Schule,
-        Gesellschaft, Kultur.
-        Sie zeigen uns, was möglich ist,
-        was erwartet wird und wo Grenzen liegen.
+        Gesellschaft und Kultur.
 
       </p>
 
@@ -1801,9 +2495,9 @@ footer {
 
 
 
-<!-- =========================
+<!-- =====================================
      AUTOR
-========================= -->
+===================================== -->
 
 <section id="autor">
 
@@ -1814,6 +2508,7 @@ footer {
       <div class="label">
         Über mich
       </div>
+
 
       <div class="about-name">
         Christoph<br>
@@ -1854,12 +2549,10 @@ footer {
 
       <p>
 
-        Meine Bücher versuchen,
-        diesen Weg aus unterschiedlichen
-        Perspektiven zu betrachten –
-        wissenschaftlich, kritisch und
-        mit einem Blick auf das ganz
-        alltägliche Großwerden.
+        Meine Bücher betrachten diesen Weg
+        aus unterschiedlichen Perspektiven –
+        wissenschaftlich, kritisch und mit einem
+        Blick auf das ganz alltägliche Großwerden.
 
       </p>
 
@@ -1871,9 +2564,9 @@ footer {
 
 
 
-<!-- =========================
+<!-- =====================================
      KONTAKT
-========================= -->
+===================================== -->
 
 <section
   class="contact"
@@ -1885,9 +2578,11 @@ footer {
       Kontakt
     </div>
 
+
     <h2>
       Kontakt / Anfragen
     </h2>
+
 
     <p>
 
@@ -1914,9 +2609,9 @@ footer {
 
 
 
-<!-- =========================
+<!-- =====================================
      IMPRESSUM
-========================= -->
+===================================== -->
 
 <section
   class="impressum"
@@ -1927,6 +2622,7 @@ footer {
     <div class="label">
       Rechtliches
     </div>
+
 
     <h2>
       Impressum
@@ -1989,9 +2685,14 @@ footer {
 </section>
 
 
+
 </main>
 
 
+
+<!-- =====================================
+     FOOTER
+===================================== -->
 
 <footer>
 
@@ -2007,9 +2708,9 @@ footer {
 
 <script>
 
-/* =========================
-   MOBILE MENU
-========================= */
+/* =====================================
+   MENÜ
+===================================== */
 
 function toggleMenu() {
 
@@ -2018,7 +2719,19 @@ function toggleMenu() {
       "mobileMenu"
     );
 
+  const button =
+    document.querySelector(
+      ".menu-button"
+    );
+
   menu.classList.toggle("open");
+
+  button.setAttribute(
+    "aria-expanded",
+    menu.classList.contains("open")
+      ? "true"
+      : "false"
+  );
 
 }
 
@@ -2030,23 +2743,31 @@ function closeMenu() {
       "mobileMenu"
     );
 
+  const button =
+    document.querySelector(
+      ".menu-button"
+    );
+
   menu.classList.remove("open");
+
+  button.setAttribute(
+    "aria-expanded",
+    "false"
+  );
 
 }
 
 
-/* =========================
-   BÜCHER AUFKLAPPEN
-========================= */
+/* =====================================
+   BUCHTEXT AUFKLAPPEN
+===================================== */
 
 function toggleBook(id, button) {
 
   const book =
     document.getElementById(id);
 
-
   book.classList.toggle("open");
-
 
   if (
     book.classList.contains("open")
@@ -2065,24 +2786,20 @@ function toggleBook(id, button) {
 }
 
 
-/* =========================
-   ABENDLICHT BEIM SCROLLEN
-========================= */
+/* =====================================
+   ABENDLICHT
+=====================================
 
-/*
-   Das Licht reagiert nur sehr leicht
-   auf die Scrollposition.
+   Das Licht bewegt sich abhängig
+   von der Scrollposition.
 
-   Je weiter man scrollt, desto weiter
-   wandert das Licht und verändert
-   minimal seine Intensität.
-
-   Dadurch entsteht eher der Eindruck
-   von natürlichem Abendlicht als
-   von einer sichtbaren Animation.
-*/
+   Die Bewegung ist bewusst langsam:
+   nicht "Animation",
+   sondern atmosphärische Veränderung.
+===================================== */
 
 let ticking = false;
+
 
 function updateEveningLight() {
 
@@ -2090,112 +2807,92 @@ function updateEveningLight() {
     window.scrollY || 0;
 
 
+  const hero =
+    document.querySelector(".hero");
+
+
+  if (!hero) {
+    return;
+  }
+
+
   const heroHeight =
-    document.querySelector(".hero")
-      .offsetHeight;
+    hero.offsetHeight;
 
 
   const progress =
     Math.min(
       scrollY / heroHeight,
-      1
+      1.8
     );
 
 
   /*
-     Horizontale Bewegung:
-     nur wenige Prozent.
+    Das Licht wandert beim Scrollen
+    sichtbar von rechts oben
+    langsam Richtung Mitte.
   */
 
   const x =
-    78 - (progress * 14);
+    78 - (progress * 20);
 
-
-  /*
-     Vertikale Bewegung:
-     das Licht sinkt ganz langsam.
-  */
 
   const y =
-    25 + (progress * 18);
+    22 + (progress * 25);
 
 
   /*
-     Sehr kleine Veränderung
-     der Lichtintensität.
+    Licht bleibt kräftig.
   */
 
-  const opacity =
-    .48 - (progress * .12);
+  const strength =
+    .72 - (Math.min(progress, 1) * .10);
 
 
   /*
-     Zweiter Lichtschein bewegt
-     sich ebenfalls ganz leicht.
+    Große Lichtquelle bewegt sich.
   */
 
   const shift =
-    progress * 70;
+    progress * 115;
 
 
   const shiftY =
-    progress * 35;
-
-
-  const extra =
-    progress * .08;
-
-
-  const shadow =
-    progress * -35;
+    progress * 55;
 
 
   document.documentElement.style
     .setProperty(
-      "--scroll-light-x",
+      "--light-x",
       x + "%"
     );
 
 
   document.documentElement.style
     .setProperty(
-      "--scroll-light-y",
+      "--light-y",
       y + "%"
     );
 
 
   document.documentElement.style
     .setProperty(
-      "--scroll-light-opacity",
-      opacity
+      "--light-strength",
+      strength
     );
 
 
   document.documentElement.style
     .setProperty(
-      "--scroll-light-shift",
+      "--light-shift",
       shift + "px"
     );
 
 
   document.documentElement.style
     .setProperty(
-      "--scroll-light-shift-y",
+      "--light-shift-y",
       shiftY + "px"
-    );
-
-
-  document.documentElement.style
-    .setProperty(
-      "--scroll-light-extra",
-      extra
-    );
-
-
-  document.documentElement.style
-    .setProperty(
-      "--shadow-shift",
-      shadow + "px"
     );
 
 
@@ -2219,12 +2916,14 @@ window.addEventListener(
     }
 
   },
-  { passive: true }
+  {
+    passive: true
+  }
 );
 
 
 /*
-   Beim Laden einmal initialisieren.
+  Initialisierung.
 */
 
 updateEveningLight();
