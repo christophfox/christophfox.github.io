@@ -3,53 +3,87 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Christoph Fox | Großwerden, Sozialisation und Entwicklung</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="Christoph Fox – Bücher über Großwerden, Sozialisation, Entwicklung und Identität.">
+  <title>
+    Christoph Fox | Großwerden, Sozialisation und Entwicklung
+  </title>
 
-  <meta name="author" content="Christoph Fox">
+  <meta
+    name="description"
+    content="Christoph Fox – Bücher über Großwerden, Sozialisation, Entwicklung und Identität."
+  >
 
-  <meta name="keywords"
-        content="Christoph Fox, Großwerden, Sozialisation, Entwicklung, Identität, Klein Wild Groß Fähig, Subjekt, Handeln">
+  <meta
+    name="author"
+    content="Christoph Fox"
+  >
 
+  <meta
+    name="keywords"
+    content="Christoph Fox, Großwerden, Sozialisation, Entwicklung, Identität, Klein Wild Groß Fähig, Subjekt, Handeln"
+  >
 
-  <!-- Open Graph -->
+  <meta
+    property="og:title"
+    content="Christoph Fox | Großwerden"
+  >
 
-  <meta property="og:title"
-        content="Christoph Fox | Großwerden">
+  <meta
+    property="og:description"
+    content="Sozialisation, Entwicklung, Identität und das Werden des Menschen."
+  >
 
-  <meta property="og:description"
-        content="Sozialisation, Entwicklung, Identität und das Werden des Menschen.">
-
-  <meta property="og:type" content="website">
+  <meta
+    property="og:type"
+    content="website"
+  >
 
 
   <style>
 
     :root {
 
-      /* Papier */
+      /* =========================
+         PAPIER
+         ========================= */
+
       --paper: #fffaf2;
       --paper-warm: #f8efe2;
 
-      /* Abendlicht */
+
+      /* =========================
+         ABENDLICHT
+         ========================= */
+
       --sun: #e4b07d;
+      --sun-light: #f0c99e;
       --gold: #c98758;
 
-      /* Fuchsfell */
+
+      /* =========================
+         FUCHSFELL
+         ========================= */
+
       --fox-light: #c87952;
       --fox: #a34e32;
       --fox-dark: #713421;
       --fox-deep: #452217;
 
-      /* Schatten */
-      --night: #211511;
+
+      /* =========================
+         TEXT
+         ========================= */
 
       --ink: #191412;
       --soft: #655950;
+
+
+      /* =========================
+         LINIEN
+         ========================= */
 
       --line: #ddc9b5;
 
@@ -111,9 +145,9 @@
 
 
 
-    /* ===============================
+    /* =================================
        HEADER
-       =============================== */
+       ================================= */
 
     header {
 
@@ -169,7 +203,8 @@
 
       margin-top: 2px;
 
-      color: var(--fox);
+      color:
+        var(--fox);
 
       font-family:
         Arial,
@@ -189,7 +224,10 @@
     }
 
 
-    /* DESKTOP MENU */
+
+    /* =================================
+       DESKTOP NAVIGATION
+       ================================= */
 
     nav {
 
@@ -250,6 +288,7 @@
       height: 2px;
 
       background:
+
         linear-gradient(
           90deg,
           var(--fox-dark),
@@ -270,7 +309,9 @@
 
 
 
-    /* HAMBURGER */
+    /* =================================
+       HAMBURGER
+       ================================= */
 
     .menu-button {
 
@@ -356,9 +397,10 @@
 
 
 
-    /* ===============================
-       HERO – FUCHSFELL IM ABENDLICHT
-       =============================== */
+    /* =================================
+       HERO
+       FUCHSFELL IM ABENDLICHT
+       ================================= */
 
     .hero {
 
@@ -415,6 +457,7 @@
       border-radius: 50%;
 
       background:
+
         radial-gradient(
           circle,
           rgba(255,222,177,.62),
@@ -443,6 +486,7 @@
       height: 240px;
 
       background:
+
         linear-gradient(
           90deg,
           rgba(69,31,19,.15),
@@ -560,9 +604,9 @@
 
 
 
-    /* ===============================
+    /* =================================
        SECTIONS
-       =============================== */
+       ================================= */
 
     section {
 
@@ -638,9 +682,9 @@
 
 
 
-    /* ===============================
+    /* =================================
        BOOKS
-       =============================== */
+       ================================= */
 
     .books {
 
@@ -662,10 +706,10 @@
     .book {
 
       background:
-        rgba(255,250,243,.88);
+        rgba(255, 251, 244, 0.92);
 
       border:
-        1px solid var(--line);
+        1px solid rgba(125, 75, 52, 0.10);
 
       padding:
         35px;
@@ -673,20 +717,52 @@
       box-shadow:
 
         0 20px 50px
-        rgba(75,35,20,.09);
+        rgba(69, 34, 20, 0.08),
+
+        0 3px 12px
+        rgba(69, 34, 20, 0.05);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    }
+
+
+    .book:hover {
+
+      transform:
+        translateY(-4px);
+
+      box-shadow:
+
+        0 28px 60px
+        rgba(69, 34, 20, 0.13),
+
+        0 5px 18px
+        rgba(69, 34, 20, 0.07);
 
     }
 
 
     .cover-wrap {
 
+      position:
+        relative;
+
       background:
+
+        radial-gradient(
+          ellipse at 72% 18%,
+          rgba(239, 190, 143, 0.55),
+          transparent 38%
+        ),
 
         linear-gradient(
           145deg,
-          #e8d2bd,
-          #d8a17d,
-          #b76547
+          #f2dfca 0%,
+          #dfb18f 55%,
+          #b96b4b 100%
         );
 
       display:
@@ -706,6 +782,14 @@
 
       margin-bottom:
         32px;
+
+      border:
+        none;
+
+      box-shadow:
+
+        inset 0 0 70px
+        rgba(255, 220, 177, 0.18);
 
     }
 
@@ -729,8 +813,19 @@
 
       box-shadow:
 
-        0 22px 40px
-        rgba(54,25,15,.27);
+        0 24px 42px
+        rgba(54, 25, 15, 0.28);
+
+      transition:
+        transform 0.25s ease;
+
+    }
+
+
+    .book:hover .cover {
+
+      transform:
+        translateY(-2px);
 
     }
 
@@ -876,9 +971,9 @@
 
 
 
-    /* ===============================
+    /* =================================
        DARK FUCHSROT SECTION
-       =============================== */
+       ================================= */
 
     .connection {
 
@@ -906,7 +1001,7 @@
     .connection .label {
 
       color:
-        var(--fox-glow);
+        var(--sun-light);
 
     }
 
@@ -942,9 +1037,9 @@
 
 
 
-    /* ===============================
+    /* =================================
        ABOUT
-       =============================== */
+       ================================= */
 
     .about {
 
@@ -983,13 +1078,14 @@
 
 
 
-    /* ===============================
+    /* =================================
        KONTAKT
-       =============================== */
+       ================================= */
 
     .contact {
 
       background:
+
         linear-gradient(
           135deg,
           #f5e5d5,
@@ -1059,9 +1155,9 @@
 
 
 
-    /* ===============================
+    /* =================================
        IMPRESSUM
-       =============================== */
+       ================================= */
 
     .impressum {
 
@@ -1088,9 +1184,9 @@
 
 
 
-    /* ===============================
+    /* =================================
        FOOTER
-       =============================== */
+       ================================= */
 
     footer {
 
@@ -1115,9 +1211,9 @@
 
 
 
-    /* ===============================
+    /* =================================
        MOBILE
-       =============================== */
+       ================================= */
 
     @media (max-width: 760px) {
 
@@ -1204,539 +1300,705 @@
 <body>
 
 
-<!-- HEADER -->
+  <!-- =================================
+       HEADER
+       ================================= -->
 
-<header>
+  <header>
 
-  <div class="container header-inner">
+    <div class="container header-inner">
 
-    <a class="identity" href="#start">
 
-      <div class="name">
-        Christoph Fox
-      </div>
+      <a
+        class="identity"
+        href="#start">
 
-      <div class="topic">
-        Sozialisation · Entwicklung · Identität
-      </div>
-
-    </a>
-
-
-    <nav>
-
-      <a href="#start">Start</a>
-
-      <a href="#buecher">Bücher</a>
-
-      <a href="#autor">Über mich</a>
-
-      <a href="#kontakt">Kontakt / Anfragen</a>
-
-      <a href="#impressum">Impressum</a>
-
-    </nav>
-
-
-    <button
-      class="menu-button"
-      onclick="toggleMenu()"
-      aria-label="Menü öffnen">
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-    </button>
-
-  </div>
-
-
-  <div class="mobile-menu" id="mobileMenu">
-
-    <a href="#start" onclick="closeMenu()">
-      Start
-    </a>
-
-    <a href="#buecher" onclick="closeMenu()">
-      Bücher
-    </a>
-
-    <a href="#autor" onclick="closeMenu()">
-      Über mich
-    </a>
-
-    <a href="#kontakt" onclick="closeMenu()">
-      Kontakt / Anfragen
-    </a>
-
-    <a href="#impressum" onclick="closeMenu()">
-      Impressum
-    </a>
-
-  </div>
-
-</header>
-
-
-
-<main>
-
-
-<!-- START -->
-
-<section class="hero" id="start">
-
-  <div class="container hero-content">
-
-    <div class="eyebrow">
-      Christoph Fox · Autor
-    </div>
-
-
-    <h1>
-      Wie werden wir<br>
-      zu dem, was wir sind?
-    </h1>
-
-
-    <div class="hero-text">
-
-      Zwei Bücher über Sozialisation, Entwicklung und Identität –
-      und über die Frage, wie aus Menschen handelnde und
-      handlungsfähige Subjekte werden.
-
-    </div>
-
-
-    <div class="fox-line"></div>
-
-  </div>
-
-</section>
-
-
-
-<!-- BÜCHER -->
-
-<section id="buecher">
-
-  <div class="container">
-
-    <div class="label">
-      Die Bücher
-    </div>
-
-
-    <h2>
-      Zwei Perspektiven.<br>
-      Ein Mensch.
-    </h2>
-
-
-    <p class="intro">
-
-      Das eine Werk nähert sich dem Menschen über Sozialisation,
-      Subjekt, Handeln und Identität. Das andere betrachtet
-      Entwicklung in vier Akten – vom Kleinsein bis zur Fähigkeit,
-      die eigene Welt aktiv zu gestalten.
-
-    </p>
-
-
-    <div class="books">
-
-
-      <!-- SOZIALISATION -->
-
-      <article class="book">
-
-        <div class="cover-wrap">
-
-          <img
-            class="cover"
-            src="IMG_1937.jpeg"
-            alt="Buchcover Sozialisation. Subjekt, Handeln und Identität von Christoph Fox">
-
-        </div>
-
-
-        <div class="book-number">
-          01
-        </div>
-
-
-        <h3>
-          Sozialisation.<br>
-          Subjekt, Handeln<br>
-          und Identität
-        </h3>
-
-
-        <div class="subtitle">
+        <div class="name">
           Christoph Fox
         </div>
 
-
-        <p>
-
-          Sozialisation als aktiver, subjektorientierter Prozess:
-          Menschen entwickeln sich im Verhältnis zu ihrer sozialen
-          Umwelt, handeln, bilden Identität und erwerben dabei
-          zunehmend Kompetenzen und Handlungsfähigkeit.
-
-        </p>
-
-
-        <div class="meta">
-
-          306 Seiten<br>
-          ISBN 978-3-96138-038-1
-
-        </div>
-
-
-        <a
-          class="book-link"
-          href="https://www.lehmanns.ch/shop/sozialwissenschaften/41357656-9783961380381-sozialisation-subjekt-handeln-und-identitaet"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          Bei Lehmanns ansehen →
-
-        </a>
-
-      </article>
-
-
-
-      <!-- KLEIN WILD GROSS FÄHIG -->
-
-      <article class="book">
-
-        <div class="cover-wrap">
-
-          <img
-            class="cover"
-            src="IMG_0191.jpeg"
-            alt="Buchcover Klein. Wild. Groß. Fähig. Entwicklung. Vier Akte. von Christoph Fox">
-
-        </div>
-
-
-        <div class="book-number">
-          02
-        </div>
-
-
-        <h3>
-          Klein. Wild.<br>
-          Groß. Fähig.
-        </h3>
-
-
-        <div class="subtitle">
-          Entwicklung. Vier Akte.
-        </div>
-
-
-        <p>
-
-          Entwicklung als Weg durch vier Akte:
-          Klein, Wild, Groß und Fähig. Ein Blick auf das
-          Großwerden, auf Entwicklung und auf die Frage,
-          wie Menschen ihren Platz in der Welt finden.
-
-        </p>
-
-
-        <div class="meta">
-
-          140 Seiten<br>
-          ISBN 978-3-7592-9610-8
-
-        </div>
-
-
-        <a
-          class="book-link"
-          href="https://www.thalia.de/shop/home/artikeldetails/A1075028145"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          Bei tolino ansehen →
-
-        </a>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- GEDANKE -->
-
-<section class="connection" id="gedanke">
-
-  <div class="container">
-
-    <div class="label">
-      Der Zusammenhang
-    </div>
-
-
-    <h2>
-      Zwei Bücher.<br>
-      Eine Frage.
-    </h2>
-
-
-    <div class="connection-text">
-
-      <p>
-        <em>
-          Was bedeutet es eigentlich, jemand zu werden?
-        </em>
-      </p>
-
-
-      <p>
-
-        Das eine Buch betrachtet Sozialisation:
-        den Prozess, in dem Menschen sich mit ihrer sozialen
-        Welt auseinandersetzen, handeln und Identität entwickeln.
-
-      </p>
-
-
-      <p>
-
-        Das andere nimmt die Entwicklung selbst in den Blick –
-        vom kleinen Kind über die wilde Jugend und das
-        Erwachsensein bis zur Frage nach Fähigkeit und
-        Handlungsfähigkeit.
-
-      </p>
-
-
-      <p>
-
-        Unterschiedliche Blickwinkel.
-        Ein gemeinsames Interesse:
-        <em>der Mensch in seiner Entwicklung.</em>
-
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ÜBER MICH -->
-
-<section id="autor">
-
-  <div class="container about">
-
-    <div>
-
-      <div class="label">
-        Über mich
-      </div>
-
-
-      <div class="about-name">
-
-        Christoph<br>
-        Fox
-
-      </div>
-
-    </div>
-
-
-    <div>
-
-      <p>
-
-        Christoph Fox beschäftigt sich mit Sozialisation,
-        Entwicklung, Identität und der Frage, wie Menschen
-        zu handlungsfähigen Subjekten werden.
-
-      </p>
-
-
-      <p>
-
-        In seinen beiden Büchern nähert er sich diesem
-        Themenfeld aus unterschiedlichen Richtungen:
-        wissenschaftlich-theoretisch und mit dem Blick
-        auf Entwicklung und das Großwerden.
-
-      </p>
-
-
-      <p>
-
-        <strong>
+        <div class="topic">
           Sozialisation · Entwicklung · Identität
-        </strong>
+        </div>
 
-      </p>
+      </a>
+
+
+
+      <!-- DESKTOP -->
+
+      <nav>
+
+        <a href="#start">
+          Start
+        </a>
+
+        <a href="#buecher">
+          Bücher
+        </a>
+
+        <a href="#autor">
+          Über mich
+        </a>
+
+        <a href="#kontakt">
+          Kontakt / Anfragen
+        </a>
+
+        <a href="#impressum">
+          Impressum
+        </a>
+
+      </nav>
+
+
+
+      <!-- MOBILE -->
+
+      <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Menü öffnen">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
 
     </div>
 
-  </div>
-
-</section>
 
 
+    <div
+      class="mobile-menu"
+      id="mobileMenu">
 
-<!-- KONTAKT -->
 
-<section class="contact" id="kontakt">
+      <a
+        href="#start"
+        onclick="closeMenu()">
 
-  <div class="container contact-box">
+        Start
 
-    <div class="label">
-      Kontakt
+      </a>
+
+
+      <a
+        href="#buecher"
+        onclick="closeMenu()">
+
+        Bücher
+
+      </a>
+
+
+      <a
+        href="#autor"
+        onclick="closeMenu()">
+
+        Über mich
+
+      </a>
+
+
+      <a
+        href="#kontakt"
+        onclick="closeMenu()">
+
+        Kontakt / Anfragen
+
+      </a>
+
+
+      <a
+        href="#impressum"
+        onclick="closeMenu()">
+
+        Impressum
+
+      </a>
+
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =================================
+         START
+         ================================= -->
+
+    <section
+      class="hero"
+      id="start">
+
+
+      <div
+        class="container hero-content">
+
+
+        <div class="eyebrow">
+
+          Christoph Fox · Autor
+
+        </div>
+
+
+
+        <h1>
+
+          Wie werden wir<br>
+          zu dem, was wir sind?
+
+        </h1>
+
+
+
+        <div class="hero-text">
+
+          Zwei Bücher über Sozialisation,
+          Entwicklung und Identität –
+          und über die Frage, wie aus Menschen
+          handelnde und handlungsfähige
+          Subjekte werden.
+
+        </div>
+
+
+
+        <div class="fox-line"></div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         BÜCHER
+         ================================= -->
+
+    <section id="buecher">
+
+
+      <div class="container">
+
+
+        <div class="label">
+          Die Bücher
+        </div>
+
+
+        <h2>
+
+          Zwei Perspektiven.<br>
+          Ein Mensch.
+
+        </h2>
+
+
+        <p class="intro">
+
+          Das eine Werk nähert sich dem Menschen
+          über Sozialisation, Subjekt, Handeln und
+          Identität. Das andere betrachtet Entwicklung
+          in vier Akten – vom Kleinsein bis zur
+          Fähigkeit, die eigene Welt aktiv zu gestalten.
+
+        </p>
+
+
+
+        <div class="books">
+
+
+          <!-- BUCH 1 -->
+
+          <article class="book">
+
+
+            <div class="cover-wrap">
+
+              <img
+                class="cover"
+                src="IMG_1937.jpeg"
+                alt="Buchcover Sozialisation. Subjekt, Handeln und Identität von Christoph Fox">
+
+            </div>
+
+
+
+            <div class="book-number">
+              01
+            </div>
+
+
+            <h3>
+
+              Sozialisation.<br>
+              Subjekt, Handeln<br>
+              und Identität
+
+            </h3>
+
+
+            <div class="subtitle">
+
+              Christoph Fox
+
+            </div>
+
+
+            <p>
+
+              Sozialisation als aktiver,
+              subjektorientierter Prozess:
+              Menschen entwickeln sich im Verhältnis
+              zu ihrer sozialen Umwelt, handeln,
+              bilden Identität und erwerben dabei
+              zunehmend Kompetenzen und
+              Handlungsfähigkeit.
+
+            </p>
+
+
+            <div class="meta">
+
+              306 Seiten<br>
+              ISBN 978-3-96138-038-1
+
+            </div>
+
+
+            <a
+              class="book-link"
+              href="https://www.lehmanns.ch/shop/sozialwissenschaften/41357656-9783961380381-sozialisation-subjekt-handeln-und-identitaet"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Bei Lehmanns ansehen →
+
+            </a>
+
+
+          </article>
+
+
+
+          <!-- BUCH 2 -->
+
+          <article class="book">
+
+
+            <div class="cover-wrap">
+
+              <img
+                class="cover"
+                src="IMG_0191.jpeg"
+                alt="Buchcover Klein. Wild. Groß. Fähig. Entwicklung. Vier Akte. von Christoph Fox">
+
+            </div>
+
+
+
+            <div class="book-number">
+              02
+            </div>
+
+
+            <h3>
+
+              Klein. Wild.<br>
+              Groß. Fähig.
+
+            </h3>
+
+
+            <div class="subtitle">
+
+              Entwicklung. Vier Akte.
+
+            </div>
+
+
+            <p>
+
+              Entwicklung als Weg durch vier Akte:
+              Klein, Wild, Groß und Fähig.
+              Ein Blick auf das Großwerden,
+              auf Entwicklung und auf die Frage,
+              wie Menschen ihren Platz in der Welt finden.
+
+            </p>
+
+
+            <div class="meta">
+
+              140 Seiten<br>
+              ISBN 978-3-7592-9610-8
+
+            </div>
+
+
+            <a
+              class="book-link"
+              href="https://www.thalia.de/shop/home/artikeldetails/A1075028145"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Bei tolino ansehen →
+
+            </a>
+
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         GEDANKE
+         ================================= -->
+
+    <section
+      class="connection"
+      id="gedanke">
+
+
+      <div class="container">
+
+
+        <div class="label">
+
+          Der Zusammenhang
+
+        </div>
+
+
+        <h2>
+
+          Zwei Bücher.<br>
+          Eine Frage.
+
+        </h2>
+
+
+        <div class="connection-text">
+
+
+          <p>
+
+            <em>
+              Was bedeutet es eigentlich,
+              jemand zu werden?
+            </em>
+
+          </p>
+
+
+          <p>
+
+            Das eine Buch betrachtet Sozialisation:
+            den Prozess, in dem Menschen sich mit
+            ihrer sozialen Welt auseinandersetzen,
+            handeln und Identität entwickeln.
+
+          </p>
+
+
+          <p>
+
+            Das andere nimmt die Entwicklung selbst
+            in den Blick – vom kleinen Kind über die
+            wilde Jugend und das Erwachsensein bis
+            zur Frage nach Fähigkeit und
+            Handlungsfähigkeit.
+
+          </p>
+
+
+          <p>
+
+            Unterschiedliche Blickwinkel.
+            Ein gemeinsames Interesse:
+
+            <em>
+              der Mensch in seiner Entwicklung.
+            </em>
+
+          </p>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         ÜBER MICH
+         ================================= -->
+
+    <section id="autor">
+
+
+      <div class="container about">
+
+
+        <div>
+
+
+          <div class="label">
+            Über mich
+          </div>
+
+
+          <div class="about-name">
+
+            Christoph<br>
+            Fox
+
+          </div>
+
+
+        </div>
+
+
+
+        <div>
+
+
+          <p>
+
+            Christoph Fox beschäftigt sich mit
+            Sozialisation, Entwicklung, Identität
+            und der Frage, wie Menschen zu
+            handlungsfähigen Subjekten werden.
+
+          </p>
+
+
+          <p>
+
+            In seinen beiden Büchern nähert er sich
+            diesem Themenfeld aus unterschiedlichen
+            Richtungen: wissenschaftlich-theoretisch
+            und mit dem Blick auf Entwicklung
+            und das Großwerden.
+
+          </p>
+
+
+          <p>
+
+            <strong>
+
+              Sozialisation · Entwicklung · Identität
+
+            </strong>
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         KONTAKT
+         ================================= -->
+
+    <section
+      class="contact"
+      id="kontakt">
+
+
+      <div class="container contact-box">
+
+
+        <div class="label">
+          Kontakt
+        </div>
+
+
+        <h2>
+
+          Kontakt / Anfragen
+
+        </h2>
+
+
+        <p>
+
+          Für Fragen zu den Büchern,
+          Lesungen, Veranstaltungen,
+          Interviews oder andere Anfragen
+          können Sie gerne Kontakt aufnehmen.
+
+        </p>
+
+
+        <a
+          class="contact-button"
+          href="mailto:mail@herrfox.de">
+
+          E-Mail schreiben →
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         IMPRESSUM
+         ================================= -->
+
+    <section
+      class="impressum"
+      id="impressum">
+
+
+      <div class="container impressum-box">
+
+
+        <div class="label">
+          Rechtliches
+        </div>
+
+
+        <h2>
+
+          Impressum
+
+        </h2>
+
+
+        <p>
+
+          Angaben gemäß § 5 DDG:
+
+        </p>
+
+
+        <p>
+
+          <strong>
+            Christoph Fox
+          </strong>
+          <br>
+
+          Dorfstraße 52
+          <br>
+
+          40882 Ratingen
+          <br>
+
+          Deutschland
+
+        </p>
+
+
+        <p>
+
+          E-Mail:
+          <br>
+
+          <a href="mailto:mail@herrfox.de">
+            mail@herrfox.de
+          </a>
+
+        </p>
+
+
+        <p>
+
+          USt-IdNr.:
+          <br>
+
+          <em>
+            wird ergänzt
+          </em>
+
+        </p>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =================================
+       FOOTER
+       ================================= -->
+
+  <footer>
+
+
+    <div class="container">
+
+      © Christoph Fox
+
     </div>
 
 
-    <h2>
-      Kontakt / Anfragen
-    </h2>
-
-
-    <p>
-
-      Für Fragen zu den Büchern, Lesungen,
-      Veranstaltungen, Interviews oder anderen
-      Anfragen können Sie gerne Kontakt aufnehmen.
-
-    </p>
-
-
-    <!-- E-Mail-Adresse später einsetzen -->
-
-    <a
-      class="contact-button"
-      href="mailto:DEINE-EMAIL@BEISPIEL.DE">
-
-      E-Mail schreiben →
-
-    </a>
-
-  </div>
-
-</section>
+  </footer>
 
 
 
-<!-- IMPRESSUM -->
+  <!-- =================================
+       MENU JAVASCRIPT
+       ================================= -->
 
-<section class="impressum" id="impressum">
+  <script>
 
-  <div class="container impressum-box">
+    function toggleMenu() {
 
-    <div class="label">
-      Rechtliches
-    </div>
+      const menu =
+        document.getElementById("mobileMenu");
 
+      menu.classList.toggle("open");
 
-    <h2>
-      Impressum
-    </h2>
-
-
-    <p>
-      Angaben gemäß § 5 DDG:
-    </p>
+    }
 
 
-    <p>
+    function closeMenu() {
 
-      <strong>Christoph Fox</strong><br>
+      const menu =
+        document.getElementById("mobileMenu");
 
-      <!--
-      Hier später die vollständige
-      ladungsfähige Anschrift einsetzen.
-      -->
+      menu.classList.remove("open");
 
-    </p>
+    }
 
-
-    <p>
-
-      E-Mail:<br>
-
-      <!--
-      Hier später die echte
-      E-Mail-Adresse einsetzen.
-      -->
-
-    </p>
-
-
-    <p>
-
-      Die vollständigen Anbieterangaben
-      werden vor der Veröffentlichung
-      der Website ergänzt.
-
-    </p>
-
-  </div>
-
-</section>
-
-
-</main>
-
-
-
-<footer>
-
-  <div class="container">
-
-    © Christoph Fox
-
-  </div>
-
-</footer>
-
-
-
-<script>
-
-  function toggleMenu() {
-
-    const menu =
-      document.getElementById("mobileMenu");
-
-    menu.classList.toggle("open");
-
-  }
-
-
-  function closeMenu() {
-
-    const menu =
-      document.getElementById("mobileMenu");
-
-    menu.classList.remove("open");
-
-  }
-
-</script>
+  </script>
 
 
 </body>
