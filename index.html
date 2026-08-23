@@ -2,2003 +2,1413 @@
 <html lang="de">
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<title>Christoph Fox | Großwerden, Sozialisation und Identität</title>
 
-  <title>
-    Christoph Fox | Großwerden, Sozialisation und Entwicklung
-  </title>
+<meta name="description" content="Christoph Fox über Großwerden, Sozialisation, Entwicklung, Identität und die Frage, wie Menschen zu dem werden, was sie sind.">
 
-  <meta
-    name="description"
-    content="Christoph Fox – Bücher über Großwerden, Sozialisation, Entwicklung und Identität."
-  >
+<meta name="author" content="Christoph Fox">
 
-  <meta
-    name="author"
-    content="Christoph Fox"
-  >
+<meta name="keywords" content="Christoph Fox, Sozialisation, Großwerden, Entwicklung, Identität, Subjekt, Handeln, Erziehung, Gesellschaft">
 
-  <meta
-    name="keywords"
-    content="Christoph Fox, Großwerden, Sozialisation, Entwicklung, Identität, Klein Wild Groß Fähig, Subjekt, Handeln"
-  >
+<meta property="og:title" content="Christoph Fox">
+<meta property="og:description" content="Wie werden wir zu dem, was wir sind? Bücher über Großwerden, Sozialisation, Entwicklung und Identität.">
+<meta property="og:type" content="website">
 
-  <meta
-    property="og:title"
-    content="Christoph Fox | Großwerden"
-  >
 
-  <meta
-    property="og:description"
-    content="Sozialisation, Entwicklung, Identität und das Werden des Menschen."
-  >
+<style>
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+:root {
+  --paper: #fffaf2;
+  --paper-warm: #f7eee2;
 
+  --sun: #e2ad79;
+  --sun-light: #f1c99b;
 
-  <style>
+  --fox-light: #c87850;
+  --fox: #a44e32;
+  --fox-dark: #713421;
+  --fox-deep: #432016;
 
-    :root {
+  --ink: #191311;
+  --soft: #665951;
 
-      /* =========================
-         PAPIER
-         ========================= */
+  --line: #ddc9b5;
+}
 
-      --paper: #fffaf2;
-      --paper-warm: #f8efe2;
+* {
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
-      /* =========================
-         ABENDLICHT
-         ========================= */
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
 
-      --sun: #e4b07d;
-      --sun-light: #f0c99e;
-      --gold: #c98758;
+  background:
+    radial-gradient(
+      circle at 75% 5%,
+      rgba(228,176,125,0.20),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #f8f0e4,
+      #f2e6d7
+    );
+}
 
+a {
+  color: inherit;
+}
 
-      /* =========================
-         FUCHSFELL
-         ========================= */
+.container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
 
-      --fox-light: #c87952;
-      --fox: #a34e32;
-      --fox-dark: #713421;
-      --fox-deep: #452217;
 
+/* HEADER */
 
-      /* =========================
-         TEXT
-         ========================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
-      --ink: #191412;
-      --soft: #655950;
+  background:
+    rgba(248,239,226,0.93);
 
+  backdrop-filter: blur(14px);
 
-      /* =========================
-         LINIEN
-         ========================= */
+  border-bottom:
+    1px solid var(--line);
+}
 
-      --line: #ddc9b5;
+.header-inner {
+  min-height: 82px;
 
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.identity {
+  text-decoration: none;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+.name {
+  font-size: 1.45rem;
+  letter-spacing: .01em;
+}
 
+.topic {
+  margin-top: 2px;
 
-    html {
-      scroll-behavior: smooth;
-    }
+  color: var(--fox);
 
+  font-family: Arial, Helvetica, sans-serif;
 
-    body {
+  font-size: .64rem;
+  font-weight: 700;
 
-      margin: 0;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
 
-      color: var(--ink);
 
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+/* DESKTOP MENU */
 
-      line-height: 1.7;
+nav {
+  display: flex;
+  gap: 27px;
+}
 
-      background:
+nav a {
+  position: relative;
 
-        radial-gradient(
-          circle at 75% 5%,
-          rgba(228,176,125,0.20),
-          transparent 30%
-        ),
+  text-decoration: none;
 
-        linear-gradient(
-          145deg,
-          #f8f0e4,
-          #f2e6d7
-        );
+  font-family: Arial, Helvetica, sans-serif;
 
-    }
+  font-size: .71rem;
+  font-weight: 700;
 
+  letter-spacing: .08em;
+  text-transform: uppercase;
 
-    a {
-      color: inherit;
-    }
+  color: #433831;
+}
 
+nav a:hover {
+  color: var(--fox);
+}
 
-    .container {
+nav a::after {
+  content: "";
 
-      width: min(1120px, 90%);
+  position: absolute;
 
-      margin: 0 auto;
+  left: 0;
+  bottom: -7px;
 
-    }
+  width: 0;
+  height: 2px;
 
+  background:
+    linear-gradient(
+      90deg,
+      var(--fox-dark),
+      var(--sun)
+    );
 
+  transition: width .2s ease;
+}
 
-    /* =================================
-       HEADER
-       ================================= */
+nav a:hover::after {
+  width: 100%;
+}
 
-    header {
 
-      position: sticky;
+/* MOBILE MENU */
 
-      top: 0;
+.menu-button {
+  display: none;
 
-      z-index: 100;
+  border: none;
+  background: none;
 
-      background:
-        rgba(248,239,226,0.93);
+  padding: 8px;
+  cursor: pointer;
+}
 
-      backdrop-filter:
-        blur(14px);
+.menu-button span {
+  display: block;
 
-      border-bottom:
-        1px solid var(--line);
+  width: 25px;
+  height: 2px;
 
-    }
+  margin: 5px 0;
 
+  background: var(--fox-dark);
+}
 
-    .header-inner {
+.mobile-menu {
+  display: none;
 
-      min-height: 82px;
+  border-top:
+    1px solid var(--line);
 
-      display: flex;
+  background:
+    rgba(255,250,242,.98);
+}
 
-      align-items: center;
+.mobile-menu.open {
+  display: block;
+}
 
-      justify-content: space-between;
+.mobile-menu a {
+  display: block;
 
-    }
+  padding: 16px 5%;
 
+  border-bottom:
+    1px solid var(--line);
 
-    .identity {
+  text-decoration: none;
 
-      text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
 
-    }
+  font-size: .78rem;
+  font-weight: 700;
 
+  letter-spacing: .08em;
+  text-transform: uppercase;
 
-    .name {
+  color: var(--fox-dark);
+}
 
-      font-size: 1.45rem;
 
-      letter-spacing:
-        0.01em;
+/* HERO */
 
-    }
+.hero {
+  min-height: 82vh;
 
+  display: flex;
+  align-items: center;
 
-    .topic {
+  position: relative;
+  overflow: hidden;
 
-      margin-top: 2px;
+  background:
 
-      color:
-        var(--fox);
+    radial-gradient(
+      ellipse at 82% 28%,
+      rgba(228,176,125,.48),
+      transparent 30%
+    ),
 
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    radial-gradient(
+      ellipse at 70% 70%,
+      rgba(163,78,50,.16),
+      transparent 42%
+    ),
 
-      font-size: 0.64rem;
+    linear-gradient(
+      125deg,
+      #f8f0e4 0%,
+      #f6e4d0 42%,
+      #d49a70 72%,
+      #9f4b31 115%
+    );
+}
 
-      font-weight: 700;
+.hero::before {
+  content: "";
 
-      letter-spacing:
-        0.17em;
+  position: absolute;
 
-      text-transform:
-        uppercase;
+  width: 700px;
+  height: 700px;
 
-    }
+  right: -300px;
+  top: -260px;
 
+  border-radius: 50%;
 
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,222,177,.62),
+      rgba(201,125,82,.18) 45%,
+      transparent 70%
+    );
 
-    /* =================================
-       DESKTOP NAVIGATION
-       ================================= */
+  filter: blur(12px);
+}
 
-    nav {
+.hero::after {
+  content: "";
 
-      display: flex;
+  position: absolute;
 
-      gap: 27px;
+  bottom: -130px;
+  left: -100px;
 
-    }
+  width: 650px;
+  height: 240px;
 
+  background:
+    linear-gradient(
+      90deg,
+      rgba(69,31,19,.15),
+      transparent
+    );
 
-    nav a {
+  filter: blur(30px);
 
-      position: relative;
+  transform: rotate(-8deg);
+}
 
-      text-decoration: none;
+.hero-content {
+  position: relative;
+  z-index: 2;
 
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+  max-width: 900px;
+}
 
-      font-size: 0.71rem;
+.eyebrow {
+  color: var(--fox-dark);
 
-      font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
 
-      letter-spacing:
-        0.08em;
+  font-size: .74rem;
+  font-weight: 700;
 
-      text-transform:
-        uppercase;
+  letter-spacing: .2em;
+  text-transform: uppercase;
 
-      color:
-        #433831;
+  margin-bottom: 25px;
+}
 
-    }
+h1 {
+  margin: 0 0 35px;
 
+  font-size:
+    clamp(3.5rem, 9vw, 7.8rem);
 
-    nav a:hover {
+  line-height: .88;
 
-      color:
-        var(--fox);
+  font-weight: 400;
 
-    }
+  letter-spacing: -.065em;
 
+  color: #211511;
+}
 
-    nav a::after {
+.hero-text {
+  max-width: 790px;
 
-      content: "";
+  font-size:
+    clamp(1.2rem, 2.3vw, 1.55rem);
 
-      position: absolute;
+  color: #49352d;
+}
 
-      left: 0;
+.fox-line {
+  width: 150px;
+  height: 5px;
 
-      bottom: -7px;
+  margin-top: 45px;
 
-      width: 0;
+  background:
+    linear-gradient(
+      90deg,
+      var(--fox-deep),
+      var(--fox),
+      var(--sun)
+    );
 
-      height: 2px;
+  box-shadow:
+    0 4px 18px
+    rgba(113,52,33,.25);
+}
 
-      background:
 
-        linear-gradient(
-          90deg,
-          var(--fox-dark),
-          var(--sun)
-        );
+/* SECTIONS */
 
-      transition:
-        width .2s ease;
+section {
+  padding: 110px 0;
 
-    }
+  border-top:
+    1px solid var(--line);
+}
 
+.label {
+  color: var(--fox);
 
-    nav a:hover::after {
+  font-family: Arial, Helvetica, sans-serif;
 
-      width: 100%;
+  font-size: .72rem;
+  font-weight: 700;
 
-    }
+  letter-spacing: .18em;
+  text-transform: uppercase;
 
+  margin-bottom: 18px;
+}
 
+h2 {
+  margin: 0 0 30px;
 
-    /* =================================
-       HAMBURGER
-       ================================= */
+  font-size:
+    clamp(2.6rem, 5vw, 4.8rem);
 
-    .menu-button {
+  line-height: 1;
 
-      display: none;
+  font-weight: 400;
 
-      border: none;
+  letter-spacing: -.045em;
+}
 
-      background: none;
+.intro {
+  max-width: 800px;
 
-      padding: 8px;
+  font-size: 1.2rem;
 
-      cursor: pointer;
+  color: #4d423b;
+}
 
-    }
 
+/* BÜCHER */
 
-    .menu-button span {
+.books {
+  display: grid;
 
-      display: block;
+  grid-template-columns: 1fr 1fr;
 
-      width: 25px;
+  gap: 35px;
 
-      height: 2px;
+  margin-top: 65px;
+}
 
-      margin: 5px 0;
+.book {
+  background:
+    rgba(255,251,244,.92);
 
-      background:
-        var(--fox-dark);
+  border:
+    1px solid rgba(125,75,52,.10);
 
-    }
+  padding: 35px;
 
+  box-shadow:
+    0 20px 50px
+    rgba(69,34,20,.08),
 
-    .mobile-menu {
+    0 3px 12px
+    rgba(69,34,20,.05);
 
-      display: none;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
 
-      border-top:
-        1px solid var(--line);
+.book:hover {
+  transform: translateY(-4px);
 
-      background:
-        rgba(255,250,242,.98);
+  box-shadow:
+    0 28px 60px
+    rgba(69,34,20,.13),
 
-    }
+    0 5px 18px
+    rgba(69,34,20,.07);
+}
 
+.cover-wrap {
+  position: relative;
 
-    .mobile-menu.open {
+  background:
 
-      display: block;
+    radial-gradient(
+      ellipse at 72% 18%,
+      rgba(239,190,143,.55),
+      transparent 38%
+    ),
 
-    }
+    linear-gradient(
+      145deg,
+      #f2dfca 0%,
+      #dfb18f 55%,
+      #b96b4b 100%
+    );
 
+  display: flex;
 
-    .mobile-menu a {
+  justify-content: center;
+  align-items: center;
 
-      display: block;
+  min-height: 440px;
 
-      padding: 16px 5%;
+  padding: 25px;
 
-      border-bottom:
-        1px solid var(--line);
+  margin-bottom: 32px;
 
-      text-decoration: none;
+  border: none;
 
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+  box-shadow:
+    inset 0 0 70px
+    rgba(255,220,177,.18);
+}
 
-      font-size: .78rem;
+.cover {
+  width: 100%;
 
-      font-weight: 700;
+  max-width: 300px;
+  max-height: 470px;
 
-      letter-spacing:
-        .08em;
+  object-fit: contain;
 
-      text-transform:
-        uppercase;
+  display: block;
 
-      color:
-        var(--fox-dark);
+  box-shadow:
+    0 24px 42px
+    rgba(54,25,15,.28);
 
-    }
+  transition:
+    transform .25s ease;
+}
 
+.book:hover .cover {
+  transform: translateY(-2px);
+}
 
+.book-number {
+  color: var(--fox);
 
-    /* =================================
-       HERO
-       FUCHSFELL IM ABENDLICHT
-       ================================= */
+  font-family: Arial, Helvetica, sans-serif;
 
-    .hero {
+  font-size: .72rem;
+  font-weight: 700;
 
-      min-height: 82vh;
+  letter-spacing: .16em;
+}
 
-      display: flex;
+.book h3 {
+  margin: 18px 0 7px;
 
-      align-items: center;
+  font-size:
+    clamp(1.8rem, 3vw, 2.7rem);
 
-      position: relative;
+  line-height: 1.05;
 
-      overflow: hidden;
+  font-weight: 400;
+}
 
+.subtitle {
+  color: var(--soft);
 
-      background:
+  font-style: italic;
 
-        radial-gradient(
-          ellipse at 82% 28%,
-          rgba(228,176,125,.48),
-          transparent 30%
-        ),
+  margin-bottom: 25px;
+}
 
-        radial-gradient(
-          ellipse at 70% 70%,
-          rgba(163,78,50,.16),
-          transparent 42%
-        ),
+.book p {
+  color: #4b4039;
+}
 
-        linear-gradient(
-          125deg,
-          #f8f0e4 0%,
-          #f6e4d0 42%,
-          #d49a70 72%,
-          #9f4b31 115%
-        );
+.meta {
+  margin-top: 28px;
 
-    }
+  padding-top: 20px;
 
+  border-top:
+    1px solid var(--line);
 
-    .hero::before {
+  color: var(--soft);
 
-      content: "";
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-      position: absolute;
+  font-size: .76rem;
+}
 
-      width: 700px;
+.book-link {
+  display: inline-block;
 
-      height: 700px;
+  margin-top: 25px;
 
-      right: -300px;
+  padding: 12px 19px;
 
-      top: -260px;
+  border:
+    1px solid var(--fox);
 
-      border-radius: 50%;
+  color: var(--fox-dark);
 
-      background:
+  text-decoration: none;
 
-        radial-gradient(
-          circle,
-          rgba(255,222,177,.62),
-          rgba(201,125,82,.18) 45%,
-          transparent 70%
-        );
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-      filter:
-        blur(12px);
+  font-size: .72rem;
+  font-weight: 700;
 
-    }
+  letter-spacing: .08em;
+  text-transform: uppercase;
 
+  transition: .2s ease;
+}
 
-    .hero::after {
+.book-link:hover {
+  background: var(--fox);
+  color: #fffaf3;
+}
 
-      content: "";
 
-      position: absolute;
+/* VERBINDUNG */
 
-      bottom: -130px;
+.connection {
+  color: #fff6ec;
 
-      left: -100px;
+  background:
 
-      width: 650px;
+    radial-gradient(
+      circle at 78% 20%,
+      rgba(199,122,93,.28),
+      transparent 30%
+    ),
 
-      height: 240px;
+    linear-gradient(
+      135deg,
+      #261510,
+      #3b1b12 55%,
+      #4a2417
+    );
+}
 
-      background:
+.connection .label {
+  color: var(--sun-light);
+}
 
-        linear-gradient(
-          90deg,
-          rgba(69,31,19,.15),
-          transparent
-        );
+.connection h2 {
+  color: #fff8ef;
+}
 
-      filter:
-        blur(30px);
+.connection-text {
+  max-width: 850px;
 
-      transform:
-        rotate(-8deg);
+  font-size:
+    clamp(1.35rem, 2.8vw, 2rem);
 
-    }
+  line-height: 1.5;
+}
 
+.connection-text em {
+  color: var(--sun);
+}
 
-    .hero-content {
 
-      position: relative;
+/* AUTOR */
 
-      z-index: 2;
+.about {
+  display: grid;
 
-      max-width: 900px;
+  grid-template-columns: .8fr 1.2fr;
 
-    }
+  gap: 80px;
+}
 
+.about-name {
+  font-size:
+    clamp(2.5rem, 5vw, 4.5rem);
 
-    .eyebrow {
+  line-height: .95;
+}
 
-      color:
-        var(--fox-dark);
+.about p {
+  font-size: 1.12rem;
 
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+  color: #4b4039;
+}
 
-      font-size: .74rem;
 
-      font-weight: 700;
+/* KONTAKT */
 
-      letter-spacing:
-        .2em;
+.contact {
+  background:
+    linear-gradient(
+      135deg,
+      #f5e5d5,
+      #edd2bd
+    );
+}
 
-      text-transform:
-        uppercase;
+.contact-box {
+  max-width: 760px;
+}
 
-      margin-bottom:
-        25px;
+.contact-box p {
+  font-size: 1.18rem;
 
-    }
+  color: #4c3d34;
+}
 
+.contact-button {
+  display: inline-block;
 
-    h1 {
+  margin-top: 20px;
 
-      margin:
-        0 0 35px;
+  padding: 13px 22px;
 
-      font-size:
-        clamp(3.5rem, 9vw, 7.8rem);
+  background: var(--fox);
 
-      line-height:
-        .88;
+  color: #fffaf3;
 
-      font-weight:
-        400;
+  text-decoration: none;
 
-      letter-spacing:
-        -.065em;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-      color:
-        #211511;
+  font-size: .75rem;
+  font-weight: 700;
 
-    }
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
 
 
-    .hero-text {
+/* IMPRESSUM */
 
-      max-width:
-        780px;
+.impressum {
+  background: #eee3d5;
+}
 
-      font-size:
-        clamp(1.2rem, 2.3vw, 1.55rem);
+.impressum-box {
+  max-width: 760px;
+}
 
-      color:
-        #49352d;
+.impressum p {
+  color: #51463e;
+}
 
-    }
 
+/* FOOTER */
 
-    .fox-line {
+footer {
+  border-top:
+    1px solid var(--line);
 
-      width:
-        150px;
+  padding: 35px 0;
 
-      height:
-        5px;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-      margin-top:
-        45px;
+  font-size: .72rem;
 
-      background:
+  color: var(--soft);
+}
 
-        linear-gradient(
-          90deg,
-          var(--fox-deep),
-          var(--fox),
-          var(--sun)
-        );
 
-      box-shadow:
-        0 4px 18px
-        rgba(113,52,33,.25);
+/* MOBILE */
 
-    }
+@media (max-width: 760px) {
 
+  .header-inner {
+    min-height: 72px;
+  }
 
+  nav {
+    display: none;
+  }
 
-    /* =================================
-       SECTIONS
-       ================================= */
+  .menu-button {
+    display: block;
+  }
 
-    section {
+  .hero {
+    min-height: 75vh;
+  }
 
-      padding:
-        110px 0;
+  section {
+    padding: 75px 0;
+  }
 
-      border-top:
-        1px solid var(--line);
+  .books,
+  .about {
+    grid-template-columns: 1fr;
+  }
 
-    }
+  .book {
+    padding: 25px;
+  }
 
+  .cover-wrap {
+    min-height: 390px;
+  }
 
-    .label {
+  h1 {
+    font-size: 4.2rem;
+  }
+}
 
-      color:
-        var(--fox);
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-size:
-        .72rem;
-
-      font-weight:
-        700;
-
-      letter-spacing:
-        .18em;
-
-      text-transform:
-        uppercase;
-
-      margin-bottom:
-        18px;
-
-    }
-
-
-    h2 {
-
-      margin:
-        0 0 30px;
-
-      font-size:
-        clamp(2.6rem, 5vw, 4.8rem);
-
-      line-height:
-        1;
-
-      font-weight:
-        400;
-
-      letter-spacing:
-        -.045em;
-
-    }
-
-
-    .intro {
-
-      max-width:
-        790px;
-
-      font-size:
-        1.2rem;
-
-      color:
-        #4d423b;
-
-    }
-
-
-
-    /* =================================
-       BOOKS
-       ================================= */
-
-    .books {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        1fr 1fr;
-
-      gap:
-        35px;
-
-      margin-top:
-        65px;
-
-    }
-
-
-    .book {
-
-      background:
-        rgba(255, 251, 244, 0.92);
-
-      border:
-        1px solid rgba(125, 75, 52, 0.10);
-
-      padding:
-        35px;
-
-      box-shadow:
-
-        0 20px 50px
-        rgba(69, 34, 20, 0.08),
-
-        0 3px 12px
-        rgba(69, 34, 20, 0.05);
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-
-    }
-
-
-    .book:hover {
-
-      transform:
-        translateY(-4px);
-
-      box-shadow:
-
-        0 28px 60px
-        rgba(69, 34, 20, 0.13),
-
-        0 5px 18px
-        rgba(69, 34, 20, 0.07);
-
-    }
-
-
-    .cover-wrap {
-
-      position:
-        relative;
-
-      background:
-
-        radial-gradient(
-          ellipse at 72% 18%,
-          rgba(239, 190, 143, 0.55),
-          transparent 38%
-        ),
-
-        linear-gradient(
-          145deg,
-          #f2dfca 0%,
-          #dfb18f 55%,
-          #b96b4b 100%
-        );
-
-      display:
-        flex;
-
-      justify-content:
-        center;
-
-      align-items:
-        center;
-
-      min-height:
-        440px;
-
-      padding:
-        25px;
-
-      margin-bottom:
-        32px;
-
-      border:
-        none;
-
-      box-shadow:
-
-        inset 0 0 70px
-        rgba(255, 220, 177, 0.18);
-
-    }
-
-
-    .cover {
-
-      width:
-        100%;
-
-      max-width:
-        300px;
-
-      max-height:
-        470px;
-
-      object-fit:
-        contain;
-
-      display:
-        block;
-
-      box-shadow:
-
-        0 24px 42px
-        rgba(54, 25, 15, 0.28);
-
-      transition:
-        transform 0.25s ease;
-
-    }
-
-
-    .book:hover .cover {
-
-      transform:
-        translateY(-2px);
-
-    }
-
-
-    .book-number {
-
-      color:
-        var(--fox);
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-size:
-        .72rem;
-
-      font-weight:
-        700;
-
-      letter-spacing:
-        .16em;
-
-    }
-
-
-    .book h3 {
-
-      margin:
-        18px 0 7px;
-
-      font-size:
-        clamp(1.8rem, 3vw, 2.7rem);
-
-      line-height:
-        1.05;
-
-      font-weight:
-        400;
-
-    }
-
-
-    .subtitle {
-
-      color:
-        var(--soft);
-
-      font-style:
-        italic;
-
-      margin-bottom:
-        25px;
-
-    }
-
-
-    .book p {
-
-      color:
-        #4b4039;
-
-    }
-
-
-    .meta {
-
-      margin-top:
-        28px;
-
-      padding-top:
-        20px;
-
-      border-top:
-        1px solid var(--line);
-
-      color:
-        var(--soft);
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-size:
-        .76rem;
-
-    }
-
-
-    .book-link {
-
-      display:
-        inline-block;
-
-      margin-top:
-        25px;
-
-      padding:
-        12px 19px;
-
-      border:
-        1px solid var(--fox);
-
-      color:
-        var(--fox-dark);
-
-      text-decoration:
-        none;
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-size:
-        .72rem;
-
-      font-weight:
-        700;
-
-      letter-spacing:
-        .08em;
-
-      text-transform:
-        uppercase;
-
-      transition:
-        .2s ease;
-
-    }
-
-
-    .book-link:hover {
-
-      background:
-        var(--fox);
-
-      color:
-        #fffaf3;
-
-    }
-
-
-
-    /* =================================
-       DARK FUCHSROT SECTION
-       ================================= */
-
-    .connection {
-
-      color:
-        #fff6ec;
-
-      background:
-
-        radial-gradient(
-          circle at 78% 20%,
-          rgba(199,122,93,.28),
-          transparent 30%
-        ),
-
-        linear-gradient(
-          135deg,
-          #261510,
-          #3b1b12 55%,
-          #4a2417
-        );
-
-    }
-
-
-    .connection .label {
-
-      color:
-        var(--sun-light);
-
-    }
-
-
-    .connection h2 {
-
-      color:
-        #fff8ef;
-
-    }
-
-
-    .connection-text {
-
-      max-width:
-        850px;
-
-      font-size:
-        clamp(1.35rem, 2.8vw, 2rem);
-
-      line-height:
-        1.5;
-
-    }
-
-
-    .connection-text em {
-
-      color:
-        var(--sun);
-
-    }
-
-
-
-    /* =================================
-       ABOUT
-       ================================= */
-
-    .about {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        .8fr 1.2fr;
-
-      gap:
-        80px;
-
-    }
-
-
-    .about-name {
-
-      font-size:
-        clamp(2.5rem, 5vw, 4.5rem);
-
-      line-height:
-        .95;
-
-    }
-
-
-    .about p {
-
-      font-size:
-        1.12rem;
-
-      color:
-        #4b4039;
-
-    }
-
-
-
-    /* =================================
-       KONTAKT
-       ================================= */
-
-    .contact {
-
-      background:
-
-        linear-gradient(
-          135deg,
-          #f5e5d5,
-          #edd2bd
-        );
-
-    }
-
-
-    .contact-box {
-
-      max-width:
-        760px;
-
-    }
-
-
-    .contact-box p {
-
-      font-size:
-        1.18rem;
-
-      color:
-        #4c3d34;
-
-    }
-
-
-    .contact-button {
-
-      display:
-        inline-block;
-
-      margin-top:
-        20px;
-
-      padding:
-        13px 22px;
-
-      background:
-        var(--fox);
-
-      color:
-        #fffaf3;
-
-      text-decoration:
-        none;
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-size:
-        .75rem;
-
-      font-weight:
-        700;
-
-      letter-spacing:
-        .08em;
-
-      text-transform:
-        uppercase;
-
-    }
-
-
-
-    /* =================================
-       IMPRESSUM
-       ================================= */
-
-    .impressum {
-
-      background:
-        #eee3d5;
-
-    }
-
-
-    .impressum-box {
-
-      max-width:
-        760px;
-
-    }
-
-
-    .impressum p {
-
-      color:
-        #51463e;
-
-    }
-
-
-
-    /* =================================
-       FOOTER
-       ================================= */
-
-    footer {
-
-      border-top:
-        1px solid var(--line);
-
-      padding:
-        35px 0;
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-size:
-        .72rem;
-
-      color:
-        var(--soft);
-
-    }
-
-
-
-    /* =================================
-       MOBILE
-       ================================= */
-
-    @media (max-width: 760px) {
-
-      .header-inner {
-
-        min-height:
-          72px;
-
-      }
-
-
-      nav {
-
-        display:
-          none;
-
-      }
-
-
-      .menu-button {
-
-        display:
-          block;
-
-      }
-
-
-      .hero {
-
-        min-height:
-          75vh;
-
-      }
-
-
-      section {
-
-        padding:
-          75px 0;
-
-      }
-
-
-      .books,
-      .about {
-
-        grid-template-columns:
-          1fr;
-
-      }
-
-
-      .book {
-
-        padding:
-          25px;
-
-      }
-
-
-      .cover-wrap {
-
-        min-height:
-          390px;
-
-      }
-
-
-      h1 {
-
-        font-size:
-          4.2rem;
-
-      }
-
-    }
-
-  </style>
+</style>
 
 </head>
-
 
 
 <body>
 
 
-  <!-- =================================
-       HEADER
-       ================================= -->
+<header>
 
-  <header>
+  <div class="container header-inner">
 
-    <div class="container header-inner">
+    <a class="identity" href="#start">
+
+      <div class="name">
+        Christoph Fox
+      </div>
+
+      <div class="topic">
+        Sozialisation · Entwicklung · Identität
+      </div>
+
+    </a>
 
 
-      <a
-        class="identity"
-        href="#start">
+    <nav>
 
-        <div class="name">
+      <a href="#start">Start</a>
+
+      <a href="#buecher">Bücher</a>
+
+      <a href="#autor">Über mich</a>
+
+      <a href="#kontakt">Kontakt / Anfragen</a>
+
+      <a href="#impressum">Impressum</a>
+
+    </nav>
+
+
+    <button
+      class="menu-button"
+      onclick="toggleMenu()"
+      aria-label="Menü öffnen">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </div>
+
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <a href="#start" onclick="closeMenu()">
+      Start
+    </a>
+
+    <a href="#buecher" onclick="closeMenu()">
+      Bücher
+    </a>
+
+    <a href="#autor" onclick="closeMenu()">
+      Über mich
+    </a>
+
+    <a href="#kontakt" onclick="closeMenu()">
+      Kontakt / Anfragen
+    </a>
+
+    <a href="#impressum" onclick="closeMenu()">
+      Impressum
+    </a>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero" id="start">
+
+  <div class="container hero-content">
+
+    <div class="eyebrow">
+      Christoph Fox · Autor
+    </div>
+
+    <h1>
+      Wie werden wir<br>
+      zu dem, was wir sind?
+    </h1>
+
+    <div class="hero-text">
+
+      Wir werden nicht einfach geboren
+      und irgendwann fertig.
+      Wir wachsen hinein in Beziehungen,
+      Gesellschaft und Geschichte –
+      und machen uns dabei selbst
+      zu dem, was wir werden.
+
+    </div>
+
+    <div class="fox-line"></div>
+
+  </div>
+
+</section>
+
+
+
+<!-- BÜCHER -->
+
+<section id="buecher">
+
+  <div class="container">
+
+    <div class="label">
+      Die Bücher
+    </div>
+
+    <h2>
+      Zwei Bücher.<br>
+      Eine große Frage.
+    </h2>
+
+    <p class="intro">
+
+      Wie wird aus einem kleinen Menschen
+      jemand, der seine Welt verstehen,
+      sich in ihr behaupten und sie schließlich
+      selbst mitgestalten kann?
+
+      Die beiden Bücher von Christoph Fox
+      nähern sich dieser Frage aus
+      unterschiedlichen Richtungen.
+
+    </p>
+
+
+    <div class="books">
+
+
+      <!-- SOZIALISATION -->
+
+      <article class="book">
+
+        <div class="cover-wrap">
+
+          <img
+            class="cover"
+            src="IMG_1937.jpeg"
+            alt="Buchcover Sozialisation. Subjekt, Handeln und Identität von Christoph Fox">
+
+        </div>
+
+
+        <div class="book-number">
+          01
+        </div>
+
+
+        <h3>
+          Sozialisation.<br>
+          Subjekt, Handeln<br>
+          und Identität
+        </h3>
+
+
+        <div class="subtitle">
           Christoph Fox
         </div>
 
-        <div class="topic">
-          Sozialisation · Entwicklung · Identität
-        </div>
 
-      </a>
-
-
-
-      <!-- DESKTOP -->
-
-      <nav>
-
-        <a href="#start">
-          Start
-        </a>
-
-        <a href="#buecher">
-          Bücher
-        </a>
-
-        <a href="#autor">
-          Über mich
-        </a>
-
-        <a href="#kontakt">
-          Kontakt / Anfragen
-        </a>
-
-        <a href="#impressum">
-          Impressum
-        </a>
-
-      </nav>
-
-
-
-      <!-- MOBILE -->
-
-      <button
-        class="menu-button"
-        onclick="toggleMenu()"
-        aria-label="Menü öffnen">
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
-
-    </div>
-
-
-
-    <div
-      class="mobile-menu"
-      id="mobileMenu">
-
-
-      <a
-        href="#start"
-        onclick="closeMenu()">
-
-        Start
-
-      </a>
-
-
-      <a
-        href="#buecher"
-        onclick="closeMenu()">
-
-        Bücher
-
-      </a>
-
-
-      <a
-        href="#autor"
-        onclick="closeMenu()">
-
-        Über mich
-
-      </a>
-
-
-      <a
-        href="#kontakt"
-        onclick="closeMenu()">
-
-        Kontakt / Anfragen
-
-      </a>
-
-
-      <a
-        href="#impressum"
-        onclick="closeMenu()">
-
-        Impressum
-
-      </a>
-
-
-    </div>
-
-  </header>
-
-
-
-  <main>
-
-
-    <!-- =================================
-         START
-         ================================= -->
-
-    <section
-      class="hero"
-      id="start">
-
-
-      <div
-        class="container hero-content">
-
-
-        <div class="eyebrow">
-
-          Christoph Fox · Autor
-
-        </div>
-
-
-
-        <h1>
-
-          Wie werden wir<br>
-          zu dem, was wir sind?
-
-        </h1>
-
-
-
-        <div class="hero-text">
-
-          Zwei Bücher über Sozialisation,
-          Entwicklung und Identität –
-          und über die Frage, wie aus Menschen
-          handelnde und handlungsfähige
-          Subjekte werden.
-
-        </div>
-
-
-
-        <div class="fox-line"></div>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =================================
-         BÜCHER
-         ================================= -->
-
-    <section id="buecher">
-
-
-      <div class="container">
-
-
-        <div class="label">
-          Die Bücher
-        </div>
-
-
-        <h2>
-
-          Zwei Perspektiven.<br>
-          Ein Mensch.
-
-        </h2>
-
-
-        <p class="intro">
-
-          Das eine Werk nähert sich dem Menschen
-          über Sozialisation, Subjekt, Handeln und
-          Identität. Das andere betrachtet Entwicklung
-          in vier Akten – vom Kleinsein bis zur
-          Fähigkeit, die eigene Welt aktiv zu gestalten.
+        <p>
+
+          Wir werden nicht allein zu dem,
+          was wir sind.
+
+          Wir wachsen in Familien,
+          Freundschaften, Schulen,
+          Institutionen und Gesellschaften auf.
+          Wir übernehmen, widersprechen,
+          passen uns an, grenzen uns ab –
+          und gestalten dabei immer auch
+          uns selbst.
 
         </p>
-
-
-
-        <div class="books">
-
-
-          <!-- BUCH 1 -->
-
-          <article class="book">
-
-
-            <div class="cover-wrap">
-
-              <img
-                class="cover"
-                src="IMG_1937.jpeg"
-                alt="Buchcover Sozialisation. Subjekt, Handeln und Identität von Christoph Fox">
-
-            </div>
-
-
-
-            <div class="book-number">
-              01
-            </div>
-
-
-            <h3>
-
-              Sozialisation.<br>
-              Subjekt, Handeln<br>
-              und Identität
-
-            </h3>
-
-
-            <div class="subtitle">
-
-              Christoph Fox
-
-            </div>
-
-
-            <p>
-
-              Sozialisation als aktiver,
-              subjektorientierter Prozess:
-              Menschen entwickeln sich im Verhältnis
-              zu ihrer sozialen Umwelt, handeln,
-              bilden Identität und erwerben dabei
-              zunehmend Kompetenzen und
-              Handlungsfähigkeit.
-
-            </p>
-
-
-            <div class="meta">
-
-              306 Seiten<br>
-              ISBN 978-3-96138-038-1
-
-            </div>
-
-
-            <a
-              class="book-link"
-              href="https://www.lehmanns.ch/shop/sozialwissenschaften/41357656-9783961380381-sozialisation-subjekt-handeln-und-identitaet"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              Bei Lehmanns ansehen →
-
-            </a>
-
-
-          </article>
-
-
-
-          <!-- BUCH 2 -->
-
-          <article class="book">
-
-
-            <div class="cover-wrap">
-
-              <img
-                class="cover"
-                src="IMG_0191.jpeg"
-                alt="Buchcover Klein. Wild. Groß. Fähig. Entwicklung. Vier Akte. von Christoph Fox">
-
-            </div>
-
-
-
-            <div class="book-number">
-              02
-            </div>
-
-
-            <h3>
-
-              Klein. Wild.<br>
-              Groß. Fähig.
-
-            </h3>
-
-
-            <div class="subtitle">
-
-              Entwicklung. Vier Akte.
-
-            </div>
-
-
-            <p>
-
-              Entwicklung als Weg durch vier Akte:
-              Klein, Wild, Groß und Fähig.
-              Ein Blick auf das Großwerden,
-              auf Entwicklung und auf die Frage,
-              wie Menschen ihren Platz in der Welt finden.
-
-            </p>
-
-
-            <div class="meta">
-
-              140 Seiten<br>
-              ISBN 978-3-7592-9610-8
-
-            </div>
-
-
-            <a
-              class="book-link"
-              href="https://www.thalia.de/shop/home/artikeldetails/A1075028145"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              Bei tolino ansehen →
-
-            </a>
-
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =================================
-         GEDANKE
-         ================================= -->
-
-    <section
-      class="connection"
-      id="gedanke">
-
-
-      <div class="container">
-
-
-        <div class="label">
-
-          Der Zusammenhang
-
-        </div>
-
-
-        <h2>
-
-          Zwei Bücher.<br>
-          Eine Frage.
-
-        </h2>
-
-
-        <div class="connection-text">
-
-
-          <p>
-
-            <em>
-              Was bedeutet es eigentlich,
-              jemand zu werden?
-            </em>
-
-          </p>
-
-
-          <p>
-
-            Das eine Buch betrachtet Sozialisation:
-            den Prozess, in dem Menschen sich mit
-            ihrer sozialen Welt auseinandersetzen,
-            handeln und Identität entwickeln.
-
-          </p>
-
-
-          <p>
-
-            Das andere nimmt die Entwicklung selbst
-            in den Blick – vom kleinen Kind über die
-            wilde Jugend und das Erwachsensein bis
-            zur Frage nach Fähigkeit und
-            Handlungsfähigkeit.
-
-          </p>
-
-
-          <p>
-
-            Unterschiedliche Blickwinkel.
-            Ein gemeinsames Interesse:
-
-            <em>
-              der Mensch in seiner Entwicklung.
-            </em>
-
-          </p>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =================================
-         ÜBER MICH
-         ================================= -->
-
-    <section id="autor">
-
-
-      <div class="container about">
-
-
-        <div>
-
-
-          <div class="label">
-            Über mich
-          </div>
-
-
-          <div class="about-name">
-
-            Christoph<br>
-            Fox
-
-          </div>
-
-
-        </div>
-
-
-
-        <div>
-
-
-          <p>
-
-            Christoph Fox beschäftigt sich mit
-            Sozialisation, Entwicklung, Identität
-            und der Frage, wie Menschen zu
-            handlungsfähigen Subjekten werden.
-
-          </p>
-
-
-          <p>
-
-            In seinen beiden Büchern nähert er sich
-            diesem Themenfeld aus unterschiedlichen
-            Richtungen: wissenschaftlich-theoretisch
-            und mit dem Blick auf Entwicklung
-            und das Großwerden.
-
-          </p>
-
-
-          <p>
-
-            <strong>
-
-              Sozialisation · Entwicklung · Identität
-
-            </strong>
-
-          </p>
-
-
-        </div>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =================================
-         KONTAKT
-         ================================= -->
-
-    <section
-      class="contact"
-      id="kontakt">
-
-
-      <div class="container contact-box">
-
-
-        <div class="label">
-          Kontakt
-        </div>
-
-
-        <h2>
-
-          Kontakt / Anfragen
-
-        </h2>
 
 
         <p>
 
-          Für Fragen zu den Büchern,
-          Lesungen, Veranstaltungen,
-          Interviews oder andere Anfragen
-          können Sie gerne Kontakt aufnehmen.
+          Dieses Buch fragt danach,
+          wie Menschen in diesem Wechselspiel
+          zu Subjekten werden, handeln,
+          Identität entwickeln und zunehmend
+          handlungsfähig werden.
 
         </p>
+
+
+        <div class="meta">
+
+          306 Seiten<br>
+          ISBN 978-3-96138-038-1
+
+        </div>
 
 
         <a
-          class="contact-button"
-          href="mailto:mail@herrfox.de">
+          class="book-link"
+          href="https://www.lehmanns.ch/shop/sozialwissenschaften/41357656-9783961380381-sozialisation-subjekt-handeln-und-identitaet"
+          target="_blank"
+          rel="noopener noreferrer">
 
-          E-Mail schreiben →
+          Bei Lehmanns ansehen →
 
         </a>
 
-
-      </div>
-
-    </section>
+      </article>
 
 
 
-    <!-- =================================
-         IMPRESSUM
-         ================================= -->
+      <!-- KLEIN WILD GROSS FÄHIG -->
 
-    <section
-      class="impressum"
-      id="impressum">
+      <article class="book">
 
+        <div class="cover-wrap">
 
-      <div class="container impressum-box">
+          <img
+            class="cover"
+            src="IMG_0191.jpeg"
+            alt="Buchcover Klein. Wild. Groß. Fähig. von Christoph Fox">
 
-
-        <div class="label">
-          Rechtliches
         </div>
 
 
-        <h2>
+        <div class="book-number">
+          02
+        </div>
 
-          Impressum
 
-        </h2>
+        <h3>
+          Klein. Wild.<br>
+          Groß. Fähig.
+        </h3>
+
+
+        <div class="subtitle">
+          Entwicklung. Vier Akte.
+        </div>
 
 
         <p>
 
-          Angaben gemäß § 5 DDG:
+          Großwerden ist kein gerader Weg.
 
-        </p>
+          Wir beginnen klein.
+          Wir werden wild.
+          Wir werden groß.
 
-
-        <p>
+          Und irgendwann stellt sich
+          eine andere Frage:
 
           <strong>
-            Christoph Fox
+            Was können wir mit dem anfangen,
+            was aus uns geworden ist?
           </strong>
-          <br>
-
-          Dorfstraße 52
-          <br>
-
-          40882 Ratingen
-          <br>
-
-          Deutschland
 
         </p>
 
 
         <p>
 
-          E-Mail:
-          <br>
-
-          <a href="mailto:mail@herrfox.de">
-            mail@herrfox.de
-          </a>
-
-        </p>
-
-
-        <p>
-
-          USt-IdNr.:
-          <br>
-
-          <em>
-            wird ergänzt
-          </em>
+          Vier Akte erzählen von Entwicklung,
+          vom Werden und Verändern –
+          und von dem Moment, in dem aus
+          Entwicklung zunehmend eigene
+          Handlungsfähigkeit wird.
 
         </p>
 
 
+        <div class="meta">
+
+          140 Seiten<br>
+          ISBN 978-3-7592-9610-8
+
+        </div>
+
+
+        <a
+          class="book-link"
+          href="https://www.thalia.de/shop/home/artikeldetails/A1075028145"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Bei tolino ansehen →
+
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ZUSAMMENHANG -->
+
+<section class="connection">
+
+  <div class="container">
+
+    <div class="label">
+      Der Zusammenhang
+    </div>
+
+
+    <h2>
+      Zwischen dem,<br>
+      was uns prägt,<br>
+      und dem, was wir daraus machen.
+    </h2>
+
+
+    <div class="connection-text">
+
+      <p>
+
+        Wir kommen nicht als fertige Menschen
+        auf die Welt.
+
+      </p>
+
+
+      <p>
+
+        Andere Menschen prägen uns.
+        Familien, Freunde, Schule,
+        Gesellschaft, Kultur.
+        Sie zeigen uns, was möglich ist,
+        was erwartet wird und wo Grenzen liegen.
+
+      </p>
+
+
+      <p>
+
+        Aber wir sind nicht nur das Ergebnis
+        dessen, was mit uns geschieht.
+
+        <em>
+          Wir handeln.
+        </em>
+
+        Wir widersprechen.
+        Wir entscheiden.
+        Wir verändern.
+
+      </p>
+
+
+      <p>
+
+        Genau dort treffen sich die beiden Bücher:
+
+        <em>
+          bei der Frage,
+          wie aus Prägung eigene Geschichte wird.
+        </em>
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- AUTOR -->
+
+<section id="autor">
+
+  <div class="container about">
+
+    <div>
+
+      <div class="label">
+        Über mich
       </div>
 
-    </section>
-
-
-  </main>
-
-
-
-  <!-- =================================
-       FOOTER
-       ================================= -->
-
-  <footer>
-
-
-    <div class="container">
-
-      © Christoph Fox
+      <div class="about-name">
+        Christoph<br>
+        Fox
+      </div>
 
     </div>
 
 
-  </footer>
+    <div>
+
+      <p>
+
+        Ich beschäftige mich mit der Frage,
+        wie Menschen werden, wer sie sind –
+        und wie viel sie selbst daraus machen
+        können.
+
+      </p>
+
+
+      <p>
+
+        Sozialisation, Entwicklung und
+        Handlungsfähigkeit gehören dabei
+        für mich zusammen.
+
+        Denn zwischen dem Menschen,
+        der uns geprägt hat, und dem Menschen,
+        der wir werden, liegt etwas Entscheidendes:
+
+        <strong>
+          unser eigenes Handeln.
+        </strong>
+
+      </p>
+
+
+      <p>
+
+        Meine Bücher versuchen,
+        diesen Weg aus unterschiedlichen
+        Perspektiven zu betrachten –
+        wissenschaftlich, kritisch und
+        mit einem Blick auf das ganz
+        alltägliche Großwerden.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 
-  <!-- =================================
-       MENU JAVASCRIPT
-       ================================= -->
+<!-- KONTAKT -->
 
-  <script>
+<section class="contact" id="kontakt">
 
-    function toggleMenu() {
+  <div class="container contact-box">
 
-      const menu =
-        document.getElementById("mobileMenu");
+    <div class="label">
+      Kontakt
+    </div>
 
-      menu.classList.toggle("open");
+    <h2>
+      Kontakt / Anfragen
+    </h2>
 
-    }
+    <p>
+
+      Fragen zu den Büchern,
+      Lesungen, Veranstaltungen,
+      Interviews oder andere Anfragen?
+
+      Schreiben Sie mir gerne.
+
+    </p>
 
 
-    function closeMenu() {
+    <a
+      class="contact-button"
+      href="mailto:mail@herrfox.de">
 
-      const menu =
-        document.getElementById("mobileMenu");
+      E-Mail schreiben →
 
-      menu.classList.remove("open");
+    </a>
 
-    }
+  </div>
 
-  </script>
+</section>
+
+
+
+<!-- IMPRESSUM -->
+
+<section class="impressum" id="impressum">
+
+  <div class="container impressum-box">
+
+    <div class="label">
+      Rechtliches
+    </div>
+
+    <h2>
+      Impressum
+    </h2>
+
+
+    <p>
+      Angaben gemäß § 5 DDG:
+    </p>
+
+
+    <p>
+
+      <strong>
+        Christoph Fox
+      </strong>
+      <br>
+
+      Dorfstraße 52
+      <br>
+
+      40882 Ratingen
+      <br>
+
+      Deutschland
+
+    </p>
+
+
+    <p>
+
+      E-Mail:
+      <br>
+
+      <a href="mailto:mail@herrfox.de">
+        mail@herrfox.de
+      </a>
+
+    </p>
+
+
+    <p>
+
+      USt-IdNr.:
+      <br>
+
+      <em>
+        wird ergänzt
+      </em>
+
+    </p>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+  <div class="container">
+
+    © Christoph Fox
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+function toggleMenu() {
+
+  const menu =
+    document.getElementById("mobileMenu");
+
+  menu.classList.toggle("open");
+
+}
+
+
+function closeMenu() {
+
+  const menu =
+    document.getElementById("mobileMenu");
+
+  menu.classList.remove("open");
+
+}
+
+</script>
 
 
 </body>
