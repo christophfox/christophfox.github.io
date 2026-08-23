@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Christoph Fox – Herr Fox</title>
+  <title>Herr Fox · Christoph Fox</title>
 
-  <meta name="description" content="Christoph Fox – Sozialisation, Entwicklung, Identität und die Frage, wie Menschen zu dem werden, was sie sind.">
+  <meta name="description" content="Christoph Fox – Bücher über Sozialisation, Entwicklung, Identität und das Werden des Menschen.">
 
   <style>
     :root {
-      --bg: #f5f2eb;
+      --cream: #f4efe6;
       --paper: #fffdf8;
-      --text: #171717;
-      --muted: #68645d;
-      --line: #d8d2c7;
-      --accent: #9b4b32;
+      --ink: #171512;
+      --soft: #655f57;
+      --rust: #a94f32;
+      --rust-dark: #74351f;
+      --line: #d9d0c3;
     }
 
     * {
@@ -28,237 +29,310 @@
 
     body {
       margin: 0;
-      background: var(--bg);
-      color: var(--text);
+      background: var(--cream);
+      color: var(--ink);
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.7;
     }
 
+    a {
+      color: inherit;
+    }
+
     .container {
-      width: min(1080px, 90%);
+      width: min(1120px, 90%);
       margin: 0 auto;
     }
 
+    /* HEADER */
+
     header {
-      padding: 28px 0;
+      padding: 25px 0;
       border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .brand {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      gap: 12px;
     }
 
-    .logo {
+    .fox-mark {
+      width: 38px;
+      height: 32px;
+      position: relative;
+      background: var(--rust);
+      clip-path: polygon(
+        50% 0%,
+        63% 17%,
+        86% 5%,
+        81% 32%,
+        100% 50%,
+        78% 57%,
+        72% 83%,
+        50% 100%,
+        28% 83%,
+        22% 57%,
+        0% 50%,
+        19% 32%,
+        14% 5%,
+        37% 17%
+      );
+    }
+
+    .brand-name {
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 800;
       letter-spacing: 0.18em;
     }
 
     nav a {
-      color: var(--text);
       text-decoration: none;
-      margin-left: 22px;
+      margin-left: 25px;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.04em;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     nav a:hover {
-      color: var(--accent);
+      color: var(--rust);
     }
+
+    /* HERO */
 
     .hero {
-      min-height: 78vh;
+      min-height: 82vh;
       display: flex;
       align-items: center;
-      padding: 90px 0;
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero-inner {
+    .hero::after {
+      content: "FOX";
+      position: absolute;
+      right: -70px;
+      bottom: -100px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(10rem, 25vw, 22rem);
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      color: rgba(169, 79, 50, 0.055);
+      pointer-events: none;
+    }
+
+    .hero-content {
       max-width: 900px;
+      position: relative;
+      z-index: 1;
     }
 
     .eyebrow {
-      color: var(--accent);
+      color: var(--rust);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.78rem;
-      font-weight: bold;
-      letter-spacing: 0.18em;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       margin-bottom: 25px;
     }
 
     h1 {
-      font-size: clamp(3.4rem, 9vw, 7.5rem);
-      line-height: 0.92;
-      font-weight: 400;
-      letter-spacing: -0.055em;
       margin: 0 0 35px;
+      font-size: clamp(3.8rem, 9vw, 8rem);
+      line-height: 0.88;
+      font-weight: 400;
+      letter-spacing: -0.065em;
     }
 
-    .hero p {
-      max-width: 720px;
-      font-size: clamp(1.2rem, 2.2vw, 1.55rem);
-      color: #3d3a35;
-      margin: 0;
+    .hero-text {
+      max-width: 760px;
+      font-size: clamp(1.2rem, 2.3vw, 1.55rem);
+      color: #413d37;
     }
 
-    .scroll {
-      margin-top: 55px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
+    .fox-line {
+      width: 90px;
+      height: 3px;
+      background: var(--rust);
+      margin-top: 45px;
     }
+
+    /* SECTIONS */
 
     section {
-      padding: 100px 0;
+      padding: 110px 0;
       border-top: 1px solid var(--line);
     }
 
-    .section-label {
+    .label {
+      color: var(--rust);
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--accent);
-      font-size: 0.75rem;
-      font-weight: bold;
+      font-size: 0.74rem;
+      font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       margin-bottom: 18px;
     }
 
     h2 {
-      font-size: clamp(2.3rem, 5vw, 4.2rem);
-      line-height: 1.05;
-      font-weight: 400;
-      letter-spacing: -0.035em;
       margin: 0 0 30px;
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -0.045em;
     }
 
     .intro {
-      max-width: 760px;
+      max-width: 780px;
       font-size: 1.2rem;
-      color: #45413b;
+      color: #48433c;
     }
+
+    /* BOOKS */
 
     .books {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      margin-top: 55px;
+      gap: 35px;
+      margin-top: 65px;
     }
 
     .book {
       background: var(--paper);
-      padding: 42px;
       border: 1px solid var(--line);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      padding: 35px;
     }
 
-    .book:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.07);
+    .cover-wrap {
+      background: #e8e1d7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 440px;
+      padding: 25px;
+      margin-bottom: 32px;
+    }
+
+    .cover {
+      width: 100%;
+      max-width: 300px;
+      max-height: 470px;
+      object-fit: contain;
+      display: block;
+      box-shadow: 0 18px 35px rgba(0,0,0,0.18);
     }
 
     .book-number {
+      color: var(--rust);
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--accent);
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      font-weight: bold;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
     }
 
     .book h3 {
+      margin: 18px 0 7px;
       font-size: clamp(1.8rem, 3vw, 2.7rem);
-      line-height: 1.1;
+      line-height: 1.05;
       font-weight: 400;
-      margin: 22px 0 8px;
     }
 
     .subtitle {
-      color: var(--muted);
+      color: var(--soft);
       font-style: italic;
       margin-bottom: 25px;
     }
 
     .book p {
-      color: #45413b;
+      color: #48433c;
     }
 
     .meta {
       margin-top: 28px;
       padding-top: 20px;
       border-top: 1px solid var(--line);
+      color: var(--soft);
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--muted);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       line-height: 1.7;
     }
 
+    /* CONNECTION */
+
     .connection {
-      background: #1b1b1a;
-      color: #f8f5ee;
+      background: var(--ink);
+      color: #f7f2e9;
     }
 
-    .connection .section-label {
-      color: #d49a86;
+    .connection .label {
+      color: #d28a72;
+    }
+
+    .connection h2 {
+      color: #fffaf2;
     }
 
     .connection-text {
-      max-width: 820px;
-      font-size: clamp(1.4rem, 3vw, 2.1rem);
-      line-height: 1.45;
+      max-width: 850px;
+      font-size: clamp(1.35rem, 2.8vw, 2rem);
+      line-height: 1.5;
     }
 
     .connection-text em {
-      color: #d49a86;
+      color: #d28a72;
     }
+
+    /* ABOUT */
 
     .about {
       display: grid;
       grid-template-columns: 0.8fr 1.2fr;
-      gap: 70px;
-      align-items: start;
+      gap: 80px;
     }
 
     .about-name {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.05;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 0.95;
     }
 
     .about p {
       font-size: 1.12rem;
-      color: #45413b;
+      color: #48433c;
     }
+
+    /* FOOTER */
 
     footer {
       border-top: 1px solid var(--line);
       padding: 35px 0;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.75rem;
-      color: var(--muted);
+      font-size: 0.72rem;
+      color: var(--soft);
     }
 
+    /* MOBILE */
+
     @media (max-width: 760px) {
-      header {
-        padding: 22px 0;
-      }
 
       nav {
         display: none;
       }
 
       .hero {
-        min-height: 70vh;
-        padding: 70px 0;
+        min-height: 75vh;
       }
 
       section {
-        padding: 70px 0;
+        padding: 75px 0;
       }
 
       .books,
@@ -267,7 +341,11 @@
       }
 
       .book {
-        padding: 30px;
+        padding: 25px;
+      }
+
+      .cover-wrap {
+        min-height: 390px;
       }
 
       h1 {
@@ -279,222 +357,255 @@
 
 <body>
 
-  <header>
-    <div class="container brand">
-      <div class="logo">HERR FOX</div>
+<header>
+  <div class="container header-inner">
 
-      <nav>
-        <a href="#buecher">Bücher</a>
-        <a href="#gedanke">Gedanke</a>
-        <a href="#autor">Autor</a>
-      </nav>
+    <div class="brand">
+      <div class="fox-mark"></div>
+      <div class="brand-name">HERR FOX</div>
     </div>
-  </header>
+
+    <nav>
+      <a href="#buecher">Bücher</a>
+      <a href="#gedanke">Gedanke</a>
+      <a href="#autor">Autor</a>
+    </nav>
+
+  </div>
+</header>
 
 
-  <main>
+<main>
 
-    <section class="hero">
-      <div class="container hero-inner">
+  <section class="hero">
 
-        <div class="eyebrow">Christoph Fox · Autor</div>
+    <div class="container hero-content">
 
-        <h1>Wie werden wir<br>zu dem, was wir sind?</h1>
+      <div class="eyebrow">
+        Christoph Fox · Autor
+      </div>
+
+      <h1>
+        Wie werden wir<br>
+        zu dem, was wir sind?
+      </h1>
+
+      <div class="hero-text">
+        Zwei Bücher über Sozialisation, Entwicklung und Identität –
+        und über die Frage, wie aus Menschen handelnde und
+        handlungsfähige Subjekte werden.
+      </div>
+
+      <div class="fox-line"></div>
+
+    </div>
+
+  </section>
+
+
+  <section id="buecher">
+
+    <div class="container">
+
+      <div class="label">Die Bücher</div>
+
+      <h2>
+        Zwei Perspektiven.<br>
+        Ein Mensch.
+      </h2>
+
+      <p class="intro">
+        Das eine Werk nähert sich dem Menschen über Sozialisation,
+        Subjekt, Handeln und Identität. Das andere betrachtet
+        Entwicklung in vier Akten – vom Kleinsein bis zur Fähigkeit,
+        die eigene Welt aktiv zu gestalten.
+      </p>
+
+
+      <div class="books">
+
+
+        <article class="book">
+
+          <div class="cover-wrap">
+            <img
+              class="cover"
+              src="IMG_1937.jpeg"
+              alt="Buchcover Sozialisation. Subjekt, Handeln und Identität von Christoph Fox">
+          </div>
+
+          <div class="book-number">
+            01 · 2017
+          </div>
+
+          <h3>
+            Sozialisation.<br>
+            Subjekt, Handeln<br>
+            und Identität
+          </h3>
+
+          <div class="subtitle">
+            Christoph Fox
+          </div>
+
+          <p>
+            Sozialisation als aktiver, subjektorientierter Prozess:
+            Menschen entwickeln sich im Verhältnis zu ihrer sozialen
+            Umwelt, handeln, bilden Identität und erwerben dabei
+            zunehmend Kompetenzen und Handlungsfähigkeit.
+          </p>
+
+          <div class="meta">
+            306 Seiten<br>
+            ISBN 978-3-96138-038-1
+          </div>
+
+        </article>
+
+
+        <article class="book">
+
+          <div class="cover-wrap">
+            <img
+              class="cover"
+              src="IMG_0191.jpeg"
+              alt="Buchcover Klein. Wild. Groß. Fähig. von Christoph Fox">
+          </div>
+
+          <div class="book-number">
+            02 · 2025
+          </div>
+
+          <h3>
+            Klein. Wild.<br>
+            Groß. Fähig.
+          </h3>
+
+          <div class="subtitle">
+            Entwicklung. Vier Akte.
+          </div>
+
+          <p>
+            Entwicklung als Weg durch vier Akte:
+            Klein, Wild, Groß und Fähig. Ein Blick auf das
+            Großwerden, auf Entwicklung und auf die Frage,
+            wie Menschen ihren Platz in der Welt finden.
+          </p>
+
+          <div class="meta">
+            140 Seiten<br>
+            ISBN 978-3-7592-9610-8
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="gedanke" class="connection">
+
+    <div class="container">
+
+      <div class="label">
+        Der Zusammenhang
+      </div>
+
+      <h2>
+        Zwei Bücher.<br>
+        Eine Frage.
+      </h2>
+
+      <div class="connection-text">
 
         <p>
-          Zwei Bücher, zwei Perspektiven und eine gemeinsame Frage:
-          Wie entstehen Entwicklung, Identität und Handlungsfähigkeit
-          im Verhältnis zwischen Mensch und Gesellschaft?
+          <em>Was bedeutet es eigentlich, jemand zu werden?</em>
         </p>
 
-        <div class="scroll">
-          ↓ Die Bücher
-        </div>
-
-      </div>
-    </section>
-
-
-    <section id="buecher">
-      <div class="container">
-
-        <div class="section-label">Die Bücher</div>
-
-        <h2>Zwei Wege.<br>Ein Zusammenhang.</h2>
-
-        <p class="intro">
-          Zwischen theoretischer Sozialisationstheorie und der persönlichen
-          Reise des Großwerdens liegt ein gemeinsames Thema:
-          der Mensch in seiner Entwicklung und in seiner Beziehung zu anderen.
+        <p>
+          Das eine Buch betrachtet Sozialisation:
+          den Prozess, in dem Menschen sich mit ihrer sozialen
+          Welt auseinandersetzen, handeln und Identität entwickeln.
         </p>
 
+        <p>
+          Das andere nimmt die Entwicklung selbst in den Blick –
+          vom kleinen Kind über die wilde Jugend und das
+          Erwachsensein bis zur Frage nach Fähigkeit und
+          Handlungsfähigkeit.
+        </p>
 
-        <div class="books">
-
-          <article class="book">
-
-            <div class="book-number">01 · 2017</div>
-
-            <h3>
-              Sozialisation.<br>
-              Subjekt, Handeln<br>
-              und Identität
-            </h3>
-
-            <div class="subtitle">
-              Wissenschaftliche Arbeit
-            </div>
-
-            <p>
-              Sozialisation wird hier als aktiver und subjektorientierter
-              Prozess verstanden. Im Mittelpunkt stehen Subjekt, Handeln
-              und Identität sowie die Frage, wie Menschen im Zusammenspiel
-              mit ihrer sozialen Umwelt zunehmend handlungsfähig werden.
-            </p>
-
-            <p>
-              Das Buch entwickelt dafür ein reduziertes, modellhaftes
-              Verständnis von Sozialisation und macht die darin liegenden
-              dynamischen Prozesse und Kompetenzen sichtbar.
-            </p>
-
-            <div class="meta">
-              Christoph Fox · 1. Auflage · 2017<br>
-              wvb Wissenschaftlicher Verlag Berlin<br>
-              306 Seiten · ISBN 978-3-96138-038-1
-            </div>
-
-          </article>
-
-
-          <article class="book">
-
-            <div class="book-number">02 · 2025</div>
-
-            <h3>
-              Klein. Wild.<br>
-              Groß. Fähig.
-            </h3>
-
-            <div class="subtitle">
-              Entwicklung. Vier Akte.
-            </div>
-
-            <p>
-              Entwicklung als Reise durch vier Lebensphasen:
-              Klein, Wild, Groß und Fähig.
-            </p>
-
-            <p>
-              Vom Staunen der Kindheit über die turbulente Zeit der
-              Pubertät und die Verantwortung des Erwachsenseins bis zur
-              Frage nach einer gelungenen Einbindung der eigenen Identität
-              in die Gesellschaft.
-            </p>
-
-            <p>
-              Ein Buch über Entwicklung, Aufwachsen, Identität –
-              und darüber, dass das Leben sich nicht immer an den Plan hält.
-            </p>
-
-            <div class="meta">
-              Christoph Fox · 2025<br>
-              via tolino media<br>
-              140 Seiten · ISBN 978-3-7592-9610-8
-            </div>
-
-          </article>
-
-        </div>
+        <p>
+          Unterschiedliche Blickwinkel.
+          Ein gemeinsames Interesse:
+          <em>der Mensch in seiner Entwicklung.</em>
+        </p>
 
       </div>
-    </section>
 
-
-    <section id="gedanke" class="connection">
-
-      <div class="container">
-
-        <div class="section-label">Der Zusammenhang</div>
-
-        <h2>Zwei Bücher.<br>Eine Frage.</h2>
-
-        <div class="connection-text">
-
-          <p>
-            Was bedeutet es eigentlich, <em>jemand</em> zu werden?
-          </p>
-
-          <p>
-            Das eine Buch betrachtet Sozialisation als Prozess:
-            Menschen handeln, entwickeln Kompetenzen, bilden Identität
-            und werden dabei von ihrer sozialen Welt geprägt.
-          </p>
-
-          <p>
-            Das andere nimmt die Entwicklung selbst in den Blick –
-            vom kleinen Kind über den wilden Jugendlichen und den
-            erwachsenen Menschen bis zu der Frage, ob und wie daraus
-            ein fähiges, handlungsfähiges Subjekt wird.
-          </p>
-
-          <p>
-            Zwischen beiden Arbeiten liegt deshalb mehr als nur ein
-            zeitlicher Abstand.
-            <em>Sie betrachten denselben Menschen aus unterschiedlichen
-            Blickwinkeln.</em>
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <section id="autor">
-
-      <div class="container about">
-
-        <div>
-          <div class="section-label">Der Autor</div>
-          <div class="about-name">
-            Christoph<br>Fox
-          </div>
-        </div>
-
-        <div>
-
-          <p>
-            Christoph Fox beschäftigt sich mit Fragen rund um
-            Sozialisation, Entwicklung, Identität und die Fähigkeit
-            des Menschen, handelnd mit seiner sozialen Welt umzugehen.
-          </p>
-
-          <p>
-            Sein wissenschaftliches Werk und sein späteres Buch
-            über Entwicklung greifen dabei unterschiedliche Seiten
-            derselben großen Frage auf:
-            <strong>Wie wird aus einem Menschen die Person, die er ist?</strong>
-          </p>
-
-          <p>
-            Diese Website versammelt die beiden Bücher und die Gedanken,
-            die sie miteinander verbinden.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <footer>
-    <div class="container">
-      © Christoph Fox · Herr Fox
     </div>
-  </footer>
+
+  </section>
+
+
+  <section id="autor">
+
+    <div class="container about">
+
+      <div>
+
+        <div class="label">
+          Der Autor
+        </div>
+
+        <div class="about-name">
+          Christoph<br>
+          Fox
+        </div>
+
+      </div>
+
+      <div>
+
+        <p>
+          Christoph Fox beschäftigt sich mit Sozialisation,
+          Entwicklung, Identität und der Frage, wie Menschen
+          zu handlungsfähigen Subjekten werden.
+        </p>
+
+        <p>
+          In seinen beiden Büchern nähert er sich diesem
+          Themenfeld aus unterschiedlichen Richtungen:
+          wissenschaftlich-theoretisch und mit dem Blick
+          auf Entwicklung und das Großwerden.
+        </p>
+
+        <p>
+          <strong>
+            Herr Fox – Bücher über das Werden des Menschen.
+          </strong>
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+    © Christoph Fox · Herr Fox
+  </div>
+
+</footer>
 
 </body>
 </html>
