@@ -76,17 +76,22 @@
 }
 </script>
 
+
 <style>
 
 :root {
+
   --paper: #fffaf3;
   --paper-warm: #f5e9db;
+
   --fox-light: #d98a5d;
   --fox: #a95435;
   --fox-dark: #74331f;
   --fox-deep: #421c11;
+
   --gold: #efbd87;
   --gold-light: #f7d5ad;
+
   --ink: #1b1411;
   --soft: #65574e;
   --line: #dfcbb8;
@@ -94,12 +99,21 @@
   --light-x: 78%;
   --light-y: 22%;
   --light-strength: .78;
+
   --light-shift: 0px;
   --light-shift-y: 0px;
 
   --mouse-x: 50%;
   --mouse-y: 50%;
+
+  --scroll-progress: 0%;
+
 }
+
+
+/* =========================
+   BASIS
+========================= */
 
 * {
   box-sizing: border-box;
@@ -110,9 +124,16 @@ html {
 }
 
 body {
+
   margin: 0;
+
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
   line-height: 1.7;
 
   background:
@@ -127,112 +148,88 @@ body {
       #f1e4d6
     );
 
-  overflow-x: hidden;
 }
+
+
+/* =========================
+   8 — SCROLL-FORTSCHRITT
+========================= */
+
+.scroll-progress {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: var(--scroll-progress);
+  height: 3px;
+
+  z-index: 2000;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--fox-dark),
+      var(--fox),
+      var(--gold)
+    );
+
+  box-shadow:
+    0 1px 8px rgba(169,84,53,.28);
+
+  pointer-events: none;
+
+}
+
+
+/* =========================
+   LINKS
+========================= */
 
 a {
   color: inherit;
 }
 
 
-/* =========================================================
-   SCROLL-FORTSCHRITT
-========================================================= */
-
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2000;
-
-  width: 0%;
-  height: 3px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--fox-deep),
-      var(--fox),
-      var(--gold)
-    );
-
-  box-shadow:
-    0 0 12px rgba(169,84,53,.45);
-
-  pointer-events: none;
-}
-
-
-/* =========================================================
-   CURSOR-LICHT
-========================================================= */
-
-.cursor-light {
-  position: fixed;
-  z-index: 1;
-
-  width: 280px;
-  height: 280px;
-
-  left: var(--mouse-x);
-  top: var(--mouse-y);
-
-  transform: translate(-50%, -50%);
-
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(246,189,126,.11),
-      transparent 68%
-    );
-
-  filter: blur(12px);
-
-  opacity: 0;
-  transition: opacity .5s ease;
-}
-
-body.cursor-active .cursor-light {
-  opacity: 1;
-}
-
-
-/* =========================================================
+/* =========================
    HEADER
-========================================================= */
+========================= */
 
 header {
+
   position: sticky;
+
   top: 0;
+
   z-index: 1000;
 
-  background: rgba(249,240,227,.92);
-  backdrop-filter: blur(15px);
+  background:
+    rgba(249,240,227,.92);
 
-  border-bottom: 1px solid rgba(125,75,52,.16);
+  backdrop-filter:
+    blur(15px);
 
-  transition:
-    box-shadow .3s ease,
-    background .3s ease;
-}
+  border-bottom:
+    1px solid rgba(125,75,52,.16);
 
-header.scrolled {
-  background: rgba(249,240,227,.96);
-
-  box-shadow:
-    0 8px 30px rgba(66,30,17,.08);
 }
 
 .header-inner {
+
   min-height: 82px;
-  width: min(1120px, 90%);
+
+  width:
+    min(1120px, 90%);
+
   margin: 0 auto;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
 }
 
 .identity {
@@ -240,53 +237,94 @@ header.scrolled {
 }
 
 .name {
+
   font-size: 1.5rem;
+
   letter-spacing: -.02em;
+
 }
 
 .topic {
+
   margin-top: 2px;
+
   color: var(--fox);
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .62rem;
+
   font-weight: 700;
+
   letter-spacing: .12em;
+
   line-height: 1.5;
+
 }
 
+
+/* =========================
+   NAVIGATION
+========================= */
+
 nav {
+
   display: flex;
+
   gap: 20px;
+
   align-items: center;
+
 }
 
 nav a {
+
   position: relative;
 
   text-decoration: none;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .67rem;
+
   font-weight: 700;
+
   letter-spacing: .07em;
+
   text-transform: uppercase;
 
   color: #493a33;
+
+  transition:
+    color .25s ease;
+
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
+
   color: var(--fox);
+
 }
 
 nav a::after {
+
   content: "";
 
   position: absolute;
+
   left: 0;
+
   bottom: -7px;
 
   width: 0;
+
   height: 2px;
 
   background:
@@ -296,39 +334,54 @@ nav a::after {
       var(--gold)
     );
 
-  transition: width .25s ease;
+  transition:
+    width .25s ease;
+
 }
 
-nav a:hover::after {
+nav a:hover::after,
+nav a.active::after {
+
   width: 100%;
+
 }
 
 
-/* =========================================================
+/* =========================
    SPRACHEN
-========================================================= */
+========================= */
 
 .language-switcher {
+
   display: flex;
+
   align-items: center;
+
   gap: 7px;
+
   margin-left: 8px;
+
 }
 
 .lang-button {
+
   width: 32px;
   height: 32px;
 
   padding: 0;
 
-  border: 1px solid rgba(116,51,31,.18);
+  border:
+    1px solid rgba(116,51,31,.18);
+
   border-radius: 50%;
 
-  background: rgba(255,250,243,.72);
+  background:
+    rgba(255,250,243,.72);
 
   cursor: pointer;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -338,33 +391,46 @@ nav a:hover::after {
     transform .2s ease,
     background .2s ease,
     box-shadow .2s ease;
+
 }
 
 .lang-button:hover {
-  transform: translateY(-2px) scale(1.05);
-  background: #fffaf3;
+
+  transform:
+    translateY(-2px);
+
+  background:
+    #fffaf3;
 
   box-shadow:
     0 5px 14px rgba(66,30,17,.12);
+
 }
 
 .lang-button.active {
+
   box-shadow:
     0 0 0 2px rgba(169,84,53,.18);
+
 }
 
 
 /* Zorro-Maske */
 
 .zorro-icon {
+
   width: 20px;
   height: 16px;
+
   position: relative;
+
 }
 
 .zorro-icon::before,
 .zorro-icon::after {
+
   content: "";
+
   position: absolute;
 
   top: 4px;
@@ -374,26 +440,33 @@ nav a:hover::after {
 
   background: #111;
 
-  border-radius: 55% 45% 55% 45%;
+  border-radius:
+    55% 45% 55% 45%;
+
 }
 
 .zorro-icon::before {
+
   left: 0;
 
   transform:
     rotate(-12deg)
     skewX(-12deg);
+
 }
 
 .zorro-icon::after {
+
   right: 0;
 
   transform:
     rotate(12deg)
     skewX(12deg);
+
 }
 
 .zorro-icon span {
+
   position: absolute;
 
   left: 5px;
@@ -406,25 +479,32 @@ nav a:hover::after {
 
   border-radius: 50%;
 
-  transform: rotate(-2deg);
+  transform:
+    rotate(-2deg);
+
 }
 
 
-/* =========================================================
+/* =========================
    MOBILE MENU
-========================================================= */
+========================= */
 
 .menu-button {
+
   display: none;
 
   border: 0;
+
   background: none;
 
   padding: 8px;
+
   cursor: pointer;
+
 }
 
 .menu-button span {
+
   display: block;
 
   width: 26px;
@@ -432,96 +512,93 @@ nav a:hover::after {
 
   margin: 5px 0;
 
-  background: var(--fox-dark);
+  background:
+    var(--fox-dark);
 
-  transition:
-    transform .25s ease,
-    opacity .25s ease;
-}
-
-.menu-button.open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.menu-button.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-button.open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
 }
 
 .mobile-menu {
+
   display: none;
 
-  background: rgba(255,250,243,.98);
-  border-top: 1px solid var(--line);
+  background:
+    rgba(255,250,243,.98);
+
+  border-top:
+    1px solid var(--line);
+
 }
 
 .mobile-menu.open {
+
   display: block;
-
-  animation:
-    mobileMenuIn .3s ease both;
-}
-
-@keyframes mobileMenuIn {
-
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 
 }
 
 .mobile-menu a {
+
   display: block;
 
   padding: 16px 5%;
 
-  border-bottom: 1px solid var(--line);
+  border-bottom:
+    1px solid var(--line);
 
   text-decoration: none;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .74rem;
+
   font-weight: 700;
+
   letter-spacing: .08em;
+
   text-transform: uppercase;
 
-  color: var(--fox-dark);
+  color:
+    var(--fox-dark);
+
 }
 
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero {
+
   min-height: 86vh;
 
   display: flex;
+
   align-items: center;
 
   position: relative;
+
   overflow: hidden;
 
   background:
     radial-gradient(
       ellipse at var(--light-x) var(--light-y),
-      rgba(246,189,126,var(--light-strength)),
+      rgba(
+        246,
+        189,
+        126,
+        var(--light-strength)
+      ),
       transparent 34%
     ),
+
     radial-gradient(
       ellipse at 62% 76%,
       rgba(170,76,43,.22),
       transparent 43%
     ),
+
     linear-gradient(
       125deg,
       #fbf3e7 0%,
@@ -530,13 +607,56 @@ nav a:hover::after {
       #9f492f 112%
     );
 
-  isolation: isolate;
 }
 
 
-/* große Lichtkugel */
+/* Maus-Licht */
 
 .hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  left:
+    calc(
+      var(--mouse-x) - 310px
+    );
+
+  top:
+    calc(
+      var(--mouse-y) - 310px
+    );
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,222,176,.17),
+      rgba(255,222,176,.07) 28%,
+      transparent 68%
+    );
+
+  filter:
+    blur(20px);
+
+  pointer-events: none;
+
+  transition:
+    left .35s ease-out,
+    top .35s ease-out;
+
+}
+
+
+/* großes Licht */
+
+.hero::after {
+
   content: "";
 
   position: absolute;
@@ -544,8 +664,15 @@ nav a:hover::after {
   width: 900px;
   height: 900px;
 
-  right: calc(-380px + var(--light-shift));
-  top: calc(-390px + var(--light-shift-y));
+  right:
+    calc(
+      -380px + var(--light-shift)
+    );
+
+  top:
+    calc(
+      -390px + var(--light-shift-y)
+    );
 
   border-radius: 50%;
 
@@ -558,193 +685,100 @@ nav a:hover::after {
       transparent 72%
     );
 
-  filter: blur(10px);
+  filter:
+    blur(10px);
 
   pointer-events: none;
 
-  transition:
-    right .15s linear,
-    top .15s linear;
 }
-
-
-/* untere Lichtwelle */
-
-.hero::after {
-  content: "";
-
-  position: absolute;
-
-  width: 1100px;
-  height: 360px;
-
-  left: calc(-300px + var(--light-shift));
-  bottom: -170px;
-
-  background:
-    radial-gradient(
-      ellipse,
-      rgba(255,208,158,.25),
-      transparent 70%
-    );
-
-  filter: blur(30px);
-
-  transform:
-    rotate(-8deg)
-    translateY(var(--light-shift-y));
-
-  pointer-events: none;
-}
-
-
-/* Cursorlicht im Hero */
-
-.hero-cursor-glow {
-  position: absolute;
-
-  width: 500px;
-  height: 500px;
-
-  left: var(--mouse-x);
-  top: var(--mouse-y);
-
-  transform: translate(-50%, -50%);
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(255,228,191,.18),
-      transparent 68%
-    );
-
-  filter: blur(10px);
-
-  pointer-events: none;
-
-  opacity: .8;
-}
-
-
-/* =========================================================
-   PARTIKEL
-========================================================= */
-
-.particles {
-  position: absolute;
-  inset: 0;
-
-  overflow: hidden;
-
-  pointer-events: none;
-
-  z-index: 1;
-}
-
-.particle {
-  position: absolute;
-
-  width: 4px;
-  height: 4px;
-
-  border-radius: 50%;
-
-  background: rgba(255,239,211,.65);
-
-  box-shadow:
-    0 0 12px rgba(255,224,179,.55);
-
-  animation:
-    floatParticle
-    var(--duration)
-    ease-in-out
-    infinite;
-
-  animation-delay: var(--delay);
-
-  opacity: var(--opacity);
-}
-
-@keyframes floatParticle {
-
-  0% {
-    transform:
-      translate3d(0, 30px, 0)
-      scale(.7);
-  }
-
-  50% {
-    transform:
-      translate3d(var(--drift), -70px, 0)
-      scale(1);
-  }
-
-  100% {
-    transform:
-      translate3d(0, -150px, 0)
-      scale(.6);
-  }
-
-}
-
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
 
 .hero-content {
-  position: relative;
-  z-index: 3;
 
-  width: min(1120px, 90%);
+  position: relative;
+
+  z-index: 5;
+
+  width:
+    min(1120px, 90%);
+
   margin: 0 auto;
 
-  transform:
-    translateY(calc(var(--hero-parallax, 0px) * -1));
 }
 
 .eyebrow {
-  color: var(--fox-dark);
 
-  font-family: Arial, Helvetica, sans-serif;
+  color:
+    var(--fox-dark);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .73rem;
+
   font-weight: 700;
+
   letter-spacing: .16em;
+
   text-transform: uppercase;
 
   margin-bottom: 25px;
+
 }
 
 h1 {
-  margin: 0 0 35px;
 
-  font-size: clamp(3.5rem, 9vw, 7.8rem);
+  margin:
+    0 0 35px;
+
+  font-size:
+    clamp(3.5rem, 9vw, 7.8rem);
+
   line-height: .88;
+
   font-weight: 400;
+
   letter-spacing: -.065em;
+
 }
 
 .hero-text {
+
   max-width: 800px;
 
-  font-size: clamp(1.2rem, 2.3vw, 1.55rem);
+  font-size:
+    clamp(1.2rem, 2.3vw, 1.55rem);
 
-  color: #49352d;
+  color:
+    #49352d;
+
 }
 
 .hero-services {
+
   margin-top: 18px;
 
-  color: var(--fox-dark);
+  color:
+    var(--fox-dark);
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .72rem;
+
   font-weight: 700;
+
   letter-spacing: .11em;
+
   text-transform: uppercase;
+
 }
 
 .fox-line {
+
   width: 170px;
   height: 5px;
 
@@ -762,39 +796,52 @@ h1 {
     0 5px 20px rgba(105,43,26,.25);
 
   position: relative;
+
   overflow: hidden;
+
 }
 
+
+/* 5 — Lichtlauf */
+
 .fox-line::after {
+
   content: "";
 
   position: absolute;
 
   top: 0;
-  left: -60px;
 
-  width: 60px;
+  left: -70px;
+
+  width: 55px;
+
   height: 100%;
 
   background:
     linear-gradient(
       90deg,
       transparent,
-      rgba(255,245,225,.9),
+      rgba(255,239,211,.85),
       transparent
     );
 
   animation:
-    lineShimmer 3.5s ease-in-out infinite;
+    foxLineShine 6s ease-in-out infinite;
+
 }
 
-@keyframes lineShimmer {
+@keyframes foxLineShine {
 
-  0% {
-    left: -60px;
+  0%,
+  65% {
+    left: -70px;
   }
 
-  55%,
+  82% {
+    left: 190px;
+  }
+
   100% {
     left: 190px;
   }
@@ -802,104 +849,252 @@ h1 {
 }
 
 
-/* =========================================================
+/* =========================
+   2 — HERO PARTIKEL
+========================= */
+
+.hero-particles {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+}
+
+.particle {
+
+  position: absolute;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,235,205,.48);
+
+  box-shadow:
+    0 0 10px rgba(255,222,176,.35);
+
+  animation:
+    floatParticle linear infinite;
+
+}
+
+.particle:nth-child(1) {
+  left: 12%;
+  top: 28%;
+  animation-duration: 14s;
+  animation-delay: -3s;
+}
+
+.particle:nth-child(2) {
+  left: 28%;
+  top: 64%;
+  animation-duration: 18s;
+  animation-delay: -9s;
+}
+
+.particle:nth-child(3) {
+  left: 47%;
+  top: 18%;
+  animation-duration: 16s;
+  animation-delay: -6s;
+}
+
+.particle:nth-child(4) {
+  left: 66%;
+  top: 47%;
+  animation-duration: 20s;
+  animation-delay: -12s;
+}
+
+.particle:nth-child(5) {
+  left: 81%;
+  top: 31%;
+  animation-duration: 15s;
+  animation-delay: -5s;
+}
+
+.particle:nth-child(6) {
+  left: 90%;
+  top: 70%;
+  animation-duration: 19s;
+  animation-delay: -14s;
+}
+
+.particle:nth-child(7) {
+  left: 39%;
+  top: 82%;
+  animation-duration: 17s;
+  animation-delay: -10s;
+}
+
+@keyframes floatParticle {
+
+  0% {
+    transform:
+      translate3d(0,20px,0)
+      scale(.7);
+
+    opacity: 0;
+  }
+
+  15% {
+    opacity: .45;
+  }
+
+  50% {
+    transform:
+      translate3d(25px,-35px,0)
+      scale(1);
+
+    opacity: .55;
+  }
+
+  85% {
+    opacity: .25;
+  }
+
+  100% {
+    transform:
+      translate3d(-15px,-85px,0)
+      scale(.65);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================
    SECTIONS
-========================================================= */
+========================= */
 
 section {
-  padding: 110px 0;
-  border-top: 1px solid var(--line);
 
-  position: relative;
+  padding: 110px 0;
+
+  border-top:
+    1px solid var(--line);
+
 }
 
 .container {
-  width: min(1120px, 90%);
+
+  width:
+    min(1120px, 90%);
+
   margin: 0 auto;
+
 }
 
 .label {
-  color: var(--fox);
 
-  font-family: Arial, Helvetica, sans-serif;
+  color:
+    var(--fox);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .71rem;
+
   font-weight: 700;
+
   letter-spacing: .18em;
+
   text-transform: uppercase;
 
   margin-bottom: 18px;
+
 }
 
 h2 {
-  margin: 0 0 30px;
 
-  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  margin:
+    0 0 30px;
+
+  font-size:
+    clamp(2.6rem, 5vw, 4.8rem);
+
   line-height: 1;
+
   font-weight: 400;
+
   letter-spacing: -.045em;
+
 }
 
 .intro {
+
   max-width: 800px;
 
   font-size: 1.2rem;
 
-  color: #4d423b;
+  color:
+    #4d423b;
+
 }
 
 
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
+/* =========================
+   1 — SCROLL REVEAL
+========================= */
 
 .reveal {
+
   opacity: 0;
 
   transform:
-    translateY(45px);
+    translateY(35px);
 
   transition:
-    opacity .8s ease,
-    transform .8s cubic-bezier(.22,.61,.36,1);
+    opacity .85s ease,
+    transform .85s cubic-bezier(.22,.61,.36,1);
+
 }
 
 .reveal.visible {
+
   opacity: 1;
 
   transform:
     translateY(0);
-}
 
-.reveal-delay-1 {
-  transition-delay: .08s;
-}
-
-.reveal-delay-2 {
-  transition-delay: .16s;
-}
-
-.reveal-delay-3 {
-  transition-delay: .24s;
 }
 
 
-/* =========================================================
+/* =========================
    BÜCHER
-========================================================= */
+========================= */
 
 .books {
+
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
 
   gap: 55px;
 
   margin-top: 65px;
+
 }
 
 .book {
+
   position: relative;
 
-  background: rgba(255,250,243,.55);
+  background:
+    rgba(255,250,243,.55);
 
   padding: 8px;
 
@@ -907,26 +1102,92 @@ h2 {
     0 28px 70px rgba(67,31,18,.09);
 
   transition:
-    transform .35s ease,
-    box-shadow .35s ease;
+    transform .3s ease,
+    box-shadow .3s ease;
 
-  transform-style: preserve-3d;
+  overflow: hidden;
 
-  will-change: transform;
 }
 
+
+/* 7 — Karten-Licht */
+
+.book::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: -120%;
+
+  left: -55%;
+
+  width: 35%;
+
+  height: 340%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.22),
+      transparent
+    );
+
+  transform:
+    rotate(18deg);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity .3s ease;
+
+}
+
+.book:hover::before {
+
+  opacity: 1;
+
+  animation:
+    bookShine .9s ease forwards;
+
+}
+
+@keyframes bookShine {
+
+  from {
+    left: -55%;
+  }
+
+  to {
+    left: 125%;
+  }
+
+}
+
+
 .book:hover {
+
+  transform:
+    translateY(-6px);
+
   box-shadow:
     0 35px 85px rgba(67,31,18,.15);
+
 }
 
 .cover-wrap {
+
   position: relative;
 
   min-height: 480px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   overflow: hidden;
@@ -943,9 +1204,11 @@ h2 {
       #dfaa83 58%,
       #bd6848
     );
+
 }
 
 .cover-wrap::before {
+
   content: "";
 
   position: absolute;
@@ -965,27 +1228,25 @@ h2 {
       transparent 68%
     );
 
-  filter: blur(12px);
+  filter:
+    blur(12px);
 
-  transition:
-    transform .7s ease;
-}
-
-.book:hover .cover-wrap::before {
-  transform:
-    translate(-35px, 25px)
-    scale(1.08);
 }
 
 .cover {
+
   position: relative;
+
   z-index: 2;
 
   width: auto;
+
   max-width: 72%;
+
   max-height: 455px;
 
   object-fit: contain;
+
   display: block;
 
   filter:
@@ -994,106 +1255,151 @@ h2 {
     );
 
   transition:
-    transform .45s cubic-bezier(.22,.61,.36,1),
+    transform .25s ease-out,
     filter .35s ease;
+
 }
 
 .book:hover .cover {
-  transform:
-    translateY(-12px)
-    rotate(-.55deg)
-    scale(1.025);
 
   filter:
     drop-shadow(
-      24px 34px 25px rgba(55,24,14,.36)
+      22px 31px 22px rgba(55,24,14,.34)
     );
+
 }
 
+
+/* =========================
+   BUCHTEXT
+========================= */
+
 .book-number {
+
   margin-top: 32px;
 
-  color: var(--fox);
+  color:
+    var(--fox);
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .72rem;
+
   font-weight: 700;
+
   letter-spacing: .16em;
+
 }
 
 .book h3 {
-  margin: 17px 0 7px;
 
-  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  margin:
+    17px 0 7px;
+
+  font-size:
+    clamp(1.8rem, 3vw, 2.7rem);
+
   line-height: 1.05;
+
   font-weight: 400;
+
 }
 
 .subtitle {
-  color: var(--soft);
+
+  color:
+    var(--soft);
+
   font-style: italic;
+
   margin-bottom: 25px;
+
 }
 
 .book p {
-  color: #4b4039;
+
+  color:
+    #4b4039;
+
 }
 
 .meta {
+
   margin-top: 28px;
+
   padding-top: 20px;
 
-  border-top: 1px solid var(--line);
+  border-top:
+    1px solid var(--line);
 
-  color: var(--soft);
+  color:
+    var(--soft);
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .76rem;
+
 }
 
 .book-link {
+
   display: inline-block;
 
   margin-top: 25px;
 
   padding: 12px 19px;
 
-  border: 1px solid var(--fox);
+  border:
+    1px solid var(--fox);
 
-  color: var(--fox-dark);
+  color:
+    var(--fox-dark);
 
   text-decoration: none;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .72rem;
+
   font-weight: 700;
+
   letter-spacing: .08em;
+
   text-transform: uppercase;
 
   transition:
-    transform .2s ease,
-    background .2s ease,
-    color .2s ease,
-    box-shadow .2s ease;
+    .2s ease;
 
-  will-change: transform;
 }
 
 .book-link:hover {
-  background: var(--fox);
-  color: #fffaf3;
 
-  box-shadow:
-    0 8px 22px rgba(116,51,31,.18);
+  background:
+    var(--fox);
+
+  color:
+    #fffaf3;
+
 }
 
 
-/* =========================================================
+/* =========================
    AUFKLAPPBARE TEXTE
-========================================================= */
+========================= */
 
 .book-extra {
+
   max-height: 0;
+
   overflow: hidden;
 
   opacity: 0;
@@ -1101,54 +1407,64 @@ h2 {
   transition:
     max-height .5s ease,
     opacity .35s ease;
+
 }
 
 .book.open .book-extra {
+
   max-height: 800px;
+
   opacity: 1;
+
 }
 
 .more-button {
+
   margin-top: 24px;
 
   padding: 0;
 
   border: none;
+
   background: none;
 
-  color: var(--fox);
+  color:
+    var(--fox);
 
   cursor: pointer;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .72rem;
+
   font-weight: 700;
+
   letter-spacing: .08em;
+
   text-transform: uppercase;
 
-  transition:
-    transform .2s ease,
-    letter-spacing .2s ease;
-}
-
-.more-button:hover {
-  transform: translateX(4px);
-  letter-spacing: .11em;
 }
 
 
-/* =========================================================
-   FUCHS-SILHOUETTE
-========================================================= */
+/* =========================
+   FUCHS
+========================= */
 
 .fox-sign {
+
   position: relative;
 
   width: 100%;
+
   height: 180px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   overflow: hidden;
@@ -1159,9 +1475,11 @@ h2 {
       #fffaf3,
       #f4e6d7
     );
+
 }
 
 .fox-shadow {
+
   width: 210px;
   height: 125px;
 
@@ -1173,19 +1491,20 @@ h2 {
     );
 
   transform:
-    translateY(var(--fox-parallax, 0px))
-    rotate(var(--fox-rotate, 0deg));
+    translateY(var(--fox-scroll, 0px));
 
   transition:
     transform .15s linear;
+
 }
 
 
-/* =========================================================
+/* =========================
    FRAGE
-========================================================= */
+========================= */
 
 .question {
+
   text-align: center;
 
   background:
@@ -1199,64 +1518,73 @@ h2 {
       #f8eee2,
       #efd5bd
     );
+
 }
 
 .question-inner {
+
   max-width: 850px;
+
   margin: 0 auto;
+
 }
 
 .question-mark {
-  color: var(--fox);
+
+  color:
+    var(--fox);
 
   font-size: 4rem;
+
   line-height: 1;
 
   margin-bottom: 20px;
 
-  animation:
-    questionFloat 4s ease-in-out infinite;
-}
-
-@keyframes questionFloat {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-
 }
 
 .question-text {
-  font-size: clamp(1.45rem, 3vw, 2.25rem);
+
+  font-size:
+    clamp(1.45rem, 3vw, 2.25rem);
+
   line-height: 1.4;
 
-  color: #4a352c;
+  color:
+    #4a352c;
+
 }
 
 .question-small {
+
   margin-top: 30px;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .68rem;
+
   font-weight: 700;
+
   letter-spacing: .16em;
+
   text-transform: uppercase;
 
-  color: var(--fox);
+  color:
+    var(--fox);
+
 }
 
 
-/* =========================================================
+/* =========================
    VERBINDUNG
-========================================================= */
+========================= */
 
 .connection {
-  color: var(--ink);
+
+  color:
+    var(--ink);
 
   background:
     radial-gradient(
@@ -1277,100 +1605,81 @@ h2 {
       #9f492f 112%
     );
 
-  overflow: hidden;
 }
 
 .connection .label {
-  color: var(--fox-dark);
+
+  color:
+    var(--fox-dark);
+
 }
 
 .connection h2 {
-  color: var(--ink);
+
+  color:
+    var(--ink);
+
 }
 
 .connection-text {
+
   max-width: 850px;
 
-  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  font-size:
+    clamp(1.35rem, 2.8vw, 2rem);
+
   line-height: 1.5;
 
-  position: relative;
-}
-
-
-/* animierte Linie */
-
-.connection-text::before {
-  content: "";
-
-  position: absolute;
-
-  left: -38px;
-  top: 10px;
-
-  width: 3px;
-  height: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      var(--fox-deep),
-      var(--gold)
-    );
-
-  transition:
-    height 1.4s cubic-bezier(.22,.61,.36,1);
-}
-
-.connection.visible .connection-text::before {
-  height: calc(100% - 20px);
-}
-
-.connection-text p {
-  position: relative;
-
-  transition:
-    transform .5s ease;
-}
-
-.connection-text p:hover {
-  transform:
-    translateX(7px);
 }
 
 .connection-text em {
-  color: var(--fox-dark);
+
+  color:
+    var(--fox-dark);
+
 }
 
 
-/* =========================================================
+/* =========================
    AUTOR
-========================================================= */
+========================= */
 
 .about {
+
   display: grid;
 
-  grid-template-columns: .8fr 1.2fr;
+  grid-template-columns:
+    .8fr 1.2fr;
 
   gap: 80px;
+
 }
 
 .about-name {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+  font-size:
+    clamp(2.5rem, 5vw, 4.5rem);
+
   line-height: .95;
+
 }
 
 .about p {
+
   font-size: 1.12rem;
-  color: #4b4039;
+
+  color:
+    #4b4039;
+
 }
 
 
-/* =========================================================
+/* =========================
    KONTAKT
-========================================================= */
+========================= */
 
 .contact {
+
   background:
     radial-gradient(
       ellipse at 80% 10%,
@@ -1382,286 +1691,307 @@ h2 {
       #f5e5d5,
       #edd0b9
     );
+
 }
 
 .contact-box {
+
   max-width: 760px;
+
 }
 
 .contact-box p {
+
   font-size: 1.18rem;
-  color: #4c3d34;
+
+  color:
+    #4c3d34;
+
 }
 
 .contact-button {
+
   display: inline-block;
 
   margin-top: 20px;
+
   padding: 13px 22px;
 
-  background: var(--fox);
-  color: #fffaf3;
+  background:
+    var(--fox);
+
+  color:
+    #fffaf3;
 
   text-decoration: none;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .75rem;
+
   font-weight: 700;
+
   letter-spacing: .08em;
+
   text-transform: uppercase;
 
   transition:
     transform .2s ease,
     box-shadow .2s ease,
     background .2s ease;
+
 }
 
 .contact-button:hover {
+
+  transform:
+    translateY(-2px);
+
   box-shadow:
     0 8px 20px rgba(116,51,31,.18);
 
-  background: var(--fox-dark);
+  background:
+    var(--fox-dark);
+
 }
 
 
-/* =========================================================
+/* =========================
    IMPRESSUM
-========================================================= */
+========================= */
 
 .impressum {
-  background: #eee3d5;
+
+  background:
+    #eee3d5;
+
 }
 
 .impressum-box {
+
   max-width: 760px;
+
 }
 
 .impressum p {
-  color: #51463e;
+
+  color:
+    #51463e;
+
 }
 
 
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer {
-  border-top: 1px solid var(--line);
 
-  padding: 35px 0;
+  border-top:
+    1px solid var(--line);
 
-  font-family: Arial, Helvetica, sans-serif;
+  padding:
+    35px 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: .72rem;
 
-  color: var(--soft);
+  color:
+    var(--soft);
+
 }
 
 
-/* =========================================================
-   SCROLL-TOP-FUCHS
-========================================================= */
-
-.back-to-top {
-  position: fixed;
-
-  right: 25px;
-  bottom: 25px;
-
-  width: 48px;
-  height: 48px;
-
-  z-index: 1500;
-
-  border: 1px solid rgba(116,51,31,.25);
-  border-radius: 50%;
-
-  background:
-    rgba(255,250,243,.88);
-
-  backdrop-filter: blur(10px);
-
-  color: var(--fox-dark);
-
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 1.3rem;
-
-  opacity: 0;
-  visibility: hidden;
-
-  transform:
-    translateY(15px)
-    scale(.85);
-
-  transition:
-    opacity .3s ease,
-    visibility .3s ease,
-    transform .3s ease,
-    box-shadow .3s ease;
-}
-
-.back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-
-  transform:
-    translateY(0)
-    scale(1);
-}
-
-.back-to-top:hover {
-  box-shadow:
-    0 10px 28px rgba(66,30,17,.18);
-
-  transform:
-    translateY(-4px)
-    scale(1.05);
-}
-
-
-/* =========================================================
+/* =========================
    MOBILE
-========================================================= */
+========================= */
 
 @media (max-width: 950px) {
 
   nav {
+
     gap: 13px;
+
   }
 
   .language-switcher {
+
     gap: 4px;
+
     margin-left: 2px;
+
   }
 
 }
 
+
 @media (max-width: 760px) {
 
-  .cursor-light {
-    display: none;
-  }
-
   .header-inner {
+
     min-height: 72px;
+
   }
 
   nav,
   .header-inner > .language-switcher {
+
     display: none;
+
   }
 
   .menu-button {
+
     display: block;
+
   }
 
   .mobile-menu .language-mobile {
+
     display: flex;
+
     gap: 8px;
+
     padding: 14px 5%;
+
   }
 
   .mobile-menu .language-mobile button {
-    border: 1px solid var(--line);
-    background: #fffaf3;
+
+    border:
+      1px solid var(--line);
+
+    background:
+      #fffaf3;
+
     border-radius: 50%;
+
     width: 34px;
     height: 34px;
+
     cursor: pointer;
+
   }
 
   .hero {
+
     min-height: 78vh;
+
   }
 
   section {
+
     padding: 75px 0;
+
   }
 
   .books,
   .about {
-    grid-template-columns: 1fr;
+
+    grid-template-columns:
+      1fr;
+
   }
 
   .book {
+
     padding: 7px;
+
   }
 
   .cover-wrap {
+
     min-height: 410px;
+
   }
 
   .cover {
+
     max-width: 78%;
+
   }
 
   h1 {
+
     font-size: 4.2rem;
+
   }
 
   .hero-services {
+
     max-width: 330px;
+
     line-height: 1.8;
+
   }
 
-  .connection-text::before {
-    left: -16px;
-  }
+  .reveal {
 
-  .back-to-top {
-    right: 15px;
-    bottom: 15px;
-    width: 44px;
-    height: 44px;
+    transform:
+      translateY(20px);
+
   }
 
 }
 
 
-/* =========================================================
+/* =========================
    REDUCED MOTION
-========================================================= */
+========================= */
 
 @media (prefers-reduced-motion: reduce) {
 
   html {
-    scroll-behavior: auto;
+
+    scroll-behavior:
+      auto;
+
   }
 
-  *,
-  *::before,
-  *::after {
+  * {
+
     animation: none !important;
+
     transition: none !important;
+
   }
 
   .reveal {
+
     opacity: 1;
+
     transform: none;
+
   }
 
 }
 
 
-/* =========================================================
-   DESKTOP: 3D-BUCH NICHT AUF TOUCH
-========================================================= */
+/* =========================
+   TOUCH-GERÄTE
+========================= */
 
 @media (hover: none) {
 
-  .book {
-    transform: none !important;
-  }
+  .book::before {
 
-  .cursor-light {
     display: none;
+
   }
 
 }
+
+
+/* =========================
+   SCRIPT
+========================= */
 
 </style>
 </head>
@@ -1670,20 +2000,10 @@ footer {
 <body>
 
 
-<!-- =======================================================
-     SCROLL-FORTSCHRITT
-======================================================== -->
+<!-- 8 — Fortschrittsbalken -->
 
 <div
   class="scroll-progress"
-  id="scrollProgress">
-</div>
-
-
-<!-- Cursor-Licht -->
-
-<div
-  class="cursor-light"
   aria-hidden="true">
 </div>
 
@@ -1701,12 +2021,15 @@ footer {
         Christoph Fox
       </div>
 
-      <div class="topic"
-           data-de="Autor. Dozent.<br>Beratung. Coaching. Supervision."
-           data-fr="Auteur. Enseignant.<br>Conseil. Coaching. Supervision."
-           data-es="Autor. Docente.<br>Asesoramiento. Coaching. Supervisión.">
+      <div
+        class="topic"
+        data-de="Autor. Dozent.<br>Beratung. Coaching. Supervision."
+        data-fr="Auteur. Enseignant.<br>Conseil. Coaching. Supervision."
+        data-es="Autor. Docente.<br>Asesoramiento. Coaching. Supervisión.">
+
         Autor. Dozent.<br>
         Beratung. Coaching. Supervision.
+
       </div>
 
     </a>
@@ -1714,45 +2037,57 @@ footer {
 
     <nav aria-label="Hauptnavigation">
 
-      <a href="#start"
-         data-de="Start"
-         data-fr="Accueil"
-         data-es="Inicio">
+      <a
+        href="#start"
+        data-section="start"
+        data-de="Start"
+        data-fr="Accueil"
+        data-es="Inicio">
         Start
       </a>
 
-      <a href="#buecher"
-         data-de="Bücher"
-         data-fr="Livres"
-         data-es="Libros">
+      <a
+        href="#buecher"
+        data-section="buecher"
+        data-de="Bücher"
+        data-fr="Livres"
+        data-es="Libros">
         Bücher
       </a>
 
-      <a href="#zusammenhang"
-         data-de="Zusammenhang"
-         data-fr="Le lien"
-         data-es="La conexión">
+      <a
+        href="#zusammenhang"
+        data-section="zusammenhang"
+        data-de="Zusammenhang"
+        data-fr="Le lien"
+        data-es="La conexión">
         Zusammenhang
       </a>
 
-      <a href="#autor"
-         data-de="Über mich"
-         data-fr="À propos"
-         data-es="Sobre mí">
+      <a
+        href="#autor"
+        data-section="autor"
+        data-de="Über mich"
+        data-fr="À propos"
+        data-es="Sobre mí">
         Über mich
       </a>
 
-      <a href="#kontakt"
-         data-de="Kontakt"
-         data-fr="Contact"
-         data-es="Contacto">
+      <a
+        href="#kontakt"
+        data-section="kontakt"
+        data-de="Kontakt"
+        data-fr="Contact"
+        data-es="Contacto">
         Kontakt
       </a>
 
-      <a href="#impressum"
-         data-de="Impressum"
-         data-fr="Mentions légales"
-         data-es="Aviso legal">
+      <a
+        href="#impressum"
+        data-section="impressum"
+        data-de="Impressum"
+        data-fr="Mentions légales"
+        data-es="Aviso legal">
         Impressum
       </a>
 
@@ -1761,22 +2096,29 @@ footer {
 
     <div class="language-switcher">
 
-      <button class="lang-button active"
-              onclick="setLanguage('de')"
-              aria-label="Deutsch">
+      <button
+        class="lang-button active"
+        onclick="setLanguage('de')"
+        aria-label="Deutsch">
         🇩🇪
       </button>
 
-      <button class="lang-button"
-              onclick="setLanguage('fr')"
-              aria-label="Français">
+      <button
+        class="lang-button"
+        onclick="setLanguage('fr')"
+        aria-label="Français">
         🥖
       </button>
 
-      <button class="lang-button"
-              onclick="setLanguage('es')"
-              aria-label="Español">
-        <span class="zorro-icon"><span></span></span>
+      <button
+        class="lang-button"
+        onclick="setLanguage('es')"
+        aria-label="Español">
+
+        <span class="zorro-icon">
+          <span></span>
+        </span>
+
       </button>
 
     </div>
@@ -1801,63 +2143,80 @@ footer {
     class="mobile-menu"
     id="mobileMenu">
 
-    <a href="#start"
-       onclick="closeMenu()"
-       data-de="Start"
-       data-fr="Accueil"
-       data-es="Inicio">
+    <a
+      href="#start"
+      onclick="closeMenu()"
+      data-de="Start"
+      data-fr="Accueil"
+      data-es="Inicio">
       Start
     </a>
 
-    <a href="#buecher"
-       onclick="closeMenu()"
-       data-de="Bücher"
-       data-fr="Livres"
-       data-es="Libros">
+    <a
+      href="#buecher"
+      onclick="closeMenu()"
+      data-de="Bücher"
+      data-fr="Livres"
+      data-es="Libros">
       Bücher
     </a>
 
-    <a href="#zusammenhang"
-       onclick="closeMenu()"
-       data-de="Zusammenhang"
-       data-fr="Le lien"
-       data-es="La conexión">
+    <a
+      href="#zusammenhang"
+      onclick="closeMenu()"
+      data-de="Zusammenhang"
+      data-fr="Le lien"
+      data-es="La conexión">
       Zusammenhang
     </a>
 
-    <a href="#autor"
-       onclick="closeMenu()"
-       data-de="Über mich"
-       data-fr="À propos"
-       data-es="Sobre mí">
+    <a
+      href="#autor"
+      onclick="closeMenu()"
+      data-de="Über mich"
+      data-fr="À propos"
+      data-es="Sobre mí">
       Über mich
     </a>
 
-    <a href="#kontakt"
-       onclick="closeMenu()"
-       data-de="Kontakt"
-       data-fr="Contact"
-       data-es="Contacto">
+    <a
+      href="#kontakt"
+      onclick="closeMenu()"
+      data-de="Kontakt"
+      data-fr="Contact"
+      data-es="Contacto">
       Kontakt
     </a>
 
-    <a href="#impressum"
-       onclick="closeMenu()"
-       data-de="Impressum"
-       data-fr="Mentions légales"
-       data-es="Aviso legal">
+    <a
+      href="#impressum"
+      onclick="closeMenu()"
+      data-de="Impressum"
+      data-fr="Mentions légales"
+      data-es="Aviso legal">
       Impressum
     </a>
 
 
     <div class="language-mobile">
 
-      <button onclick="setLanguage('de'); closeMenu()">🇩🇪</button>
+      <button
+        onclick="setLanguage('de'); closeMenu()">
+        🇩🇪
+      </button>
 
-      <button onclick="setLanguage('fr'); closeMenu()">🥖</button>
+      <button
+        onclick="setLanguage('fr'); closeMenu()">
+        🥖
+      </button>
 
-      <button onclick="setLanguage('es'); closeMenu()">
-        <span class="zorro-icon"><span></span></span>
+      <button
+        onclick="setLanguage('es'); closeMenu()">
+
+        <span class="zorro-icon">
+          <span></span>
+        </span>
+
       </button>
 
     </div>
@@ -1870,56 +2229,41 @@ footer {
 <main>
 
 
-<!-- =======================================================
+<!-- =========================
      HERO
-======================================================== -->
+========================= -->
 
-<section class="hero" id="start">
+<section
+  class="hero"
+  id="start">
 
-  <div
-    class="particles"
-    aria-hidden="true">
-
-    <span class="particle"
-          style="left:8%;bottom:15%;--duration:8s;--delay:-2s;--drift:20px;--opacity:.25;"></span>
-
-    <span class="particle"
-          style="left:17%;bottom:28%;--duration:11s;--delay:-6s;--drift:-25px;--opacity:.35;"></span>
-
-    <span class="particle"
-          style="left:31%;bottom:18%;--duration:9s;--delay:-3s;--drift:35px;--opacity:.22;"></span>
-
-    <span class="particle"
-          style="left:44%;bottom:24%;--duration:13s;--delay:-8s;--drift:-30px;--opacity:.28;"></span>
-
-    <span class="particle"
-          style="left:58%;bottom:14%;--duration:10s;--delay:-1s;--drift:22px;--opacity:.32;"></span>
-
-    <span class="particle"
-          style="left:67%;bottom:31%;--duration:12s;--delay:-7s;--drift:-35px;--opacity:.23;"></span>
-
-    <span class="particle"
-          style="left:79%;bottom:18%;--duration:9s;--delay:-5s;--drift:28px;--opacity:.35;"></span>
-
-    <span class="particle"
-          style="left:89%;bottom:35%;--duration:14s;--delay:-10s;--drift:-20px;--opacity:.22;"></span>
-
-  </div>
-
+  <!-- 2 — dezente Partikel -->
 
   <div
-    class="hero-cursor-glow"
+    class="hero-particles"
     aria-hidden="true">
+
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+
   </div>
 
 
   <div class="hero-content">
 
-    <div class="eyebrow"
-         data-de="Christoph Fox"
-         data-fr="Christoph Fox"
-         data-es="Christoph Fox">
+    <div
+      class="eyebrow"
+      data-de="Christoph Fox"
+      data-fr="Christoph Fox"
+      data-es="Christoph Fox">
+
       Christoph Fox
+
     </div>
 
 
@@ -1934,17 +2278,21 @@ footer {
     </h1>
 
 
-    <div class="hero-text"
-         data-de="Wir werden nicht einfach geboren und sind irgendwann fertig.<br><br>Wir wachsen hinein in Beziehungen, Gesellschaft und Geschichte – und machen uns dabei selbst zu dem, was wir werden."
-         data-fr="Nous ne naissons pas simplement pour devenir un jour des êtres achevés.<br><br>Nous grandissons au sein de relations, de la société et de l’histoire – et, ce faisant, nous contribuons nous-mêmes à devenir ce que nous sommes."
-         data-es="No nacemos simplemente para estar algún día terminados.<br><br>Crecemos dentro de nuestras relaciones, de la sociedad y de la historia – y, al hacerlo, también nos convertimos en quienes llegamos a ser.">
+    <div
+      class="hero-text"
+      data-de="Wir werden nicht einfach geboren und sind irgendwann fertig.<br><br>Wir wachsen hinein in Beziehungen, Gesellschaft und Geschichte – und machen uns dabei selbst zu dem, was wir werden."
+      data-fr="Nous ne naissons pas simplement pour devenir un jour des êtres achevés.<br><br>Nous grandissons au sein de relations, de la société et de l’histoire – et, ce faisant, nous contribuons nous-mêmes à devenir ce que nous sommes."
+      data-es="No nacemos simplemente para estar algún día terminados.<br><br>Crecemos dentro de nuestras relaciones, de la sociedad y de la historia – y, al hacerlo, también nos convertimos en quienes llegamos a ser.">
 
-      Wir werden nicht einfach geboren und sind irgendwann fertig.
+      Wir werden nicht einfach geboren
+      und sind irgendwann fertig.
 
       <br><br>
 
-      Wir wachsen hinein in Familie, Beziehungen,
-      Gesellschaft, Kultur und Geschichte –
+      Wir wachsen hinein in Familie,
+      Beziehungen, Gesellschaft,
+      Kultur und Geschichte –
+
       und machen uns dabei selbst
       zu dem, was wir werden.
 
@@ -1958,9 +2306,9 @@ footer {
 </section>
 
 
-<!-- =======================================================
-     FOX
-======================================================== -->
+<!-- =========================
+     FUCHS
+========================= -->
 
 <div
   class="fox-sign"
@@ -1980,13 +2328,22 @@ footer {
         x2="1"
         y2="1">
 
-        <stop offset="0%" stop-color="#5d2617"/>
-        <stop offset="55%" stop-color="#8e3f25"/>
-        <stop offset="100%" stop-color="#3a180f"/>
+        <stop
+          offset="0%"
+          stop-color="#5d2617"/>
+
+        <stop
+          offset="55%"
+          stop-color="#8e3f25"/>
+
+        <stop
+          offset="100%"
+          stop-color="#3a180f"/>
 
       </linearGradient>
 
     </defs>
+
 
     <path
       d="
@@ -2013,6 +2370,7 @@ footer {
       fill="url(#foxFur)"
     />
 
+
     <ellipse
       cx="151"
       cy="151"
@@ -2036,28 +2394,34 @@ footer {
     font-family:Georgia,serif;
     font-size:1.5rem;
   ">
+
   Christoph Fox
+
 </div>
 
 
-<!-- =======================================================
+<!-- =========================
      BÜCHER
-======================================================== -->
+========================= -->
 
-<section id="buecher">
+<section
+  id="buecher">
 
   <div class="container">
 
-    <div class="label reveal"
-         data-de="Die Bücher"
-         data-fr="Les livres"
-         data-es="Los libros">
+    <div
+      class="label reveal"
+      data-de="Die Bücher"
+      data-fr="Les livres"
+      data-es="Los libros">
+
       Die Bücher
+
     </div>
 
 
     <h2
-      class="reveal reveal-delay-1"
+      class="reveal"
       data-de="Zwei Bücher.<br>Eine Frage."
       data-fr="Deux livres.<br>Une question."
       data-es="Dos libros.<br>Una pregunta.">
@@ -2069,7 +2433,7 @@ footer {
 
 
     <p
-      class="intro reveal reveal-delay-2"
+      class="intro reveal"
       data-de="Wie wird aus einem kleinen Menschen jemand, der seine Welt verstehen, sich in ihr behaupten und sie schließlich selbst mitgestalten kann?<br><br>Die beiden Bücher von Christoph Fox nähern sich dieser Frage aus unterschiedlichen Richtungen."
       data-fr="Comment un petit être humain devient-il quelqu’un capable de comprendre son monde, d’y trouver sa place et finalement de contribuer lui-même à le façonner ?<br><br>Les deux livres de Christoph Fox abordent cette question sous des angles différents."
       data-es="¿Cómo se convierte un pequeño ser humano en alguien capaz de comprender su mundo, desenvolverse en él y finalmente contribuir a darle forma?<br><br>Los dos libros de Christoph Fox se acercan a esta cuestión desde perspectivas diferentes.">
@@ -2091,8 +2455,10 @@ footer {
     <div class="books">
 
 
+      <!-- BUCH 1 -->
+
       <article
-        class="book reveal reveal-delay-1"
+        class="book reveal"
         id="buch-sozialisation">
 
         <div class="cover-wrap">
@@ -2106,7 +2472,9 @@ footer {
         </div>
 
 
-        <div class="book-number">01</div>
+        <div class="book-number">
+          01
+        </div>
 
 
         <h3>
@@ -2147,11 +2515,15 @@ footer {
 
         <div class="book-extra">
 
-          <h4 data-de="Worum geht es?"
-              data-fr="De quoi s’agit-il ?"
-              data-es="¿De qué trata?">
+          <h4
+            data-de="Worum geht es?"
+            data-fr="De quoi s’agit-il ?"
+            data-es="¿De qué trata?">
+
             Worum geht es?
+
           </h4>
+
 
           <p
             data-de="Das Buch fragt danach, wie Menschen in ihrer sozialen Welt zu Subjekten werden.<br><br>Sozialisation erscheint dabei nicht als bloße Anpassung, sondern als Verhältnis zwischen Prägung, eigenem Handeln, Identität und Handlungsfähigkeit."
@@ -2171,10 +2543,13 @@ footer {
           </p>
 
 
-          <h4 data-de="Die zentrale Frage"
-              data-fr="La question centrale"
-              data-es="La cuestión central">
+          <h4
+            data-de="Die zentrale Frage"
+            data-fr="La question centrale"
+            data-es="La cuestión centrale">
+
             Die zentrale Frage
+
           </h4>
 
 
@@ -2205,13 +2580,15 @@ footer {
 
 
         <div class="meta">
+
           306 Seiten<br>
           ISBN 978-3-96138-038-1
+
         </div>
 
 
         <a
-          class="book-link magnetic"
+          class="book-link"
           href="https://www.lehmanns.ch/shop/sozialwissenschaften/41357656-9783961380381-sozialisation-subjekt-handeln-und-identitaet"
           target="_blank"
           rel="noopener noreferrer"
@@ -2226,8 +2603,10 @@ footer {
       </article>
 
 
+      <!-- BUCH 2 -->
+
       <article
-        class="book reveal reveal-delay-2"
+        class="book reveal"
         id="buch-klein-wild">
 
         <div class="cover-wrap">
@@ -2241,7 +2620,9 @@ footer {
         </div>
 
 
-        <div class="book-number">02</div>
+        <div class="book-number">
+          02
+        </div>
 
 
         <h3>
@@ -2285,11 +2666,15 @@ footer {
 
         <div class="book-extra">
 
-          <h4 data-de="Worum geht es?"
-              data-fr="De quoi s’agit-il ?"
-              data-es="¿De qué trata?">
+          <h4
+            data-de="Worum geht es?"
+            data-fr="De quoi s’agit-il ?"
+            data-es="¿De qué trata?">
+
             Worum geht es?
+
           </h4>
+
 
           <p
             data-de="Entwicklung wird hier als Weg durch vier Akte betrachtet: Klein. Wild. Groß. Fähig.<br><br>Ein Blick auf das Werden des Menschen, auf Veränderung und auf den Moment, in dem aus Entwicklung zunehmend eigene Handlungsfähigkeit entsteht."
@@ -2310,10 +2695,13 @@ footer {
           </p>
 
 
-          <h4 data-de="Die zentrale Frage"
-              data-fr="La question centrale"
-              data-es="La cuestión central">
+          <h4
+            data-de="Die zentrale Frage"
+            data-fr="La question centrale"
+            data-es="La cuestión central">
+
             Die zentrale Frage
+
           </h4>
 
 
@@ -2344,12 +2732,14 @@ footer {
 
 
         <div class="meta">
+
           ISBN 978-3-7592-9610-8
+
         </div>
 
 
         <a
-          class="book-link magnetic"
+          class="book-link"
           href="https://www.thalia.de/shop/home/artikeldetails/A1075028145"
           target="_blank"
           rel="noopener noreferrer"
@@ -2370,20 +2760,22 @@ footer {
 </section>
 
 
-<!-- =======================================================
+<!-- =========================
      FRAGE
-======================================================== -->
+========================= -->
 
 <section class="question">
 
-  <div class="container question-inner">
+  <div
+    class="container question-inner reveal">
 
-    <div class="question-mark reveal">
+    <div class="question-mark">
       ?
     </div>
 
+
     <div
-      class="question-text reveal reveal-delay-1"
+      class="question-text"
       data-de="Wer wären wir, wenn niemand uns gesagt hätte, wer wir sein sollen?"
       data-fr="Qui serions-nous si personne ne nous avait dit qui nous devions être ?"
       data-es="¿Quiénes seríamos si nadie nos hubiera dicho quiénes debíamos ser?">
@@ -2394,8 +2786,11 @@ footer {
 
     </div>
 
-    <div class="question-small reveal reveal-delay-2">
+
+    <div class="question-small">
+
       Christoph Fox
+
     </div>
 
   </div>
@@ -2403,9 +2798,9 @@ footer {
 </section>
 
 
-<!-- =======================================================
+<!-- =========================
      ZUSAMMENHANG
-======================================================== -->
+========================= -->
 
 <section
   class="connection"
@@ -2413,16 +2808,19 @@ footer {
 
   <div class="container">
 
-    <div class="label reveal"
-         data-de="Der Zusammenhang"
-         data-fr="Le lien"
-         data-es="La conexión">
+    <div
+      class="label reveal"
+      data-de="Der Zusammenhang"
+      data-fr="Le lien"
+      data-es="La conexión">
+
       Der Zusammenhang
+
     </div>
 
 
     <h2
-      class="reveal reveal-delay-1"
+      class="reveal"
       data-de="Zwischen dem,<br>was uns prägt,<br>und dem, was wir daraus machen."
       data-fr="Entre ce qui nous façonne<br>et ce que nous en faisons."
       data-es="Entre aquello que nos forma<br>y lo que hacemos con ello.">
@@ -2434,12 +2832,12 @@ footer {
     </h2>
 
 
-    <div class="connection-text reveal reveal-delay-2">
+    <div class="connection-text">
 
-      <p
-        data-de="Wir kommen nicht als fertige Menschen auf die Welt."
-        data-fr="Nous ne venons pas au monde en tant qu’êtres humains achevés."
-        data-es="No llegamos al mundo como seres humanos terminados.">
+      <p class="reveal"
+         data-de="Wir kommen nicht als fertige Menschen auf die Welt."
+         data-fr="Nous ne venons pas au monde en tant qu’êtres humains achevés."
+         data-es="No llegamos al mundo como seres humanos terminados.">
 
         Wir kommen nicht als fertige Menschen
         auf die Welt.
@@ -2447,10 +2845,10 @@ footer {
       </p>
 
 
-      <p
-        data-de="Andere Menschen prägen uns. Familien, Freunde, Schule, Gesellschaft und Kultur."
-        data-fr="Les autres nous façonnent. La famille, les amis, l’école, la société et la culture."
-        data-es="Otras personas nos forman. La familia, los amigos, la escuela, la sociedad y la cultura.">
+      <p class="reveal"
+         data-de="Andere Menschen prägen uns. Familien, Freunde, Schule, Gesellschaft und Kultur."
+         data-fr="Les autres nous façonnent. La famille, les amis, l’école, la société et la culture."
+         data-es="Otras personas nos forman. La familia, los amigos, la escuela, la sociedad y la cultura.">
 
         Andere Menschen prägen uns.
         Familien, Freunde, Schule,
@@ -2459,15 +2857,17 @@ footer {
       </p>
 
 
-      <p
-        data-de="Aber wir sind nicht nur das Ergebnis dessen, was mit uns geschieht. <em>Wir handeln.</em> Wir widersprechen. Wir entscheiden. Wir verändern."
-        data-fr="Mais nous ne sommes pas seulement le résultat de ce qui nous arrive. <em>Nous agissons.</em> Nous résistons. Nous décidons. Nous transformons."
-        data-es="Pero no somos solamente el resultado de lo que nos sucede. <em>Actuamos.</em> Nos oponemos. Decidimos. Transformamos.">
+      <p class="reveal"
+         data-de="Aber wir sind nicht nur das Ergebnis dessen, was mit uns geschieht. <em>Wir handeln.</em> Wir widersprechen. Wir entscheiden. Wir verändern."
+         data-fr="Mais nous ne sommes pas seulement le résultat de ce qui nous arrive. <em>Nous agissons.</em> Nous résistons. Nous décidons. Nous transformons."
+         data-es="Pero no somos solamente el resultado de lo que nos sucede. <em>Actuamos.</em> Nos oponemos. Decidimos. Transformamos.">
 
         Aber wir sind nicht nur das Ergebnis
         dessen, was mit uns geschieht.
 
-        <em>Wir handeln.</em>
+        <em>
+          Wir handeln.
+        </em>
 
         Wir widersprechen.
         Wir entscheiden.
@@ -2476,10 +2876,10 @@ footer {
       </p>
 
 
-      <p
-        data-de="Genau dort treffen sich die beiden Bücher: <em>bei der Frage, wie aus Prägung eigene Geschichte wird.</em>"
-        data-fr="C’est précisément là que les deux livres se rejoignent : <em>dans la question de savoir comment ce qui nous façonne devient notre propre histoire.</em>"
-        data-es="Ahí es donde se encuentran los dos libros: <em>en la pregunta de cómo aquello que nos forma se convierte en nuestra propia historia.</em>">
+      <p class="reveal"
+         data-de="Genau dort treffen sich die beiden Bücher: <em>bei der Frage, wie aus Prägung eigene Geschichte wird.</em>"
+         data-fr="C’est précisément là que les deux livres se rejoignent : <em>dans la question de savoir comment ce qui nous façonne devient notre propre histoire.</em>"
+         data-es="Ahí es donde se encuentran los dos libros: <em>en la pregunta de cómo aquello que nos forma se convierte en nuestra propia historia.</em>">
 
         Genau dort treffen sich die beiden Bücher:
 
@@ -2497,9 +2897,9 @@ footer {
 </section>
 
 
-<!-- =======================================================
+<!-- =========================
      AUTOR
-======================================================== -->
+========================= -->
 
 <section id="autor">
 
@@ -2507,25 +2907,31 @@ footer {
 
     <div class="reveal">
 
-      <div class="label"
-           data-de="Über mich"
-           data-fr="À propos de moi"
-           data-es="Sobre mí">
+      <div
+        class="label"
+        data-de="Über mich"
+        data-fr="À propos de moi"
+        data-es="Sobre mí">
+
         Über mich
+
       </div>
 
 
       <div class="about-name">
+
         Christoph<br>
         Fox
+
       </div>
 
     </div>
 
 
-    <div class="reveal reveal-delay-1">
+    <div>
 
       <p
+        class="reveal"
         data-de="Als studierter Erziehungswissenschaftler interessiert mich die Frage, wie Menschen werden, wer sie sind – und wie viel sie selbst daraus machen können."
         data-fr="En tant que diplômé en sciences de l’éducation, je m’intéresse à la question de savoir comment les êtres humains deviennent ce qu’ils sont – et dans quelle mesure ils peuvent eux-mêmes en faire quelque chose."
         data-es="Como graduado en Ciencias de la Educación, me interesa la cuestión de cómo las personas llegan a ser quienes son – y cuánto pueden hacer ellas mismas con aquello en lo que se han convertido.">
@@ -2540,6 +2946,7 @@ footer {
 
 
       <p
+        class="reveal"
         data-de="Sozialisation, Entwicklung und Handlungsfähigkeit gehören dabei für mich zusammen. Denn zwischen dem Menschen, der uns geprägt hat, und dem Menschen, der wir werden, liegt etwas Entscheidendes: unser eigenes Handeln."
         data-fr="Pour moi, socialisation, développement et capacité d’agir sont étroitement liés. Car entre la personne que notre histoire a façonnée et celle que nous devenons se trouve quelque chose d’essentiel : notre propre capacité d’agir."
         data-es="Para mí, socialización, desarrollo y capacidad de acción están estrechamente relacionados. Porque entre la persona que nuestra historia ha formado y la persona en la que nos convertimos existe algo decisivo: nuestra propia capacidad de actuar.">
@@ -2560,6 +2967,7 @@ footer {
 
 
       <p
+        class="reveal"
         data-de="Meine Bücher betrachten diesen Weg aus unterschiedlichen Perspektiven – wissenschaftlich, kritisch und mit einem Blick auf das ganz alltägliche Großwerden."
         data-fr="Mes livres abordent ce parcours sous différentes perspectives – scientifiques, critiques et attentives à la réalité très quotidienne du fait de grandir."
         data-es="Mis libros contemplan este camino desde distintas perspectivas: científica, crítica y con una mirada hacia el hecho cotidiano de crecer.">
@@ -2578,31 +2986,41 @@ footer {
 </section>
 
 
-<!-- =======================================================
+<!-- =========================
      KONTAKT
-======================================================== -->
+========================= -->
 
-<section class="contact" id="kontakt">
+<section
+  class="contact"
+  id="kontakt">
 
-  <div class="container contact-box reveal">
+  <div
+    class="container contact-box">
 
-    <div class="label"
-         data-de="Kontakt"
-         data-fr="Contact"
-         data-es="Contacto">
+    <div
+      class="label reveal"
+      data-de="Kontakt"
+      data-fr="Contact"
+      data-es="Contacto">
+
       Kontakt
+
     </div>
 
 
     <h2
+      class="reveal"
       data-de="Anfragen"
       data-fr="Demandes"
       data-es="Solicitudes">
+
       Anfragen
+
     </h2>
 
 
     <p
+      class="reveal"
       data-de="Anfragen zu Beratung, Coaching oder Supervision für Privatpersonen oder Einrichtungen der Sozialen Arbeit."
       data-fr="Demandes de conseil, de coaching ou de supervision pour particuliers ou institutions du travail social."
       data-es="Consultas sobre asesoramiento, coaching o supervisión para particulares o instituciones del ámbito del trabajo social.">
@@ -2615,7 +3033,7 @@ footer {
 
 
     <a
-      class="contact-button magnetic"
+      class="contact-button reveal"
       href="mailto:mail@herrfox.de"
       data-de="Hier anfragen →"
       data-fr="Faire une demande →"
@@ -2630,31 +3048,41 @@ footer {
 </section>
 
 
-<!-- =======================================================
+<!-- =========================
      IMPRESSUM
-======================================================== -->
+========================= -->
 
-<section class="impressum" id="impressum">
+<section
+  class="impressum"
+  id="impressum">
 
-  <div class="container impressum-box reveal">
+  <div
+    class="container impressum-box">
 
-    <div class="label"
-         data-de="Rechtliches"
-         data-fr="Mentions légales"
-         data-es="Aviso legal">
+    <div
+      class="label reveal"
+      data-de="Rechtliches"
+      data-fr="Mentions légales"
+      data-es="Aviso legal">
+
       Rechtliches
+
     </div>
 
 
     <h2
+      class="reveal"
       data-de="Impressum"
       data-fr="Mentions légales"
       data-es="Aviso legal">
+
       Impressum
+
     </h2>
 
 
     <p
+      class="reveal"
       data-de="Angaben gemäß § 5 DDG:"
       data-fr="Informations conformément à l’article 5 DDG :"
       data-es="Información conforme al § 5 DDG:">
@@ -2664,7 +3092,7 @@ footer {
     </p>
 
 
-    <p>
+    <p class="reveal">
 
       <strong>
         Christoph Fox
@@ -2673,21 +3101,30 @@ footer {
       <br>
 
       c/o Autorenglück #61822
+
       <br>
+
       Albert-Einstein-Straße 47
+
       <br>
+
       02977 Hoyerswerda
+
       <br>
+
       Deutschland
 
     </p>
 
 
-    <p>
+    <p class="reveal">
+
       <br>
+
       <a href="mailto:mail@herrfox.de">
         mail@herrfox.de
       </a>
+
     </p>
 
   </div>
@@ -2708,43 +3145,37 @@ footer {
 </footer>
 
 
-<!-- =======================================================
-     ZURÜCK NACH OBEN
-======================================================== -->
-
-<button
-  class="back-to-top magnetic"
-  id="backToTop"
-  onclick="window.scrollTo({top:0,behavior:'smooth'})"
-  aria-label="Nach oben">
-
-  ↑
-
-</button>
-
-
 <script>
 
-/* =========================================================
+
+/* =========================
    SPRACHEN
-========================================================= */
+========================= */
 
 function setLanguage(language) {
 
-  document.documentElement.lang = language;
+  document.documentElement.lang =
+    language;
+
 
   const elements =
-    document.querySelectorAll("[data-" + language + "]");
+    document.querySelectorAll(
+      "[data-" + language + "]"
+    );
+
 
   elements.forEach(function(element) {
 
     element.innerHTML =
-      element.getAttribute("data-" + language);
+      element.getAttribute(
+        "data-" + language
+      );
 
   });
 
 
-  document.querySelectorAll(".lang-button")
+  document
+    .querySelectorAll(".lang-button")
     .forEach(function(button) {
 
       button.classList.remove("active");
@@ -2753,18 +3184,41 @@ function setLanguage(language) {
 
 
   const buttons =
-    document.querySelectorAll(".lang-button");
+    document.querySelectorAll(
+      ".lang-button"
+    );
 
-  if (language === "de" && buttons[0]) {
-    buttons[0].classList.add("active");
+
+  if (
+    language === "de" &&
+    buttons[0]
+  ) {
+
+    buttons[0]
+      .classList.add("active");
+
   }
 
-  if (language === "fr" && buttons[1]) {
-    buttons[1].classList.add("active");
+
+  if (
+    language === "fr" &&
+    buttons[1]
+  ) {
+
+    buttons[1]
+      .classList.add("active");
+
   }
 
-  if (language === "es" && buttons[2]) {
-    buttons[2].classList.add("active");
+
+  if (
+    language === "es" &&
+    buttons[2]
+  ) {
+
+    buttons[2]
+      .classList.add("active");
+
   }
 
 
@@ -2776,24 +3230,26 @@ function setLanguage(language) {
 }
 
 
-/* =========================================================
+/* =========================
    MENÜ
-========================================================= */
+========================= */
 
 function toggleMenu() {
 
   const menu =
-    document.getElementById("mobileMenu");
+    document.getElementById(
+      "mobileMenu"
+    );
+
 
   const button =
-    document.querySelector(".menu-button");
+    document.querySelector(
+      ".menu-button"
+    );
+
 
   menu.classList.toggle("open");
 
-  button.classList.toggle(
-    "open",
-    menu.classList.contains("open")
-  );
 
   button.setAttribute(
     "aria-expanded",
@@ -2808,14 +3264,19 @@ function toggleMenu() {
 function closeMenu() {
 
   const menu =
-    document.getElementById("mobileMenu");
+    document.getElementById(
+      "mobileMenu"
+    );
+
 
   const button =
-    document.querySelector(".menu-button");
+    document.querySelector(
+      ".menu-button"
+    );
+
 
   menu.classList.remove("open");
 
-  button.classList.remove("open");
 
   button.setAttribute(
     "aria-expanded",
@@ -2825,19 +3286,22 @@ function closeMenu() {
 }
 
 
-/* =========================================================
+/* =========================
    BUCHTEXT
-========================================================= */
+========================= */
 
 function toggleBook(id, button) {
 
   const book =
     document.getElementById(id);
 
+
   book.classList.toggle("open");
 
+
   const language =
-    document.documentElement.lang || "de";
+    document.documentElement.lang ||
+    "de";
 
 
   const labels = {
@@ -2860,7 +3324,9 @@ function toggleBook(id, button) {
   };
 
 
-  if (book.classList.contains("open")) {
+  if (
+    book.classList.contains("open")
+  ) {
 
     button.textContent =
       labels[language].less;
@@ -2875,26 +3341,31 @@ function toggleBook(id, button) {
 }
 
 
-/* =========================================================
-   ABENDLICHT + PARALLAX
-========================================================= */
+/* =========================
+   4 — ABENDLICHT
+========================= */
 
 let ticking = false;
+
 
 function updateEveningLight() {
 
   const scrollY =
     window.scrollY || 0;
 
+
   const hero =
     document.querySelector(".hero");
+
 
   if (!hero) {
     return;
   }
 
+
   const heroHeight =
     hero.offsetHeight;
+
 
   const progress =
     Math.min(
@@ -2902,19 +3373,26 @@ function updateEveningLight() {
       1.8
     );
 
+
   const x =
     78 - (progress * 20);
+
 
   const y =
     22 + (progress * 25);
 
+
   const strength =
-    .78 - (
-      Math.min(progress, 1) * .10
+    .78 -
+    (
+      Math.min(progress, 1) *
+      .10
     );
+
 
   const shift =
     progress * 115;
+
 
   const shiftY =
     progress * 55;
@@ -2925,20 +3403,24 @@ function updateEveningLight() {
     x + "%"
   );
 
+
   document.documentElement.style.setProperty(
     "--light-y",
     y + "%"
   );
+
 
   document.documentElement.style.setProperty(
     "--light-strength",
     strength
   );
 
+
   document.documentElement.style.setProperty(
     "--light-shift",
     shift + "px"
   );
+
 
   document.documentElement.style.setProperty(
     "--light-shift-y",
@@ -2946,34 +3428,16 @@ function updateEveningLight() {
   );
 
 
+  /* 3 — Fuchs bewegt sich minimal */
+
+  const foxMovement =
+    Math.min(scrollY * .045, 24);
+
+
   document.documentElement.style.setProperty(
-    "--hero-parallax",
-    Math.min(scrollY * .12, 100) + "px"
+    "--fox-scroll",
+    foxMovement + "px"
   );
-
-
-  const fox =
-    document.querySelector(".fox-shadow");
-
-  if (fox) {
-
-    const foxOffset =
-      Math.sin(scrollY * .008) * 7;
-
-    const foxRotate =
-      Math.sin(scrollY * .006) * .6;
-
-    document.documentElement.style.setProperty(
-      "--fox-parallax",
-      foxOffset + "px"
-    );
-
-    document.documentElement.style.setProperty(
-      "--fox-rotate",
-      foxRotate + "deg"
-    );
-
-  }
 
 
   ticking = false;
@@ -3005,312 +3469,368 @@ window.addEventListener(
 updateEveningLight();
 
 
-/* =========================================================
-   SCROLL-FORTSCHRITT + HEADER + TOP BUTTON
-========================================================= */
+/* =========================
+   1 — SCROLL REVEAL
+========================= */
 
-function updateScrollUI() {
+const revealElements =
+  document.querySelectorAll(
+    ".reveal"
+  );
+
+
+const revealObserver =
+  new IntersectionObserver(
+    function(entries) {
+
+      entries.forEach(
+        function(entry) {
+
+          if (
+            entry.isIntersecting
+          ) {
+
+            entry.target
+              .classList
+              .add("visible");
+
+            revealObserver
+              .unobserve(
+                entry.target
+              );
+
+          }
+
+        }
+      );
+
+    },
+    {
+      threshold: .12,
+      rootMargin: "0px 0px -45px 0px"
+    }
+  );
+
+
+revealElements.forEach(
+  function(element) {
+
+    revealObserver.observe(
+      element
+    );
+
+  }
+);
+
+
+/* =========================
+   6 — BUCHCOVER MOUSE-TILT
+========================= */
+
+const books =
+  document.querySelectorAll(
+    ".book"
+  );
+
+
+const finePointer =
+  window.matchMedia(
+    "(hover: hover) and (pointer: fine)"
+  ).matches;
+
+
+if (finePointer) {
+
+  books.forEach(function(book) {
+
+    const cover =
+      book.querySelector(".cover");
+
+
+    if (!cover) {
+      return;
+    }
+
+
+    book.addEventListener(
+      "mousemove",
+      function(event) {
+
+        const rect =
+          book.getBoundingClientRect();
+
+
+        const x =
+          (
+            event.clientX -
+            rect.left
+          ) /
+          rect.width;
+
+
+        const y =
+          (
+            event.clientY -
+            rect.top
+          ) /
+          rect.height;
+
+
+        const rotateY =
+          (x - .5) * 3.2;
+
+
+        const rotateX =
+          (.5 - y) * 2.5;
+
+
+        cover.style.transform =
+          `
+          perspective(900px)
+          translateY(-8px)
+          rotateX(${rotateX}deg)
+          rotateY(${rotateY}deg)
+          rotate(-.35deg)
+          scale(1.015)
+          `;
+
+      }
+    );
+
+
+    book.addEventListener(
+      "mouseleave",
+      function() {
+
+        cover.style.transform =
+          "";
+
+      }
+    );
+
+  });
+
+}
+
+
+/* =========================
+   10 — MAUS-LICHT IM HERO
+========================= */
+
+if (finePointer) {
+
+  const hero =
+    document.querySelector(
+      ".hero"
+    );
+
+
+  hero.addEventListener(
+    "mousemove",
+    function(event) {
+
+      const rect =
+        hero.getBoundingClientRect();
+
+
+      const x =
+        (
+          event.clientX -
+          rect.left
+        ) /
+        rect.width *
+        100;
+
+
+      const y =
+        (
+          event.clientY -
+          rect.top
+        ) /
+        rect.height *
+        100;
+
+
+      document.documentElement
+        .style
+        .setProperty(
+          "--mouse-x",
+          x + "%"
+        );
+
+
+      document.documentElement
+        .style
+        .setProperty(
+          "--mouse-y",
+          y + "%"
+        );
+
+    }
+  );
+
+
+  hero.addEventListener(
+    "mouseleave",
+    function() {
+
+      document.documentElement
+        .style
+        .setProperty(
+          "--mouse-x",
+          "50%"
+        );
+
+
+      document.documentElement
+        .style
+        .setProperty(
+          "--mouse-y",
+          "50%"
+        );
+
+    }
+  );
+
+}
+
+
+/* =========================
+   8 — SCROLL-PROGRESS
+========================= */
+
+function updateScrollProgress() {
 
   const scrollTop =
     window.scrollY || 0;
 
-  const documentHeight =
-    document.documentElement.scrollHeight -
+
+  const scrollHeight =
+    document.documentElement
+      .scrollHeight -
     window.innerHeight;
 
+
+  if (scrollHeight <= 0) {
+    return;
+  }
+
+
   const percentage =
-    documentHeight > 0
-      ? (scrollTop / documentHeight) * 100
-      : 0;
+    (
+      scrollTop /
+      scrollHeight
+    ) *
+    100;
 
 
-  const progress =
-    document.getElementById("scrollProgress");
-
-  if (progress) {
-
-    progress.style.width =
-      percentage + "%";
-
-  }
-
-
-  const header =
-    document.querySelector("header");
-
-  if (header) {
-
-    header.classList.toggle(
-      "scrolled",
-      scrollTop > 30
+  document.documentElement
+    .style
+    .setProperty(
+      "--scroll-progress",
+      percentage + "%"
     );
-
-  }
-
-
-  const topButton =
-    document.getElementById("backToTop");
-
-  if (topButton) {
-
-    topButton.classList.toggle(
-      "visible",
-      scrollTop > window.innerHeight * .65
-    );
-
-  }
 
 }
 
 
 window.addEventListener(
   "scroll",
-  updateScrollUI,
+  updateScrollProgress,
   {
     passive: true
   }
 );
 
-updateScrollUI();
+
+updateScrollProgress();
 
 
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
+/* =========================
+   9 — AKTIVER NAVIGATIONSPUNKT
+========================= */
 
-const revealObserver =
+const sections =
+  document.querySelectorAll(
+    "main section[id]"
+  );
+
+
+const navigationLinks =
+  document.querySelectorAll(
+    "nav a[data-section]"
+  );
+
+
+const navObserver =
   new IntersectionObserver(
     function(entries) {
 
-      entries.forEach(function(entry) {
+      entries.forEach(
+        function(entry) {
 
-        if (entry.isIntersecting) {
+          if (
+            entry.isIntersecting
+          ) {
 
-          entry.target.classList.add("visible");
-
-          revealObserver.unobserve(
-            entry.target
-          );
-
-        }
-
-      });
-
-    },
-    {
-      threshold: .12,
-      rootMargin: "0px 0px -50px 0px"
-    }
-  );
+            const id =
+              entry.target.id;
 
 
-document
-  .querySelectorAll(".reveal")
-  .forEach(function(element) {
+            navigationLinks
+              .forEach(
+                function(link) {
 
-    revealObserver.observe(element);
+                  link.classList
+                    .toggle(
+                      "active",
+                      link.dataset.section === id
+                    );
 
-  });
-
-
-/* =========================================================
-   ZUSAMMENHANG AKTIVIEREN
-========================================================= */
-
-const connection =
-  document.querySelector(".connection");
-
-if (connection) {
-
-  const connectionObserver =
-    new IntersectionObserver(
-      function(entries) {
-
-        entries.forEach(function(entry) {
-
-          if (entry.isIntersecting) {
-
-            connection.classList.add(
-              "visible"
-            );
-
-            connectionObserver.unobserve(
-              connection
-            );
+                }
+              );
 
           }
 
-        });
-
-      },
-      {
-        threshold: .2
-      }
-    );
-
-  connectionObserver.observe(connection);
-
-}
-
-
-/* =========================================================
-   CURSOR-LICHT
-========================================================= */
-
-const supportsHover =
-  window.matchMedia(
-    "(hover: hover)"
-  ).matches;
-
-if (supportsHover) {
-
-  document.addEventListener(
-    "mousemove",
-    function(event) {
-
-      document.documentElement.style.setProperty(
-        "--mouse-x",
-        event.clientX + "px"
+        }
       );
 
-      document.documentElement.style.setProperty(
-        "--mouse-y",
-        event.clientY + "px"
-      );
-
-      document.body.classList.add(
-        "cursor-active"
-      );
-
+    },
+    {
+      rootMargin:
+        "-35% 0px -55% 0px",
+      threshold: 0
     }
   );
 
-}
+
+sections.forEach(
+  function(section) {
+
+    navObserver.observe(
+      section
+    );
+
+  }
+);
 
 
-/* =========================================================
-   MAGNETISCHE BUTTONS
-========================================================= */
-
-if (supportsHover) {
-
-  document
-    .querySelectorAll(".magnetic")
-    .forEach(function(element) {
-
-      element.addEventListener(
-        "mousemove",
-        function(event) {
-
-          const rect =
-            element.getBoundingClientRect();
-
-          const x =
-            event.clientX -
-            rect.left -
-            rect.width / 2;
-
-          const y =
-            event.clientY -
-            rect.top -
-            rect.height / 2;
-
-          element.style.transform =
-            "translate(" +
-            (x * .12) +
-            "px," +
-            (y * .12) +
-            "px)";
-
-        }
-      );
-
-
-      element.addEventListener(
-        "mouseleave",
-        function() {
-
-          element.style.transform =
-            "";
-
-        }
-      );
-
-    });
-
-}
-
-
-/* =========================================================
-   3D-BÜCHER
-========================================================= */
-
-if (supportsHover) {
-
-  document
-    .querySelectorAll(".book")
-    .forEach(function(book) {
-
-      book.addEventListener(
-        "mousemove",
-        function(event) {
-
-          const rect =
-            book.getBoundingClientRect();
-
-          const x =
-            event.clientX -
-            rect.left;
-
-          const y =
-            event.clientY -
-            rect.top;
-
-          const rotateY =
-            ((x / rect.width) - .5) * 3;
-
-          const rotateX =
-            ((y / rect.height) - .5) * -3;
-
-          book.style.transform =
-            "perspective(1100px) " +
-            "rotateX(" +
-            rotateX +
-            "deg) " +
-            "rotateY(" +
-            rotateY +
-            "deg) " +
-            "translateY(-5px)";
-
-        }
-      );
-
-
-      book.addEventListener(
-        "mouseleave",
-        function() {
-
-          book.style.transform =
-            "";
-
-        }
-      );
-
-    });
-
-}
-
-
-/* =========================================================
+/* =========================
    SPRACHE BEIM LADEN
-========================================================= */
+========================= */
 
 const savedLanguage =
-  localStorage.getItem("christophFoxLanguage") || "de";
+  localStorage.getItem(
+    "christophFoxLanguage"
+  ) || "de";
 
-setLanguage(savedLanguage);
+
+setLanguage(
+  savedLanguage
+);
 
 </script>
+
 
 </body>
 </html>
