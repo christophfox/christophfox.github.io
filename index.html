@@ -26,7 +26,6 @@
 <meta name="twitter:title" content="Christoph Fox | Autor">
 <meta name="twitter:description" content="Bücher und Gedanken über Sozialisation, Entwicklung, Identität und Handlungsfähigkeit.">
 
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,7 +46,6 @@
 }
 </script>
 
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -63,7 +61,6 @@
 }
 </script>
 
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -77,7 +74,6 @@
   "inLanguage": "de"
 }
 </script>
-
 
 <style>
 
@@ -178,12 +174,6 @@ header {
   text-transform: uppercase;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
 nav {
   display: flex;
   gap: 23px;
@@ -224,95 +214,6 @@ nav a::after {
   );
 
   transition: width .25s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-
-/* =========================
-   SPRACHWAHL
-========================= */
-
-.language-switcher {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.language-button {
-  width: 31px;
-  height: 31px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0;
-
-  border: 1px solid rgba(116,51,31,.18);
-  border-radius: 50%;
-
-  background: rgba(255,250,243,.65);
-
-  cursor: pointer;
-
-  font-size: 15px;
-
-  opacity: .68;
-
-  transition:
-    transform .25s ease,
-    opacity .25s ease,
-    background .25s ease,
-    box-shadow .25s ease;
-}
-
-.language-button:hover {
-  transform: translateY(-2px) scale(1.05);
-  opacity: 1;
-
-  background: #fffaf3;
-
-  box-shadow:
-    0 5px 14px rgba(85,38,22,.13);
-}
-
-.language-button.active {
-  opacity: 1;
-
-  border-color: rgba(116,51,31,.38);
-
-  background: #fffaf3;
-
-  box-shadow:
-    0 4px 12px rgba(85,38,22,.12);
-}
-
-
-/* Zorro-Maske */
-
-.zorro-icon {
-  width: 21px;
-  height: 15px;
-
-  display: block;
-
-  transition:
-    transform .25s ease,
-    filter .25s ease;
-}
-
-.language-button:hover .zorro-icon {
-  transform:
-    rotate(-4deg)
-    scale(1.08);
-
-  filter:
-    drop-shadow(
-      0 2px 3px rgba(65,25,15,.25)
-    );
 }
 
 
@@ -473,6 +374,19 @@ nav a:hover::after {
   text-transform: uppercase;
 
   margin-bottom: 25px;
+}
+
+.hero-services {
+  margin-top: -16px;
+  margin-bottom: 25px;
+
+  color: rgba(66,28,17,.72);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .66rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -1038,6 +952,52 @@ h2 {
   color: #4c3d34;
 }
 
+.contact-service {
+  margin-top: 35px;
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(125,75,52,.22);
+}
+
+.contact-service h3 {
+  margin: 0 0 12px;
+
+  font-size: 1.65rem;
+  font-weight: 400;
+
+  color: var(--fox-dark);
+}
+
+.contact-service p {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.contact-service-link {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  color: var(--fox-dark);
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  transition:
+    transform .2s ease,
+    color .2s ease;
+}
+
+.contact-service-link:hover {
+  color: var(--fox);
+  transform: translateX(4px);
+}
+
 .contact-button {
   display: inline-block;
 
@@ -1094,19 +1054,11 @@ footer {
    MOBILE
 ========================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 760px) {
 
-  .header-right {
-    gap: 14px;
+  .header-inner {
+    min-height: 72px;
   }
-
-  nav {
-    gap: 15px;
-  }
-
-}
-
-@media (max-width: 900px) {
 
   nav {
     display: none;
@@ -1114,18 +1066,6 @@ footer {
 
   .menu-button {
     display: block;
-  }
-
-  .header-right {
-    gap: 10px;
-  }
-
-}
-
-@media (max-width: 760px) {
-
-  .header-inner {
-    min-height: 72px;
   }
 
   .hero {
@@ -1157,9 +1097,9 @@ footer {
     font-size: 4.2rem;
   }
 
-  .language-button {
-    width: 29px;
-    height: 29px;
+  .hero-services {
+    font-size: .58rem;
+    letter-spacing: .10em;
   }
 
 }
@@ -1210,101 +1150,29 @@ footer {
     </a>
 
 
-    <div class="header-right">
+    <nav aria-label="Hauptnavigation">
 
-      <nav aria-label="Hauptnavigation">
+      <a href="#start">Start</a>
+      <a href="#buecher">Bücher</a>
+      <a href="#gedanken">Gedanken</a>
+      <a href="#autor">Über mich</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#impressum">Impressum</a>
 
-        <a href="#start" data-i18n="navStart">Start</a>
-        <a href="#buecher" data-i18n="navBooks">Bücher</a>
-        <a href="#gedanken" data-i18n="navThoughts">Gedanken</a>
-        <a href="#autor" data-i18n="navAbout">Über mich</a>
-        <a href="#kontakt" data-i18n="navContact">Kontakt</a>
-        <a href="#impressum" data-i18n="navLegal">Impressum</a>
-
-      </nav>
+    </nav>
 
 
-      <div class="language-switcher" aria-label="Sprache auswählen">
+    <button
+      class="menu-button"
+      onclick="toggleMenu()"
+      aria-label="Menü öffnen"
+      aria-expanded="false">
 
-        <button
-          class="language-button active"
-          onclick="setLanguage('de')"
-          aria-label="Deutsch"
-          title="Deutsch">
+      <span></span>
+      <span></span>
+      <span></span>
 
-          🇩🇪
-
-        </button>
-
-
-        <button
-          class="language-button"
-          onclick="setLanguage('fr')"
-          aria-label="Français"
-          title="Français">
-
-          🥖
-
-        </button>
-
-
-        <button
-          class="language-button"
-          onclick="setLanguage('es')"
-          aria-label="Español"
-          title="Español">
-
-          <svg
-            class="zorro-icon"
-            viewBox="0 0 60 40"
-            xmlns="http://www.w3.org/2000/svg">
-
-            <path
-              d="M4 13
-                 C12 5 22 5 30 10
-                 C38 5 48 5 56 13
-                 C49 11 43 12 38 16
-                 C44 18 49 21 53 26
-                 C45 24 38 22 30 25
-                 C22 22 15 24 7 26
-                 C11 21 16 18 22 16
-                 C17 12 11 11 4 13 Z"
-
-              fill="#74331f"
-            />
-
-            <path
-              d="M12 13
-                 C18 10 24 11 30 15
-                 C36 11 42 10 48 13"
-
-              fill="none"
-              stroke="#efbd87"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              opacity=".8"
-            />
-
-          </svg>
-
-        </button>
-
-      </div>
-
-
-      <button
-        class="menu-button"
-        onclick="toggleMenu()"
-        aria-label="Menü öffnen"
-        aria-expanded="false">
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
-    </div>
+    </button>
 
   </div>
 
@@ -1313,29 +1181,12 @@ footer {
     class="mobile-menu"
     id="mobileMenu">
 
-    <a href="#start" onclick="closeMenu()" data-i18n="navStart">
-      Start
-    </a>
-
-    <a href="#buecher" onclick="closeMenu()" data-i18n="navBooks">
-      Bücher
-    </a>
-
-    <a href="#gedanken" onclick="closeMenu()" data-i18n="navThoughts">
-      Gedanken
-    </a>
-
-    <a href="#autor" onclick="closeMenu()" data-i18n="navAbout">
-      Über mich
-    </a>
-
-    <a href="#kontakt" onclick="closeMenu()" data-i18n="navContact">
-      Kontakt / Anfragen
-    </a>
-
-    <a href="#impressum" onclick="closeMenu()" data-i18n="navLegal">
-      Impressum
-    </a>
+    <a href="#start" onclick="closeMenu()">Start</a>
+    <a href="#buecher" onclick="closeMenu()">Bücher</a>
+    <a href="#gedanken" onclick="closeMenu()">Gedanken</a>
+    <a href="#autor" onclick="closeMenu()">Über mich</a>
+    <a href="#kontakt" onclick="closeMenu()">Kontakt / Anfragen</a>
+    <a href="#impressum" onclick="closeMenu()">Impressum</a>
 
   </div>
 
@@ -1345,24 +1196,24 @@ footer {
 <main>
 
 
-<!-- =========================
-     HERO
-========================= -->
-
 <section class="hero" id="start">
 
   <div class="hero-content">
 
-    <div class="eyebrow" data-i18n="eyebrow">
+    <div class="eyebrow">
       Christoph Fox · Autor
     </div>
 
-    <h1 data-i18n="heroTitle">
+    <div class="hero-services">
+      Autor · Coaching · Supervision · Beratung
+    </div>
+
+    <h1>
       Wie werden wir<br>
       zu dem, was wir sind?
     </h1>
 
-    <div class="hero-text" data-i18n="heroText">
+    <div class="hero-text">
 
       Wir werden nicht einfach geboren und sind irgendwann fertig.
 
@@ -1381,24 +1232,20 @@ footer {
 
 
 
-<!-- =========================
-     BÜCHER
-========================= -->
-
 <section id="buecher">
 
   <div class="container">
 
-    <div class="label" data-i18n="booksLabel">
+    <div class="label">
       Die Bücher
     </div>
 
-    <h2 data-i18n="booksTitle">
+    <h2>
       Zwei Bücher.<br>
       Eine Frage.
     </h2>
 
-    <p class="intro" data-i18n="booksIntro">
+    <p class="intro">
 
       Wie wird aus einem kleinen Menschen
       jemand, der seine Welt verstehen,
@@ -1414,8 +1261,6 @@ footer {
 
     <div class="books">
 
-
-      <!-- BUCH 1 -->
 
       <article class="book" id="buch-sozialisation">
 
@@ -1448,7 +1293,7 @@ footer {
         </div>
 
 
-        <p data-i18n="book1Text">
+        <p>
 
           Wir werden nicht allein zu dem,
           was wir sind.
@@ -1467,11 +1312,11 @@ footer {
 
         <div class="book-extra">
 
-          <h4 data-i18n="book1ExtraTitle">
+          <h4>
             Worum geht es?
           </h4>
 
-          <p data-i18n="book1Extra">
+          <p>
 
             Das Buch fragt danach, wie Menschen
             in ihrer sozialen Welt zu Subjekten werden.
@@ -1484,11 +1329,11 @@ footer {
           </p>
 
 
-          <h4 data-i18n="book1QuestionTitle">
+          <h4>
             Die zentrale Frage
           </h4>
 
-          <p data-i18n="book1Question">
+          <p>
 
             Wie viel von dem, was wir sind,
             wurde uns mitgegeben –
@@ -1501,8 +1346,7 @@ footer {
 
         <button
           class="more-button"
-          onclick="toggleBook('buch-sozialisation', this)"
-          data-i18n="more">
+          onclick="toggleBook('buch-sozialisation', this)">
 
           Mehr zum Buch +
 
@@ -1521,8 +1365,7 @@ footer {
           class="book-link"
           href="https://www.lehmanns.ch/shop/sozialwissenschaften/41357656-9783961380381-sozialisation-subjekt-handeln-und-identitaet"
           target="_blank"
-          rel="noopener noreferrer"
-          data-i18n="book1Link">
+          rel="noopener noreferrer">
 
           Bei Lehmanns ansehen →
 
@@ -1531,8 +1374,6 @@ footer {
       </article>
 
 
-
-      <!-- BUCH 2 -->
 
       <article class="book" id="buch-klein-wild">
 
@@ -1559,12 +1400,12 @@ footer {
         </h3>
 
 
-        <div class="subtitle" data-i18n="book2Subtitle">
+        <div class="subtitle">
           Entwicklung. Vier Akte.
         </div>
 
 
-        <p data-i18n="book2Text">
+        <p>
 
           Großwerden ist kein gerader Weg.
 
@@ -1585,11 +1426,11 @@ footer {
 
         <div class="book-extra">
 
-          <h4 data-i18n="book2ExtraTitle">
+          <h4>
             Worum geht es?
           </h4>
 
-          <p data-i18n="book2Extra">
+          <p>
 
             Entwicklung wird hier als Weg durch
             vier Akte betrachtet:
@@ -1603,11 +1444,11 @@ footer {
           </p>
 
 
-          <h4 data-i18n="book2QuestionTitle">
+          <h4>
             Die zentrale Frage
           </h4>
 
-          <p data-i18n="book2Question">
+          <p>
 
             Wann werden wir nicht nur groß,
             sondern tatsächlich fähig,
@@ -1620,8 +1461,7 @@ footer {
 
         <button
           class="more-button"
-          onclick="toggleBook('buch-klein-wild', this)"
-          data-i18n="more">
+          onclick="toggleBook('buch-klein-wild', this)">
 
           Mehr zum Buch +
 
@@ -1639,8 +1479,7 @@ footer {
           class="book-link"
           href="https://www.thalia.de/shop/home/artikeldetails/A1075028145"
           target="_blank"
-          rel="noopener noreferrer"
-          data-i18n="book2Link">
+          rel="noopener noreferrer">
 
           Bei Thalia ansehen →
 
@@ -1655,8 +1494,6 @@ footer {
 </section>
 
 
-
-<!-- FUCHS -->
 
 <div
   class="fox-sign"
@@ -1676,9 +1513,20 @@ footer {
         x2="1"
         y2="1">
 
-        <stop offset="0%" stop-color="#5d2617"/>
-        <stop offset="55%" stop-color="#8e3f25"/>
-        <stop offset="100%" stop-color="#3a180f"/>
+        <stop
+          offset="0%"
+          stop-color="#5d2617"
+        />
+
+        <stop
+          offset="55%"
+          stop-color="#8e3f25"
+        />
+
+        <stop
+          offset="100%"
+          stop-color="#3a180f"
+        />
 
       </linearGradient>
 
@@ -1741,10 +1589,6 @@ footer {
 
 
 
-<!-- =========================
-     FRAGE
-========================= -->
-
 <section class="question">
 
   <div class="container question-inner">
@@ -1753,10 +1597,12 @@ footer {
       ?
     </div>
 
-    <div class="question-text" data-i18n="question">
+    <div class="question-text">
+
       Wer wären wir,
       wenn niemand uns gesagt hätte,
       wer wir sein sollen?
+
     </div>
 
     <div class="question-small">
@@ -1769,24 +1615,20 @@ footer {
 
 
 
-<!-- =========================
-     GEDANKEN
-========================= -->
-
 <section class="thoughts" id="gedanken">
 
   <div class="container">
 
-    <div class="label" data-i18n="thoughtsLabel">
+    <div class="label">
       Gedanken
     </div>
 
-    <h2 data-i18n="thoughtsTitle">
+    <h2>
       Über das<br>
       Menschwerden.
     </h2>
 
-    <p class="thoughts-intro" data-i18n="thoughtsIntro">
+    <p class="thoughts-intro">
 
       Kleine Gedanken zu großen Fragen:
       über das Großwerden, über Menschen,
@@ -1800,14 +1642,14 @@ footer {
 
     <article class="thought">
 
-      <div class="thought-title" data-i18n="thoughtTitle">
+      <div class="thought-title">
 
         Wann hört man eigentlich auf,
         jemand anderes zu werden?
 
       </div>
 
-      <div class="thought-text" data-i18n="thoughtText">
+      <div class="thought-text">
 
         Wir verändern uns ständig.
         Trotzdem erzählen wir uns gerne,
@@ -1819,7 +1661,7 @@ footer {
 
       </div>
 
-      <div class="thought-date" data-i18n="thoughtDate">
+      <div class="thought-date">
         Ein erster Gedanke
       </div>
 
@@ -1831,25 +1673,21 @@ footer {
 
 
 
-<!-- =========================
-     VERBINDUNG
-========================= -->
-
 <section class="connection">
 
   <div class="container">
 
-    <div class="label" data-i18n="connectionLabel">
+    <div class="label">
       Der Zusammenhang
     </div>
 
-    <h2 data-i18n="connectionTitle">
+    <h2>
       Zwischen dem,<br>
       was uns prägt,<br>
       und dem, was wir daraus machen.
     </h2>
 
-    <div class="connection-text" data-i18n="connectionText">
+    <div class="connection-text">
 
       <p>
         Wir kommen nicht als fertige Menschen
@@ -1863,6 +1701,7 @@ footer {
       </p>
 
       <p>
+
         Aber wir sind nicht nur das Ergebnis
         dessen, was mit uns geschieht.
 
@@ -1871,15 +1710,18 @@ footer {
         Wir widersprechen.
         Wir entscheiden.
         Wir verändern.
+
       </p>
 
       <p>
+
         Genau dort treffen sich die beiden Bücher:
 
         <em>
           bei der Frage,
           wie aus Prägung eigene Geschichte wird.
         </em>
+
       </p>
 
     </div>
@@ -1890,17 +1732,13 @@ footer {
 
 
 
-<!-- =========================
-     AUTOR
-========================= -->
-
 <section id="autor">
 
   <div class="container about">
 
     <div>
 
-      <div class="label" data-i18n="aboutLabel">
+      <div class="label">
         Über mich
       </div>
 
@@ -1914,9 +1752,10 @@ footer {
 
     <div>
 
-      <p data-i18n="aboutText1">
+      <p>
 
-        Ich beschäftige mich mit der Frage,
+        Ich bin studierter Erziehungswissenschaftler
+        und beschäftige mich mit der Frage,
         wie Menschen werden, wer sie sind –
         und wie viel sie selbst daraus machen
         können.
@@ -1924,7 +1763,7 @@ footer {
       </p>
 
 
-      <p data-i18n="aboutText2">
+      <p>
 
         Sozialisation, Entwicklung und
         Handlungsfähigkeit gehören dabei
@@ -1941,7 +1780,7 @@ footer {
       </p>
 
 
-      <p data-i18n="aboutText3">
+      <p>
 
         Meine Bücher betrachten diesen Weg
         aus unterschiedlichen Perspektiven –
@@ -1958,23 +1797,19 @@ footer {
 
 
 
-<!-- =========================
-     KONTAKT
-========================= -->
-
 <section class="contact" id="kontakt">
 
   <div class="container contact-box">
 
-    <div class="label" data-i18n="contactLabel">
+    <div class="label">
       Kontakt
     </div>
 
-    <h2 data-i18n="contactTitle">
+    <h2>
       Kontakt / Anfragen
     </h2>
 
-    <p data-i18n="contactText">
+    <p>
 
       Fragen zu den Büchern,
       Lesungen, Veranstaltungen,
@@ -1982,10 +1817,33 @@ footer {
 
     </p>
 
+
+    <div class="contact-service">
+
+      <h3>
+        Coaching &amp; Supervision
+      </h3>
+
+      <p>
+        Anfragen zu Coaching und Supervision
+        und beruflicher Beratung für Privatpersonen
+        oder Einrichtungen der Sozialen Arbeit
+      </p>
+
+      <a
+        class="contact-service-link"
+        href="mailto:mail@herrfox.de?subject=Anfrage%20Coaching%20%26%20Supervision">
+
+        → klick
+
+      </a>
+
+    </div>
+
+
     <a
       class="contact-button"
-      href="mailto:mail@herrfox.de"
-      data-i18n="emailButton">
+      href="mailto:mail@herrfox.de">
 
       E-Mail schreiben →
 
@@ -1997,23 +1855,19 @@ footer {
 
 
 
-<!-- =========================
-     IMPRESSUM
-========================= -->
-
 <section class="impressum" id="impressum">
 
   <div class="container impressum-box">
 
-    <div class="label" data-i18n="legalLabel">
+    <div class="label">
       Rechtliches
     </div>
 
-    <h2 data-i18n="legalTitle">
+    <h2>
       Impressum
     </h2>
 
-    <p data-i18n="legalAccording">
+    <p>
       Angaben gemäß § 5 DDG:
     </p>
 
@@ -2037,10 +1891,7 @@ footer {
 
     <p>
 
-      <span data-i18n="emailLabel">
-        E-Mail:
-      </span>
-
+      E-Mail:
       <br>
 
       <a href="mailto:mail@herrfox.de">
@@ -2062,7 +1913,7 @@ footer {
 
   <div class="container">
 
-    © Christoph Fox
+    © Dipl.-Päd. Christoph Fox
 
   </div>
 
@@ -2071,531 +1922,6 @@ footer {
 
 
 <script>
-
-/* =========================
-   SPRACHEN
-========================= */
-
-const translations = {
-
-  de: {
-
-    title:
-      "Christoph Fox | Autor über Sozialisation, Entwicklung und Identität",
-
-    description:
-      "Christoph Fox – Bücher und Gedanken über Sozialisation, Entwicklung, Identität und Handlungsfähigkeit.",
-
-    navStart: "Start",
-    navBooks: "Bücher",
-    navThoughts: "Gedanken",
-    navAbout: "Über mich",
-    navContact: "Kontakt / Anfragen",
-    navLegal: "Impressum",
-
-    eyebrow:
-      "Christoph Fox · Autor",
-
-    heroTitle:
-      "Wie werden wir<br>zu dem, was wir sind?",
-
-    heroText:
-      "Wir werden nicht einfach geboren und sind irgendwann fertig.<br><br>Wir wachsen hinein in Beziehungen, Gesellschaft und Geschichte – und machen uns dabei selbst zu dem, was wir werden.",
-
-    booksLabel:
-      "Die Bücher",
-
-    booksTitle:
-      "Zwei Bücher.<br>Eine Frage.",
-
-    booksIntro:
-      "Wie wird aus einem kleinen Menschen jemand, der seine Welt verstehen, sich in ihr behaupten und sie schließlich selbst mitgestalten kann?<br><br>Die beiden Bücher von Christoph Fox nähern sich dieser Frage aus unterschiedlichen Richtungen.",
-
-    book1Text:
-      "Wir werden nicht allein zu dem, was wir sind.<br><br>Wir wachsen in Familien, Freundschaften, Schulen, Institutionen und Gesellschaften auf.<br><br>Wir übernehmen, widersprechen, passen uns an, grenzen uns ab – und gestalten dabei immer auch uns selbst.",
-
-    book1ExtraTitle:
-      "Worum geht es?",
-
-    book1Extra:
-      "Das Buch fragt danach, wie Menschen in ihrer sozialen Welt zu Subjekten werden.<br><br>Sozialisation erscheint dabei nicht als bloße Anpassung, sondern als Verhältnis zwischen Prägung, eigenem Handeln, Identität und Handlungsfähigkeit.",
-
-    book1QuestionTitle:
-      "Die zentrale Frage",
-
-    book1Question:
-      "Wie viel von dem, was wir sind, wurde uns mitgegeben – und was machen wir selbst daraus?",
-
-    more:
-      "Mehr zum Buch +",
-
-    book1Link:
-      "Bei Lehmanns ansehen →",
-
-    book2Subtitle:
-      "Entwicklung. Vier Akte.",
-
-    book2Text:
-      "Großwerden ist kein gerader Weg.<br><br>Wir beginnen klein.<br>Wir werden wild.<br>Wir werden groß.<br><br>Und irgendwann stellt sich eine andere Frage:<br><br><strong>Was können wir mit dem anfangen, was aus uns geworden ist?</strong>",
-
-    book2ExtraTitle:
-      "Worum geht es?",
-
-    book2Extra:
-      "Entwicklung wird hier als Weg durch vier Akte betrachtet: Klein. Wild. Groß. Fähig.<br><br>Ein Blick auf das Werden des Menschen, auf Veränderung und auf den Moment, in dem aus Entwicklung zunehmend eigene Handlungsfähigkeit entsteht.",
-
-    book2QuestionTitle:
-      "Die zentrale Frage",
-
-    book2Question:
-      "Wann werden wir nicht nur groß, sondern tatsächlich fähig, mit dem eigenen Leben etwas anzufangen?",
-
-    book2Link:
-      "Bei Thalia ansehen →",
-
-    question:
-      "Wer wären wir, wenn niemand uns gesagt hätte, wer wir sein sollen?",
-
-    thoughtsLabel:
-      "Gedanken",
-
-    thoughtsTitle:
-      "Über das<br>Menschwerden.",
-
-    thoughtsIntro:
-      "Kleine Gedanken zu großen Fragen: über das Großwerden, über Menschen, Sozialisation, Freiheit und die manchmal merkwürdige Tatsache, dass wir alle irgendwie versuchen müssen, mit unserem Leben klarzukommen.",
-
-    thoughtTitle:
-      "Wann hört man eigentlich auf, jemand anderes zu werden?",
-
-    thoughtText:
-      "Wir verändern uns ständig. Trotzdem erzählen wir uns gerne, wir seien irgendwann „fertig“.<br><br>Vielleicht beginnt Erwachsensein genau dort, wo man merkt, dass man es niemals ganz ist.",
-
-    thoughtDate:
-      "Ein erster Gedanke",
-
-    connectionLabel:
-      "Der Zusammenhang",
-
-    connectionTitle:
-      "Zwischen dem,<br>was uns prägt,<br>und dem, was wir daraus machen.",
-
-    connectionText:
-      "<p>Wir kommen nicht als fertige Menschen auf die Welt.</p><p>Andere Menschen prägen uns. Familien, Freunde, Schule, Gesellschaft und Kultur.</p><p>Aber wir sind nicht nur das Ergebnis dessen, was mit uns geschieht.<br><br><em>Wir handeln.</em><br><br>Wir widersprechen. Wir entscheiden. Wir verändern.</p><p>Genau dort treffen sich die beiden Bücher:<br><br><em>bei der Frage, wie aus Prägung eigene Geschichte wird.</em></p>",
-
-    aboutLabel:
-      "Über mich",
-
-    aboutText1:
-      "Ich beschäftige mich mit der Frage, wie Menschen werden, wer sie sind – und wie viel sie selbst daraus machen können.",
-
-    aboutText2:
-      "Sozialisation, Entwicklung und Handlungsfähigkeit gehören dabei für mich zusammen.<br><br>Denn zwischen dem Menschen, der uns geprägt hat, und dem Menschen, der wir werden, liegt etwas Entscheidendes:<br><br><strong>unser eigenes Handeln.</strong>",
-
-    aboutText3:
-      "Meine Bücher betrachten diesen Weg aus unterschiedlichen Perspektiven – wissenschaftlich, kritisch und mit einem Blick auf das ganz alltägliche Großwerden.",
-
-    contactLabel:
-      "Kontakt",
-
-    contactTitle:
-      "Kontakt / Anfragen",
-
-    contactText:
-      "Fragen zu den Büchern, Lesungen, Veranstaltungen, Interviews oder andere Anfragen?",
-
-    emailButton:
-      "E-Mail schreiben →",
-
-    legalLabel:
-      "Rechtliches",
-
-    legalTitle:
-      "Impressum",
-
-    legalAccording:
-      "Angaben gemäß § 5 DDG:",
-
-    emailLabel:
-      "E-Mail:"
-
-  },
-
-
-  fr: {
-
-    title:
-      "Christoph Fox | Auteur sur la socialisation, le développement et l'identité",
-
-    description:
-      "Christoph Fox – livres et réflexions sur la socialisation, le développement, l'identité et la capacité d'agir.",
-
-    navStart: "Accueil",
-    navBooks: "Livres",
-    navThoughts: "Réflexions",
-    navAbout: "À propos",
-    navContact: "Contact",
-    navLegal: "Mentions légales",
-
-    eyebrow:
-      "Christoph Fox · Auteur",
-
-    heroTitle:
-      "Comment devenons-nous<br>ce que nous sommes ?",
-
-    heroText:
-      "Nous ne naissons pas simplement pour devenir un jour des êtres achevés.<br><br>Nous grandissons au sein de relations, d'une société et d'une histoire – et nous contribuons ainsi à devenir nous-mêmes ce que nous devenons.",
-
-    booksLabel:
-      "Les livres",
-
-    booksTitle:
-      "Deux livres.<br>Une question.",
-
-    booksIntro:
-      "Comment un petit être humain devient-il quelqu'un capable de comprendre son monde, d'y trouver sa place et finalement de le façonner lui-même ?<br><br>Les deux livres de Christoph Fox abordent cette question sous des angles différents.",
-
-    book1Text:
-      "Nous ne devenons pas seuls ce que nous sommes.<br><br>Nous grandissons dans des familles, des amitiés, des écoles, des institutions et des sociétés.<br><br>Nous adoptons, nous résistons, nous nous adaptons, nous nous distinguons – et, ce faisant, nous façonnons aussi constamment notre propre personne.",
-
-    book1ExtraTitle:
-      "De quoi s'agit-il ?",
-
-    book1Extra:
-      "Le livre s'interroge sur la manière dont les individus deviennent des sujets au sein de leur monde social.<br><br>La socialisation n'y apparaît pas comme une simple adaptation, mais comme une relation entre ce qui nous façonne, notre propre action, notre identité et notre capacité d'agir.",
-
-    book1QuestionTitle:
-      "La question centrale",
-
-    book1Question:
-      "Quelle part de ce que nous sommes nous a été donnée – et qu'en faisons-nous nous-mêmes ?",
-
-    more:
-      "En savoir plus +",
-
-    book1Link:
-      "Voir chez Lehmanns →",
-
-    book2Subtitle:
-      "Développement. Quatre actes.",
-
-    book2Text:
-      "Grandir n'est pas un chemin tout tracé.<br><br>Nous commençons petits.<br>Nous devenons sauvages.<br>Nous grandissons.<br><br>Et, un jour, une autre question se pose :<br><br><strong>Que pouvons-nous faire de ce que nous sommes devenus ?</strong>",
-
-    book2ExtraTitle:
-      "De quoi s'agit-il ?",
-
-    book2Extra:
-      "Le développement est ici envisagé comme un parcours en quatre actes : Petit. Sauvage. Grand. Capable.<br><br>Un regard sur la manière dont l'être humain se construit, sur le changement et sur le moment où le développement devient progressivement une véritable capacité d'agir par soi-même.",
-
-    book2QuestionTitle:
-      "La question centrale",
-
-    book2Question:
-      "À quel moment ne devenons-nous pas seulement grands, mais réellement capables de faire quelque chose de notre propre vie ?",
-
-    book2Link:
-      "Voir chez Thalia →",
-
-    question:
-      "Qui serions-nous si personne ne nous avait jamais dit qui nous devions être ?",
-
-    thoughtsLabel:
-      "Réflexions",
-
-    thoughtsTitle:
-      "Devenir<br>humain.",
-
-    thoughtsIntro:
-      "De petites réflexions sur de grandes questions : grandir, les êtres humains, la socialisation, la liberté et ce fait parfois étrange que nous devons tous, d'une manière ou d'une autre, essayer de composer avec notre vie.",
-
-    thoughtTitle:
-      "Quand cesse-t-on vraiment de devenir quelqu'un d'autre ?",
-
-    thoughtText:
-      "Nous changeons constamment. Pourtant, nous aimons nous raconter qu'un jour nous serons enfin « achevés ».<br><br>Peut-être que devenir adulte commence précisément lorsque l'on comprend que l'on ne le sera jamais tout à fait.",
-
-    thoughtDate:
-      "Une première réflexion",
-
-    connectionLabel:
-      "Le lien",
-
-    connectionTitle:
-      "Entre ce qui nous façonne<br>et ce que nous en faisons.",
-
-    connectionText:
-      "<p>Nous ne venons pas au monde en tant qu'êtres déjà achevés.</p><p>D'autres nous façonnent. La famille, les amis, l'école, la société et la culture.</p><p>Mais nous ne sommes pas seulement le résultat de ce qui nous arrive.<br><br><em>Nous agissons.</em><br><br>Nous résistons. Nous décidons. Nous transformons.</p><p>C'est précisément là que les deux livres se rejoignent :<br><br><em>dans la question de savoir comment ce qui nous façonne devient notre propre histoire.</em></p>",
-
-    aboutLabel:
-      "À propos",
-
-    aboutText1:
-      "Je m'intéresse à la question de savoir comment les êtres humains deviennent ce qu'ils sont – et dans quelle mesure ils peuvent eux-mêmes en faire quelque chose.",
-
-    aboutText2:
-      "Pour moi, socialisation, développement et capacité d'agir sont étroitement liés.<br><br>Car entre la personne qui nous a façonnés et celle que nous devenons se trouve quelque chose de décisif :<br><br><strong>notre propre action.</strong>",
-
-    aboutText3:
-      "Mes livres abordent ce parcours sous différents angles – scientifique, critique et attentif à la réalité très quotidienne du fait de grandir.",
-
-    contactLabel:
-      "Contact",
-
-    contactTitle:
-      "Contact / Demandes",
-
-    contactText:
-      "Questions sur les livres, lectures, événements, interviews ou autres demandes ?",
-
-    emailButton:
-      "Écrire un e-mail →",
-
-    legalLabel:
-      "Informations légales",
-
-    legalTitle:
-      "Mentions légales",
-
-    legalAccording:
-      "Informations conformément à la législation allemande :",
-
-    emailLabel:
-      "E-mail :"
-
-  },
-
-
-  es: {
-
-    title:
-      "Christoph Fox | Autor sobre socialización, desarrollo e identidad",
-
-    description:
-      "Christoph Fox – libros y reflexiones sobre socialización, desarrollo, identidad y capacidad de actuar.",
-
-    navStart: "Inicio",
-    navBooks: "Libros",
-    navThoughts: "Reflexiones",
-    navAbout: "Sobre mí",
-    navContact: "Contacto",
-    navLegal: "Aviso legal",
-
-    eyebrow:
-      "Christoph Fox · Autor",
-
-    heroTitle:
-      "¿Cómo llegamos a ser<br>lo que somos?",
-
-    heroText:
-      "No nacemos simplemente para estar algún día completamente terminados.<br><br>Crecemos dentro de relaciones, de una sociedad y de una historia – y, al mismo tiempo, contribuimos a convertirnos en aquello que llegamos a ser.",
-
-    booksLabel:
-      "Los libros",
-
-    booksTitle:
-      "Dos libros.<br>Una pregunta.",
-
-    booksIntro:
-      "¿Cómo se convierte un pequeño ser humano en alguien capaz de comprender su mundo, desenvolverse en él y finalmente contribuir a transformarlo?<br><br>Los dos libros de Christoph Fox se acercan a esta pregunta desde perspectivas diferentes.",
-
-    book1Text:
-      "No llegamos a ser quienes somos por nosotros mismos.<br><br>Crecemos en familias, amistades, escuelas, instituciones y sociedades.<br><br>Adoptamos, nos oponemos, nos adaptamos, nos diferenciamos – y, al hacerlo, también nos construimos a nosotros mismos.",
-
-    book1ExtraTitle:
-      "¿De qué trata?",
-
-    book1Extra:
-      "El libro se pregunta cómo las personas se convierten en sujetos dentro de su mundo social.<br><br>La socialización no aparece aquí como una mera adaptación, sino como una relación entre aquello que nos forma, nuestra propia acción, nuestra identidad y nuestra capacidad de actuar.",
-
-    book1QuestionTitle:
-      "La pregunta central",
-
-    book1Question:
-      "¿Cuánto de lo que somos nos fue dado – y qué hacemos nosotros mismos con ello?",
-
-    more:
-      "Más sobre el libro +",
-
-    book1Link:
-      "Ver en Lehmanns →",
-
-    book2Subtitle:
-      "Desarrollo. Cuatro actos.",
-
-    book2Text:
-      "Crecer no es un camino recto.<br><br>Empezamos siendo pequeños.<br>Nos volvemos salvajes.<br>Crecemos.<br><br>Y en algún momento aparece otra pregunta:<br><br><strong>¿Qué podemos hacer con aquello en lo que nos hemos convertido?</strong>",
-
-    book2ExtraTitle:
-      "¿De qué trata?",
-
-    book2Extra:
-      "El desarrollo se contempla aquí como un recorrido a través de cuatro actos: Pequeño. Salvaje. Grande. Capaz.<br><br>Una mirada al devenir del ser humano, al cambio y al momento en que el desarrollo se convierte progresivamente en capacidad propia de actuar.",
-
-    book2QuestionTitle:
-      "La pregunta central",
-
-    book2Question:
-      "¿Cuándo dejamos de ser solamente grandes para ser realmente capaces de hacer algo con nuestra propia vida?",
-
-    book2Link:
-      "Ver en Thalia →",
-
-    question:
-      "¿Quiénes seríamos si nadie nos hubiera dicho nunca quién debíamos ser?",
-
-    thoughtsLabel:
-      "Reflexiones",
-
-    thoughtsTitle:
-      "Sobre<br>hacernos humanos.",
-
-    thoughtsIntro:
-      "Pequeñas reflexiones sobre grandes preguntas: crecer, las personas, la socialización, la libertad y ese hecho a veces extraño de que todos tenemos que intentar, de alguna manera, arreglárnoslas con nuestra propia vida.",
-
-    thoughtTitle:
-      "¿Cuándo dejamos de convertirnos en otra persona?",
-
-    thoughtText:
-      "Cambiamos constantemente. Sin embargo, nos gusta contarnos que algún día estaremos «terminados».<br><br>Quizá la adultez comienza precisamente cuando comprendemos que nunca llegaremos a estarlo del todo.",
-
-    thoughtDate:
-      "Una primera reflexión",
-
-    connectionLabel:
-      "La conexión",
-
-    connectionTitle:
-      "Entre aquello que nos forma<br>y lo que hacemos con ello.",
-
-    connectionText:
-      "<p>No llegamos al mundo como seres humanos ya terminados.</p><p>Otras personas nos forman. La familia, los amigos, la escuela, la sociedad y la cultura.</p><p>Pero no somos solamente el resultado de lo que nos sucede.<br><br><em>Actuamos.</em><br><br>Nos oponemos. Decidimos. Transformamos.</p><p>Ahí es precisamente donde se encuentran los dos libros:<br><br><em>en la pregunta de cómo aquello que nos forma se convierte en nuestra propia historia.</em></p>",
-
-    aboutLabel:
-      "Sobre mí",
-
-    aboutText1:
-      "Me interesa la pregunta de cómo las personas llegan a ser quienes son – y cuánto pueden hacer ellas mismas con aquello en lo que se han convertido.",
-
-    aboutText2:
-      "Para mí, socialización, desarrollo y capacidad de actuar están estrechamente relacionados.<br><br>Porque entre la persona que nos ha formado y la persona en la que nos convertimos hay algo decisivo:<br><br><strong>nuestra propia acción.</strong>",
-
-    aboutText3:
-      "Mis libros contemplan este recorrido desde diferentes perspectivas – científica, crítica y con una mirada hacia la experiencia cotidiana de crecer.",
-
-    contactLabel:
-      "Contacto",
-
-    contactTitle:
-      "Contacto / Consultas",
-
-    contactText:
-      "¿Preguntas sobre los libros, lecturas, eventos, entrevistas u otras consultas?",
-
-    emailButton:
-      "Escribir un correo →",
-
-    legalLabel:
-      "Información legal",
-
-    legalTitle:
-      "Aviso legal",
-
-    legalAccording:
-      "Información conforme a la legislación alemana:",
-
-    emailLabel:
-      "Correo electrónico:"
-
-  }
-
-};
-
-
-/* =========================
-   SPRACHE SETZEN
-========================= */
-
-function setLanguage(language) {
-
-  const t = translations[language];
-
-  if (!t) {
-    return;
-  }
-
-
-  document.documentElement.lang = language;
-
-
-  document.title = t.title;
-
-
-  const description =
-    document.querySelector(
-      'meta[name="description"]'
-    );
-
-  if (description) {
-    description.setAttribute(
-      "content",
-      t.description
-    );
-  }
-
-
-  document
-    .querySelectorAll("[data-i18n]")
-    .forEach(function(element) {
-
-      const key =
-        element.getAttribute("data-i18n");
-
-      if (t[key] !== undefined) {
-
-        element.innerHTML =
-          t[key];
-
-      }
-
-    });
-
-
-  document
-    .querySelectorAll(".language-button")
-    .forEach(function(button) {
-
-      button.classList.remove("active");
-
-    });
-
-
-  const buttons =
-    document.querySelectorAll(
-      ".language-button"
-    );
-
-
-  if (language === "de") {
-    buttons[0].classList.add("active");
-  }
-
-  if (language === "fr") {
-    buttons[1].classList.add("active");
-  }
-
-  if (language === "es") {
-    buttons[2].classList.add("active");
-  }
-
-
-  localStorage.setItem(
-    "christophFoxLanguage",
-    language
-  );
-
-}
-
 
 /* =========================
    MENÜ
@@ -2650,37 +1976,15 @@ function toggleBook(id, button) {
 
   book.classList.toggle("open");
 
-  const language =
-    localStorage.getItem(
-      "christophFoxLanguage"
-    ) || "de";
-
-
   if (book.classList.contains("open")) {
 
-    const labels = {
-
-      de: "Weniger anzeigen −",
-      fr: "Réduire −",
-      es: "Mostrar menos −"
-
-    };
-
     button.textContent =
-      labels[language];
+      "Weniger anzeigen −";
 
   } else {
 
-    const labels = {
-
-      de: "Mehr zum Buch +",
-      fr: "En savoir plus +",
-      es: "Más sobre el libro +"
-
-    };
-
     button.textContent =
-      labels[language];
+      "Mehr zum Buch +";
 
   }
 
@@ -2781,25 +2085,6 @@ window.addEventListener(
     passive: true
   }
 );
-
-
-/* =========================
-   STARTSPRACHE
-========================= */
-
-const savedLanguage =
-  localStorage.getItem(
-    "christophFoxLanguage"
-  );
-
-if (
-  savedLanguage &&
-  translations[savedLanguage]
-) {
-
-  setLanguage(savedLanguage);
-
-}
 
 
 updateEveningLight();
