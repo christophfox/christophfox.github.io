@@ -33,9 +33,9 @@
     "email": "mailto:mail@herrfox.de",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Hoyerswerda",
-      "postalCode": "02977",
       "streetAddress": "Albert-Einstein-Straße 47",
+      "postalCode": "02977",
+      "addressLocality": "Hoyerswerda",
       "addressCountry": "DE"
     }
   }
@@ -773,7 +773,23 @@ h2 {
 ========================= */
 
 .thoughts {
-  background: var(--paper);
+  background:
+    radial-gradient(
+      ellipse at 18% 18%,
+      rgba(255,255,255,.95),
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 82% 78%,
+      rgba(211,139,92,.22),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      #fffaf3 0%,
+      #f8eee3 48%,
+      #ead8c6 100%
+    );
 }
 
 .thoughts-intro {
@@ -828,19 +844,60 @@ h2 {
 
   background:
     radial-gradient(
-      ellipse at 80% 10%,
-      rgba(218,140,91,.30),
-      transparent 40%
+      ellipse at var(--light-x) var(--light-y),
+      rgba(246,189,126,var(--light-strength)),
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 62% 76%,
+      rgba(170,76,43,.22),
+      transparent 43%
     ),
     linear-gradient(
-      135deg,
-      #f5e5d5,
-      #edd0b9
+      125deg,
+      #fbf3e7 0%,
+      #f7dfc8 38%,
+      #d58b61 70%,
+      #9f492f 112%
     );
+
+  position: relative;
+  overflow: hidden;
+}
+
+.connection::before {
+  content: "";
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  right: calc(-380px + var(--light-shift));
+  top: calc(-390px + var(--light-shift-y));
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,231,193,.72) 0%,
+      rgba(239,177,116,.40) 25%,
+      rgba(201,116,72,.15) 52%,
+      transparent 72%
+    );
+
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.connection .container {
+  position: relative;
+  z-index: 2;
 }
 
 .connection .label {
-  color: var(--fox);
+  color: var(--fox-dark);
 }
 
 .connection h2 {
@@ -852,10 +909,12 @@ h2 {
 
   font-size: clamp(1.35rem, 2.8vw, 2rem);
   line-height: 1.5;
+
+  color: #49352d;
 }
 
 .connection-text em {
-  color: var(--fox);
+  color: var(--fox-dark);
 }
 
 
@@ -1022,7 +1081,8 @@ footer {
   }
 
   *,
-  *::before {
+  *::before,
+  *::after {
     transition: none !important;
   }
 
@@ -1033,7 +1093,6 @@ footer {
 
 
 <body>
-
 
 <header>
 
@@ -1054,7 +1113,6 @@ footer {
 
     </a>
 
-
     <nav aria-label="Hauptnavigation">
 
       <a href="#start">Start</a>
@@ -1065,7 +1123,6 @@ footer {
       <a href="#impressum">Impressum</a>
 
     </nav>
-
 
     <button
       class="menu-button"
@@ -1116,7 +1173,8 @@ footer {
 
     <div class="hero-text">
 
-      Wir werden nicht einfach geboren und sind irgendwann fertig.
+      Wir werden nicht einfach geboren
+      und sind irgendwann fertig.
 
       Wir wachsen hinein in Beziehungen,
       Gesellschaft und Geschichte –
@@ -1437,44 +1495,25 @@ footer {
     <path
       d="
         M38 130
-
         C48 118 58 107 72 101
-
         C85 95 98 94 110 97
-
         C118 91 126 83 132 73
-
         L138 39
-
         L154 57
-
         C165 52 177 52 188 56
-
         L215 38
-
         L207 73
-
         C201 86 193 94 182 99
-
         C194 105 205 111 217 115
-
         C231 119 244 116 258 108
-
         C248 125 233 139 216 143
-
         C196 148 176 143 159 137
-
         C143 132 128 127 113 128
-
         C94 130 77 139 60 148
-
         C51 153 43 151 38 145
-
         C35 141 35 135 38 130
-
         Z
       "
-
       fill="url(#foxFur)"
     />
 
@@ -1486,12 +1525,9 @@ footer {
         C165 54 177 54 187 58
         L211 42
       "
-
       fill="none"
-
       stroke="#d99a70"
       stroke-width="3"
-
       opacity=".38"
     />
 
@@ -1501,11 +1537,8 @@ footer {
       cy="151"
       rx="104"
       ry="11"
-
       fill="#3b180f"
-
       opacity=".16"
-
       filter="blur(5px)"
     />
 
