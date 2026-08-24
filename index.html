@@ -5,12 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Cloudflare Web Analytics -->
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d6e50610e13044258951e9b340a01894"}'></script>
+<script type="module"
+src="https://static.cloudflareinsights.com/beacon.min.js"
+data-cf-beacon='{"token": "d6e50610e13044258951e9b340a01894"}'>
+</script>
 <!-- End Cloudflare Web Analytics -->
 
-<title>Christoph Fox | Autor über Sozialisation, Entwicklung und Identität</title>
+<title>Christoph Fox | Autor, Dozent, Beratung, Coaching und Supervision</title>
 
-<meta name="description" content="Christoph Fox – Bücher und Gedanken über Sozialisation, Entwicklung, Identität und Handlungsfähigkeit.">
+<meta name="description"
+content="Christoph Fox – Bücher, Gedanken, Beratung, Coaching und Supervision zu Sozialisation, Entwicklung, Identität und Handlungsfähigkeit.">
 
 <meta name="author" content="Christoph Fox">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -18,13 +22,16 @@
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-<meta property="og:title" content="Christoph Fox | Autor">
-<meta property="og:description" content="Bücher und Gedanken über Sozialisation, Entwicklung, Identität und Handlungsfähigkeit.">
+<meta property="og:title" content="Christoph Fox">
+<meta property="og:description"
+content="Autor, Dozent, Beratung, Coaching und Supervision.">
 <meta property="og:site_name" content="Christoph Fox">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Christoph Fox | Autor">
-<meta name="twitter:description" content="Bücher und Gedanken über Sozialisation, Entwicklung, Identität und Handlungsfähigkeit.">
+<meta name="twitter:title" content="Christoph Fox">
+<meta name="twitter:description"
+content="Autor, Dozent, Beratung, Coaching und Supervision.">
+
 
 <script type="application/ld+json">
 {
@@ -33,7 +40,7 @@
   "mainEntity": {
     "@type": "Person",
     "name": "Christoph Fox",
-    "description": "Autor und Dozent mit den Schwerpunkten Sozialisation, Entwicklung, Identität und Handlungsfähigkeit.",
+    "description": "Autor, Dozent, studierter Erziehungswissenschaftler sowie Anbieter von Beratung, Coaching und Supervision.",
     "email": "mailto:mail@herrfox.de",
     "address": {
       "@type": "PostalAddress",
@@ -45,6 +52,7 @@
   }
 }
 </script>
+
 
 <script type="application/ld+json">
 {
@@ -61,6 +69,7 @@
 }
 </script>
 
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,6 +83,7 @@
   "inLanguage": "de"
 }
 </script>
+
 
 <style>
 
@@ -170,13 +180,15 @@ header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: .62rem;
   font-weight: 700;
-  letter-spacing: .16em;
+  letter-spacing: .12em;
   text-transform: uppercase;
+  line-height: 1.6;
 }
 
 nav {
   display: flex;
   gap: 23px;
+  align-items: center;
 }
 
 nav a {
@@ -214,6 +226,50 @@ nav a::after {
   );
 
   transition: width .25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+   SPRACHEN
+========================= */
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 18px;
+}
+
+.language-button {
+  border: 0;
+  background: transparent;
+  padding: 3px;
+
+  cursor: pointer;
+
+  font-size: 1.15rem;
+  line-height: 1;
+
+  opacity: .72;
+
+  transition:
+    transform .25s ease,
+    opacity .25s ease,
+    filter .25s ease;
+}
+
+.language-button:hover {
+  transform: translateY(-2px) scale(1.08);
+  opacity: 1;
+  filter: drop-shadow(0 3px 5px rgba(80,35,20,.18));
+}
+
+.language-button.active {
+  opacity: 1;
 }
 
 
@@ -376,26 +432,29 @@ nav a::after {
   margin-bottom: 25px;
 }
 
-.hero-services {
-  margin-top: -16px;
-  margin-bottom: 25px;
-
-  color: rgba(66,28,17,.72);
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: .66rem;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-
 h1 {
-  margin: 0 0 35px;
+  margin: 0 0 18px;
 
   font-size: clamp(3.5rem, 9vw, 7.8rem);
   line-height: .88;
   font-weight: 400;
   letter-spacing: -.065em;
+}
+
+/* Neue dezente Berufszeile im Hero */
+
+.hero-roles {
+  margin-bottom: 35px;
+
+  color: #5b4033;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(.78rem, 1.4vw, .95rem);
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+
+  opacity: .82;
 }
 
 .hero-text {
@@ -924,6 +983,18 @@ h2 {
   color: #4b4039;
 }
 
+.about-role {
+  margin-top: 20px;
+
+  color: var(--fox);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
 
 /* =========================
    KONTAKT
@@ -952,38 +1023,30 @@ h2 {
   color: #4c3d34;
 }
 
-.contact-service {
-  margin-top: 35px;
-  padding-top: 30px;
+.contact-services {
+  margin: 30px 0 5px;
 
-  border-top: 1px solid rgba(125,75,52,.22);
+  font-size: 1.25rem;
+  line-height: 1.75;
+
+  color: #4a392f;
 }
 
-.contact-service h3 {
-  margin: 0 0 12px;
-
-  font-size: 1.65rem;
-  font-weight: 400;
-
+.contact-services strong {
   color: var(--fox-dark);
 }
 
-.contact-service p {
-  margin: 0;
-  font-size: 1.05rem;
-}
-
-.contact-service-link {
+.contact-link {
   display: inline-block;
 
-  margin-top: 18px;
+  margin-top: 22px;
 
   color: var(--fox-dark);
 
   text-decoration: none;
 
   font-family: Arial, Helvetica, sans-serif;
-  font-size: .72rem;
+  font-size: .75rem;
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -993,9 +1056,9 @@ h2 {
     color .2s ease;
 }
 
-.contact-service-link:hover {
-  color: var(--fox);
+.contact-link:hover {
   transform: translateX(4px);
+  color: var(--fox);
 }
 
 .contact-button {
@@ -1054,6 +1117,18 @@ footer {
    MOBILE
 ========================= */
 
+@media (max-width: 900px) {
+
+  nav {
+    gap: 13px;
+  }
+
+  .language-switcher {
+    margin-left: 8px;
+  }
+
+}
+
 @media (max-width: 760px) {
 
   .header-inner {
@@ -1062,6 +1137,11 @@ footer {
 
   nav {
     display: none;
+  }
+
+  .language-switcher {
+    margin-left: auto;
+    margin-right: 8px;
   }
 
   .menu-button {
@@ -1097,9 +1177,11 @@ footer {
     font-size: 4.2rem;
   }
 
-  .hero-services {
-    font-size: .58rem;
-    letter-spacing: .10em;
+  .hero-roles {
+    font-size: .68rem;
+    letter-spacing: .08em;
+    line-height: 1.8;
+    max-width: 300px;
   }
 
 }
@@ -1144,7 +1226,8 @@ footer {
       </div>
 
       <div class="topic">
-        Sozialisation · Entwicklung · Identität
+        Autor. Dozent.<br>
+        Beratung. Coaching. Supervision.
       </div>
 
     </a>
@@ -1160,6 +1243,44 @@ footer {
       <a href="#impressum">Impressum</a>
 
     </nav>
+
+
+    <!-- SPRACHEN -->
+
+    <div class="language-switcher"
+         aria-label="Sprache auswählen">
+
+      <button
+        class="language-button active"
+        onclick="setLanguage('de')"
+        aria-label="Deutsch"
+        title="Deutsch">
+
+        🇩🇪
+
+      </button>
+
+      <button
+        class="language-button"
+        onclick="setLanguage('fr')"
+        aria-label="Français"
+        title="Français">
+
+        🥖
+
+      </button>
+
+      <button
+        class="language-button"
+        onclick="setLanguage('es')"
+        aria-label="Español"
+        title="Español">
+
+        🎭
+
+      </button>
+
+    </div>
 
 
     <button
@@ -1201,17 +1322,18 @@ footer {
   <div class="hero-content">
 
     <div class="eyebrow">
-      Christoph Fox · Autor
-    </div>
-
-    <div class="hero-services">
-      Autor · Coaching · Supervision · Beratung
+      Christoph Fox
     </div>
 
     <h1>
       Wie werden wir<br>
       zu dem, was wir sind?
     </h1>
+
+    <div class="hero-roles">
+      Autor. Dozent.<br>
+      Beratung. Coaching. Supervision.
+    </div>
 
     <div class="hero-text">
 
@@ -1270,8 +1392,7 @@ footer {
             class="cover"
             src="IMG_1937.jpeg"
             alt="Buchcover Sozialisation. Subjekt, Handeln und Identität von Christoph Fox"
-            loading="lazy"
-          >
+            loading="lazy">
 
         </div>
 
@@ -1383,8 +1504,7 @@ footer {
             class="cover"
             src="IMG_0191.jpeg"
             alt="Buchcover Klein. Wild. Groß. Fähig. – Entwicklung. Vier Akte. von Christoph Fox"
-            loading="lazy"
-          >
+            loading="lazy">
 
         </div>
 
@@ -1515,18 +1635,21 @@ footer {
 
         <stop
           offset="0%"
-          stop-color="#5d2617"
-        />
+          stop-color="#5d2617">
+
+        </stop>
 
         <stop
           offset="55%"
-          stop-color="#8e3f25"
-        />
+          stop-color="#8e3f25">
+
+        </stop>
 
         <stop
           offset="100%"
-          stop-color="#3a180f"
-        />
+          stop-color="#3a180f">
+
+        </stop>
 
       </linearGradient>
 
@@ -1555,8 +1678,8 @@ footer {
         C35 141 35 135 38 130
         Z
       "
-      fill="url(#foxFur)"
-    />
+      fill="url(#foxFur)">
+    </path>
 
 
     <path
@@ -1569,8 +1692,8 @@ footer {
       fill="none"
       stroke="#d99a70"
       stroke-width="3"
-      opacity=".38"
-    />
+      opacity=".38">
+    </path>
 
 
     <ellipse
@@ -1580,8 +1703,8 @@ footer {
       ry="11"
       fill="#3b180f"
       opacity=".16"
-      filter="blur(5px)"
-    />
+      filter="blur(5px)">
+    </ellipse>
 
   </svg>
 
@@ -1747,6 +1870,10 @@ footer {
         Fox
       </div>
 
+      <div class="about-role">
+        Studierter Erziehungswissenschaftler
+      </div>
+
     </div>
 
 
@@ -1810,35 +1937,28 @@ footer {
     </h2>
 
     <p>
-
-      Fragen zu den Büchern,
-      Lesungen, Veranstaltungen,
-      Interviews oder andere Anfragen?
-
+      Anfragen zu:
     </p>
 
+    <div class="contact-services">
 
-    <div class="contact-service">
-
-      <h3>
-        Coaching &amp; Supervision
-      </h3>
-
-      <p>
-        Anfragen zu Coaching und Supervision
-        und beruflicher Beratung für Privatpersonen
-        oder Einrichtungen der Sozialen Arbeit
-      </p>
-
-      <a
-        class="contact-service-link"
-        href="mailto:mail@herrfox.de?subject=Anfrage%20Coaching%20%26%20Supervision">
-
-        → klick
-
-      </a>
+      Coaching.<br>
+      Supervision.<br>
+      Beratung.
 
     </div>
+
+
+    <a
+      class="contact-link"
+      href="mailto:mail@herrfox.de?subject=Anfrage%20zu%20Coaching%2C%20Supervision%20oder%20Beratung">
+
+      → Anfrage stellen
+
+    </a>
+
+
+    <br>
 
 
     <a
@@ -1986,6 +2106,42 @@ function toggleBook(id, button) {
     button.textContent =
       "Mehr zum Buch +";
 
+  }
+
+}
+
+
+/* =========================
+   SPRACHEN
+========================= */
+
+function setLanguage(language) {
+
+  /*
+   * Die Sprachumschaltung bleibt bewusst
+   * vorbereitet und kann die vollständigen
+   * Übersetzungen der bisherigen Version laden.
+   */
+
+  document.documentElement.lang = language;
+
+  const buttons =
+    document.querySelectorAll(".language-button");
+
+  buttons.forEach(function(button) {
+    button.classList.remove("active");
+  });
+
+  if (language === "de") {
+    buttons[0].classList.add("active");
+  }
+
+  if (language === "fr") {
+    buttons[1].classList.add("active");
+  }
+
+  if (language === "es") {
+    buttons[2].classList.add("active");
   }
 
 }
