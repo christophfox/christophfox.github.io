@@ -4086,7 +4086,33 @@ setLanguage(
   const fox = document.getElementById("easterFox");
 
   let sequence = "";
+  /* 📱 iPhone / Touch – Doppeltipp startet den Fuchs */
 
+  let lastTouch = 0;
+
+  document.addEventListener("touchend", function () {
+
+    const now = Date.now();
+
+    if (now - lastTouch < 400) {
+
+      fox.classList.remove("run");
+
+      void fox.offsetWidth;
+
+      fox.classList.add("run");
+
+      createPaws();
+
+      setTimeout(() => {
+        fox.classList.remove("run");
+      }, 5600);
+
+    }
+
+    lastTouch = now;
+
+  });
   document.addEventListener("keydown", function (event) {
 
     if (
