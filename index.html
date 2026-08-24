@@ -2010,7 +2010,315 @@ footer {
   }
 
 }
+/* =========================================================
+   🦊 EASTER EGG – DER GEHEIME FUCHS
+========================================================= */
 
+.easter-fox {
+  position: fixed;
+
+  left: -180px;
+  bottom: 12vh;
+
+  width: 150px;
+  height: 95px;
+
+  z-index: 9999;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transform:
+    translateX(0)
+    scaleX(1);
+
+  filter:
+    drop-shadow(
+      0 12px 12px rgba(55,24,14,.28)
+    );
+}
+
+.easter-fox.run {
+  opacity: 1;
+
+  animation:
+    foxRunAcross 5.5s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+@keyframes foxRunAcross {
+
+  0% {
+    left: -180px;
+    transform:
+      translateY(0)
+      scaleX(1)
+      rotate(0deg);
+  }
+
+  10% {
+    transform:
+      translateY(-8px)
+      scaleX(1)
+      rotate(-2deg);
+  }
+
+  25% {
+    transform:
+      translateY(3px)
+      scaleX(1)
+      rotate(2deg);
+  }
+
+  45% {
+    transform:
+      translateY(-6px)
+      scaleX(1)
+      rotate(-1deg);
+  }
+
+  70% {
+    transform:
+      translateY(2px)
+      scaleX(1)
+      rotate(1deg);
+  }
+
+  100% {
+    left: calc(100vw + 180px);
+
+    transform:
+      translateY(-3px)
+      scaleX(1)
+      rotate(0deg);
+  }
+
+}
+
+
+/* Fuchs aus reinem CSS */
+
+.easter-fox-body {
+  position: absolute;
+
+  left: 30px;
+  bottom: 20px;
+
+  width: 88px;
+  height: 48px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    55% 45% 45% 55%;
+}
+
+.easter-fox-head {
+  position: absolute;
+
+  left: 8px;
+  top: 4px;
+
+  width: 54px;
+  height: 48px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 45%,
+      22% 0,
+      38% 22%,
+      72% 15%,
+      100% 45%,
+      72% 85%,
+      35% 100%,
+      15% 72%
+    );
+}
+
+.easter-fox-ear {
+  position: absolute;
+
+  width: 24px;
+  height: 34px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 75%
+    );
+}
+
+.easter-fox-ear.one {
+  left: 15px;
+  top: -14px;
+
+  transform: rotate(-8deg);
+}
+
+.easter-fox-ear.two {
+  left: 39px;
+  top: -13px;
+
+  transform: rotate(8deg);
+}
+
+.easter-fox-tail {
+  position: absolute;
+
+  right: -25px;
+  top: 3px;
+
+  width: 70px;
+  height: 58px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    70% 30% 70% 30%;
+
+  transform:
+    rotate(28deg);
+}
+
+.easter-fox-tail::after {
+  content: "";
+
+  position: absolute;
+
+  right: -3px;
+  top: 4px;
+
+  width: 30px;
+  height: 35px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+}
+
+.easter-fox-eye {
+  position: absolute;
+
+  left: 42px;
+  top: 23px;
+
+  width: 5px;
+  height: 5px;
+
+  background: #111;
+
+  border-radius: 50%;
+}
+
+.easter-fox-leg {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 9px;
+  height: 28px;
+
+  background: #74331f;
+
+  border-radius: 50%;
+}
+
+.easter-fox-leg.one {
+  left: 48px;
+
+  animation:
+    foxLegA .22s infinite alternate;
+}
+
+.easter-fox-leg.two {
+  left: 83px;
+
+  animation:
+    foxLegB .22s infinite alternate;
+}
+
+@keyframes foxLegA {
+
+  from {
+    transform: rotate(18deg);
+  }
+
+  to {
+    transform: rotate(-18deg);
+  }
+
+}
+
+@keyframes foxLegB {
+
+  from {
+    transform: rotate(-18deg);
+  }
+
+  to {
+    transform: rotate(18deg);
+  }
+
+}
+
+
+/* kleine geheime Pfoten */
+
+.fox-paw {
+  position: fixed;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: rgba(169,84,53,.35);
+
+  pointer-events: none;
+
+  z-index: 9998;
+
+  opacity: 0;
+
+  animation:
+    pawFade 1.2s ease-out forwards;
+}
+
+@keyframes pawFade {
+
+  0% {
+    opacity: .7;
+    transform: scale(.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      scale(1.8)
+      translateY(-8px);
+  }
+
+}
 </style>
 </head>
 
@@ -3750,7 +4058,110 @@ setLanguage(
 );
 
 </script>
+<!-- =====================================================
+     🦊 EASTER EGG
+===================================================== -->
 
+<div class="easter-fox" id="easterFox">
+
+  <div class="easter-fox-tail"></div>
+
+  <div class="easter-fox-body"></div>
+
+  <div class="easter-fox-head">
+    <div class="easter-fox-ear one"></div>
+    <div class="easter-fox-ear two"></div>
+    <div class="easter-fox-eye"></div>
+  </div>
+
+  <div class="easter-fox-leg one"></div>
+  <div class="easter-fox-leg two"></div>
+
+</div>
+
+<script>
+
+(function () {
+
+  const fox = document.getElementById("easterFox");
+
+  let sequence = "";
+
+  document.addEventListener("keydown", function (event) {
+
+    if (
+      event.key.length === 1 &&
+      /[a-z]/i.test(event.key)
+    ) {
+
+      sequence += event.key.toLowerCase();
+
+      if (sequence.length > 3) {
+        sequence = sequence.slice(-3);
+      }
+
+      if (sequence === "fox") {
+
+        sequence = "";
+
+        fox.classList.remove("run");
+
+        void fox.offsetWidth;
+
+        fox.classList.add("run");
+
+        createPaws();
+
+        setTimeout(() => {
+          fox.classList.remove("run");
+        }, 5600);
+
+      }
+
+    }
+
+  });
+
+
+  function createPaws() {
+
+    let pawCount = 0;
+
+    const pawTimer = setInterval(() => {
+
+      if (pawCount >= 12) {
+
+        clearInterval(pawTimer);
+
+        return;
+
+      }
+
+      const paw = document.createElement("div");
+
+      paw.className = "fox-paw";
+
+      paw.style.left =
+        (20 + pawCount * 7) + "vw";
+
+      paw.style.bottom =
+        (12 + Math.random() * 3) + "vh";
+
+      document.body.appendChild(paw);
+
+      setTimeout(() => {
+        paw.remove();
+      }, 1300);
+
+      pawCount++;
+
+    }, 390);
+
+  }
+
+})();
+
+</script>
 </body>
 </html>
 ```
