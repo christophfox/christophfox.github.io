@@ -4058,8 +4058,9 @@ setLanguage(
 );
 
 </script>
+```html
 <!-- =====================================================
-     🦊 EASTER EGG
+     🦊 EASTER EGG – DER GEHEIME FUCHS 2.0
 ===================================================== -->
 
 <div class="easter-fox" id="easterFox">
@@ -4079,126 +4080,900 @@ setLanguage(
 
 </div>
 
+
+<!-- =====================================================
+     🦊 FUCHS-BLICK AUS DEM RAND
+===================================================== -->
+
+<div class="peek-fox" id="peekFox">
+
+  <div class="peek-ear one"></div>
+  <div class="peek-ear two"></div>
+
+  <div class="peek-face">
+    <div class="peek-eye"></div>
+  </div>
+
+</div>
+
+
+<style>
+
+/* =========================================================
+   🦊 HAUPT-FUCHS
+========================================================= */
+
+.easter-fox {
+
+  position: fixed;
+
+  left: -180px;
+  bottom: 12vh;
+
+  width: 150px;
+  height: 95px;
+
+  z-index: 9999;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transform:
+    translateX(0)
+    scaleX(1);
+
+  filter:
+    drop-shadow(
+      0 12px 12px rgba(55,24,14,.28)
+    );
+}
+
+
+/* =========================================================
+   NORMALER LAUF
+========================================================= */
+
+.easter-fox.run {
+
+  opacity: 1;
+
+  animation:
+    foxRunAcross 5.5s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+@keyframes foxRunAcross {
+
+  0% {
+    left: -180px;
+
+    transform:
+      translateY(0)
+      scaleX(1)
+      rotate(0deg);
+  }
+
+  10% {
+    transform:
+      translateY(-8px)
+      scaleX(1)
+      rotate(-2deg);
+  }
+
+  25% {
+    transform:
+      translateY(3px)
+      scaleX(1)
+      rotate(2deg);
+  }
+
+  45% {
+    transform:
+      translateY(-6px)
+      scaleX(1)
+      rotate(-1deg);
+  }
+
+  70% {
+    transform:
+      translateY(2px)
+      scaleX(1)
+      rotate(1deg);
+  }
+
+  100% {
+
+    left: calc(100vw + 180px);
+
+    transform:
+      translateY(-3px)
+      scaleX(1)
+      rotate(0deg);
+  }
+
+}
+
+
+/* =========================================================
+   🦊 ZWEITES AUSLÖSEN
+   Fuchs bleibt stehen, dreht sich um und verschwindet
+========================================================= */
+
+.easter-fox.second-run {
+
+  opacity: 1;
+
+  animation:
+    foxSecondRun 4.8s ease-in-out forwards;
+}
+
+@keyframes foxSecondRun {
+
+  0% {
+    left: -180px;
+
+    transform:
+      translateY(0)
+      scaleX(1)
+      rotate(0deg);
+  }
+
+  28% {
+
+    left: 35vw;
+
+    transform:
+      translateY(-4px)
+      scaleX(1)
+      rotate(0deg);
+  }
+
+  42% {
+
+    left: 35vw;
+
+    transform:
+      translateY(-2px)
+      scaleX(-1)
+      rotate(0deg);
+  }
+
+  62% {
+
+    left: 35vw;
+
+    transform:
+      translateY(-5px)
+      scaleX(-1)
+      rotate(0deg);
+  }
+
+  100% {
+
+    left: calc(-180px);
+
+    transform:
+      translateY(0)
+      scaleX(-1)
+      rotate(0deg);
+  }
+
+}
+
+
+/* =========================================================
+   FUCHS-KÖRPER
+========================================================= */
+
+.easter-fox-body {
+
+  position: absolute;
+
+  left: 30px;
+  bottom: 20px;
+
+  width: 88px;
+  height: 48px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    55% 45% 45% 55%;
+}
+
+
+/* =========================================================
+   FUCHS-KOPF
+========================================================= */
+
+.easter-fox-head {
+
+  position: absolute;
+
+  left: 8px;
+  top: 4px;
+
+  width: 54px;
+  height: 48px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 45%,
+      22% 0,
+      38% 22%,
+      72% 15%,
+      100% 45%,
+      72% 85%,
+      35% 100%,
+      15% 72%
+    );
+}
+
+
+/* =========================================================
+   OHREN
+========================================================= */
+
+.easter-fox-ear {
+
+  position: absolute;
+
+  width: 24px;
+  height: 34px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 75%
+    );
+}
+
+.easter-fox-ear.one {
+
+  left: 15px;
+  top: -14px;
+
+  transform: rotate(-8deg);
+}
+
+.easter-fox-ear.two {
+
+  left: 39px;
+  top: -13px;
+
+  transform: rotate(8deg);
+}
+
+
+/* =========================================================
+   SCHWANZ
+========================================================= */
+
+.easter-fox-tail {
+
+  position: absolute;
+
+  right: -25px;
+  top: 3px;
+
+  width: 70px;
+  height: 58px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    70% 30% 70% 30%;
+
+  transform:
+    rotate(28deg);
+}
+
+.easter-fox-tail::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: -3px;
+  top: 4px;
+
+  width: 30px;
+  height: 35px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   AUGE
+========================================================= */
+
+.easter-fox-eye {
+
+  position: absolute;
+
+  left: 42px;
+  top: 23px;
+
+  width: 5px;
+  height: 5px;
+
+  background: #111;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   BEINE
+========================================================= */
+
+.easter-fox-leg {
+
+  position: absolute;
+
+  bottom: 0;
+
+  width: 9px;
+  height: 28px;
+
+  background: #74331f;
+
+  border-radius: 50%;
+}
+
+.easter-fox-leg.one {
+
+  left: 48px;
+
+  animation:
+    foxLegA .22s infinite alternate;
+}
+
+.easter-fox-leg.two {
+
+  left: 83px;
+
+  animation:
+    foxLegB .22s infinite alternate;
+}
+
+@keyframes foxLegA {
+
+  from {
+    transform: rotate(18deg);
+  }
+
+  to {
+    transform: rotate(-18deg);
+  }
+
+}
+
+@keyframes foxLegB {
+
+  from {
+    transform: rotate(-18deg);
+  }
+
+  to {
+    transform: rotate(18deg);
+  }
+
+}
+
+
+/* =========================================================
+   🐾 PFOTEN
+========================================================= */
+
+.fox-paw {
+
+  position: fixed;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(169,84,53,.35);
+
+  pointer-events: none;
+
+  z-index: 9998;
+
+  opacity: 0;
+
+  animation:
+    pawFade 1.2s ease-out forwards;
+}
+
+@keyframes pawFade {
+
+  0% {
+    opacity: .7;
+
+    transform:
+      scale(.5);
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      scale(1.8)
+      translateY(-8px);
+  }
+
+}
+
+
+/* =========================================================
+   👀 FUCHS SCHAUT AUS DEM RAND
+========================================================= */
+
+.peek-fox {
+
+  position: fixed;
+
+  right: -70px;
+  top: 38%;
+
+  width: 80px;
+  height: 80px;
+
+  z-index: 9997;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transform:
+    translateX(0);
+
+  filter:
+    drop-shadow(
+      0 8px 10px rgba(55,24,14,.22)
+    );
+}
+
+
+/* Auslösen */
+
+.peek-fox.peek {
+
+  animation:
+    foxPeek 3.2s ease-in-out forwards;
+}
+
+
+@keyframes foxPeek {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateX(0);
+  }
+
+  20% {
+    opacity: 1;
+
+    transform:
+      translateX(-48px);
+  }
+
+  55% {
+    opacity: 1;
+
+    transform:
+      translateX(-48px);
+  }
+
+  78% {
+    opacity: 1;
+
+    transform:
+      translateX(-48px);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translateX(0);
+  }
+
+}
+
+
+/* Gesicht */
+
+.peek-face {
+
+  position: absolute;
+
+  left: 16px;
+  top: 25px;
+
+  width: 48px;
+  height: 45px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 45%,
+      20% 0,
+      38% 20%,
+      62% 20%,
+      80% 0,
+      100% 45%,
+      76% 88%,
+      50% 100%,
+      24% 88%
+    );
+}
+
+
+/* Ohren */
+
+.peek-ear {
+
+  position: absolute;
+
+  width: 25px;
+  height: 36px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 75%
+    );
+}
+
+.peek-ear.one {
+
+  left: 15px;
+  top: 7px;
+
+  transform:
+    rotate(-8deg);
+}
+
+.peek-ear.two {
+
+  right: 15px;
+  top: 7px;
+
+  transform:
+    rotate(8deg);
+}
+
+
+/* Auge */
+
+.peek-eye {
+
+  position: absolute;
+
+  left: 31px;
+  top: 20px;
+
+  width: 5px;
+  height: 5px;
+
+  background: #111;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   JAVASCRIPT
+========================================================= */
+
+</style>
+
+
 <script>
 
 (function () {
 
-  const fox = document.getElementById("easterFox");
+  const fox =
+    document.getElementById("easterFox");
+
+  const peekFox =
+    document.getElementById("peekFox");
 
   let sequence = "";
-  /* 📱 iPhone / Touch – Doppeltipp startet den Fuchs */
+
+  let runCount = 0;
 
   let lastTouch = 0;
 
-  document.addEventListener("touchend", function () {
 
-    const now = Date.now();
+  /* =====================================================
+     🦊 FUCHS STARTEN
+  ===================================================== */
 
-    if (now - lastTouch < 400) {
+  function startFox() {
 
-      fox.classList.remove("run");
+    runCount++;
 
-      void fox.offsetWidth;
+    fox.classList.remove("run");
+    fox.classList.remove("second-run");
+
+    void fox.offsetWidth;
+
+
+    /* Erstes Mal */
+
+    if (runCount === 1) {
 
       fox.classList.add("run");
 
       createPaws();
 
       setTimeout(() => {
+
         fox.classList.remove("run");
+
       }, 5600);
 
     }
 
-    lastTouch = now;
 
-  });
-  document.addEventListener("keydown", function (event) {
+    /* Zweites Mal */
 
-    if (
-      event.key.length === 1 &&
-      /[a-z]/i.test(event.key)
-    ) {
+    else if (runCount === 2) {
 
-      sequence += event.key.toLowerCase();
+      fox.classList.add("second-run");
 
-      if (sequence.length > 3) {
-        sequence = sequence.slice(-3);
-      }
+      createPaws();
 
-      if (sequence === "fox") {
+      setTimeout(() => {
 
-        sequence = "";
+        fox.classList.remove("second-run");
 
-        fox.classList.remove("run");
+      }, 4900);
 
-        void fox.offsetWidth;
+    }
 
-        fox.classList.add("run");
 
-        createPaws();
+    /* Danach wieder von vorne */
 
-        setTimeout(() => {
-          fox.classList.remove("run");
-        }, 5600);
+    else {
+
+      runCount = 0;
+
+      setTimeout(() => {
+
+        startFox();
+
+      }, 150);
+
+    }
+
+  }
+
+
+  /* =====================================================
+     💻 DESKTOP – "FOX"
+  ===================================================== */
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (
+        event.key.length === 1 &&
+        /[a-z]/i.test(event.key)
+      ) {
+
+        sequence +=
+          event.key.toLowerCase();
+
+        if (sequence.length > 3) {
+
+          sequence =
+            sequence.slice(-3);
+        }
+
+        if (sequence === "fox") {
+
+          sequence = "";
+
+          startFox();
+
+        }
 
       }
 
     }
+  );
 
-  });
 
+  /* =====================================================
+     📱 IPHONE – DOPPELTIPP
+  ===================================================== */
+
+  document.addEventListener(
+    "touchend",
+    function () {
+
+      const now = Date.now();
+
+      if (
+        now - lastTouch < 400
+      ) {
+
+        startFox();
+
+      }
+
+      lastTouch = now;
+
+    }
+  );
+
+
+  /* =====================================================
+     👀 FUCHS SCHAUT AUS DEM RAND
+  ===================================================== */
+
+  let peekTimer;
+
+  function showPeekFox() {
+
+    clearTimeout(peekTimer);
+
+    peekFox.classList.remove("peek");
+
+    void peekFox.offsetWidth;
+
+    peekFox.classList.add("peek");
+
+    peekTimer = setTimeout(() => {
+
+      peekFox.classList.remove("peek");
+
+    }, 3300);
+
+  }
+
+
+  /*
+     Der kleine Fuchs erscheint nicht ständig.
+     Er schaut nur gelegentlich einmal kurz herein.
+  */
+
+  setTimeout(
+    showPeekFox,
+    18000
+  );
+
+
+  /*
+     Danach kann er später noch einmal auftauchen.
+  */
+
+  setInterval(
+    function () {
+
+      if (
+        Math.random() < .35
+      ) {
+
+        showPeekFox();
+
+      }
+
+    },
+    45000
+  );
+
+
+  /* =====================================================
+     🐾 PFOTEN
+  ===================================================== */
 
   function createPaws() {
 
     let pawCount = 0;
 
-    const pawTimer = setInterval(() => {
+    const pawTimer =
+      setInterval(
+        () => {
 
-      if (pawCount >= 12) {
+          if (
+            pawCount >= 12
+          ) {
 
-        clearInterval(pawTimer);
+            clearInterval(
+              pawTimer
+            );
 
-        return;
+            return;
 
-      }
+          }
 
-      const paw = document.createElement("div");
+          const paw =
+            document.createElement(
+              "div"
+            );
 
-      paw.className = "fox-paw";
+          paw.className =
+            "fox-paw";
 
-      paw.style.left =
-        (20 + pawCount * 7) + "vw";
+          paw.style.left =
+            (
+              20 +
+              pawCount * 7
+            ) + "vw";
 
-      paw.style.bottom =
-        (12 + Math.random() * 3) + "vh";
+          paw.style.bottom =
+            (
+              12 +
+              Math.random() * 3
+            ) + "vh";
 
-      document.body.appendChild(paw);
+          document.body.appendChild(
+            paw
+          );
 
-      setTimeout(() => {
-        paw.remove();
-      }, 1300);
+          setTimeout(
+            () => {
 
-      pawCount++;
+              paw.remove();
 
-    }, 390);
+            },
+            1300
+          );
+
+          pawCount++;
+
+        },
+        390
+      );
 
   }
-fox.addEventListener("dblclick", function () {
 
-  fox.classList.remove("run");
-
-  void fox.offsetWidth;
-
-  fox.classList.add("run");
-
-  createPaws();
-
-  setTimeout(() => {
-    fox.classList.remove("run");
-  }, 5600);
-});
 })();
+
 </script>
+
 </body>
 </html>
