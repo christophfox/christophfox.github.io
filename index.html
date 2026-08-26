@@ -405,6 +405,50 @@ nav a:hover::after {
     0 0 0 2px rgba(169,84,53,.18);
 }
 
+  .accessibility-button {
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border:
+    1px solid rgba(116,51,31,.18);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,250,243,.72);
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+.accessibility-button svg {
+  width: 18px;
+  height: 18px;
+
+  display: block;
+}
+
+.accessibility-button:hover {
+  transform:
+    translateY(-2px)
+    rotate(-3deg);
+
+  background: #fffaf3;
+
+  box-shadow:
+    0 5px 14px rgba(66,30,17,.12);
+}
 
 /* Zorro-Maske */
 
@@ -2407,7 +2451,92 @@ footer {
     </nav>
 
 
-    <div class="language-switcher"> <button class="lang-button active" onclick="setLanguage('de')" aria-label="Deutsch"> 🇩🇪 </button> <button class="lang-button" onclick="setLanguage('fr')" aria-label="Français"> 🇫🇷 </button> <button class="lang-button" onclick="setLanguage('es')" aria-label="Español"> 🇪🇸 </button> </div>
+    <div class="language-switcher">
+
+  <button
+    class="lang-button active"
+    onclick="setLanguage('de')"
+    aria-label="Deutsch">
+    🇩🇪
+  </button>
+
+  <button
+    class="lang-button"
+    onclick="setLanguage('fr')"
+    aria-label="Français">
+    🇫🇷
+  </button>
+
+  <button
+    class="lang-button"
+    onclick="setLanguage('es')"
+    aria-label="Español">
+    🇪🇸
+  </button>
+
+  <button
+    class="accessibility-button"
+    aria-label="Teilhabe"
+    title="Teilhabe">
+
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true">
+
+      <circle cx="12" cy="4.5" r="2.2" fill="#111"/>
+
+      <circle
+        cx="12"
+        cy="12"
+        r="7.2"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"/>
+
+      <path
+        d="M12 7.5v6.5m-5.5-3h11M12 14l-3.5 6M12 14l3.5 6"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    </svg>
+
+  </button>
+
+  <button
+    class="accessibility-button"
+    aria-label="Seite vorlesen"
+    title="Seite vorlesen">
+
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true">
+
+      <path
+        d="M4 9v6h4l5 4V5L8 9H4Z"
+        fill="#111"/>
+
+      <path
+        d="M16 9c1.2 1.2 1.2 4.8 0 6"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"
+        stroke-linecap="round"/>
+
+      <path
+        d="M18.5 6.5c2.7 2.7 2.7 8.3 0 11"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"
+        stroke-linecap="round"/>
+
+    </svg>
+
+  </button>
+
+</div>
 
     <button
       class="menu-button"
