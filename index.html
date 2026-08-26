@@ -2506,9 +2506,10 @@ footer {
   </button>
 
   <button
-    class="accessibility-button"
-    aria-label="Seite vorlesen"
-    title="Seite vorlesen">
+  class="accessibility-button"
+  onclick="toggleReadAloud()"
+  aria-label="Seite vorlesen"
+  title="Seite vorlesen">
 
     <svg
       viewBox="0 0 24 24"
@@ -3982,6 +3983,49 @@ function setLanguage(language) {
   localStorage.setItem(
     "christophFoxLanguage",
     language
+  );
+
+}
+
+  function toggleReadAloud() {
+
+  if (window.speechSynthesis.speaking) {
+
+    window.speechSynthesis.cancel();
+
+    return;
+  }
+
+
+  const language =
+    document.documentElement.lang || "de";
+
+
+  const text =
+    document.body.innerText;
+
+
+  const speech =
+    new SpeechSynthesisUtterance(text);
+
+
+  speech.lang =
+    language === "fr"
+      ? "fr-FR"
+      : language === "es"
+        ? "es-ES"
+        : "de-DE";
+
+
+  speech.rate = 0.95;
+
+  speech.pitch = 1;
+
+  speech.volume = 1;
+
+
+  window.speechSynthesis.speak(
+    speech
   );
 
 }
