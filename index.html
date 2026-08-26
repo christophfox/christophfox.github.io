@@ -450,6 +450,26 @@ nav a:hover::after {
     0 5px 14px rgba(66,30,17,.12);
 }
 
+.readability-mode {
+  font-size: 108%;
+  line-height: 1.75;
+}
+
+.readability-mode p,
+.readability-mode li {
+  letter-spacing: 0.02em;
+}
+
+.readability-mode .hero-text,
+.readability-mode .intro {
+  line-height: 1.9;
+}
+
+.readability-mode .reveal {
+  animation: none !important;
+  transition: none !important;
+}
+  
 /* Zorro-Maske */
 
 .zorro-icon {
@@ -2475,9 +2495,10 @@ footer {
   </button>
 
   <button
-    class="accessibility-button"
-    aria-label="Teilhabe"
-    title="Teilhabe">
+  class="accessibility-button"
+  onclick="toggleReadability()"
+  aria-label="Teilhabe"
+  title="Lesbarkeit erhöhen">
 
     <svg
       viewBox="0 0 24 24"
@@ -4076,6 +4097,13 @@ function setLanguage(language) {
 
 }
 
+  function toggleReadability() {
+
+  document.body.classList.toggle(
+    "readability-mode"
+  );
+
+}
 
 /* =========================================================
    MENÜ
