@@ -2509,6 +2509,37 @@ footer {
 .legal-details .impressum-box {
   padding-top: 0;
 }
+.secret-key {
+  position: fixed;
+  right: 42px;
+  top: 38%;
+  z-index: 10000;
+
+  font-size: 42px;
+
+  opacity: 0;
+
+  transform:
+    scale(.4)
+    rotate(-25deg);
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(0 5px 8px rgba(55,24,14,.28));
+
+  transition:
+    opacity .35s ease,
+    transform .45s cubic-bezier(.2,.8,.3,1);
+}
+
+.secret-key.show {
+  opacity: 1;
+
+  transform:
+    scale(1)
+    rotate(0deg);
+}
 </style>
 </head>
 
