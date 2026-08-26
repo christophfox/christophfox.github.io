@@ -1,0 +1,5611 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d6e50610e13044258951e9b340a01894"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+<title>Christoph Fox - Beratung, Coaching, Supervision und Sozialisation</title>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='f' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%235d2617'/%3E%3Cstop offset='55%25' stop-color='%238e3f25'/%3E%3Cstop offset='100%25' stop-color='%23a95435'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M8 45 C12 39 17 34 24 32 C29 30 34 30 39 32 C43 29 46 25 48 19 L51 8 L56 18 C59 16 61 16 63 17 L59 29 C57 34 54 38 49 41 C54 44 58 46 63 45 C58 52 51 56 43 55 C35 54 29 50 23 49 C18 48 13 50 8 53 C6 51 6 48 8 45 Z' fill='url(%23f)'/%3E%3C/svg%3E">
+
+<meta name="description" content="Christoph Fox – Beratung, Coaching, Supervision und Sozialisation. Resilienz. Stress-Prophylaxe.">
+<meta name="author" content="Christoph Fox">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#a95435">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Christoph Fox">
+<meta property="og:description" content="Bücher, Zusammenhang, Beratung, Coaching und Supervision.">
+<meta property="og:site_name" content="Christoph Fox">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Christoph Fox">
+<meta name="twitter:description" content="Bücher, Zusammenhang, Beratung, Coaching und Supervision.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Christoph Fox",
+    "description": "Dipl.-Päd. Christoph Fox, Autor, Dozent und studierter Erziehungswissenschaftler.",
+    "email": "mailto:mail@herrfox.de",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hoyerswerda",
+      "postalCode": "02977",
+      "streetAddress": "Albert-Einstein-Straße 47",
+      "addressCountry": "DE"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Sozialisation: Subjekt, Handeln und Identität",
+  "author": {
+    "@type": "Person",
+    "name": "Christoph Fox"
+  },
+  "isbn": "9783961380381",
+  "datePublished": "2017",
+  "inLanguage": "de"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Klein. Wild. Groß. Fähig. – Entwicklung. Vier Akte.",
+  "author": {
+    "@type": "Person",
+    "name": "Christoph Fox"
+  },
+  "isbn": "9783759296108",
+  "inLanguage": "de"
+}
+</script>
+
+
+<style>
+
+/* =========================================================
+   GRUNDLAGEN
+========================================================= */
+
+:root {
+  --paper: #fffaf3;
+  --paper-warm: #f5e9db;
+
+  --fox-light: #d98a5d;
+  --fox: #a95435;
+  --fox-dark: #74331f;
+  --fox-deep: #421c11;
+
+  --gold: #efbd87;
+  --gold-light: #f7d5ad;
+
+  --ink: #1b1411;
+  --soft: #65574e;
+  --line: #dfcbb8;
+
+  --light-x: 78%;
+  --light-y: 22%;
+  --light-strength: .78;
+  --light-shift: 0px;
+  --light-shift-y: 0px;
+
+  --scroll-progress: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  color: var(--ink);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  line-height: 1.7;
+
+  background:
+    radial-gradient(
+      ellipse at 75% 0%,
+      rgba(222,158,111,.22),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #faf3e9,
+      #f1e4d6
+    );
+
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+
+/* =========================================================
+   GIMMICK 06
+   SANFT SCHWEBENDE HINTERGRUNDFORMEN
+========================================================= */
+
+.ambient-orb {
+  position: fixed;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  opacity: .17;
+
+  filter: blur(35px);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(217,138,93,.75),
+      transparent 70%
+    );
+
+  animation:
+    ambientFloat 18s ease-in-out infinite;
+}
+
+.ambient-orb.one {
+  left: -130px;
+  top: 28%;
+}
+
+.ambient-orb.two {
+  right: -150px;
+  top: 62%;
+
+  width: 330px;
+  height: 330px;
+
+  animation-delay: -8s;
+  animation-duration: 23s;
+}
+
+@keyframes ambientFloat {
+
+  0%,
+  100% {
+    transform: translate3d(0,0,0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(20px,-30px,0) scale(1.06);
+  }
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+
+  background: rgba(249,240,227,.88);
+
+  backdrop-filter: blur(15px);
+
+  border-bottom:
+    1px solid rgba(125,75,52,.16);
+
+  transition:
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+header.scrolled {
+  background: rgba(249,240,227,.96);
+
+  box-shadow:
+    0 8px 30px rgba(66,30,17,.08);
+}
+
+.header-inner {
+  min-height: 82px;
+
+  width: min(1120px, 90%);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.identity {
+  text-decoration: none;
+
+  transition:
+    transform .25s ease;
+}
+
+.identity:hover {
+  transform: translateX(2px);
+}
+
+.name {
+  font-size: 1.5rem;
+
+  letter-spacing: -.02em;
+}
+
+.topic {
+  margin-top: 2px;
+
+  color: var(--fox);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .62rem;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  line-height: 1.5;
+}
+
+nav {
+  display: flex;
+
+  gap: 20px;
+
+  align-items: center;
+}
+
+nav a {
+  position: relative;
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .67rem;
+
+  font-weight: 700;
+
+  letter-spacing: .07em;
+
+  text-transform: uppercase;
+
+  color: #493a33;
+
+  transition:
+    color .25s ease,
+    transform .25s ease;
+}
+
+nav a:hover {
+  color: var(--fox);
+
+  transform: translateY(-1px);
+}
+
+nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--fox-dark),
+      var(--gold)
+    );
+
+  transition:
+    width .25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   SPRACHEN
+========================================================= */
+
+.header-fox {
+  width: 46px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 4px;
+  margin-right: 2px;
+
+  flex-shrink: 0;
+}
+
+.header-fox svg {
+  width: 46px;
+  height: 34px;
+
+  display: block;
+}
+  
+.language-switcher {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-left: 8px;
+}
+
+.lang-button {
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border:
+    1px solid rgba(116,51,31,.18);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,250,243,.72);
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+.lang-button:hover {
+  transform:
+    translateY(-2px)
+    rotate(-3deg);
+
+  background: #fffaf3;
+
+  box-shadow:
+    0 5px 14px rgba(66,30,17,.12);
+}
+
+.lang-button.active {
+  box-shadow:
+    0 0 0 2px rgba(169,84,53,.18);
+}
+
+  .accessibility-button {
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border:
+    1px solid rgba(116,51,31,.18);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,250,243,.72);
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+.accessibility-button svg {
+  width: 18px;
+  height: 18px;
+
+  display: block;
+}
+
+.accessibility-button:hover {
+  transform:
+    translateY(-2px)
+    rotate(-3deg);
+
+  background: #fffaf3;
+
+  box-shadow:
+    0 5px 14px rgba(66,30,17,.12);
+}
+
+.readability-mode {
+  font-size: 118%;
+}
+
+.readability-mode p,
+.readability-mode li {
+  line-height: 1.9 !important;
+  letter-spacing: 0.025em;
+}
+
+.readability-mode h1,
+.readability-mode h2,
+.readability-mode h3,
+.readability-mode h4 {
+  letter-spacing: 0.01em;
+  line-height: 1.35 !important;
+}
+
+.readability-mode p {
+  margin-bottom: 1.8em;
+}
+
+.readability-mode .hero-text,
+.readability-mode .intro {
+  line-height: 2 !important;
+}
+
+.readability-mode a {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.readability-mode .reveal {
+  animation: none !important;
+  transition: none !important;
+}
+
+.readability-mode .ambient-orb,
+.readability-mode .fox-shadow {
+  opacity: .35 !important;
+}
+  
+/* Zorro-Maske */
+
+.zorro-icon {
+  width: 20px;
+  height: 16px;
+
+  position: relative;
+}
+
+.zorro-icon::before,
+.zorro-icon::after {
+  content: "";
+
+  position: absolute;
+
+  top: 4px;
+
+  width: 9px;
+  height: 6px;
+
+  background: #111;
+
+  border-radius:
+    55% 45% 55% 45%;
+}
+
+.zorro-icon::before {
+  left: 0;
+
+  transform:
+    rotate(-12deg)
+    skewX(-12deg);
+}
+
+.zorro-icon::after {
+  right: 0;
+
+  transform:
+    rotate(12deg)
+    skewX(12deg);
+}
+
+.zorro-icon span {
+  position: absolute;
+
+  left: 5px;
+  top: 5px;
+
+  width: 10px;
+  height: 3px;
+
+  background: #111;
+
+  border-radius: 50%;
+
+  transform: rotate(-2deg);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-button {
+  display: none;
+
+  border: 0;
+
+  background: none;
+
+  padding: 8px;
+
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+
+  width: 26px;
+  height: 2px;
+
+  margin: 5px 0;
+
+  background: var(--fox-dark);
+
+  transition:
+    transform .25s ease,
+    opacity .25s ease;
+}
+
+.menu-button.open span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.menu-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.open span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+.mobile-menu {
+  display: none;
+
+  background:
+    rgba(255,250,243,.98);
+
+  border-top:
+    1px solid var(--line);
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu a {
+  display: block;
+
+  padding: 16px 5%;
+
+  border-bottom:
+    1px solid var(--line);
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .74rem;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  color: var(--fox-dark);
+}
+
+.mobile-menu a:hover {
+  background: #f7e9da;
+}
+
+.mobile-menu .language-mobile {
+  display: flex;
+
+  gap: 8px;
+
+  padding: 14px 5%;
+}
+
+.mobile-menu .language-mobile button {
+  border:
+    1px solid var(--line);
+
+  background:
+    #fffaf3;
+
+  border-radius: 50%;
+
+  width: 34px;
+  height: 34px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  min-height: 86vh;
+
+  display: flex;
+
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at var(--light-x) var(--light-y),
+      rgba(246,189,126,var(--light-strength)),
+      transparent 34%
+    ),
+
+    radial-gradient(
+      ellipse at 62% 76%,
+      rgba(170,76,43,.22),
+      transparent 43%
+    ),
+
+    linear-gradient(
+      125deg,
+      #fbf3e7 0%,
+      #f7dfc8 38%,
+      #d58b61 70%,
+      #9f492f 112%
+    );
+}
+
+
+/* GIMMICK 01
+   Bewegtes Licht */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  right:
+    calc(-380px + var(--light-shift));
+
+  top:
+    calc(-390px + var(--light-shift-y));
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,231,193,.88) 0%,
+      rgba(239,177,116,.55) 25%,
+      rgba(201,116,72,.20) 52%,
+      transparent 72%
+    );
+
+  filter: blur(10px);
+
+  pointer-events: none;
+
+  animation:
+    heroGlow 12s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+
+  0%,
+  100% {
+    opacity: .82;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 1100px;
+  height: 360px;
+
+  left:
+    calc(-300px + var(--light-shift));
+
+  bottom: -170px;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(255,208,158,.25),
+      transparent 70%
+    );
+
+  filter: blur(30px);
+
+  transform: rotate(-8deg);
+
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1120px, 90%);
+
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: var(--fox-dark);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .73rem;
+
+  font-weight: 700;
+
+  letter-spacing: .16em;
+
+  text-transform: uppercase;
+
+  margin-bottom: 25px;
+}
+
+h1 {
+  margin: 0 0 35px;
+
+  font-size:
+    clamp(1.5rem, 3.5vw, 3.9rem);
+
+  line-height: 1.15;
+
+  font-weight: 400;
+
+  letter-spacing: -.065em;
+}
+
+.hero-text {
+  max-width: 800px;
+
+  font-size:
+    clamp(1.2rem, 2.3vw, 1.55rem);
+
+  color: #49352d;
+}
+
+.hero-services {
+  margin-top: 18px;
+
+  color: var(--fox-dark);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  letter-spacing: .11em;
+
+  text-transform: uppercase;
+}
+
+
+/* GIMMICK 10
+   kleine laufende Linie */
+
+.fox-line {
+  width: 170px;
+  height: 5px;
+
+  margin-top: 45px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--fox-deep),
+      var(--fox),
+      var(--gold)
+    );
+
+  box-shadow:
+    0 5px 20px rgba(105,43,26,.25);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.fox-line::after {
+  content: "";
+
+  position: absolute;
+
+  left: -40%;
+
+  top: 0;
+
+  width: 35%;
+
+  height: 100%;
+
+  background:
+    rgba(255,245,224,.65);
+
+  filter: blur(4px);
+
+  animation:
+    lineSweep 4.5s ease-in-out infinite;
+}
+
+@keyframes lineSweep {
+
+  0% {
+    left: -40%;
+  }
+
+  55%,
+  100% {
+    left: 120%;
+  }
+
+}
+
+
+/* =========================================================
+   GIMMICK 03
+   FUCHS DIREKT UNTER HERO
+========================================================= */
+
+.fox-sign {
+  position: relative;
+
+  width: 100%;
+  height: 180px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf3,
+      #f4e6d7
+    );
+}
+
+.fox-shadow {
+  width: 210px;
+  height: 125px;
+
+  opacity: .78;
+
+  filter:
+    drop-shadow(
+      0 18px 20px rgba(66,30,17,.20)
+    );
+
+  transition:
+    transform .8s ease,
+    opacity .8s ease;
+}
+
+
+/* GIMMICK 04
+   kleiner Fuchs als wiederkehrendes Element */
+
+.fox-divider {
+  width: min(1120px, 90%);
+
+  height: 100px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+}
+
+.fox-divider::before,
+.fox-divider::after {
+  content: "";
+
+  height: 1px;
+
+  flex: 1;
+
+  max-width: 360px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--line)
+    );
+}
+
+.fox-divider::after {
+  background:
+    linear-gradient(
+      90deg,
+      var(--line),
+      transparent
+    );
+}
+
+.fox-mini {
+  width: 55px;
+
+  margin: 0 22px;
+
+  opacity: .72;
+
+  filter:
+    drop-shadow(
+      0 8px 7px rgba(66,30,17,.15)
+    );
+
+  animation:
+    foxBreath 5s ease-in-out infinite;
+}
+
+@keyframes foxBreath {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translateY(-4px)
+      scale(1.025);
+  }
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+  padding: 110px 0;
+
+  border-top:
+    1px solid var(--line);
+}
+
+#autor {
+  background:
+    radial-gradient(
+      ellipse at 70% 0%,
+      rgba(220,148,96,.32),
+      transparent 45%
+    ),
+
+    linear-gradient(
+      145deg,
+      #f8eee2,
+      #efd5bd
+    );
+}
+
+.container {
+  width: min(1120px, 90%);
+
+  margin: 0 auto;
+}
+
+.label {
+  color: var(--fox);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .71rem;
+
+  font-weight: 700;
+
+  letter-spacing: .18em;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+h2 {
+  margin: 0 0 30px;
+
+  font-size:
+    clamp(2.6rem, 5vw, 4.8rem);
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -.045em;
+}
+
+.intro {
+  max-width: 800px;
+
+  font-size: 1.2rem;
+
+  color: #4d423b;
+}
+
+
+/* =========================================================
+   GIMMICK 08
+   SCROLL REVEAL
+========================================================= */
+
+.reveal {
+  opacity: 0;
+
+  transform:
+    translateY(35px);
+
+  transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.visible {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: .08s;
+}
+
+.reveal-delay-2 {
+  transition-delay: .16s;
+}
+
+.reveal-delay-3 {
+  transition-delay: .24s;
+}
+
+
+/* =========================================================
+   BÜCHER
+========================================================= */
+
+.books {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 55px;
+
+  margin-top: 65px;
+}
+
+.book {
+  position: relative;
+
+  background:
+    rgba(255,250,243,.55);
+
+  padding: 8px;
+
+  box-shadow:
+    0 28px 70px rgba(67,31,18,.09);
+
+  transition:
+    transform .4s cubic-bezier(.2,.7,.2,1),
+    box-shadow .4s ease;
+}
+
+.book:hover {
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 35px 85px rgba(67,31,18,.15);
+}
+
+
+/* GIMMICK 07
+   Buchcover schwebt leicht */
+
+.cover-wrap {
+  position: relative;
+
+  min-height: 480px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 75% 20%,
+      rgba(255,220,177,.72),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      145deg,
+      #f4e0cb,
+      #dfaa83 58%,
+      #bd6848
+    );
+}
+
+.cover-wrap::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: -180px;
+  right: -130px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,227,190,.7),
+      transparent 68%
+    );
+
+  filter: blur(12px);
+
+  animation:
+    coverGlow 9s ease-in-out infinite;
+}
+
+@keyframes coverGlow {
+
+  0%,
+  100% {
+    transform: translate(0,0);
+  }
+
+  50% {
+    transform: translate(-18px,12px);
+  }
+
+}
+
+.cover {
+  position: relative;
+
+  z-index: 2;
+
+  width: auto;
+
+  max-width: 72%;
+
+  max-height: 455px;
+
+  object-fit: contain;
+
+  display: block;
+
+  filter:
+    drop-shadow(
+      18px 24px 18px rgba(55,24,14,.30)
+    );
+
+  transition:
+    transform .55s cubic-bezier(.2,.7,.2,1),
+    filter .55s ease;
+}
+
+.book:hover .cover {
+  transform:
+    translateY(-10px)
+    rotate(-.35deg)
+    scale(1.015);
+
+  filter:
+    drop-shadow(
+      22px 31px 22px rgba(55,24,14,.34)
+    );
+}
+
+.book-number {
+  margin-top: 32px;
+
+  color: var(--fox);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  letter-spacing: .16em;
+}
+
+.book h3 {
+  margin: 17px 0 7px;
+
+  font-size:
+    clamp(1.8rem, 3vw, 2.7rem);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+}
+
+.subtitle {
+  color: var(--soft);
+
+  font-style: italic;
+
+  margin-bottom: 25px;
+}
+
+.book p {
+  color: #4b4039;
+}
+
+.meta {
+  margin-top: 28px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid var(--line);
+
+  color: var(--soft);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .76rem;
+}
+
+.book-link {
+  display: inline-block;
+
+  margin-top: 25px;
+
+  padding: 12px 19px;
+
+  border:
+    1px solid var(--fox);
+
+  color: var(--fox-dark);
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform .2s ease,
+    background .25s ease,
+    color .25s ease,
+    box-shadow .25s ease;
+}
+
+.book-link:hover {
+  background: var(--fox);
+
+  color: #fffaf3;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(116,51,31,.15);
+}
+
+
+/* =========================================================
+   AUFKLAPPBARE TEXTE
+========================================================= */
+
+.book-extra {
+  max-height: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transition:
+    max-height .5s ease,
+    opacity .35s ease;
+}
+
+.book.open .book-extra {
+  max-height: 2700px;
+
+  opacity: 1;
+}
+
+.more-button {
+  margin-top: 24px;
+
+  padding: 0;
+
+  border: none;
+
+  background: none;
+
+  color: var(--fox);
+
+  cursor: pointer;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  transition:
+    letter-spacing .25s ease,
+    transform .25s ease;
+}
+
+.more-button:hover {
+  letter-spacing: .12em;
+
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   FRAGE
+========================================================= */
+
+.question {
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 70% 0%,
+      rgba(220,148,96,.32),
+      transparent 45%
+    ),
+
+    linear-gradient(
+      145deg,
+      #f8eee2,
+      #efd5bd
+    );
+}
+
+.question::before {
+  content: "“";
+
+  position: absolute;
+
+  left: 5%;
+
+  top: 15px;
+
+  font-size: 15rem;
+
+  line-height: 1;
+
+  color:
+    rgba(169,84,53,.055);
+
+  pointer-events: none;
+}
+
+.question-inner {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.question-mark {
+  color: var(--fox);
+
+  font-size: 4rem;
+
+  line-height: 1;
+
+  margin-bottom: 20px;
+
+  animation:
+    questionFloat 4s ease-in-out infinite;
+}
+
+@keyframes questionFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+}
+
+.question-text {
+  font-size:
+    clamp(1.45rem, 3vw, 2.25rem);
+
+  line-height: 1.4;
+
+  color: #4a352c;
+}
+
+.question-small {
+  margin-top: 30px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .68rem;
+
+  font-weight: 700;
+
+  letter-spacing: .16em;
+
+  text-transform: uppercase;
+
+  color: var(--fox);
+}
+
+
+/* =========================================================
+   GIMMICK 09
+   VERBINDUNGSLINIE
+========================================================= */
+
+.connection {
+  color: var(--ink);
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at var(--light-x) var(--light-y),
+      rgba(246,189,126,var(--light-strength)),
+      transparent 34%
+    ),
+
+    radial-gradient(
+      ellipse at 62% 76%,
+      rgba(170,76,43,.22),
+      transparent 43%
+    ),
+
+    linear-gradient(
+      125deg,
+      #fbf3e7 0%,
+      #f7dfc8 38%,
+      #d58b61 70%,
+      #9f492f 112%
+    );
+}
+
+.connection .label {
+  color: var(--fox-dark);
+}
+
+.connection h2 {
+  color: var(--ink);
+}
+
+.connection-text {
+  max-width: 850px;
+
+  font-size:
+    clamp(1.35rem, 2.8vw, 2rem);
+
+  line-height: 1.5;
+
+  position: relative;
+}
+
+.connection-text::before {
+  content: "";
+
+  position: absolute;
+
+  left: -35px;
+
+  top: 5px;
+
+  bottom: 5px;
+
+  width: 2px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      var(--fox),
+      var(--gold),
+      transparent
+    );
+
+  transform:
+    scaleY(0);
+
+  transform-origin: top;
+
+  transition:
+    transform 1.4s ease;
+}
+
+.connection.visible .connection-text::before {
+  transform:
+    scaleY(1);
+}
+
+.connection-text p {
+  position: relative;
+
+  transition:
+    transform .35s ease;
+}
+
+.connection-text p:hover {
+  transform:
+    translateX(7px);
+}
+
+.connection-text em {
+  color: var(--fox-dark);
+}
+
+
+/* =========================================================
+   GIMMICK 04 – FUCHS ZWISCHEN DEN BEREICHEN
+========================================================= */
+
+.fox-divider-section {
+  background: #fffaf3;
+
+  border-top: none;
+
+  padding: 15px 0;
+}
+
+
+/* =========================================================
+   AUTOR
+========================================================= */
+
+.about {
+  display: grid;
+
+  grid-template-columns:
+    .8fr 1.2fr;
+
+  gap: 80px;
+}
+
+.about-name {
+  font-size:
+    clamp(2.5rem, 5vw, 4.5rem);
+
+  line-height: .95;
+}
+
+.about p {
+  font-size: 1.12rem;
+
+  color: #4b4039;
+}
+
+
+/* =========================================================
+   KONTAKT
+========================================================= */
+
+.contact {
+  background:
+    radial-gradient(
+      ellipse at 80% 10%,
+      rgba(218,140,91,.30),
+      transparent 40%
+    ),
+
+    linear-gradient(
+      135deg,
+      #f5e5d5,
+      #edd0b9
+    );
+}
+
+.contact-box {
+  max-width: 760px;
+}
+
+.contact-box p {
+  font-size: 1.18rem;
+
+  color: #4c3d34;
+}
+
+.contact-button {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  padding: 13px 22px;
+
+  background: var(--fox);
+
+  color: #fffaf3;
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .75rem;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+.contact-button:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(116,51,31,.20);
+
+  background:
+    var(--fox-dark);
+}
+
+
+/* =========================================================
+   GIMMICK 05
+   GROSSER FUCHS AM ENDE
+========================================================= */
+
+.final-fox-section {
+  position: relative;
+
+  min-height: 330px;
+
+  padding: 75px 0 45px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf3,
+      #f2dfce
+    );
+
+  border-top:
+    1px solid var(--line);
+}
+
+.final-fox-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 220px;
+
+  left: 50%;
+  bottom: -130px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(169,84,53,.20),
+      transparent 70%
+    );
+
+
+    filter:
+      blur(22px);
+}
+
+.final-fox {
+  width: min(360px, 55vw);
+
+  position: relative;
+
+  z-index: 2;
+
+  filter:
+    drop-shadow(
+      0 25px 18px rgba(66,30,17,.22)
+    );
+
+  animation:
+    finalFoxFloat 6s ease-in-out infinite;
+
+  transform-origin:
+    center bottom;
+}
+
+@keyframes finalFoxFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-8px);
+  }
+
+}
+
+.final-fox-caption {
+  position: absolute;
+
+  bottom: 22px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  color:
+    rgba(116,51,31,.55);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .62rem;
+
+  font-weight: 700;
+
+  letter-spacing: .16em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   IMPRESSUM
+========================================================= */
+
+.impressum {
+  background: #eee3d5;
+}
+
+.impressum-box {
+  max-width: 760px;
+}
+
+.impressum p {
+  color: #51463e;
+  font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  border-top:
+    1px solid var(--line);
+
+  padding: 10px 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: .72rem;
+
+  color: var(--soft);
+
+  background: #eee3d5;
+}
+
+
+/* =========================================================
+   GIMMICK 10
+   SANFTER PAGE-TOP BUTTON
+========================================================= */
+
+.back-top {
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  width: 42px;
+  height: 42px;
+
+  border:
+    1px solid rgba(116,51,31,.22);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,250,243,.88);
+
+  color: var(--fox-dark);
+
+  cursor: pointer;
+
+  z-index: 900;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform:
+    translateY(10px);
+
+  transition:
+    opacity .3s ease,
+    visibility .3s ease,
+    transform .3s ease,
+    background .25s ease;
+}
+
+.back-top.visible {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(0);
+}
+
+.back-top:hover {
+  background: #fffaf3;
+
+  transform:
+    translateY(-3px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 100%) {
+
+  nav {
+    gap: 13px;
+  }
+
+  .language-switcher {
+    gap: 4px;
+
+    margin-left: 2px;
+  }
+
+  .connection-text::before {
+    left: -20px;
+  }
+
+}
+
+
+@media (max-width: 760px) {
+
+  .header-inner {
+    min-height: 72px;
+  }
+
+  nav,
+  .header-inner > .language-switcher {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .hero {
+    min-height: 78vh;
+  }
+
+  section {
+    padding: 75px 0;
+  }
+
+  .books,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .book {
+    padding: 7px;
+  }
+
+  .cover-wrap {
+    min-height: 410px;
+  }
+
+  .cover {
+    max-width: 78%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-services {
+    max-width: 330px;
+
+    line-height: 1.8;
+  }
+
+  .fox-sign {
+    height: 140px;
+  }
+
+  .fox-shadow {
+    width: 175px;
+  }
+
+  .fox-mini {
+    width: 45px;
+
+    margin:
+      0 14px;
+  }
+
+  .fox-divider {
+    height: 80px;
+  }
+
+  .connection-text::before {
+    display: none;
+  }
+
+  .final-fox-section {
+    min-height: 270px;
+  }
+
+  .final-fox {
+    width: 260px;
+  }
+
+  .back-top {
+    right: 15px;
+    bottom: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+
+    transform: none;
+  }
+
+}
+/* =========================================================
+   🦊 EASTER EGG – DER GEHEIME FUCHS
+========================================================= */
+
+.easter-fox {
+  position: fixed;
+
+  left: -180px;
+  bottom: 12vh;
+
+  width: 150px;
+  height: 95px;
+
+  z-index: 9999;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transform:
+    translateX(0)
+    scaleX(-1);
+
+  filter:
+    drop-shadow(
+      0 12px 12px rgba(55,24,14,.28)
+    );
+}
+
+.easter-fox.run {
+  opacity: 1;
+
+  animation:
+    foxRunAcross 5.5s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+@keyframes foxRunAcross {
+
+  0% {
+    left: -180px;
+    transform:
+      translateY(0)
+      scaleX(-1)
+      rotate(0deg);
+  }
+
+  10% {
+    transform:
+      translateY(-8px)
+      scaleX(-1)
+      rotate(-2deg);
+  }
+
+  25% {
+    transform:
+      translateY(3px)
+      scaleX(-1)
+      rotate(2deg);
+  }
+
+  45% {
+    transform:
+      translateY(-6px)
+      scaleX(-1)
+      rotate(-1deg);
+  }
+
+  70% {
+    transform:
+      translateY(2px)
+      scaleX(-1)
+      rotate(1deg);
+  }
+
+  100% {
+    left: calc(100vw + 180px);
+
+    transform:
+      translateY(-3px)
+      scaleX(-1)
+      rotate(0deg);
+  }
+
+}
+
+
+/* Fuchs aus reinem CSS */
+
+.easter-fox-body {
+  position: absolute;
+
+  left: 30px;
+  bottom: 20px;
+
+  width: 88px;
+  height: 48px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    55% 45% 45% 55%;
+}
+
+.easter-fox-head {
+  position: absolute;
+
+  left: 8px;
+  top: 4px;
+
+  width: 54px;
+  height: 48px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 45%,
+      22% 0,
+      38% 22%,
+      72% 15%,
+      100% 45%,
+      72% 85%,
+      35% 100%,
+      15% 72%
+    );
+}
+
+.easter-fox-ear {
+  position: absolute;
+
+  width: 24px;
+  height: 34px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 75%
+    );
+}
+
+.easter-fox-ear.one {
+  left: 15px;
+  top: -14px;
+
+  transform: rotate(-8deg);
+}
+
+.easter-fox-ear.two {
+  left: 39px;
+  top: -13px;
+
+  transform: rotate(8deg);
+}
+
+.easter-fox-tail {
+  position: absolute;
+
+  right: -25px;
+  top: 3px;
+
+  width: 70px;
+  height: 58px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    70% 30% 70% 30%;
+
+  transform:
+    rotate(28deg);
+}
+
+.easter-fox-tail::after {
+  content: "";
+
+  position: absolute;
+
+  right: -3px;
+  top: 4px;
+
+  width: 30px;
+  height: 35px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+}
+
+.easter-fox-eye {
+  position: absolute;
+
+  left: 42px;
+  top: 23px;
+
+  width: 5px;
+  height: 5px;
+
+  background: #111;
+
+  border-radius: 50%;
+}
+
+.easter-fox-leg {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 9px;
+  height: 28px;
+
+  background: #74331f;
+
+  border-radius: 50%;
+}
+
+.easter-fox-leg.one {
+  left: 48px;
+
+  animation:
+    foxLegA .22s infinite alternate;
+}
+
+.easter-fox-leg.two {
+  left: 83px;
+
+  animation:
+    foxLegB .22s infinite alternate;
+}
+
+@keyframes foxLegA {
+
+  from {
+    transform: rotate(18deg);
+  }
+
+  to {
+    transform: rotate(-18deg);
+  }
+
+}
+
+@keyframes foxLegB {
+
+  from {
+    transform: rotate(-18deg);
+  }
+
+  to {
+    transform: rotate(18deg);
+  }
+
+}
+
+
+/* kleine geheime Pfoten */
+
+.fox-paw {
+  position: fixed;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: rgba(169,84,53,.35);
+
+  pointer-events: none;
+
+  z-index: 9998;
+
+  opacity: 0;
+
+  animation:
+    pawFade 1.2s ease-out forwards;
+}
+
+@keyframes pawFade {
+
+  0% {
+    opacity: .7;
+    transform: scale(.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      scale(1.8)
+      translateY(-8px);
+  }
+
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- GIMMICK 06: sanfte Ambient-Lichter -->
+
+<div class="ambient-orb one"></div>
+<div class="ambient-orb two"></div>
+
+
+<header id="siteHeader">
+
+  <div class="header-inner">
+
+    <a
+      class="identity"
+      href="#start"
+      aria-label="Christoph Fox – Startseite">
+
+      <div class="name">
+        Christoph Fox
+      </div>
+
+      <div
+        class="topic"
+        data-de="Autor. Dozent. Sozialisation.<br>Beratung. Coaching. Supervision."
+        data-fr="Auteur. Enseignant.<br>Conseil. Coaching. Supervision."
+        data-es="Autor. Docente.<br>Asesoramiento. Coaching. Supervisión.">
+
+        Autor. Dozent.<br>
+        Beratung. Coaching. Supervision.
+
+      </div>
+
+    </a>
+
+
+    <nav aria-label="Hauptnavigation">
+
+      <a href="#start"
+         data-de="Start"
+         data-fr="Accueil"
+         data-es="Inicio">
+        Start
+      </a>
+
+      <a href="#buecher"
+         data-de="Bücher"
+         data-fr="Livres"
+         data-es="Libros">
+        Bücher
+      </a>
+
+      <a href="#zusammenhang"
+         data-de="Zusammenhang"
+         data-fr="Le lien"
+         data-es="La conexión">
+        Zusammenhang
+      </a>
+
+      <a href="#autor"
+         data-de="Über mich"
+         data-fr="À propos"
+         data-es="Sobre mí">
+        Über mich
+      </a>
+
+      <a href="#kontakt"
+         data-de="Kontakt"
+         data-fr="Contact"
+         data-es="Contacto">
+        Kontakt
+      </a>
+
+      <a href="#impressum"
+         data-de="Impressum"
+         data-fr="Mentions légales"
+         data-es="Aviso legal">
+        Impressum
+      </a>
+
+    </nav>
+
+    <div class="header-fox" aria-hidden="true">
+
+      <svg
+        viewBox="0 0 300 180"
+        xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+
+          <linearGradient
+            id="headerFoxFur"
+            x1="0"
+            y1="0"
+            x2="1"
+            y2="1">
+
+            <stop
+              offset="0%"
+              stop-color="#5d2617"/>
+
+            <stop
+              offset="55%"
+              stop-color="#8e3f25"/>
+
+            <stop
+              offset="100%"
+              stop-color="#3a180f"/>
+
+          </linearGradient>
+
+        </defs>
+
+        <path
+          d="
+            M38 130
+            C48 118 58 107 72 101
+            C85 95 98 94 110 97
+            C118 91 126 83 132 73
+            L138 39
+            L154 57
+            C165 52 177 52 188 56
+            L215 38
+            L207 73
+            C201 86 193 94 182 99
+            C194 105 205 111 217 115
+            C231 119 244 116 258 108
+            C248 125 233 139 216 143
+            C196 148 176 143 159 137
+            C143 132 128 127 113 128
+            C94 130 77 139 60 148
+            C51 153 43 151 38 145
+            C35 141 35 135 38 130
+            Z
+          "
+          fill="url(#headerFoxFur)"
+        />
+
+        <ellipse
+          cx="151"
+          cy="151"
+          rx="104"
+          ry="11"
+          fill="#3b180f"
+          opacity=".16"
+          filter="blur(5px)"
+        />
+
+      </svg>
+
+    </div>
+
+    <div class="language-switcher">
+
+  <button
+    class="lang-button active"
+    onclick="setLanguage('de')"
+    aria-label="Deutsch">
+    🇩🇪
+  </button>
+
+  <button
+    class="lang-button"
+    onclick="setLanguage('fr')"
+    aria-label="Français">
+    🇫🇷
+  </button>
+
+  <button
+    class="lang-button"
+    onclick="setLanguage('es')"
+    aria-label="Español">
+    🇪🇸
+  </button>
+
+  <button
+  class="accessibility-button"
+  onclick="toggleReadability()"
+  aria-label="Teilhabe"
+  title="Lesbarkeit erhöhen">
+
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true">
+
+      <circle cx="12" cy="4.5" r="2.2" fill="#111"/>
+
+      <circle
+        cx="12"
+        cy="12"
+        r="7.2"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"/>
+
+      <path
+        d="M12 7.5v6.5m-5.5-3h11M12 14l-3.5 6M12 14l3.5 6"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    </svg>
+
+  </button>
+
+  <button
+  class="accessibility-button"
+  onclick="toggleReadAloud()"
+  aria-label="Seite vorlesen"
+  title="Seite vorlesen">
+
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true">
+
+      <path
+        d="M4 9v6h4l5 4V5L8 9H4Z"
+        fill="#111"/>
+
+      <path
+        d="M16 9c1.2 1.2 1.2 4.8 0 6"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"
+        stroke-linecap="round"/>
+
+      <path
+        d="M18.5 6.5c2.7 2.7 2.7 8.3 0 11"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"
+        stroke-linecap="round"/>
+
+    </svg>
+
+  </button>
+
+</div>
+
+    <button
+      class="menu-button"
+      onclick="toggleMenu()"
+      aria-label="Menü öffnen"
+      aria-expanded="false">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </div>
+
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu">
+
+    <a href="#start"
+       onclick="closeMenu()"
+       data-de="Start"
+       data-fr="Accueil"
+       data-es="Inicio">
+      Start
+    </a>
+
+    <a href="#buecher"
+       onclick="closeMenu()"
+       data-de="Bücher"
+       data-fr="Livres"
+       data-es="Libros">
+      Bücher
+    </a>
+
+    <a href="#zusammenhang"
+       onclick="closeMenu()"
+       data-de="Zusammenhang"
+       data-fr="Le lien"
+       data-es="La conexión">
+      Zusammenhang
+    </a>
+
+    <a href="#autor"
+       onclick="closeMenu()"
+       data-de="Über mich"
+       data-fr="À propos"
+       data-es="Sobre mí">
+      Über mich
+    </a>
+
+    <a href="#kontakt"
+       onclick="closeMenu()"
+       data-de="Kontakt"
+       data-fr="Contact"
+       data-es="Contacto">
+      Kontakt
+    </a>
+
+    <a href="#impressum"
+       onclick="closeMenu()"
+       data-de="Impressum"
+       data-fr="Mentions légales"
+       data-es="Aviso legal">
+      Impressum
+    </a>
+
+
+    <div class="language-mobile">
+
+  <button onclick="setLanguage('de'); closeMenu()" aria-label="Deutsch">
+    🇩🇪
+  </button>
+
+  <button onclick="setLanguage('fr'); closeMenu()" aria-label="Français">
+    🇫🇷
+  </button>
+
+  <button onclick="setLanguage('es'); closeMenu()" aria-label="Español">
+    🇪🇸
+  </button>
+
+  <button
+    class="accessibility-button"
+    onclick="toggleReadability()"
+    aria-label="Lesbarkeit erhöhen"
+    title="Lesbarkeit erhöhen">
+
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true">
+
+      <circle cx="12" cy="4.5" r="2.2" fill="#111"/>
+
+      <circle
+        cx="12"
+        cy="12"
+        r="7.2"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"/>
+
+      <path
+        d="M12 7.5v6.5m-5.5-3h11M12 14l-3.5 6M12 14l3.5 6"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    </svg>
+
+  </button>
+
+  <button
+    class="accessibility-button"
+    onclick="toggleReadAloud()"
+    aria-label="Seite vorlesen"
+    title="Seite vorlesen">
+
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true">
+
+      <path
+        d="M4 9v6h4l5 4V5L8 9H4Z"
+        fill="#111"/>
+
+      <path
+        d="M16 9c1.2 1.2 1.2 4.8 0 6"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"
+        stroke-linecap="round"/>
+
+      <path
+        d="M18.5 6.5c2.7 2.7 2.7 8.3 0 11"
+        fill="none"
+        stroke="#111"
+        stroke-width="2"
+        stroke-linecap="round"/>
+
+    </svg>
+
+  </button>
+
+</div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+  class="hero"
+  id="start">
+
+  <div class="hero-content">
+
+    <div
+      class="eyebrow reveal"
+      data-de="Christoph Fox"
+      data-fr="Christoph Fox"
+      data-es="Christoph Fox">
+
+    
+
+    </div>
+
+
+    <h1
+      class="reveal reveal-delay-1"
+      data-de="Wie werden wir groß?<br>Handlungsfähig?<br>Kompetent?<br>Resilient!"
+      data-fr="Comment devenons-nous grands ?<br>Capables d’agir ?<br>Compétents ?<br>Résilients !"
+      data-es="¿Cómo llegamos a ser grandes?<br>¿Capaces de actuar?<br>¿Competentes?<br>¡Resilientes!"
+
+      Wie werden wir groß?<br>
+      Handlungsfähig?<br>
+      Kompetent?<br>
+      Resilient?
+
+    </h1>
+
+
+    <div
+      class="hero-text reveal reveal-delay-2"
+      data-de="Wir sind nicht irgendwann fertig.<br> Fertig sind wir nie.<br>Aber groß.<br> Und fähig?<br><br>
+      Wir wachsen hinein in Familie, Beziehungen. Gesellschaft. Kultur.<br> Und machen uns dabei auch selbst zu dem, was wir werden.<br><br>
+      Wir sind erst klein.<br>
+      Dann relativ wild.<br>
+      Dann irgendwie groß.<br>
+      Und schließlich fähig?<br>
+      Hoffentlich.<br><br>
+      Konstitution.<br> Konfrontation.<br>
+      Konstruktion.<br> Kompetenz.<br>
+      Modellhaft.<br>"
+      data-fr="Nous ne sommes jamais vraiment achevés.<br>Nous ne le sommes jamais.<br>Mais grands.<br>Et capables ?<br><br>
+Nous grandissons au sein de la famille, des relations, de la société et de la culture.<br>Et, ce faisant, nous contribuons nous-mêmes à devenir ce que nous devenons.<br><br>
+Nous sommes d’abord petits.<br>
+Puis relativement sauvages.<br>
+Puis, d’une certaine manière, grands.<br>
+Et finalement capables ?<br>
+Espérons-le.<br><br>
+Constitution.<br>
+Confrontation.<br>
+Construction.<br>
+Compétence.<br>
+Modélisation.<br>"
+data-es="Nunca estamos realmente terminados.<br>Nunca lo estamos.<br>Pero crecemos.<br>¿Y somos capaces?<br><br>
+Crecemos dentro de la familia, de las relaciones, de la sociedad y de la cultura.<br>Y, al hacerlo, también contribuimos nosotros mismos a convertirnos en quienes llegamos a ser.<br><br>
+Primero somos pequeños.<br>
+Después, relativamente salvajes.<br>
+Luego, de alguna manera, grandes.<br>
+Y finalmente, ¿capaces?<br>
+Esperemos que sí.<br><br>
+Constitución.<br>
+Confrontación.<br>
+Construcción.<br>
+Competencia.<br>
+Modelización.<br>"
+
+      Wir werden nicht einfach geboren.<br> Und sind irgendwann fertig.<br>Fertig sind wir nie.<br>Aber groß.<br> Und fähig.<br><br>
+      Wir wachsen hinein in Familie, Beziehungen. Gesellschaft. Kultur.<br> Und machen uns dabei auch selbst zu dem, was wir werden.<br><br>
+      Wir sind erst klein.<br>
+      Dann relativ wild.<br>
+      Dann irgendwie groß.<br>
+      Und hoffentlich fähig.<br><br>
+      Konstitution.<br> Konfrontation.<br>
+      Konstruktion.<br> Kompetenz.<br>
+      Modellhaft.<br>
+      
+    </div>
+
+
+    <div class="fox-line reveal reveal-delay-3"></div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     GIMMICK 03: FUCHS UNTER HERO
+===================================================== -->
+
+<div
+  class="fox-sign"
+  aria-hidden="true">
+
+  <svg
+    class="fox-shadow"
+    viewBox="0 0 300 180"
+    xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+
+      <linearGradient
+        id="foxFur"
+        x1="0"
+        y1="0"
+        x2="1"
+        y2="1">
+
+        <stop
+          offset="0%"
+          stop-color="#5d2617"/>
+
+        <stop
+          offset="55%"
+          stop-color="#8e3f25"/>
+
+        <stop
+          offset="100%"
+          stop-color="#3a180f"/>
+
+      </linearGradient>
+
+    </defs>
+
+
+    <path
+      d="
+        M38 130
+        C48 118 58 107 72 101
+        C85 95 98 94 110 97
+        C118 91 126 83 132 73
+        L138 39
+        L154 57
+        C165 52 177 52 188 56
+        L215 38
+        L207 73
+        C201 86 193 94 182 99
+        C194 105 205 111 217 115
+        C231 119 244 116 258 108
+        C248 125 233 139 216 143
+        C196 148 176 143 159 137
+        C143 132 128 127 113 128
+        C94 130 77 139 60 148
+        C51 153 43 151 38 145
+        C35 141 35 135 38 130
+        Z
+      "
+      fill="url(#foxFur)"
+    />
+
+
+   <ellipse
+          cx="178"
+          cy="69"
+          rx="3.2"
+          ry="2.2"
+          fill="#111"/>
+
+        <ellipse
+          cx="193"
+          cy="67"
+          rx="3.2"
+          ry="2.2"
+          fill="#111"/>
+
+  </svg>
+
+</div>
+
+
+<div
+  style="
+    text-align:center;
+    padding:25px 20px 5px;
+    background:#fffaf3;
+    font-family:Georgia,serif;
+    font-size:1.5rem;
+  ">
+
+
+</div>
+
+
+<!-- =====================================================
+     BÜCHER
+===================================================== -->
+
+<section id="buecher">
+
+  <div class="container">
+
+    <div
+      class="label reveal"
+      data-de="Die Bücher"
+      data-fr="Les livres"
+      data-es="Los libros">
+
+      Die Bücher
+
+    </div>
+
+
+    <h2
+      class="reveal reveal-delay-1"
+      data-de="Zwei Werke.<br>Eine Frage."
+      data-fr="Deux livres.<br>Une question."
+      data-es="Dos libros.<br>Una pregunta.">
+
+      Zwei Werke.<br>
+      Eine Frage.
+
+    </h2>
+
+
+    <p
+      class="intro reveal reveal-delay-2"
+      data-de="Wie entsteht Handlungsfähigkeit?<br> Gesellschaftlich handlungsfähige Identität?<br> 
+      Kompetenz, die gesellschaftliche Integration<br> und individuelle Autonomie erfolgreich verbindet?<br><br>
+      Zwei Werke. Eins wissenschaftlich.<br>
+      Theoretisch. Modellhaft. Ideal.<br>
+      Das andere alltäglich. Leider."
+      data-fr="Comment naît la capacité d’agir ?<br>Une identité capable d’agir dans la société ?<br>
+Une compétence qui relie avec succès l’intégration sociale<br>et l’autonomie individuelle ?<br><br>
+Deux œuvres. L’une scientifique.<br>
+Théorique. Modélisée. Idéale.<br>
+L’autre quotidienne. Malheureusement."
+      data-es="¿Cómo surge la capacidad de actuar?<br>¿Una identidad capaz de desenvolverse en la sociedad?<br>
+¿Una competencia que vincula con éxito la integración social<br>y la autonomía individual?<br><br>
+Dos obras. Una científica.<br>
+Teórica. Modelizada. Ideal.<br>
+La otra cotidiana. Por desgracia.">
+
+     Wie entsteht Handlungsfähigkeit? Gesellschaftlich handlungsfähige Identität?<br> 
+      Kompetenz, die gesellschaftliche Integration und individuelle Autonomie erfolgreich verbindet?
+
+      <br><br>
+
+       Zwei Werke. Eins wissenschaftlich.<br>
+      Theoretisch. Modellhaft. Ideal.<br>
+      Das andere alltäglich. Leider.
+
+    </p>
+
+
+    <div class="books">
+
+
+      <article
+        class="book reveal"
+        id="buch-sozialisation">
+
+        <div class="cover-wrap">
+
+          <img
+            class="cover"
+            src="IMG_1937.jpeg"
+            alt="Buchcover Sozialisation: Subjekt, Handeln und Identität von Christoph Fox"
+            loading="lazy">
+
+        </div>
+
+
+        <div class="book-number">
+          1
+        </div>
+
+
+        <h3>
+          Sozialisation:<br>
+          Subjekt, Handeln<br>
+          und Identität
+        </h3>
+
+
+        <div class="subtitle">
+        </div>
+
+
+        <p
+          data-de="1. Konstitution.<br>
+          2. Konfrontation.<br>
+          3. Konstruktion.<br>
+          4. Kompetenz.<br><br><br>
+          1. Wir starten zugrundelegend konstitutiv in das Wechselspiel zwischen Gesellschaft und Subjekt.<br><br> 
+          2. In diesem Prozess folgt eine relativ konfrontative Auseinandersetzung mit gesellschaftlichen Erwartungen und äußeren Anforderungen.<br><br> 
+          3. Durch aktives und sinnhaftes Handeln wird die soziale Wirklichkeit danach entsprechend konstruktiv als Identität ausgestaltet.<br><br> 
+          4. Ziel dieses lebenslangen Prozesses ist es, eine stabile Persönlichkeit zu entwickeln, die kompetent mit gesellschaftlichen Anforderungen umgeht. 
+          So entsteht eine handlungsfähige Identität, die gesellschaftliche Integration und individuelle Autonomie erfolgreich verbindet."
+          data-fr="1. Constitution.<br>
+2. Confrontation.<br>
+3. Construction.<br>
+4. Compétence.<br><br><br>
+1. Nous entrons fondamentalement, de manière constitutive, dans l’interaction entre société et sujet.<br><br>
+2. Dans ce processus suit une confrontation relativement intense avec les attentes sociales et les exigences extérieures.<br><br>
+3. Par une action active et porteuse de sens, la réalité sociale est ensuite construite comme identité.<br><br>
+4. Le but de ce processus tout au long de la vie est de développer une personnalité stable, capable de faire face aux exigences sociales. Ainsi naît une identité capable d’agir, qui relie avec succès intégration sociale et autonomie individuelle."
+          data-es="1. Constitución.<br>
+2. Confrontación.<br>
+3. Construcción.<br>
+4. Competencia.<br><br><br>
+1. Partimos, de manera fundamental y constitutiva, de la interacción entre sociedad y sujeto.<br><br>
+2. En este proceso tiene lugar una confrontación relativamente intensa con las expectativas sociales y las exigencias externas.<br><br>
+3. Mediante una acción activa y dotada de sentido, la realidad social se construye posteriormente como identidad.<br><br>
+4. El objetivo de este proceso, que dura toda la vida, es desarrollar una personalidad estable capaz de afrontar las exigencias sociales. Así surge una identidad capaz de actuar, que vincula con éxito la integración social y la autonomía individual.">
+
+          Wir werden nicht allein zu dem,
+          was wir sind.
+
+          <br><br>
+
+          Wir wachsen in Familien,
+          Freundschaften, Schulen,
+          Institutionen und Gesellschaften auf.
+
+          <br><br>
+
+          Wir übernehmen, widersprechen,
+          passen uns an, grenzen uns ab –
+          und gestalten dabei immer auch
+          uns selbst.
+
+        </p>
+
+
+        <div class="book-extra">
+
+          <h4
+            data-de="Thema"
+            data-fr="De quoi s’agit-il ?"
+            data-es="¿De qué trata?">
+
+            Thema
+
+          </h4>
+
+
+          <p
+            data-de="Das Buch fragt danach, wie Menschen in ihrer sozialen Welt zu handlungsfähigen kompetenten Subjekten werden.<br>Sozialisation läuft nie schematisch ab, wird hier jedoch als Verhältnis zwischen Subjekt und Gesellschaft, eigenem Handeln und einer sich daraus ergebenden stabilen und resilienten Identität modelliert."
+            data-fr="Le livre s’interroge sur la manière dont les êtres humains deviennent des sujets compétents et capables d’agir au sein de leur monde social.<br>
+La socialisation ne se déroule jamais de manière schématique. Elle est néanmoins modélisée ici comme une relation entre le sujet et la société, l’action personnelle et une identité stable et résiliente qui en résulte."
+            data-es="El libro se pregunta cómo las personas se convierten en sujetos competentes y capaces de actuar dentro de su mundo social.<br>
+La socialización nunca se desarrolla de forma esquemática. Sin embargo, aquí se modeliza como una relación entre el sujeto y la sociedad, la acción propia y una identidad estable y resiliente que surge de ella.">
+
+            Das Buch fragt danach, wie Menschen
+            in ihrer sozialen Welt zu Subjekten mit 
+            eigener gesellschaftlich handlungsfähiger Identität werden.
+
+            <br><br>
+
+            Sozialisation erscheint dabei nicht als
+            bloße Anpassung, sondern als Verhältnis
+            zwischen Ausgangslage, eigenem Handeln,
+            Identität und Handlungsfähigkeit.
+
+          </p>
+
+
+          <h4
+            data-de="Klappentext"
+            data-fr="Texte de quatrième de couverture"
+            data-es="Texto de contraportada">
+
+            Klappentext
+
+          </h4>
+
+
+          <p
+            data-de="Sozialisation ist der aktive und subjektorientierte Prozess der Vergesellschaftung von Individuen zu kompetent handlungsfähigen Identitäten.
+Der vorliegende Ansatz reduziert die Komplexität der Wirklichkeit und Sozialisation in ein schematisches Modell, das die dynamischen Prozesse und zu erwerbenden Kompetenzen darstellbar werden lässt.
+Ausgehend von einem subjektorientierten Blick werden die sozialisationstheoretisch relevanten Begriffe Subjekt, Handeln und Identität vorgestellt. Es folgt die Darstellung einer innersubjektiven Struktur, deren Handlungen im gemeinsamen Feld mit Anderen und deren Entwicklung. Die Elemente kompetenter Sozialisation sind der Erwerb konstitutiver, konfrontativer und konstruktiver Komponenten. Ziel von Sozialisationsprozessen ist die (komplexe) Entwicklung kompetent handlungsfähiger Subjekte. In diesem Buch wird der, um Komplexität reduzierte, Sozialisationsprozess modellhaft dargestellt."
+            data-fr="La socialisation est le processus actif et centré sur le sujet par lequel les individus deviennent des identités compétentes et capables d’agir au sein de la société.
+
+L’approche présentée ici réduit la complexité de la réalité et de la socialisation à un modèle schématique qui permet de rendre représentables les processus dynamiques ainsi que les compétences à acquérir.
+
+Partant d’une perspective centrée sur le sujet, les concepts de sujet, d’action et d’identité pertinents pour la théorie de la socialisation sont présentés. Suit la présentation d’une structure intra-subjective, de ses actions dans un champ partagé avec les autres ainsi que de son développement. Les éléments d’une socialisation compétente sont l’acquisition de composantes constitutives, confrontatives et constructives. L’objectif des processus de socialisation est le développement (complexe) de sujets compétents et capables d’agir. Dans cet ouvrage, le processus de socialisation, réduit dans sa complexité, est présenté sous forme de modèle."
+            data-es="La socialización es el proceso activo y centrado en el sujeto mediante el cual los individuos se convierten en identidades competentes y capaces de actuar dentro de la sociedad.
+
+El enfoque presentado aquí reduce la complejidad de la realidad y de la socialización a un modelo esquemático que permite representar los procesos dinámicos y las competencias que deben adquirirse.
+
+Partiendo de una perspectiva centrada en el sujeto, se presentan los conceptos relevantes para la teoría de la socialización: sujeto, acción e identidad. A continuación, se expone una estructura intrasubjetiva, sus acciones en un campo compartido con los demás y su desarrollo. Los elementos de una socialización competente son la adquisición de componentes constitutivos, confrontativos y constructivos. El objetivo de los procesos de socialización es el desarrollo (complejo) de sujetos competentes y capaces de actuar. En este libro, el proceso de socialización, reducido en su complejidad, se presenta de forma modelizada.">
+
+            Wie viel von dem, was wir sind,
+            wurde uns mitgegeben –
+            und was machen wir selbst daraus?
+
+          </p>
+
+        </div>
+
+
+        <button
+          class="more-button"
+          onclick="toggleBook('buch-sozialisation', this)"
+          data-de="Mehr zum Buch +"
+          data-fr="En savoir plus +"
+          data-es="Más sobre el libro +">
+
+          Mehr zum Buch +
+
+        </button>
+
+
+        <div class="meta">
+
+          306 Seiten<br>
+          ISBN 978-3-96138-038-1
+
+        </div>
+
+
+        <a
+          class="book-link"
+          href="https://www.lehmanns.ch/shop/sozialwissenschaften/41357656-9783961380381-sozialisation-subjekt-handeln-und-identitaet"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-de="Bei Lehmanns ansehen →"
+          data-fr="Voir chez Lehmanns →"
+          data-es="Ver en Lehmanns →">
+
+          Bei Lehmanns ansehen →
+
+        </a>
+
+<a
+  class="book-link"
+  href="https://d-nb.info/1149169982/04"
+  target="_blank"
+  rel="noopener noreferrer"
+  data-de="Inhaltsverzeichnis hier ansehen →"
+  data-fr="Voir la table des matières →"
+  data-es="Ver el índice aquí →">
+
+  Inhaltsverzeichnis hier ansehen →
+
+</a>
+        
+      </article>
+
+
+      <article
+        class="book reveal reveal-delay-1"
+        id="buch-klein-wild">
+
+        <div class="cover-wrap">
+
+          <img
+            class="cover"
+            src="IMG_0191.jpeg"
+            alt="Buchcover Klein. Wild. Groß. Fähig. – Entwicklung. Vier Akte. von Christoph Fox"
+            loading="lazy">
+
+        </div>
+
+
+        <div class="book-number">
+          2
+        </div>
+
+
+        <h3>
+          Klein. Wild.<br>
+          Groß. Fähig.
+        </h3>
+
+
+        <div class="subtitle">
+          Entwicklung. Vier Akte.
+        </div>
+
+
+        <p
+          data-de="1. Wir starten klein.<br> 2. Dann wird´s wild.<br> 3. Wir werden groß.<br>4. Und schließlich fähig?<br><br> Gute Reise!"
+          data-fr="1. Nous commençons petits.<br>
+2. Puis ça devient sauvage.<br>
+3. Nous devenons grands.<br>
+4. Et finalement capables ?<br><br>
+Bon voyage !</strong>"
+          data-es="1. Empezamos pequeños.<br>
+2. Después se vuelve salvaje.<br>
+3. Nos hacemos grandes.<br>
+4. Y finalmente, ¿capaces?<br><br>
+¡Buen viaje!</strong>">
+
+          Großwerden ist kein gerader Weg.
+
+          <br><br>
+
+          Wir beginnen klein.
+          Wir werden wild.
+          Wir werden groß.
+
+          <br><br>
+
+          Und irgendwann stellt sich
+          eine andere Frage:
+
+          <br><br>
+
+          <strong>
+            Was können wir mit dem anfangen,
+            was aus uns geworden ist?
+          </strong>
+
+        </p>
+
+
+        <div class="book-extra">
+
+          <h4
+            data-de="Thema"
+            data-fr="De quoi s’agit-il ?"
+            data-es="¿De qué trata?">
+
+            Thema
+
+          </h4>
+
+
+          <p
+            data-de="Entwicklung ist ein Akt.<br> Schön wär´s. Vier Akte!<br> Klein. Wild. Groß. Fähig.<br><br>Eine Reise durch nur allzu menschliche Gefilde.<br>Ein Theaterstück.<br> Mit Ende!<br> Oder ohne."
+            data-fr="Le développement est un acte .<br>Ce serait bien. Quatre actes !<br>Petit. Sauvage. Grand. Capable.<br><br>Un voyage à travers des contrées bien trop humaines.<br>Une pièce de théâtre.<br>Avec une fin !<br>Ou sans."
+            data-es="¡El desarrollo es un acto.<br>Ojalá. ¡Cuatro actos!<br>Pequeño. Salvaje. Grande. Capaz.<br><br>Un viaje por territorios demasiado humanos.<br>Una obra de teatro.<br>¡Con final!<br>O sin él.">
+
+            Entwicklung wird hier als Weg durch
+            vier Akte betrachtet:
+            Klein. Wild. Groß. Fähig.
+
+            <br><br>
+
+            Ein Blick auf das Werden des Menschen,
+            auf Veränderung und auf den Moment,
+            in dem aus Entwicklung zunehmend
+            eigene Handlungsfähigkeit entsteht.
+
+          </p>
+
+
+          <h4
+            data-de="Klappentext"
+            data-fr="Texte de quatrième de couverture"
+            data-es="Texto de contraportada">
+
+            Klappentext
+
+          </h4>
+
+
+          <p
+            data-de="Entwicklung ist die tragische Reise durch vier Phasen des Lebens.<br> Jeder Akt prägt und formt uns zu dem, was wir sind.<br> Klein beginnt alles mit zauberhaftem Staunen.<br> Wild und herausfordernd ist die turbulente Zeit der Pubertät.<br> Groß sein ist dann erwachsene Verantwortung, individuelle Stärke.<br> Fähig wäre erfolgreiche Einbindung der eigenen Identität in die Gesellschaft.<br> Wäre! Wenn da nicht...<br> Gute Reise!"
+            data-fr="Le développement est le voyage tragique à travers quatre phases de la vie.<br>
+Chaque acte nous façonne et nous transforme en ce que nous sommes.<br>
+Tout commence petit, avec l’émerveillement magique de l’enfance.<br>
+Sauvage et tumultueuse, l’adolescence est une période de défis et de bouleversements.<br>
+Être grand, c’est alors assumer les responsabilités de l’âge adulte et développer sa force individuelle.<br>
+Être capable, ce serait réussir à intégrer sa propre identité dans la société.<br>
+Ce serait ! Si seulement il n’y avait pas…<br>
+Bon voyage !"
+            data-es="El desarrollo es el viaje trágico a través de cuatro etapas de la vida.<br>
+Cada acto nos marca y nos transforma en aquello que somos.<br>
+Todo comienza siendo pequeños, con el asombro mágico de la infancia.<br>
+Salvaje y desafiante es la turbulenta etapa de la pubertad.<br>
+Ser grandes significa entonces asumir la responsabilidad adulta y desarrollar la propia fuerza individual.<br>
+Ser capaces sería lograr integrar nuestra propia identidad en la sociedad.<br>
+¡Lo sería! Si no fuera por…<br>
+¡Buen viaje!">
+
+            Wann werden wir nicht nur groß,
+            sondern tatsächlich fähig,
+            mit dem eigenen Leben etwas anzufangen?
+
+          </p>
+
+        </div>
+
+
+        <button
+          class="more-button"
+          onclick="toggleBook('buch-klein-wild', this)"
+          data-de="Mehr zum Buch +"
+          data-fr="En savoir plus +"
+          data-es="Más sobre el libro +">
+
+          Mehr zum Buch +
+
+        </button>
+
+
+        <div class="meta">
+          140 Seiten <br>
+          ISBN 978-3-7592-9610-8
+
+        </div>
+
+
+        <a
+          class="book-link"
+          href="https://www.thalia.de/shop/home/artikeldetails/A1075028145"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-de="Bei Thalia ansehen →"
+          data-fr="Voir chez Thalia →"
+          data-es="Ver en Thalia →">
+
+          Bei Thalia ansehen →
+
+        </a>
+
+<br>
+        
+        <a
+  class="book-link"
+  href="kwgf_Inhaltsverzeichnis.JPG"
+  target="_blank"
+  rel="noopener noreferrer"
+  data-de="Inhaltsverzeichnis hier ansehen →"
+  data-fr="Voir la table des matières →"
+  data-es="Ver el índice aquí →">
+
+  Inhaltsverzeichnis hier ansehen →
+
+</a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     GIMMICK 04: KLEINER FUCHS
+===================================================== -->
+
+<div class="fox-divider-section">
+
+  <div
+    class="fox-divider reveal"
+    aria-hidden="true">
+
+    <span class="fox-mini">
+
+      <svg
+        viewBox="0 0 300 180"
+        xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+
+          <linearGradient
+            id="miniFox"
+            x1="0"
+            y1="0"
+            x2="1"
+            y2="1">
+
+            <stop
+              offset="0%"
+              stop-color="#74331f"/>
+
+            <stop
+              offset="100%"
+              stop-color="#a95435"/>
+
+          </linearGradient>
+
+        </defs>
+
+        <path
+  d="
+    M38 130
+    C48 118 58 107 72 101
+    C85 95 98 94 110 97
+    C118 91 126 83 132 73
+    L138 39
+    L154 57
+    C165 52 177 52 188 56
+    L215 38
+    L207 73
+    C201 86 193 94 182 99
+    C194 105 205 111 217 115
+    C231 119 244 116 258 108
+    C248 125 233 139 216 143
+    C196 148 176 143 159 137
+    C143 132 128 127 113 128
+    C94 130 77 139 60 148
+    C51 153 43 151 38 145
+    C35 141 35 135 38 130
+    Z
+  "
+  fill="url(#miniFox)"
+/>
+
+<!-- Augen -->
+<ellipse
+  cx="170"
+  cy="72"
+  rx="2.5"
+  ry="1.8"
+  fill="#111"/>
+
+<ellipse
+  cx="181"
+  cy="70"
+  rx="2.5"
+  ry="1.8"
+  fill="#111"/>
+
+</svg>
+
+    </span>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     FRAGE
+===================================================== -->
+
+<section class="question">
+
+  <div class="container question-inner">
+
+    <div class="question-mark">
+      ?
+    </div>
+
+
+    <div
+      class="question-text reveal"
+      data-de="Wer wären wir,<br> wenn niemand uns gesagt hätte,<br> wer wir sein sollen?"
+      data-fr="Qui serions-nous si personne ne nous avait dit qui nous devions être ?"
+      data-es="¿Quiénes seríamos si nadie nos hubiera dicho quiénes debíamos ser?">
+
+      Wer wären wir,<br>
+      wenn niemand uns gesagt hätte,<br>
+      wer wir sein sollen?
+
+    </div>
+
+
+    <div class="question-small">
+      Fox
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ZUSAMMENHANG
+===================================================== -->
+
+<section
+  class="connection"
+  id="zusammenhang">
+
+  <div class="container">
+
+    <div
+      class="label reveal"
+      data-de="Der Zusammenhang"
+      data-fr="Le lien"
+      data-es="La conexión">
+
+      Der Zusammenhang
+
+    </div>
+
+
+    <h2
+      class="reveal reveal-delay-1"
+      data-de="Zwischen dem, wie es beginnt.<br>Und dem, was wir daraus machen."
+      data-fr="Entre la manière dont tout commence.<br>Et ce que nous en faisons."
+      data-es="Entre cómo comienza todo.<br>Y lo que hacemos con ello.">
+
+      Zwischen dem, wie es beginnt,<br>
+      und dem, was wir daraus machen.
+
+    </h2>
+
+
+    <div class="connection-text" style="font-size: 1.2em;">
+
+
+     <p
+  class="reveal"
+
+  data-de="
+  ´Goldgelb und warm.<br>
+  Das Licht der Welt.<br>
+  Es war Ihr Tag.<br>
+  Ihr schönster. Ihr erster.<br>
+  Die ersten Blicke. Erstmals Augenblicke.<br>
+  Der Tag der Geburt war sonnendurchstrahlt.´<br>
+  <span class='literaturhinweis'>(Fox 2025: Klein. Wild. Groß. Fähig.)</span>
+  <br><br>
+  Wir kommen nicht fertig auf die Welt.<br>
+  Und werden es auch nie werden."
+
+  data-fr="
+  « Doré et chaleureux.<br>
+  La lumière du monde.<br>
+  C’était votre jour.<br>
+  Votre plus beau. Votre premier.<br>
+  Les premiers regards. Les premiers instants.<br>
+  Le jour de la naissance était traversé de soleil. »<br>
+  <span class='literaturhinweis'>(Fox 2025 : Klein. Wild. Groß. Fähig.)</span>
+  <br><br>
+  Nous ne venons pas au monde achevés.<br>
+  Et nous ne le serons jamais."
+
+  data-es="
+  « Dorado y cálido.<br>
+  La luz del mundo.<br>
+  Era vuestro día.<br>
+  El más hermoso. El primero.<br>
+  Las primeras miradas. Los primeros instantes.<br>
+  El día del nacimiento estaba atravesado por el sol. »<br>
+  <span class='literaturhinweis'>(Fox 2025: Klein. Wild. Groß. Fähig.)</span>
+  <br><br>
+  No llegamos al mundo terminados.<br>
+  Y nunca lo estaremos.">
+
+  Wir kommen nicht als fertig auf die Welt.<br>
+  Und werden es nie werden.
+
+  <span class="literaturhinweis">
+    (Fox 2025: Klein. Wild. Groß. Fähig.)
+  </span>
+
+</p>
+
+      <p
+        class="reveal"
+        data-de="Alles beeinflusst uns.<br> Lebenslage. Lebensphase.<br> Familie, Freunde.<br> Kollegium. Schule.<br> Gesellschaft und Kultur."
+        data-fr="Tout nous influence.<br>
+Situation de vie. Phase de vie.<br>
+Famille, amis.<br>
+Collègues. École.<br>
+Société et culture."
+        data-es="Todo nos influye.<br>
+Situación de vida. Etapa de la vida.<br>
+Familia, amigos.<br>
+Colegas. Escuela.<br>
+Sociedad y cultura.">
+
+        Alles beeinflusst.<br> 
+        Lebenslage. Lebensphase.<br>
+        Familie, Freunde, Schule.<br>
+        Gesellschaft und Kultur.<br>
+
+      </p>
+
+
+      <p
+        class="reveal"
+        data-de="Aber wir sind nicht nur das Ergebnis dessen, was geschieht.<br> <em>Wir handeln.</em> <br>Wir widersprechen. <br>Wir entscheiden. <br>Wir verändern."
+        data-fr="Mais nous ne sommes pas seulement le résultat de ce qui arrive.<br>
+<em>Nous agissons.</em><br>
+Nous résistons.<br>
+Nous décidons.<br>
+Nous transformons."
+        data-es="Pero no somos solamente el resultado de lo que sucede.<br>
+<em>Actuamos.</em><br>
+Nos oponemos.<br>
+Decidimos.<br>
+Transformamos.">
+
+        Aber wir sind nicht nur das Ergebnis
+        dessen, was geschieht.
+
+        <em>Wir handeln.</em> <br>
+
+        Wir widersprechen.<br>
+        Wir entscheiden.<br>
+        Wir verändern.<br>
+
+      </p>
+
+
+      <p
+        class="reveal"
+        data-de="Genau dort liegt prinzipiell alles in unserer eigenen Hand!<br> <em>Handlungsfähigkeit!<br> 
+        Gesellschaftliche Kompetenz.<br> 
+        Stabile Identität!<br>
+        Resilienz!!<br>
+        Theoretisch.<br>
+        Modellhaft.<br>
+        Erlernbar.<br>
+        Machbar.<br>
+        Real!</em>"
+        data-fr="C’est précisément là que, en principe, presque tout est entre nos mains !<br>
+<em>
+Capacité d’agir !<br>
+Compétence sociale.<br>
+Identité stable !<br>
+Résilience !!<br>
+Théorique.<br>
+Modélisée.<br>
+Apprenable.<br>
+Réalisable.<br>
+Réelle !
+</em>"
+        data-es="¡Precisamente ahí, en principio, casi todo está en nuestras manos!<br>
+<em>
+¡Capacidad de actuar!<br>
+Competencia social.<br>
+¡Identidad estable!<br>
+¡¡Resiliencia!!<br>
+Teórica.<br>
+Modelizada.<br>
+Aprendible.<br>
+Realizable.<br>
+¡Real!
+</em>">
+
+        Genau dort liegt prinzipiell nahezu alles in unserer eigenen Hand!<br> <em>Handlungsfähigkeit!<br> 
+        Gesellschaftliche Kompetenz.<br> 
+        Stabile Identität!
+        </em>
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     AUTOR
+===================================================== -->
+
+<section id="autor">
+
+  <div class="container about">
+
+    <div class="reveal">
+
+      <div
+        class="label"
+        data-de="Über mich"
+        data-fr="À propos de moi"
+        data-es="Sobre mí">
+
+        Über mich
+  
+      </div><br><br>
+      <img src="FOM Foto - Kopie (2).jpeg" alt="Foto von mir" width="200">
+      <div class="about-name">
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <p
+        data-de="Als studierter Erziehungswissenschaftler lehre ich Grundlagen und Methoden der Sozialen Arbeit. Suchthilfe. Erziehung.<br>
+        Inklusion. Und Case Management.<br><br>
+        Stress-Prophylaxe am Arbeitsplatz.<br> 
+        Und Resilienz-Coaching im Alltag.<br><br>
+        Mich interessiert die Frage: Wie werden Menschen, wer sie sind?<br> 
+        Und wie viel sie selbst mit ihren Ressourcen daraus machen können.<br><br>
+        Wunder? Eher selten.<br>
+        Das doppelte? Aber ja!"
+
+        <p
+        data-fr="En tant que diplômé en sciences de l’éducation, j’enseigne les fondements et les méthodes du travail social. Aide aux personnes dépendantes. Éducation.<br>
+Inclusion. Et Case Management.<br><br>
+Prévention du stress au travail.<br>
+Et coaching en résilience au quotidien.<br><br>
+La question qui m’intéresse est la suivante : comment les êtres humains deviennent-ils ce qu’ils sont ?<br>
+Et que peuvent-ils eux-mêmes faire de leurs ressources ?<br><br>
+Les miracles ? Plutôt rares.<br>
+Le double ? Mais oui!"
+        data-es="Como graduado en Ciencias de la Educación, enseño fundamentos y métodos del trabajo social. Atención a las adicciones. Educación.<br>
+Inclusión. Y gestión de casos.<br><br>
+Prevención del estrés en el trabajo.<br>
+Y coaching de resiliencia en la vida cotidiana.<br><br>
+Me interesa la pregunta: ¿cómo llegan las personas a ser quienes son?<br>
+¿Y cuánto pueden hacer ellas mismas con sus propios recursos?<br><br>
+¿Milagros? Más bien raros.<br>
+¿Lo doble? ¡Pero sí!">
+
+        Als studierter Erziehungswissenschaftler
+        interessiert mich die Frage,
+        wie Menschen werden, wer sie sind –
+        und wie viel sie selbst daraus machen
+        können.
+
+      </p>
+
+
+      <p
+        data-de="Sozialisation, Entwicklung, Identität<br> 
+        und Handlungsfähigkeit gehören dabei zusammen.<br> 
+        Denn zwischen Ausgangslage und dem,<br>
+        der wir werden, liegt etwas Entscheidendes:<br> 
+        Unser Handeln. Der Weg zu Handlungsfähigkeit!<br>Hin zu Resilienz!"
+        data-fr="Pour moi, socialisation, développement et capacité d’agir sont étroitement liés.<br>
+Car entre la situation de départ et la personne que nous devenons se trouve quelque chose d’essentiel :<br>
+notre action. Le chemin vers la capacité d’agir !<br>
+Vers la résilience !"
+        data-es="Para mí, socialización, desarrollo y capacidad de actuar están estrechamente relacionados.<br>
+Porque entre la situación de partida y la persona en la que nos convertimos existe algo decisivo:<br>
+nuestra acción. ¡El camino hacia la capacidad de actuar!<br>
+¡Hacia la resiliencia!">
+
+        Sozialisation, Entwicklung und
+        Handlungsfähigkeit gehören dabei
+        zusammen.
+
+        Denn zwischen der Ausgangslage und dem Menschen,
+        der wir werden, liegt etwas Entscheidendes:
+
+        <strong>
+          unser Handeln. Der Weg zu Handlungsfähigkeit!
+        </strong>
+
+      </p>
+
+
+      <p
+        data-de="Und Handlungsfähigkeit ist erlernbar!<br>
+      Und wie entsteht Handlungsfähigkeit?<br> Gesellschaftlich handlungsfähige Identität?<br> 
+      Kompetenz, die gesellschaftliche Integration und individuelle Autonomie erfolgreich verbindet?<br><br>
+      Zwei Werke.<br> 
+      Eins wissenschaftlich.<br>
+      Theoretisch. Modellhaft. Ideal.<br>
+      Das andere alltäglich. Leider."
+        data-fr="Et la capacité d’agir s’apprend !<br>
+Et comment naît la capacité d’agir ?<br>
+Une identité capable d’agir dans la société ?<br>
+Une compétence qui relie avec succès intégration sociale et autonomie individuelle ?<br><br>
+Deux œuvres.<br>
+L’une scientifique.<br>
+Théorique. Modélisée. Idéale.<br>
+L’autre quotidienne. Malheureusement."
+        data-es="¡Y la capacidad de actuar se puede aprender!<br>
+¿Y cómo surge la capacidad de actuar?<br>
+¿Una identidad capaz de desenvolverse en la sociedad?<br>
+¿Una competencia que vincula con éxito la integración social y la autonomía individual?<br><br>
+Dos obras.<br>
+Una científica.<br>
+Teórica. Modelizada. Ideal.<br>
+La otra cotidiana. Por desgracia.">
+
+        Beide Werke betrachten diesen Weg
+        aus zwei Perspektiven –
+        einmal wissenschaftlich, kritisch. Und einmal ganz praktisch das ganz alltägliche Großwerden.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     KONTAKT
+===================================================== -->
+
+<section
+  class="contact"
+  id="kontakt">
+
+  <div class="container contact-box">
+
+    <div
+      class="label reveal"
+      data-de="Kontakt"
+      data-fr="Contact"
+      data-es="Contacto">
+
+      Kontakt
+
+    </div>
+
+
+    <h2
+      class="reveal reveal-delay-1"
+      data-de="Anfragen"
+      data-fr="Demandes"
+      data-es="Solicitudes">
+
+      Anfragen
+
+    </h2>
+
+
+    <p
+      class="reveal reveal-delay-2"
+      data-de="<b>Beratung.<br> 
+      Coaching.<br> 
+      Supervision.<br>
+      Lehraufträge.</b><br><br>
+      Für Einrichtungen.<br>
+      (Fach-)Hochschulen.<br>
+      Und Firmen.<br>
+      Oder privat.<br><br>
+      An Rhein.<br>
+      Und Ruhr."
+      data-fr="<b>Conseil.<br>
+Coaching.<br>
+Supervision.<br>
+Enseignement.</b><br><br>
+Pour les institutions.<br>
+Les établissements d’enseignement supérieur.<br>
+Et les entreprises.<br>
+Ou pour les particuliers.<br><br>
+Sur le Rhin.<br>
+Et dans la Ruhr."
+      data-es="<b>Asesoramiento.<br>
+Coaching.<br>
+Supervisión.<br>
+Docencia.</b><br><br>
+Para instituciones.<br>
+Universidades y centros de educación superior.<br>
+Y empresas.<br>
+O para particulares.<br><br>
+En el Rin.<br>
+Y en el Ruhr.">
+ 
+      <b>Beratung, Supervision oder Coaching.</b><br>
+      Für Einrichtungen der Sozialen Arbeit.<br> 
+      Oder privat.<br>
+      An Rhein.<br>
+      Und Ruhr.
+
+    </p>
+
+
+    <a
+      class="contact-button reveal reveal-delay-3"
+      href="mailto:mail@herrfox.de"
+      data-de="Hier anfragen →"
+      data-fr="Faire une demande →"
+      data-es="Hacer una consulta →">
+
+      Hier anfragen →
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     GIMMICK 05
+     DER GROSSE FUCHS ALS ABSCHLUSS
+===================================================== -->
+
+<section
+  class="final-fox-section"
+  aria-hidden="true">
+
+  <svg
+    class="final-fox"
+    viewBox="0 0 300 180"
+    xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+
+      <linearGradient
+        id="finalFoxFur"
+        x1="0"
+        y1="0"
+        x2="1"
+        y2="1">
+
+        <stop
+          offset="0%"
+          stop-color="#5d2617"/>
+
+        <stop
+          offset="55%"
+          stop-color="#8e3f25"/>
+
+        <stop
+          offset="100%"
+          stop-color="#3a180f"/>
+
+      </linearGradient>
+
+    </defs>
+
+
+    <path
+      d="
+        M38 130
+        C48 118 58 107 72 101
+        C85 95 98 94 110 97
+        C118 91 126 83 132 73
+        L138 39
+        L154 57
+        C165 52 177 52 188 56
+        L215 38
+        L207 73
+        C201 86 193 94 182 99
+        C194 105 205 111 217 115
+        C231 119 244 116 258 108
+        C248 125 233 139 216 143
+        C196 148 176 143 159 137
+        C143 132 128 127 113 128
+        C94 130 77 139 60 148
+        C51 153 43 151 38 145
+        C35 141 35 135 38 130
+        Z
+      "
+      fill="url(#finalFoxFur)"
+    />
+
+
+    <ellipse
+      cx="151"
+      cy="151"
+      rx="104"
+      ry="11"
+      fill="#3b180f"
+      opacity=".16"
+      filter="blur(5px)"
+    />
+
+  </svg>
+
+
+  <div class="final-fox-caption">
+    Christoph Fox
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     IMPRESSUM
+===================================================== -->
+
+<section
+  class="impressum"
+  id="impressum">
+
+  <div class="container impressum-box">
+
+    <div
+      class="label reveal"
+      data-de="Impressum"
+      data-fr="Mentions légales"
+      data-es="Aviso legal">
+
+      Impressum
+
+    </div>
+
+    <p
+      class="reveal reveal-delay-2"
+      data-de="Angaben gemäß § 5 DDG:"
+      data-fr="Informations conformément à l’article 5 DDG :"
+      data-es="Información conforme al § 5 DDG:">
+
+      Angaben gemäß § 5 DDG:
+
+    </p>
+
+    <p>
+
+      <strong>
+        Christoph Fox
+      </strong>
+
+      <br>
+
+      c/o Autorenglück #61822
+      <br>
+
+      Albert-Einstein-Straße 47
+      <br>
+
+      02977 Hoyerswerda
+      <br>
+
+      Deutschland
+    </p>
+    <p>
+      <a href="mailto:mail@herrfox.de">
+        mail@herrfox.de
+      </a>
+    </p>
+  </div>
+</section>
+</main>
+<footer>
+
+  <div class="container">
+
+    © Dipl.-Päd. Christoph Fox
+  </div>
+</footer>
+<!-- =====================================================
+     GIMMICK 10
+     ZURÜCK NACH OBEN
+===================================================== -->
+
+<button
+  class="back-top"
+  id="backTop"
+  onclick="window.scrollTo({top:0,behavior:'smooth'})"
+  aria-label="Nach oben">
+
+  ↑
+
+</button>
+
+
+<script>
+
+
+/* =========================================================
+   SPRACHEN
+========================================================= */
+
+function setLanguage(language) {
+
+  document.documentElement.lang =
+    language;
+
+
+  const elements =
+    document.querySelectorAll(
+      "[data-" + language + "]"
+    );
+
+
+  elements.forEach(function(element) {
+
+    element.innerHTML =
+      element.getAttribute(
+        "data-" + language
+      );
+
+  });
+
+
+  document
+    .querySelectorAll(".lang-button")
+    .forEach(function(button) {
+
+      button.classList.remove("active");
+
+    });
+
+
+  const buttons =
+    document.querySelectorAll(
+      ".lang-button"
+    );
+
+
+  if (language === "de" && buttons[0]) {
+    buttons[0].classList.add("active");
+  }
+
+  if (language === "fr" && buttons[1]) {
+    buttons[1].classList.add("active");
+  }
+
+  if (language === "es" && buttons[2]) {
+    buttons[2].classList.add("active");
+  }
+
+
+  localStorage.setItem(
+    "christophFoxLanguage",
+    language
+  );
+
+}
+
+  function toggleReadAloud() {
+
+  if (window.speechSynthesis.speaking) {
+
+    window.speechSynthesis.cancel();
+
+    return;
+  }
+
+
+  const language =
+    document.documentElement.lang || "de";
+
+
+  const text =
+    document.body.innerText;
+
+
+  const speech =
+    new SpeechSynthesisUtterance(text);
+
+
+  speech.lang =
+    language === "fr"
+      ? "fr-FR"
+      : language === "es"
+        ? "es-ES"
+        : "de-DE";
+
+
+  speech.rate = 0.95;
+
+  speech.pitch = 1;
+
+  speech.volume = 1;
+
+
+  window.speechSynthesis.speak(
+    speech
+  );
+
+}
+
+  function toggleReadability() {
+
+  document.body.classList.toggle(
+    "readability-mode"
+  );
+
+}
+
+/* =========================================================
+   MENÜ
+========================================================= */
+
+function toggleMenu() {
+
+  const menu =
+    document.getElementById(
+      "mobileMenu"
+    );
+
+  const button =
+    document.querySelector(
+      ".menu-button"
+    );
+
+
+  menu.classList.toggle("open");
+
+  button.classList.toggle(
+    "open",
+    menu.classList.contains("open")
+  );
+
+
+  button.setAttribute(
+    "aria-expanded",
+    menu.classList.contains("open")
+      ? "true"
+      : "false"
+  );
+
+}
+
+
+function closeMenu() {
+
+  const menu =
+    document.getElementById(
+      "mobileMenu"
+    );
+
+  const button =
+    document.querySelector(
+      ".menu-button"
+    );
+
+
+  menu.classList.remove("open");
+
+  button.classList.remove("open");
+
+
+  button.setAttribute(
+    "aria-expanded",
+    "false"
+  );
+
+}
+
+
+/* =========================================================
+   BUCHTEXT
+========================================================= */
+
+function toggleBook(id, button) {
+
+  const book =
+    document.getElementById(id);
+
+
+  book.classList.toggle("open");
+
+
+  const language =
+    document.documentElement.lang ||
+    "de";
+
+
+  const labels = {
+
+    de: {
+      more: "Mehr zum Buch +",
+      less: "Weniger anzeigen −"
+    },
+
+    fr: {
+      more: "En savoir plus +",
+      less: "Réduire −"
+    },
+
+    es: {
+      more: "Más sobre el libro +",
+      less: "Mostrar menos −"
+    }
+
+  };
+
+
+  if (
+    book.classList.contains("open")
+  ) {
+
+    button.textContent =
+      labels[language].less;
+
+  } else {
+
+    button.textContent =
+      labels[language].more;
+
+  }
+
+}
+
+
+/* =========================================================
+   GIMMICK 01 + 02
+   ABENDLICHT / PARALLAX
+========================================================= */
+
+let ticking = false;
+
+
+function updateEveningLight() {
+
+  const scrollY =
+    window.scrollY || 0;
+
+
+  const hero =
+    document.querySelector(
+      ".hero"
+    );
+
+
+  if (!hero) {
+    return;
+  }
+
+
+  const heroHeight =
+    hero.offsetHeight;
+
+
+  const progress =
+    Math.min(
+      scrollY / heroHeight,
+      1.8
+    );
+
+
+  const x =
+    78 - (
+      progress * 20
+    );
+
+
+  const y =
+    22 + (
+      progress * 25
+    );
+
+
+  const strength =
+    .78 - (
+      Math.min(
+        progress,
+        1
+      ) * .10
+    );
+
+
+  const shift =
+    progress * 115;
+
+
+  const shiftY =
+    progress * 55;
+
+
+  document.documentElement.style.setProperty(
+    "--light-x",
+    x + "%"
+  );
+
+
+  document.documentElement.style.setProperty(
+    "--light-y",
+    y + "%"
+  );
+
+
+  document.documentElement.style.setProperty(
+    "--light-strength",
+    strength
+  );
+
+
+  document.documentElement.style.setProperty(
+    "--light-shift",
+    shift + "px"
+  );
+
+
+  document.documentElement.style.setProperty(
+    "--light-shift-y",
+    shiftY + "px"
+  );
+
+
+  ticking = false;
+
+}
+
+
+window.addEventListener(
+  "scroll",
+  function() {
+
+    if (!ticking) {
+
+      window.requestAnimationFrame(
+        updateEveningLight
+      );
+
+      ticking = true;
+
+    }
+
+  },
+  {
+    passive: true
+  }
+);
+
+
+updateEveningLight();
+
+
+/* =========================================================
+   GIMMICK 08
+   SCROLL REVEAL
+========================================================= */
+
+const revealObserver =
+  new IntersectionObserver(
+    function(entries) {
+
+      entries.forEach(
+        function(entry) {
+
+          if (
+            entry.isIntersecting
+          ) {
+
+            entry.target.classList.add(
+              "visible"
+            );
+
+            revealObserver.unobserve(
+              entry.target
+            );
+
+          }
+
+        }
+      );
+
+    },
+    {
+      threshold: .12,
+
+      rootMargin:
+        "0px 0px -40px 0px"
+    }
+  );
+
+
+document
+  .querySelectorAll(".reveal")
+  .forEach(
+    function(element) {
+
+      revealObserver.observe(
+        element
+      );
+
+    }
+  );
+
+
+/* =========================================================
+   GIMMICK 09
+   CONNECTION SECTION AKTIVIEREN
+========================================================= */
+
+const connection =
+  document.querySelector(
+    ".connection"
+  );
+
+
+if (connection) {
+
+  const connectionObserver =
+    new IntersectionObserver(
+      function(entries) {
+
+        entries.forEach(
+          function(entry) {
+
+            if (
+              entry.isIntersecting
+            ) {
+
+              connection.classList.add(
+                "visible"
+              );
+
+            }
+
+          }
+        );
+
+      },
+      {
+        threshold: .15
+      }
+    );
+
+
+  connectionObserver.observe(
+    connection
+  );
+
+}
+
+
+/* =========================================================
+   HEADER + BACK TO TOP
+========================================================= */
+
+const header =
+  document.getElementById(
+    "siteHeader"
+  );
+
+
+const backTop =
+  document.getElementById(
+    "backTop"
+  );
+
+
+window.addEventListener(
+  "scroll",
+  function() {
+
+    const scrollY =
+      window.scrollY || 0;
+
+
+    if (header) {
+
+      header.classList.toggle(
+        "scrolled",
+        scrollY > 30
+      );
+
+    }
+
+
+    if (backTop) {
+
+      backTop.classList.toggle(
+        "visible",
+        scrollY > 700
+      );
+
+    }
+
+  },
+  {
+    passive: true
+  }
+);
+
+
+/* =========================================================
+   SPRACHE BEIM LADEN
+========================================================= */
+
+const savedLanguage =
+  localStorage.getItem(
+    "christophFoxLanguage"
+  ) || "de";
+
+
+setLanguage(
+  savedLanguage
+);
+
+</script>
+<!-- =====================================================
+     🦊 EASTER EGG – DER GEHEIME FUCHS 2.0
+===================================================== -->
+
+<div class="easter-fox" id="easterFox">
+
+  <div class="easter-fox-tail"></div>
+
+  <div class="easter-fox-body"></div>
+
+  <div class="easter-fox-head">
+    <div class="easter-fox-ear one"></div>
+    <div class="easter-fox-ear two"></div>
+    <div class="easter-fox-eye"></div>
+  </div>
+
+  <div class="easter-fox-leg one"></div>
+  <div class="easter-fox-leg two"></div>
+
+</div>
+
+
+<!-- =====================================================
+     🦊 FUCHS-BLICK AUS DEM RAND
+===================================================== -->
+
+<div class="peek-fox" id="peekFox">
+
+  <div class="peek-ear one"></div>
+  <div class="peek-ear two"></div>
+
+  <div class="peek-face">
+    <div class="peek-eye"></div>
+  </div>
+
+</div>
+
+
+<style>
+
+/* =========================================================
+   🦊 HAUPT-FUCHS
+========================================================= */
+
+.easter-fox {
+
+  position: fixed;
+
+  left: -180px;
+  bottom: 12vh;
+
+  width: 150px;
+  height: 95px;
+
+  z-index: 9999;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transform:
+    translateX(0)
+    scaleX(-1);
+
+  filter:
+    drop-shadow(
+      0 12px 12px rgba(55,24,14,.28)
+    );
+}
+
+
+/* =========================================================
+   NORMALER LAUF
+========================================================= */
+
+.easter-fox.run {
+
+  opacity: 1;
+
+  animation:
+    foxRunAcross 5.5s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+@keyframes foxRunAcross {
+
+  0% {
+    left: -180px;
+
+    transform:
+      translateY(0)
+      scaleX(-1)
+      rotate(0deg);
+  }
+
+  10% {
+    transform:
+      translateY(-8px)
+      scaleX(-1)
+      rotate(-2deg);
+  }
+
+  25% {
+    transform:
+      translateY(3px)
+      scaleX(-1)
+      rotate(2deg);
+  }
+
+  45% {
+    transform:
+      translateY(-6px)
+      scaleX(-1)
+      rotate(-1deg);
+  }
+
+  70% {
+    transform:
+      translateY(2px)
+      scaleX(-1)
+      rotate(1deg);
+  }
+
+  100% {
+
+    left: calc(100vw + 180px);
+
+    transform:
+      translateY(-3px)
+      scaleX(-1)
+      rotate(0deg);
+  }
+
+}
+
+
+/* =========================================================
+   🦊 ZWEITES AUSLÖSEN
+   Fuchs bleibt stehen, dreht sich um und verschwindet
+========================================================= */
+
+.easter-fox.second-run {
+
+  opacity: 1;
+
+  animation:
+    foxSecondRun 4.8s ease-in-out forwards;
+}
+
+@keyframes foxSecondRun {
+
+  0% {
+    left: -180px;
+
+    transform:
+      translateY(0)
+      scaleX(-1)
+      rotate(0deg);
+  }
+
+  28% {
+
+    left: 35vw;
+
+    transform:
+      translateY(-4px)
+      scaleX(-1)
+      rotate(0deg);
+  }
+
+  42% {
+
+    left: 35vw;
+
+    transform:
+      translateY(-2px)
+      scaleX(1)
+      rotate(0deg);
+  }
+
+  62% {
+
+    left: 35vw;
+
+    transform:
+      translateY(-5px)
+      scaleX(1)
+      rotate(0deg);
+  }
+
+  100% {
+
+    left: calc(-180px);
+
+    transform:
+      translateY(0)
+      scaleX(1)
+      rotate(0deg);
+  }
+
+}
+
+
+/* =========================================================
+   FUCHS-KÖRPER
+========================================================= */
+
+.easter-fox-body {
+
+  position: absolute;
+
+  left: 30px;
+  bottom: 20px;
+
+  width: 88px;
+  height: 48px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    55% 45% 45% 55%;
+}
+
+
+/* =========================================================
+   FUCHS-KOPF
+========================================================= */
+
+.easter-fox-head {
+
+  position: absolute;
+
+  left: 8px;
+  top: 4px;
+
+  width: 54px;
+  height: 48px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 45%,
+      22% 0,
+      38% 22%,
+      72% 15%,
+      100% 45%,
+      72% 85%,
+      35% 100%,
+      15% 72%
+    );
+}
+
+
+/* =========================================================
+   OHREN
+========================================================= */
+
+.easter-fox-ear {
+
+  position: absolute;
+
+  width: 24px;
+  height: 34px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 75%
+    );
+}
+
+.easter-fox-ear.one {
+
+  left: 15px;
+  top: -14px;
+
+  transform: rotate(-8deg);
+}
+
+.easter-fox-ear.two {
+
+  left: 39px;
+  top: -13px;
+
+  transform: rotate(8deg);
+}
+
+
+/* =========================================================
+   SCHWANZ
+========================================================= */
+
+.easter-fox-tail {
+
+  position: absolute;
+
+  right: -25px;
+  top: 3px;
+
+  width: 70px;
+  height: 58px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    70% 30% 70% 30%;
+
+  transform:
+    rotate(28deg);
+}
+
+.easter-fox-tail::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: -3px;
+  top: 4px;
+
+  width: 30px;
+  height: 35px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   AUGE
+========================================================= */
+
+.easter-fox-eye {
+
+  position: absolute;
+
+  left: 42px;
+  top: 23px;
+
+  width: 5px;
+  height: 5px;
+
+  background: #111;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   BEINE
+========================================================= */
+
+.easter-fox-leg {
+
+  position: absolute;
+
+  bottom: 0;
+
+  width: 9px;
+  height: 28px;
+
+  background: #74331f;
+
+  border-radius: 50%;
+}
+
+.easter-fox-leg.one {
+
+  left: 48px;
+
+  animation:
+    foxLegA .22s infinite alternate;
+}
+
+.easter-fox-leg.two {
+
+  left: 83px;
+
+  animation:
+    foxLegB .22s infinite alternate;
+}
+
+@keyframes foxLegA {
+
+  from {
+    transform: rotate(18deg);
+  }
+
+  to {
+    transform: rotate(-18deg);
+  }
+
+}
+
+@keyframes foxLegB {
+
+  from {
+    transform: rotate(-18deg);
+  }
+
+  to {
+    transform: rotate(18deg);
+  }
+
+}
+
+
+/* =========================================================
+   🐾 PFOTEN
+========================================================= */
+
+.fox-paw {
+
+  position: fixed;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(169,84,53,.35);
+
+  pointer-events: none;
+
+  z-index: 9998;
+
+  opacity: 0;
+
+  animation:
+    pawFade 1.2s ease-out forwards;
+}
+
+@keyframes pawFade {
+
+  0% {
+    opacity: .7;
+
+    transform:
+      scale(.5);
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      scale(1.8)
+      translateY(-8px);
+  }
+
+}
+
+
+/* =========================================================
+   👀 FUCHS SCHAUT AUS DEM RAND
+========================================================= */
+
+.peek-fox {
+
+  position: fixed;
+
+  right: -70px;
+  top: 38%;
+
+  width: 80px;
+  height: 80px;
+
+  z-index: 9997;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transform:
+    translateX(0);
+
+  filter:
+    drop-shadow(
+      0 8px 10px rgba(55,24,14,.22)
+    );
+}
+
+
+/* Auslösen */
+
+.peek-fox.peek {
+
+  animation:
+    foxPeek 3.2s ease-in-out forwards;
+}
+
+
+@keyframes foxPeek {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateX(0);
+  }
+
+  20% {
+    opacity: 1;
+
+    transform:
+      translateX(-48px);
+  }
+
+  55% {
+    opacity: 1;
+
+    transform:
+      translateX(-48px);
+  }
+
+  78% {
+    opacity: 1;
+
+    transform:
+      translateX(-48px);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translateX(0);
+  }
+
+}
+
+
+/* Gesicht */
+
+.peek-face {
+
+  position: absolute;
+
+  left: 16px;
+  top: 25px;
+
+  width: 48px;
+  height: 45px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 45%,
+      20% 0,
+      38% 20%,
+      62% 20%,
+      80% 0,
+      100% 45%,
+      76% 88%,
+      50% 100%,
+      24% 88%
+    );
+}
+
+
+/* Ohren */
+
+.peek-ear {
+
+  position: absolute;
+
+  width: 25px;
+  height: 36px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 75%
+    );
+}
+
+.peek-ear.one {
+
+  left: 15px;
+  top: 7px;
+
+  transform:
+    rotate(-8deg);
+}
+
+.peek-ear.two {
+
+  right: 15px;
+  top: 7px;
+
+  transform:
+    rotate(8deg);
+}
+
+
+/* Auge */
+
+.peek-eye {
+
+  position: absolute;
+
+  left: 31px;
+  top: 20px;
+
+  width: 5px;
+  height: 5px;
+
+  background: #111;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   JAVASCRIPT
+========================================================= */
+
+  .literaturhinweis {
+  font-size: 0.5rem;
+}
+  
+</style>
+
+
+<script>
+
+(function () {
+
+  const fox =
+    document.getElementById("easterFox");
+
+  const peekFox =
+    document.getElementById("peekFox");
+
+  let sequence = "";
+
+  let runCount = 0;
+
+  let lastTouch = 0;
+
+
+  /* =====================================================
+     🦊 FUCHS STARTEN
+  ===================================================== */
+
+  function startFox() {
+
+    runCount++;
+
+    fox.classList.remove("run");
+    fox.classList.remove("second-run");
+
+    void fox.offsetWidth;
+
+
+    /* Erstes Mal */
+
+    if (runCount === 1) {
+
+      fox.classList.add("run");
+
+      createPaws();
+
+      setTimeout(() => {
+
+        fox.classList.remove("run");
+
+      }, 5600);
+
+    }
+
+
+    /* Zweites Mal */
+
+    else if (runCount === 2) {
+
+      fox.classList.add("second-run");
+
+      createPaws();
+
+      setTimeout(() => {
+
+        fox.classList.remove("second-run");
+
+      }, 4900);
+
+    }
+
+
+    /* Danach wieder von vorne */
+
+    else {
+
+      runCount = 0;
+
+      setTimeout(() => {
+
+        startFox();
+
+      }, 150);
+
+    }
+
+  }
+
+
+  /* =====================================================
+     💻 DESKTOP – "FOX"
+  ===================================================== */
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (
+        event.key.length === 1 &&
+        /[a-z]/i.test(event.key)
+      ) {
+
+        sequence +=
+          event.key.toLowerCase();
+
+        if (sequence.length > 3) {
+
+          sequence =
+            sequence.slice(-3);
+        }
+
+        if (sequence === "fox") {
+
+          sequence = "";
+
+          startFox();
+
+        }
+
+      }
+
+    }
+  );
+
+
+  /* =====================================================
+     📱 IPHONE – DOPPELTIPP
+  ===================================================== */
+
+  document.addEventListener(
+    "touchend",
+    function () {
+
+      const now = Date.now();
+
+      if (
+        now - lastTouch < 400
+      ) {
+
+        startFox();
+
+      }
+
+      lastTouch = now;
+
+    }
+  );
+
+
+  /* =====================================================
+     👀 FUCHS SCHAUT AUS DEM RAND
+  ===================================================== */
+
+  let peekTimer;
+
+  function showPeekFox() {
+
+    clearTimeout(peekTimer);
+
+    peekFox.classList.remove("peek");
+
+    void peekFox.offsetWidth;
+
+    peekFox.classList.add("peek");
+
+    peekTimer = setTimeout(() => {
+
+      peekFox.classList.remove("peek");
+
+    }, 3300);
+
+  }
+
+
+  /*
+     Der kleine Fuchs erscheint nicht ständig.
+     Er schaut nur gelegentlich einmal kurz herein.
+  */
+
+  setTimeout(
+    showPeekFox,
+    18000
+  );
+
+
+  /*
+     Danach kann er später noch einmal auftauchen.
+  */
+
+  setInterval(
+    function () {
+
+      if (
+        Math.random() < .35
+      ) {
+
+        showPeekFox();
+
+      }
+
+    },
+    45000
+  );
+
+
+  /* =====================================================
+     🐾 PFOTEN
+  ===================================================== */
+
+  function createPaws() {
+
+    let pawCount = 0;
+
+    const pawTimer =
+      setInterval(
+        () => {
+
+          if (
+            pawCount >= 12
+          ) {
+
+            clearInterval(
+              pawTimer
+            );
+
+            return;
+
+          }
+
+          const paw =
+            document.createElement(
+              "div"
+            );
+
+          paw.className =
+            "fox-paw";
+
+          paw.style.left =
+            (
+              20 +
+              pawCount * 7
+            ) + "vw";
+
+          paw.style.bottom =
+            (
+              12 +
+              Math.random() * 3
+            ) + "vh";
+
+          document.body.appendChild(
+            paw
+          );
+
+          setTimeout(
+            () => {
+
+              paw.remove();
+
+            },
+            1300
+          );
+
+          pawCount++;
+
+        },
+        390
+      );
+
+  }
+
+})();
+
+</script>
+
+</body>
+</html>
