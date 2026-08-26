@@ -5871,11 +5871,22 @@ cursor: pointer;
   
     peekFox.addEventListener("click", function () {
 
-    const secretKey = document.getElementById("secretKey");
+  const secretKey =
+    document.getElementById("secretKey");
 
-secretKey.classList.add("show");
+  secretKey.classList.remove("show");
 
-  });
+  void secretKey.offsetWidth;
+
+  secretKey.classList.add("show");
+
+  setTimeout(() => {
+
+    secretKey.classList.remove("show");
+
+  }, 2000);
+
+});
 
 
   /*
