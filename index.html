@@ -5794,6 +5794,107 @@ body.fox-burrow-mode::after {
   cursor: pointer;
   z-index: 10001;
 }
+
+/* =========================================================
+   🕳️ GEHEIMER FUCHSBAU
+========================================================= */
+
+#foxBurrowOverlay::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(116,51,31,.72) 0%,
+      rgba(116,51,31,.32) 24%,
+      transparent 52%
+    ),
+
+    radial-gradient(
+      ellipse at 0% 50%,
+      rgba(55,24,14,.78) 0%,
+      transparent 32%
+    ),
+
+    radial-gradient(
+      ellipse at 100% 50%,
+      rgba(55,24,14,.78) 0%,
+      transparent 32%
+    );
+
+  opacity: .95;
+
+}
+
+
+/* obere Erd-/Höhlenkante */
+
+#foxBurrowOverlay::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: -5%;
+  right: -5%;
+  top: -12%;
+
+  height: 32%;
+
+  pointer-events: none;
+
+  background:
+
+    radial-gradient(
+      ellipse at 15% 100%,
+      rgba(116,51,31,.48) 0%,
+      transparent 48%
+    ),
+
+    radial-gradient(
+      ellipse at 42% 100%,
+      rgba(116,51,31,.58) 0%,
+      transparent 45%
+    ),
+
+    radial-gradient(
+      ellipse at 70% 100%,
+      rgba(116,51,31,.48) 0%,
+      transparent 48%
+    ),
+
+    radial-gradient(
+      ellipse at 92% 100%,
+      rgba(116,51,31,.58) 0%,
+      transparent 45%
+    );
+
+  opacity: .8;
+
+}
+
+
+/* =========================================================
+   🌒 HEIMELIGER INNERER LICHTRAUM
+========================================================= */
+
+body.fox-burrow-mode #foxBurrowOverlay {
+
+  box-shadow:
+
+    inset 0 0 120px rgba(35,14,8,.72),
+
+    inset 0 -90px 120px rgba(116,51,31,.18);
+
+}
   
 </style>
 
