@@ -8286,16 +8286,17 @@ secretKey.addEventListener("click", function () {
   }
 
 
-  /* =====================================================
-     📦 SCHATZKISTEN – KLICKEN
-  ===================================================== */
+/* =====================================================
+   📦 SCHATZKISTEN – KLICKEN
+========================================================= */
 
-  const treasureChests =
+const treasureChests =
   document.querySelectorAll(".burrow-chest");
 
 const foxFinalMessage =
   document.getElementById("foxFinalMessage");
 
+let openedChestCount = 0;
 let finalSequenceDone = false;
 
 
@@ -8303,7 +8304,19 @@ treasureChests.forEach(function (chest) {
 
   chest.addEventListener("click", function () {
 
+    const wasOpened =
+      chest.classList.contains("opened");
+
     chest.classList.toggle("opened");
+
+
+    /* Nur beim tatsächlichen Öffnen zählen */
+
+    if (!wasOpened) {
+
+      openedChestCount++;
+
+    }
 
 
     /* =====================================================
@@ -8312,9 +8325,7 @@ treasureChests.forEach(function (chest) {
 
     if (
       !finalSequenceDone &&
-      document.querySelectorAll(
-        ".burrow-chest.opened"
-      ).length === 3
+      openedChestCount === 3
     ) {
 
       finalSequenceDone = true;
@@ -8324,11 +8335,15 @@ treasureChests.forEach(function (chest) {
 
       setTimeout(function () {
 
-        foxFinalMessage.classList.remove("show");
+        if (foxFinalMessage) {
 
-        void foxFinalMessage.offsetWidth;
+          foxFinalMessage.classList.remove("show");
 
-        foxFinalMessage.classList.add("show");
+          void foxFinalMessage.offsetWidth;
+
+          foxFinalMessage.classList.add("show");
+
+        }
 
       }, 700);
 
@@ -8356,8 +8371,10 @@ treasureChests.forEach(function (chest) {
 
   });
 
-});
-  /* =====================================================
+});  
+  
+
+/* =====================================================
    ✕ FLUCHT AUS DEM FUCHSBAU
 ===================================================== */
 
