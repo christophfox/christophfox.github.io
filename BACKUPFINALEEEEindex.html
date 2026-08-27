@@ -28,23 +28,27 @@
 <meta name="twitter:description" content="Bücher, Zusammenhang, Beratung, Coaching und Supervision.">
 
 <script type="application/ld+json">
+
 {
+
   "@context": "https://schema.org",
+
   "@type": "ProfilePage",
+
   "mainEntity": {
+
     "@type": "Person",
+
     "name": "Christoph Fox",
+
     "description": "Dipl.-Päd. Christoph Fox, Autor, Dozent und studierter Erziehungswissenschaftler.",
-    "email": "mailto:mail@herrfox.de",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Hoyerswerda",
-      "postalCode": "02977",
-      "streetAddress": "Albert-Einstein-Straße 47",
-      "addressCountry": "DE"
-    }
+
+    "email": "mailto:mail@herrfox.de"
+
   }
+
 }
+
 </script>
 
 <script type="application/ld+json">
@@ -2340,17 +2344,59 @@ footer {
 }
 
 .easter-fox-eye {
+
   position: absolute;
 
   left: 42px;
+
   top: 23px;
 
   width: 5px;
+
   height: 5px;
 
   background: #111;
 
   border-radius: 50%;
+
+}
+
+.easter-fox-eye::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 1px;
+  top: 1px;
+
+  width: 2px;
+  height: 2px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+
+}
+
+.easter-fox-eye::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: -25px;
+
+  top: 0;
+
+  width: 5px;
+
+  height: 5px;
+
+  background: #111;
+
+  border-radius: 50%;
+
 }
 
 .easter-fox-leg {
@@ -2442,6 +2488,172 @@ footer {
   }
 
 }
+/* =========================================================
+   🔒 DATENSCHUTZ – AUFKLAPPBAR
+========================================================= */
+
+.legal-details {
+  max-width: 1100px;
+  margin: 30px auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,250,243,.72);
+  overflow: hidden;
+}
+
+.legal-details summary {
+  padding: 20px 24px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--fox-dark);
+}
+
+.legal-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.legal-details summary::after {
+  content: "▸";
+  float: right;
+  transition: transform .25s ease;
+}
+
+.legal-details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.legal-details .impressum-box {
+  padding-top: 0;
+}
+.secret-key {
+  position: fixed;
+  right: 42px;
+  top: 38%;
+  z-index: 10000;
+
+  font-size: 42px;
+
+  opacity: 0;
+
+  transform:
+    scale(.4)
+    rotate(-25deg);
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(0 5px 8px rgba(55,24,14,.28));
+
+  transition:
+    opacity .35s ease,
+    transform .45s cubic-bezier(.2,.8,.3,1);
+}
+
+.secret-key.show {
+  opacity: 1;
+
+  transform:
+    scale(1)
+    rotate(0deg);
+}
+
+.secret-key {
+  position: fixed;
+  right: 42px;
+  top: 38%;
+  z-index: 10000;
+
+  width: 54px;
+  height: 54px;
+
+  opacity: 0;
+
+  transform:
+    scale(.4)
+    rotate(-25deg);
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(0 5px 8px rgba(55,24,14,.28));
+
+  transition:
+    opacity .35s ease,
+    transform .45s cubic-bezier(.2,.8,.3,1);
+}
+
+.secret-key.show {
+  opacity: 1;
+
+  transform:
+    scale(1)
+    rotate(0deg);
+}
+
+.key-ring {
+  position: absolute;
+
+  left: 2px;
+  top: 8px;
+
+  width: 25px;
+  height: 25px;
+
+  border: 6px solid #d49a45;
+  border-radius: 50%;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.45),
+    0 1px 2px rgba(55,24,14,.25);
+}
+
+.key-stem {
+  position: absolute;
+
+  left: 24px;
+  top: 18px;
+
+  width: 28px;
+  height: 9px;
+
+  border-radius: 5px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f0c878,
+      #b8782f
+    );
+
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.5),
+    0 2px 3px rgba(55,24,14,.2);
+}
+
+.key-tooth {
+  position: absolute;
+
+  width: 8px;
+  height: 13px;
+
+  background: #b8782f;
+
+  border-radius: 0 0 3px 3px;
+}
+
+.key-tooth.one {
+  left: 40px;
+  top: 25px;
+}
+
+.key-tooth.two {
+  left: 48px;
+  top: 25px;
+  height: 9px;
+}
+
 </style>
 </head>
 
@@ -2470,7 +2682,7 @@ footer {
 
       <div
         class="topic"
-        data-de="Autor. Dozent. Sozialisation.<br>Beratung. Coaching. Supervision."
+        data-de="Autor. Dozent.<br>Beratung. Coaching. Supervision."
         data-fr="Auteur. Enseignant.<br>Conseil. Coaching. Supervision."
         data-es="Autor. Docente.<br>Asesoramiento. Coaching. Supervisión.">
 
@@ -3810,7 +4022,7 @@ Realizable.<br>
     <div class="reveal reveal-delay-1">
       <p
         data-de="Als studierter Erziehungswissenschaftler lehre ich Grundlagen und Methoden der Sozialen Arbeit. Suchthilfe. Erziehung.<br>
-        Inklusion. Und Case Management.<br><br>
+        Inklusion. Und Case Management.<br>
         Stress-Prophylaxe am Arbeitsplatz.<br> 
         Und Resilienz-Coaching im Alltag.<br><br>
         Mich interessiert die Frage: Wie werden Menschen, wer sie sind?<br> 
@@ -4092,21 +4304,13 @@ Y en el Ruhr.">
      IMPRESSUM
 ===================================================== -->
 
-<section
-  class="impressum"
-  id="impressum">
+<details class="legal-details" id="impressum">
+
+  <summary>
+    Impressum
+  </summary>
 
   <div class="container impressum-box">
-
-    <div
-      class="label reveal"
-      data-de="Impressum"
-      data-fr="Mentions légales"
-      data-es="Aviso legal">
-
-      Impressum
-
-    </div>
 
     <p
       class="reveal reveal-delay-2"
@@ -4136,14 +4340,152 @@ Y en el Ruhr.">
       <br>
 
       Deutschland
+
     </p>
+
     <p>
+
+      <a href="mailto:mail@herrfox.de">
+        mail@herrfox.de
+      </a>
+
+    </p>
+
+  </div>
+
+</details>
+
+<details class="legal-details" id="datenschutz">
+
+  <summary>
+    Datenschutz
+  </summary>
+
+  <div class="container impressum-box">
+
+    <h2>
+      Datenschutzerklärung
+    </h2>
+
+    <p>
+      Der Schutz Ihrer persönlichen Daten ist mir wichtig.
+      Ich behandle personenbezogene Daten vertraulich und
+      entsprechend den gesetzlichen Datenschutzvorschriften.
+    </p>
+
+    <h3>
+      Verantwortlicher
+    </h3>
+
+    <p>
+      Christoph Fox<br>
+      c/o Autorenglück #61822<br>
+      Albert-Einstein-Straße 47<br>
+      02977 Hoyerswerda<br>
+      Deutschland
+    </p>
+
+    <p>
+      E-Mail:
       <a href="mailto:mail@herrfox.de">
         mail@herrfox.de
       </a>
     </p>
+
+    <h3>
+      Hosting und technische Bereitstellung
+    </h3>
+
+    <p>
+      Beim Aufruf dieser Website können technisch notwendige
+      Daten verarbeitet werden, die für die Bereitstellung,
+      Sicherheit und Stabilität der Website erforderlich sind.
+      Hierzu können insbesondere IP-Adresse, Datum und Uhrzeit
+      des Zugriffs, angeforderte Seite sowie technische
+      Informationen zum verwendeten Browser und Betriebssystem
+      gehören.
+    </p>
+
+   <h3>
+  Cloudflare Web Analytics
+</h3>
+
+<p>
+  Diese Website verwendet Cloudflare Web Analytics zur
+  statistischen Auswertung der Nutzung und zur Verbesserung
+  der technischen Leistung der Website.
+</p>
+
+<p>
+  Cloudflare Web Analytics arbeitet nach Angaben von Cloudflare
+  ohne Cookies und ohne Local Storage zur Erfassung der
+  Nutzungsmetriken. Cloudflare gibt außerdem an, dass Web
+  Analytics keine personenbezogenen Daten der Besucher sammelt,
+  keine individuellen Nutzer über verschiedene Websites hinweg
+  verfolgt und kein Fingerprinting zur Identifizierung einzelner
+  Personen verwendet.
+</p>
+
+<p>
+  Die für Web Analytics verwendeten Daten beschränken sich nach
+  Angaben von Cloudflare auf technische Messwerte zur
+  Performance der Website, beispielsweise Informationen zur
+  Ladezeit und zu den Core Web Vitals.
+</p>
+
+<p>
+  Anbieter ist Cloudflare, Inc., 101 Townsend St,
+  San Francisco, CA 94107, USA.
+</p>
+
+<p>
+  Weitere Informationen finden Sie in den
+  Datenschutzinformationen von Cloudflare.
+</p>
+
+
+    <h3>
+      Kontaktaufnahme per E-Mail
+    </h3>
+
+    <p>
+      Wenn Sie mich per E-Mail kontaktieren, werden die von Ihnen
+      übermittelten personenbezogenen Daten ausschließlich zur
+      Bearbeitung Ihrer Anfrage und zur Kommunikation mit Ihnen
+      verarbeitet.
+    </p>
+
+    <h3>
+      Ihre Rechte
+    </h3>
+
+    <p>
+      Sie haben im Rahmen der gesetzlichen Voraussetzungen das
+      Recht auf Auskunft über Ihre personenbezogenen Daten,
+      Berichtigung, Löschung, Einschränkung der Verarbeitung
+      sowie Widerspruch gegen bestimmte Verarbeitungen.
+    </p>
+
+    <p>
+      Sie haben außerdem das Recht, sich bei einer
+      Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer
+      personenbezogenen Daten zu beschweren.
+    </p>
+
+    <h3>
+      Aktualität
+    </h3>
+
+    <p>
+      Diese Datenschutzerklärung kann angepasst werden, wenn
+      sich die technische oder rechtliche Situation der Website
+      ändert.
+    </p>
+
   </div>
-</section>
+
+</details>
+
 </main>
 <footer>
 
@@ -4713,16 +5055,137 @@ setLanguage(
      🦊 FUCHS-BLICK AUS DEM RAND
 ===================================================== -->
 
+<!-- =====================================================
+     🦊 FOXY IM FUCHSBAU
+===================================================== -->
+
+<div id="burrowFoxy">
+
+  <div class="burrow-fox-tail"></div>
+
+  <div class="burrow-fox-body"></div>
+
+  <div class="burrow-fox-head">
+
+    <div class="burrow-fox-ear one"></div>
+    <div class="burrow-fox-ear two"></div>
+
+    <div class="burrow-fox-eye one"></div>
+    <div class="burrow-fox-eye two"></div>
+
+    <div class="burrow-fox-smile"></div>
+
+  </div>
+
+ <div class="burrow-fox-paw"></div>
+
+</div>
+
+<div id="burrowFoxy">
+
+  <div class="burrow-fox-tail"></div>
+
+  <div class="burrow-fox-body"></div>
+
+  <div class="burrow-fox-head">
+
+    <div class="burrow-fox-ear one"></div>
+    <div class="burrow-fox-ear two"></div>
+
+    <div class="burrow-fox-eye one"></div>
+    <div class="burrow-fox-eye two"></div>
+
+    <div class="burrow-fox-smile"></div>
+
+  </div>
+
+  <div class="burrow-fox-paw"></div>
+
+</div>
+
+
+<!-- =====================================================
+     🧰 FOXY'S DREI SCHATZKISTEN
+===================================================== -->
+
+<div id="burrowChests">
+
+  <div class="burrow-chest one">
+
+   <div class="burrow-chest-inside"></div>
+
+<div class="treasure treasure-coin">
+  <div class="treasure-coin-face">
+    <div class="mini-fox">
+      <div class="mini-fox-ear one"></div>
+      <div class="mini-fox-ear two"></div>
+      <div class="mini-fox-eye one"></div>
+      <div class="mini-fox-eye two"></div>
+    </div>
+  </div>
+</div>
+<div class="burrow-chest-lid"></div>
+<div class="burrow-lock"></div>
+
+  </div>
+
+
+  <div class="burrow-chest two">
+
+   <div class="burrow-chest-inside"></div>
+
+<div class="treasure treasure-scroll">
+  <div class="scroll-paper"></div>
+</div>
+
+<div class="burrow-chest-lid"></div>
+<div class="burrow-lock"></div>
+
+  </div>
+
+
+  <div class="burrow-chest three">
+
+   <div class="burrow-chest-inside"></div>
+
+<div class="treasure treasure-babyfox">
+  <div class="babyfox-ear one"></div>
+  <div class="babyfox-ear two"></div>
+  <div class="babyfox-head"></div>
+  <div class="babyfox-eye one"></div>
+  <div class="babyfox-eye two"></div>
+</div>
+
+<div class="burrow-chest-lid"></div>
+<div class="burrow-lock"></div>
+
+  </div>
+
+</div>
 <div class="peek-fox" id="peekFox">
 
   <div class="peek-ear one"></div>
   <div class="peek-ear two"></div>
 
   <div class="peek-face">
-    <div class="peek-eye"></div>
-  </div>
+
+  <div class="peek-eye"></div>
+  <div class="peek-eye second"></div>
 
 </div>
+
+</div>
+
+  
+<div class="secret-key" id="secretKey" aria-label="Geheimer Schlüssel">
+  <span class="key-ring"></span>
+  <span class="key-stem"></span>
+  <span class="key-tooth one"></span>
+  <span class="key-tooth two"></span>
+</div>
+<div id="foxBurrowOverlay" aria-hidden="true"></div>
+
+<button id="burrowClose" aria-label="Fuchsbau schließen">×</button>
 
 
 <style>
@@ -5176,7 +5639,9 @@ setLanguage(
 
   z-index: 9997;
 
-  pointer-events: none;
+  pointer-events: auto;
+
+cursor: pointer;
 
   opacity: 0;
 
@@ -5317,15 +5782,42 @@ setLanguage(
 
   position: absolute;
 
-  left: 31px;
+  left: 18px;
+
   top: 20px;
 
   width: 5px;
+
   height: 5px;
 
   background: #111;
 
   border-radius: 50%;
+
+}
+
+.peek-eye.second {
+
+  left: 31px;
+
+}
+
+.peek-eye::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 1px;
+  top: 1px;
+
+  width: 2px;
+  height: 2px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+
 }
 
 
@@ -5335,6 +5827,1975 @@ setLanguage(
 
   .literaturhinweis {
   font-size: 0.5rem;
+}
+
+/* =========================================================
+   🦊 GEHEIMER FUCHSBAU – ATMOSPHÄRE
+========================================================= */
+
+#foxBurrowOverlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9990;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 55%,
+      rgba(169,84,53,.18) 0%,
+      rgba(116,51,31,.38) 42%,
+      rgba(55,24,14,.72) 100%
+    );
+
+  backdrop-filter:
+    brightness(.27)
+    saturate(.82);
+
+  -webkit-backdrop-filter:
+    brightness(.27)
+    saturate(.82);
+
+  transition:
+    opacity 1.8s cubic-bezier(.22,.61,.36,1);
+
+}
+
+
+/* Fuchsbau wird betreten */
+
+body.fox-burrow-mode #foxBurrowOverlay {
+
+  opacity: 1;
+
+}
+
+
+/* ganz leichter warmer Lichtschein */
+
+body.fox-burrow-mode::after {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9989;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 50% 58%,
+      rgba(201,113,72,.08),
+      transparent 42%
+    );
+
+  opacity: 1;
+
+  animation:
+    burrowBreath 5s ease-in-out infinite;
+
+}
+
+
+@keyframes burrowBreath {
+
+  0%,
+  100% {
+    opacity: .65;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+}
+
+.secret-key {
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+/* =========================================================
+   🕳️ SCHRITT 2 – FOXY'S FUCHSBAU
+   gezeichnete, warme Erd-Höhle
+========================================================= */
+
+body.fox-burrow-mode #foxBurrowOverlay {
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   🪨 HÖHLENDECKE
+========================================================= */
+
+body.fox-burrow-mode #foxBurrowOverlay::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: -8%;
+  right: -8%;
+  top: -31%;
+
+  height: 65%;
+
+  border-radius:
+    0 0 50% 50% / 0 0 72% 72%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #24100a 0%,
+      #35170e 48%,
+      #4b2114 78%,
+      #642d1b 100%
+    );
+
+  box-shadow:
+
+    inset 0 -18px 28px
+      rgba(169,84,53,.16),
+
+    0 18px 32px
+      rgba(20,8,4,.72);
+
+  opacity: .98;
+
+}
+
+
+/* =========================================================
+   🕳️ INNERE HÖHLENÖFFNUNG
+========================================================= */
+
+body.fox-burrow-mode #foxBurrowOverlay::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 13%;
+  right: 13%;
+  top: 3%;
+
+  height: 76%;
+
+  border-radius:
+    50% 50% 42% 42% / 38% 38% 45% 45%;
+
+  background:
+
+    radial-gradient(
+      ellipse at 50% 62%,
+      rgba(169,84,53,.13) 0%,
+      rgba(116,51,31,.08) 27%,
+      rgba(35,15,9,.28) 65%,
+      rgba(18,7,4,.52) 100%
+    );
+
+  box-shadow:
+
+    inset 0 20px 35px
+      rgba(20,8,4,.55),
+
+    inset 0 -20px 35px
+      rgba(169,84,53,.08);
+
+}
+
+
+/* =========================================================
+   🟤 ERDWÄNDE LINKS UND RECHTS
+========================================================= */
+
+body.fox-burrow-mode #foxBurrowOverlay {
+
+  background:
+
+    radial-gradient(
+      ellipse at -4% 28%,
+      #32150d 0%,
+      #4b2114 30%,
+      transparent 52%
+    ),
+
+    radial-gradient(
+      ellipse at 104% 31%,
+      #32150d 0%,
+      #4b2114 30%,
+      transparent 52%
+    ),
+
+    radial-gradient(
+      ellipse at 2% 88%,
+      #3a190f 0%,
+      #5a2818 27%,
+      transparent 50%
+    ),
+
+    radial-gradient(
+      ellipse at 98% 88%,
+      #3a190f 0%,
+      #5a2818 27%,
+      transparent 50%
+    ),
+
+    radial-gradient(
+      ellipse at 50% 62%,
+      rgba(190,92,54,.10),
+      transparent 43%
+    );
+
+}
+
+
+/* =========================================================
+   🌱 ERDIGER BODEN
+========================================================= */
+
+body.fox-burrow-mode #foxBurrowOverlay {
+
+  box-shadow:
+
+    inset 0 -24vh 0
+      rgba(59,25,15,.52),
+
+    inset 0 -8vh 45px
+      rgba(169,84,53,.12),
+
+    inset 0 0 100px
+      rgba(19,7,4,.55);
+
+}
+
+
+/* =========================================================
+   🪵 KLEINE ERDKANTEN
+========================================================= */
+
+body.fox-burrow-mode #foxBurrowOverlay {
+
+  clip-path:
+    polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+
+}
+
+
+/* =========================================================
+   🕯️ WARMER PLATZ IN DER MITTE
+========================================================= */
+
+body.fox-burrow-mode {
+
+  --fox-burrow-warmth: rgba(205,112,69,.12);
+
+}
+
+
+body.fox-burrow-mode #foxBurrowOverlay {
+
+  animation:
+    burrowBreath 5s ease-in-out infinite;
+
+}
+
+/* =========================================================
+   🦊 SCHRITT 3 – FOXY IM FUCHSBAU
+========================================================= */
+
+#burrowFoxy {
+
+  position: fixed;
+
+  left: 50%;
+
+  bottom: 18vh;
+
+  width: 230px;
+
+  height: 145px;
+
+  z-index: 9996;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform:
+    translateX(-50%)
+    translateY(18px)
+    scale(.94);
+
+  filter:
+    drop-shadow(
+      0 14px 16px
+      rgba(35,14,8,.38)
+    );
+
+  transition:
+    opacity 1.4s ease,
+    transform 1.8s cubic-bezier(.22,.61,.36,1);
+
+}
+
+
+/* Foxy erscheint */
+
+body.fox-burrow-mode #burrowFoxy {
+
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    translateY(0)
+    scale(1);
+
+  animation:
+    foxyBreath 5s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   🦊 KÖRPER – LIEGEND
+========================================================= */
+
+.burrow-fox-body {
+
+  position: absolute;
+
+  left: 54px;
+
+  bottom: 18px;
+
+  width: 142px;
+
+  height: 67px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    60% 48% 52% 62%;
+
+  transform:
+    rotate(-3deg);
+
+}
+
+
+/* weicher Bauch */
+
+.burrow-fox-body::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 27px;
+
+  bottom: 8px;
+
+  width: 94px;
+
+  height: 30px;
+
+  background:
+    rgba(245,233,219,.42);
+
+  border-radius: 50%;
+
+  transform:
+    rotate(3deg);
+
+}
+
+
+/* =========================================================
+   🦊 KOPF
+========================================================= */
+
+.burrow-fox-head {
+
+  position: absolute;
+
+  left: 22px;
+
+  top: 24px;
+
+  width: 76px;
+
+  height: 68px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 43%,
+      16% 4%,
+      35% 22%,
+      66% 18%,
+      86% 0,
+      100% 46%,
+      80% 79%,
+      51% 100%,
+      23% 82%
+    );
+
+}
+
+
+/* =========================================================
+   👂 OHREN
+========================================================= */
+
+.burrow-fox-ear {
+
+  position: absolute;
+
+  width: 31px;
+
+  height: 43px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 78%
+    );
+
+}
+
+.burrow-fox-ear.one {
+
+  left: 30px;
+
+  top: 2px;
+
+  transform:
+    rotate(-9deg);
+
+}
+
+.burrow-fox-ear.two {
+
+  left: 66px;
+
+  top: 0;
+
+  transform:
+    rotate(8deg);
+
+}
+
+
+/* =========================================================
+   👀 AUGEN
+========================================================= */
+
+.burrow-fox-eye {
+
+  position: absolute;
+
+  top: 52px;
+
+  width: 7px;
+
+  height: 7px;
+
+  background: #17100d;
+
+  border-radius: 50%;
+
+}
+
+.burrow-fox-eye.one {
+
+  left: 30px;
+
+}
+
+.burrow-fox-eye.two {
+
+  left: 50px;
+
+}
+
+
+/* kleiner warmer Lichtpunkt */
+
+.burrow-fox-eye::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 1px;
+
+  top: 1px;
+
+  width: 2px;
+
+  height: 2px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   🙂 GANZ LEICHTES SCHMUNZELN
+========================================================= */
+
+.burrow-fox-smile {
+
+  position: absolute;
+
+  left: 53px;
+
+  top: 67px;
+
+  width: 22px;
+
+  height: 8px;
+
+  border-bottom:
+    2px solid #3c1910;
+
+  border-radius:
+    0 0 50% 50%;
+
+  transform:
+    rotate(-2deg);
+
+}
+
+
+/* =========================================================
+   🐾 VORDERPFOTE – LOCKER NACH VORN
+========================================================= */
+
+.burrow-fox-paw {
+
+  position: absolute;
+
+  left: 90px;
+
+  bottom: 4px;
+
+  width: 70px;
+
+  height: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    55% 45% 55% 45%;
+
+  transform:
+    rotate(-8deg);
+
+}
+
+
+/* kleine Pfotenlinien */
+
+.burrow-fox-paw::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: 8px;
+
+  top: 8px;
+
+  width: 18px;
+
+  height: 7px;
+
+  border-bottom:
+    2px solid
+    rgba(55,24,14,.45);
+
+  border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   🦊 SCHWANZ – GEMÜTLICH UM DEN KÖRPER
+========================================================= */
+
+.burrow-fox-tail {
+
+  position: absolute;
+
+  right: 2px;
+
+  bottom: 22px;
+
+  width: 96px;
+
+  height: 63px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    70% 35% 70% 40%;
+
+  transform:
+    rotate(12deg);
+
+}
+
+
+/* weiße Schwanzspitze */
+
+.burrow-fox-tail::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: -1px;
+
+  top: 4px;
+
+  width: 38px;
+
+  height: 42px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   🌬️ FOXY ATMET
+========================================================= */
+
+@keyframes foxyBreath {
+
+  0%,
+  100% {
+
+    transform:
+      translateX(-50%)
+      translateY(0)
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(-50%)
+      translateY(-3px)
+      scale(1.008);
+
+  }
+
+}
+
+/* =========================================================
+   🧰 FOXY'S SCHATZKISTEN
+========================================================= */
+
+#burrowChests {
+
+  position: fixed;
+
+  left: 50%;
+
+  bottom: 8vh;
+
+  width: 430px;
+
+  height: 140px;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 10000;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 1.2s ease;
+
+}
+
+
+/* Sobald der Fuchsbau geöffnet wird */
+
+body.fox-burrow-mode #burrowChests {
+
+  opacity: 1;
+
+  pointer-events: auto;
+
+}
+
+
+/* =========================================================
+   📦 KISTE
+========================================================= */
+
+.burrow-chest {
+
+  position: absolute;
+
+  width: 105px;
+
+  height: 65px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #9a5635,
+      #552619
+    );
+
+  border:
+    2px solid
+    rgba(205,137,88,.55);
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 18px
+      rgba(20,8,4,.5);
+
+  animation:
+    chestBreath 4s ease-in-out infinite;
+
+}
+
+
+
+/* =========================================================
+   ✨ GOLDENER BESCHLAG
+========================================================= */
+
+.burrow-chest::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 0;
+
+  width: 11px;
+
+  height: 43px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    rgba(197,148,69,.8);
+
+}
+
+
+/* =========================================================
+   📍 POSITIONEN
+========================================================= */
+
+.burrow-chest.one {
+
+  left: 0;
+
+  bottom: 5px;
+
+  transform:
+    rotate(-4deg);
+
+}
+
+.burrow-chest.two {
+
+  left: 50%;
+
+  bottom: 18px;
+
+  transform:
+    translateX(-50%)
+    rotate(1deg);
+
+}
+
+.burrow-chest.three {
+
+  right: 0;
+
+  bottom: 4px;
+
+  transform:
+    rotate(4deg);
+
+}
+
+
+/* =========================================================
+   🔒 SCHLOSS
+========================================================= */
+
+.burrow-lock {
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 28px;
+
+  width: 17px;
+
+  height: 19px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    linear-gradient(
+      145deg,
+      #e2bc6c,
+      #956626
+    );
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 0 8px
+    rgba(226,188,108,.7);
+
+  animation:
+    lockGlow 2.5s ease-in-out infinite;
+
+}
+
+
+/* Schlossbügel */
+
+.burrow-lock::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 4px;
+
+  top: -10px;
+
+  width: 9px;
+
+  height: 12px;
+
+  border:
+    3px solid
+    #c99b4e;
+
+  border-bottom: 0;
+
+  border-radius:
+    8px 8px 0 0;
+
+}
+
+
+/* =========================================================
+   🌬️ KISTE ATMET
+========================================================= */
+
+@keyframes chestBreath {
+
+  0%,
+  100% {
+
+    filter:
+      brightness(.96);
+
+    box-shadow:
+      0 10px 18px
+        rgba(20,8,4,.5),
+
+      0 0 5px
+        rgba(205,137,88,.10);
+
+  }
+
+  50% {
+
+    filter:
+      brightness(1.04);
+
+    box-shadow:
+      0 10px 18px
+        rgba(20,8,4,.5),
+
+      0 0 17px
+        rgba(205,137,88,.3);
+
+  }
+
+}
+
+
+/* =========================================================
+   ✨ SCHLOSS LEUCHTET
+========================================================= */
+
+@keyframes lockGlow {
+
+  0%,
+  100% {
+
+    opacity: .7;
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+    box-shadow:
+      0 0 14px
+      rgba(226,188,108,.95);
+
+  }
+
+}
+
+/* =========================================================
+   📦 KISTE ÖFFNET SICH
+========================================================= */
+
+/* kleines warmes Licht aus der geöffneten Kiste */
+
+.burrow-chest.opened {
+
+  box-shadow:
+
+    0 12px 20px
+      rgba(20,8,4,.5),
+
+    0 0 22px
+      rgba(226,183,99,.32);
+
+}
+
+
+/* Schloss geht beim Öffnen weg */
+
+.burrow-chest.opened .burrow-lock {
+
+  opacity: 0;
+
+  transform:
+    translateX(-50%)
+    scale(.7);
+
+  transition:
+    opacity .35s ease,
+    transform .35s ease;
+
+}
+
+ /* =========================================================
+   📦 FOXY'S ECHTER SCHATZKISTEN-DECKEL
+========================================================= */
+
+.burrow-chest {
+
+  position: absolute;
+
+  overflow: visible;
+
+}
+
+
+/* dunkler Innenraum */
+
+.burrow-chest-inside {
+
+  position: absolute;
+
+  left: 7px;
+  right: 7px;
+
+  top: 8px;
+
+  height: 34px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      #241007 0%,
+      #100604 65%,
+      #080302 100%
+    );
+
+  border-radius:
+    3px 3px 6px 6px;
+
+  z-index: 1;
+
+}
+
+
+/* =========================================================
+   🪵 DER ECHTE DECKEL
+========================================================= */
+
+.burrow-chest-lid {
+
+  position: absolute;
+
+  left: 0;
+  top: -2px;
+
+  width: 100%;
+  height: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a85d38,
+      #71341f 65%,
+      #4b2115
+    );
+
+  border-radius:
+    6px 6px 3px 3px;
+
+  border-bottom:
+    3px solid #bd7944;
+
+  box-shadow:
+    0 4px 7px
+    rgba(20,8,4,.55);
+
+  transform-origin:
+    bottom center;
+
+  transition:
+    transform .75s
+    cubic-bezier(.2,.8,.2,1);
+
+  z-index: 5;
+
+}
+
+
+/* kleine Holzstruktur */
+
+.burrow-chest-lid::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 12%;
+  right: 12%;
+
+  top: 7px;
+
+  height: 2px;
+
+  background:
+    rgba(245,201,148,.18);
+
+  border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   ✨ DAS GEHEIMNISVOLLE LICHT
+========================================================= */
+
+.burrow-chest-inside::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 3px;
+
+  width: 130%;
+  height: 75px;
+
+  transform:
+    translateX(-50%)
+    scale(.35);
+
+  transform-origin:
+    center bottom;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(255,221,142,.85) 0%,
+      rgba(226,188,108,.48) 24%,
+      rgba(226,188,108,.16) 48%,
+      transparent 74%
+    );
+
+  filter:
+    blur(5px);
+
+  opacity: 0;
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+  pointer-events: none;
+
+}
+
+
+/* =========================================================
+   🗝️ KISTE GEÖFFNET
+========================================================= */
+
+.burrow-chest.opened .burrow-chest-lid {
+
+  transform:
+    perspective(140px)
+    rotateX(72deg)
+    translateY(-13px);
+
+}
+
+
+/* Licht quillt heraus */
+
+.burrow-chest.opened
+.burrow-chest-inside::after {
+
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    scale(1);
+
+  animation:
+    treasureGlow 2.2s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   🌟 SANFTES PULP-FICTION-GEFÜHL
+========================================================= */
+
+@keyframes treasureGlow {
+
+  0%,
+  100% {
+
+    opacity: .72;
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+  }
+
+}
+
+/* =========================================================
+   ✕ FLUCHTWEG AUS DEM FUCHSBAU
+========================================================= */
+
+#burrowClose {
+
+  position: fixed;
+
+  top: 22px;
+  right: 24px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255,250,242,.95);
+
+  color: #74331f;
+
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+
+  line-height: 38px;
+  text-align: center;
+
+  cursor: pointer;
+
+  z-index: 10005;
+
+  opacity: 0;
+  pointer-events: none;
+
+  box-shadow:
+    0 4px 14px
+    rgba(55,24,14,.22);
+
+  transition:
+    opacity .5s ease,
+    transform .2s ease;
+}
+
+
+/* sichtbar, sobald der Fuchsbau offen ist */
+
+body.fox-burrow-mode #burrowClose {
+
+  opacity: 1;
+
+  pointer-events: auto;
+
+}
+
+
+#burrowClose:hover {
+
+  transform: scale(1.08);
+
+}
+
+
+#burrowClose:active {
+
+  transform: scale(.92);
+
+}
+
+/* =========================================================
+   🪙📜🦊 DIE DREI SCHÄTZE
+========================================================= */
+
+.treasure {
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 35px;
+
+  transform:
+    translateX(-50%)
+    scale(.2);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   🪙 FOXY-MÜNZE
+========================================================= */
+
+.treasure-coin {
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #fff0a8,
+      #e2bc6c 45%,
+      #9a6928 100%
+    );
+
+  border:
+    3px solid #c28e3c;
+
+  box-shadow:
+    0 0 12px rgba(255,215,120,.7),
+    0 0 30px rgba(255,190,70,.35);
+
+}
+
+
+.treasure-coin-face {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+
+  backface-visibility: hidden;
+
+}
+
+/* =========================================================
+   🦊 KLEINER FOXY AUF DER MÜNZE
+========================================================= */
+
+.mini-fox {
+
+  position: relative;
+
+  width: 25px;
+  height: 21px;
+
+}
+
+
+/* Kopf */
+
+.mini-fox::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 3px;
+  top: 5px;
+
+  width: 19px;
+  height: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 40%,
+      20% 0,
+      38% 25%,
+      62% 25%,
+      80% 0,
+      100% 40%,
+      75% 88%,
+      50% 100%,
+      25% 88%
+    );
+
+}
+
+
+/* Ohren */
+
+.mini-fox-ear {
+
+  position: absolute;
+
+  top: 1px;
+
+  width: 9px;
+  height: 12px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 75%
+    );
+
+  z-index: 2;
+
+}
+
+.mini-fox-ear.one {
+
+  left: 3px;
+
+}
+
+.mini-fox-ear.two {
+
+  right: 3px;
+
+}
+
+
+/* Augen */
+
+.mini-fox-eye {
+
+  position: absolute;
+
+  top: 11px;
+
+  width: 3px;
+  height: 3px;
+
+  background: #111;
+
+  border-radius: 50%;
+
+  z-index: 3;
+
+}
+
+.mini-fox-eye.one {
+
+  left: 8px;
+
+}
+
+.mini-fox-eye.two {
+
+  right: 8px;
+
+}
+
+
+/* kleine weiße Lichtreflexe */
+
+.mini-fox-eye::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 1px;
+  top: 0;
+
+  width: 1px;
+  height: 1px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+
+}
+
+.burrow-chest.opened .treasure-coin {
+
+  animation:
+    coinRise 2.8s ease-out forwards;
+
+}
+
+
+@keyframes coinRise {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(20px)
+      scale(.2)
+      rotateY(0deg);
+
+  }
+
+  20% {
+
+    opacity: 1;
+
+  }
+
+  55% {
+
+    transform:
+      translateX(-50%)
+      translateY(-45px)
+      scale(1)
+      rotateY(180deg);
+
+  }
+
+  80% {
+
+    transform:
+      translateX(-50%)
+      translateY(-52px)
+      scale(1)
+      rotateY(360deg);
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(-35px)
+      scale(.75)
+      rotateY(540deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   📜 GEHEIMNISVOLLE SCHRIFTROLLE
+========================================================= */
+
+.treasure-scroll {
+
+  width: 46px;
+  height: 58px;
+
+  filter:
+    drop-shadow(0 0 7px rgba(255,220,140,.7))
+    drop-shadow(0 0 18px rgba(255,190,80,.35));
+
+}
+
+
+/* Papier der geheimnisvollen Karte */
+
+.scroll-paper {
+
+  position: relative;
+
+  width: 42px;
+  height: 52px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b98b45,
+      #f5dfa8 18%,
+      #ead092 50%,
+      #f8e5ad 82%,
+      #b88642
+    );
+
+  border-radius:
+    5px 4px 5px 4px;
+
+  box-shadow:
+    0 0 10px rgba(255,220,140,.8),
+    0 0 28px rgba(255,190,80,.35);
+
+}
+
+
+/* gerolltes Ende oben */
+
+.scroll-paper::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: -5px;
+  top: -4px;
+
+  width: 52px;
+  height: 9px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f4d993,
+      #a87435
+    );
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 5px rgba(255,215,120,.5);
+
+}
+
+
+/* gerolltes Ende unten */
+
+.scroll-paper::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: -4px;
+  bottom: -4px;
+
+  width: 50px;
+  height: 9px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #a87435,
+      #f0d18a
+    );
+
+  border-radius: 50%;
+
+}
+
+
+/* Geheimnisvolle Zeichen auf der Karte */
+
+.scroll-paper {
+
+  background-image:
+    linear-gradient(
+      90deg,
+      #b98b45,
+      #f5dfa8 18%,
+      #ead092 50%,
+      #f8e5ad 82%,
+      #b88642
+    );
+
+}
+
+
+
+.burrow-chest.opened .treasure-scroll {
+
+  animation:
+    scrollRise 3s ease-out forwards;
+
+}
+
+
+.burrow-chest.opened .scroll-paper {
+
+  animation:
+    scrollUnroll 3s ease-out forwards;
+
+}
+
+
+@keyframes scrollRise {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(20px)
+      scale(.4);
+
+  }
+
+  20% {
+
+    opacity: 1;
+
+  }
+
+  65% {
+
+    transform:
+      translateX(-50%)
+      translateY(-48px)
+      scale(1);
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(-62px)
+      scale(.85);
+
+  }
+
+}
+
+
+@keyframes scrollUnroll {
+
+  0% {
+
+    transform:
+      scaleY(.25)
+      rotate(-4deg);
+
+  }
+
+  45% {
+
+    transform:
+      scaleY(.7)
+      rotate(3deg);
+
+  }
+
+  75%,
+  100% {
+
+    transform:
+      scaleY(1)
+      rotate(0deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   🦊 BABYFUCHS
+========================================================= */
+
+.treasure-babyfox {
+
+  width: 58px;
+  height: 58px;
+
+}
+
+
+.babyfox-head {
+
+  position: absolute;
+
+  left: 9px;
+  top: 14px;
+
+  width: 40px;
+  height: 36px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #b96542,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 42%,
+      18% 0,
+      38% 20%,
+      62% 20%,
+      82% 0,
+      100% 42%,
+      76% 88%,
+      50% 100%,
+      24% 88%
+    );
+
+}
+
+
+.babyfox-ear {
+
+  position: absolute;
+
+  top: 4px;
+
+  width: 18px;
+  height: 25px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 75%
+    );
+
+}
+
+
+.babyfox-ear.one {
+  left: 10px;
+}
+
+
+.babyfox-ear.two {
+  right: 10px;
+}
+
+
+.babyfox-eye {
+
+  position: absolute;
+
+  top: 27px;
+
+  width: 5px;
+  height: 5px;
+
+  background: #17100d;
+
+  border-radius: 50%;
+
+}
+
+
+.babyfox-eye.one {
+  left: 20px;
+}
+
+
+.babyfox-eye.two {
+  left: 34px;
+}
+
+.babyfox-eye::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 1px;
+  top: 1px;
+
+  width: 2px;
+  height: 2px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+
+}
+
+
+.burrow-chest.opened .treasure-babyfox {
+
+  animation:
+    babyFoxEscape 3.4s ease-out forwards;
+
+}
+
+
+@keyframes babyFoxEscape {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(25px)
+      scale(.35);
+
+  }
+
+  25% {
+
+    opacity: 1;
+
+    transform:
+      translateX(-50%)
+      translateY(-25px)
+      scale(.85);
+
+  }
+
+  42% {
+
+    transform:
+      translateX(-50%)
+      translateY(-42px)
+      scale(1);
+
+  }
+
+  55% {
+
+    opacity: 1;
+
+    transform:
+      translateX(20px)
+      translateY(-42px)
+      scale(.9);
+
+  }
+
+  75% {
+
+    transform:
+      translateX(105px)
+      translateY(-30px)
+      scale(.72);
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translateX(180px)
+      translateY(-5px)
+      scale(.45);
+
+  }
+
 }
   
 </style>
@@ -5361,11 +7822,11 @@ setLanguage(
      🦊 FUCHS STARTEN
   ===================================================== */
 
-  function startFox() {
+ function startFox() {
 
-    runCount++;
+  runCount++;
 
-    fox.classList.remove("run");
+  fox.classList.remove("run");
     fox.classList.remove("second-run");
 
     void fox.offsetWidth;
@@ -5505,6 +7966,34 @@ setLanguage(
     }, 3300);
 
   }
+  
+    peekFox.addEventListener("click", function () {
+
+  const secretKey =
+    document.getElementById("secretKey");
+
+  secretKey.classList.remove("show");
+
+  void secretKey.offsetWidth;
+
+  secretKey.classList.add("show");
+
+  setTimeout(() => {
+
+    secretKey.classList.remove("show");
+
+  }, 2000);
+
+});
+
+  const secretKey =
+  document.getElementById("secretKey");
+
+secretKey.addEventListener("click", function () {
+
+  document.body.classList.add("fox-burrow-mode");
+
+});
 
 
   /*
@@ -5603,6 +8092,39 @@ setLanguage(
 
   }
 
+
+  /* =====================================================
+     📦 SCHATZKISTEN – KLICKEN
+  ===================================================== */
+
+  const treasureChests =
+    document.querySelectorAll(".burrow-chest");
+
+  treasureChests.forEach(function (chest) {
+
+    chest.addEventListener("click", function () {
+
+      chest.classList.toggle("opened");
+
+    });
+
+  });
+
+  /* =====================================================
+   ✕ FLUCHT AUS DEM FUCHSBAU
+===================================================== */
+
+const burrowClose =
+  document.getElementById("burrowClose");
+
+burrowClose.addEventListener("click", function () {
+
+  document.body.classList.remove(
+    "fox-burrow-mode"
+  );
+
+});
+  
 })();
 
 </script>
