@@ -5984,7 +5984,433 @@ body.fox-burrow-mode #foxBurrowOverlay {
   animation:
     burrowBreath 5s ease-in-out infinite;
 
-}</style>
+}
+
+/* =========================================================
+   🦊 SCHRITT 3 – FOXY IM FUCHSBAU
+========================================================= */
+
+#burrowFoxy {
+
+  position: fixed;
+
+  left: 50%;
+
+  bottom: 18vh;
+
+  width: 230px;
+
+  height: 145px;
+
+  z-index: 9996;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform:
+    translateX(-50%)
+    translateY(18px)
+    scale(.94);
+
+  filter:
+    drop-shadow(
+      0 14px 16px
+      rgba(35,14,8,.38)
+    );
+
+  transition:
+    opacity 1.4s ease,
+    transform 1.8s cubic-bezier(.22,.61,.36,1);
+
+}
+
+
+/* Foxy erscheint */
+
+body.fox-burrow-mode #burrowFoxy {
+
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    translateY(0)
+    scale(1);
+
+  animation:
+    foxyBreath 5s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   🦊 KÖRPER – LIEGEND
+========================================================= */
+
+.burrow-fox-body {
+
+  position: absolute;
+
+  left: 54px;
+
+  bottom: 18px;
+
+  width: 142px;
+
+  height: 67px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    60% 48% 52% 62%;
+
+  transform:
+    rotate(-3deg);
+
+}
+
+
+/* weicher Bauch */
+
+.burrow-fox-body::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 27px;
+
+  bottom: 8px;
+
+  width: 94px;
+
+  height: 30px;
+
+  background:
+    rgba(245,233,219,.42);
+
+  border-radius: 50%;
+
+  transform:
+    rotate(3deg);
+
+}
+
+
+/* =========================================================
+   🦊 KOPF
+========================================================= */
+
+.burrow-fox-head {
+
+  position: absolute;
+
+  left: 22px;
+
+  top: 24px;
+
+  width: 76px;
+
+  height: 68px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 43%,
+      16% 4%,
+      35% 22%,
+      66% 18%,
+      86% 0,
+      100% 46%,
+      80% 79%,
+      51% 100%,
+      23% 82%
+    );
+
+}
+
+
+/* =========================================================
+   👂 OHREN
+========================================================= */
+
+.burrow-fox-ear {
+
+  position: absolute;
+
+  width: 31px;
+
+  height: 43px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 78%
+    );
+
+}
+
+.burrow-fox-ear.one {
+
+  left: 30px;
+
+  top: 2px;
+
+  transform:
+    rotate(-9deg);
+
+}
+
+.burrow-fox-ear.two {
+
+  left: 66px;
+
+  top: 0;
+
+  transform:
+    rotate(8deg);
+
+}
+
+
+/* =========================================================
+   👀 AUGEN
+========================================================= */
+
+.burrow-fox-eye {
+
+  position: absolute;
+
+  top: 52px;
+
+  width: 7px;
+
+  height: 7px;
+
+  background: #17100d;
+
+  border-radius: 50%;
+
+}
+
+.burrow-fox-eye.one {
+
+  left: 47px;
+
+}
+
+.burrow-fox-eye.two {
+
+  left: 72px;
+
+}
+
+
+/* kleiner warmer Lichtpunkt */
+
+.burrow-fox-eye::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 1px;
+
+  top: 1px;
+
+  width: 2px;
+
+  height: 2px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   🙂 GANZ LEICHTES SCHMUNZELN
+========================================================= */
+
+.burrow-fox-smile {
+
+  position: absolute;
+
+  left: 53px;
+
+  top: 67px;
+
+  width: 22px;
+
+  height: 8px;
+
+  border-bottom:
+    2px solid #3c1910;
+
+  border-radius:
+    0 0 50% 50%;
+
+  transform:
+    rotate(-2deg);
+
+}
+
+
+/* =========================================================
+   🐾 VORDERPFOTE – LOCKER NACH VORN
+========================================================= */
+
+.burrow-fox-paw {
+
+  position: absolute;
+
+  left: 90px;
+
+  bottom: 4px;
+
+  width: 70px;
+
+  height: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    55% 45% 55% 45%;
+
+  transform:
+    rotate(-8deg);
+
+}
+
+
+/* kleine Pfotenlinien */
+
+.burrow-fox-paw::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: 8px;
+
+  top: 8px;
+
+  width: 18px;
+
+  height: 7px;
+
+  border-bottom:
+    2px solid
+    rgba(55,24,14,.45);
+
+  border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   🦊 SCHWANZ – GEMÜTLICH UM DEN KÖRPER
+========================================================= */
+
+.burrow-fox-tail {
+
+  position: absolute;
+
+  right: 2px;
+
+  bottom: 22px;
+
+  width: 96px;
+
+  height: 63px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  border-radius:
+    70% 35% 70% 40%;
+
+  transform:
+    rotate(12deg);
+
+}
+
+
+/* weiße Schwanzspitze */
+
+.burrow-fox-tail::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: -1px;
+
+  top: 4px;
+
+  width: 38px;
+
+  height: 42px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   🌬️ FOXY ATMET
+========================================================= */
+
+@keyframes foxyBreath {
+
+  0%,
+  100% {
+
+    transform:
+      translateX(-50%)
+      translateY(0)
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(-50%)
+      translateY(-3px)
+      scale(1.008);
+
+  }
+
+}
+
+</style>
 
 
 <script>
