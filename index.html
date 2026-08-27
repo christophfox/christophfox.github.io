@@ -6790,22 +6790,6 @@ body.fox-burrow-mode #burrowChests {
    📦 KISTE ÖFFNET SICH
 ========================================================= */
 
-.burrow-chest.opened::before {
-
-  transform:
-    perspective(100px)
-    rotateX(38deg)
-    translateY(-8px);
-
-  transform-origin:
-    bottom center;
-
-  transition:
-    transform .7s ease;
-
-}
-
-
 /* kleines warmes Licht aus der geöffneten Kiste */
 
 .burrow-chest.opened {
@@ -6834,6 +6818,118 @@ body.fox-burrow-mode #burrowChests {
   transition:
     opacity .35s ease,
     transform .35s ease;
+
+}
+
+  /* =========================================================
+   📦 SICHTBARER SCHATZKISTEN-DECKEL
+========================================================= */
+
+.burrow-chest::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #8b4b2d,
+      #542818
+    );
+
+  border-radius:
+    6px 6px 2px 2px;
+
+  border-bottom:
+    3px solid
+    #b8783f;
+
+  transform-origin:
+    bottom center;
+
+  transition:
+    transform .7s cubic-bezier(.2,.8,.2,1);
+
+  z-index: 4;
+}
+
+
+/* Deckel klappt beim Öffnen deutlich auf */
+
+.burrow-chest.opened::before {
+
+  transform:
+    perspective(120px)
+    rotateX(65deg)
+    translateY(-14px);
+
+}
+
+
+/* =========================================================
+   ✨ LICHT AUS DER GEÖFFNETEN KISTE
+========================================================= */
+
+.burrow-chest.opened::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 5px;
+
+  width: 70%;
+  height: 45px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(226,188,108,.55),
+      rgba(226,188,108,.15) 45%,
+      transparent 75%
+    );
+
+  filter:
+    blur(4px);
+
+  opacity: 1;
+
+  animation:
+    treasureGlow 1.8s ease-in-out infinite;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+
+@keyframes treasureGlow {
+
+  0%,
+  100% {
+    opacity: .55;
+    transform:
+      translateX(-50%)
+      scale(.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform:
+      translateX(-50%)
+      scale(1.08);
+  }
 
 }
   
