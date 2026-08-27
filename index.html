@@ -5059,10 +5059,32 @@ setLanguage(
 
   </div>
 
-  <div class="burrow-fox-paw"></div>
+ <div class="burrow-fox-paw"></div>
 
 </div>
-  
+
+
+<!-- =====================================================
+     🧰 FOXY'S DREI SCHATZKISTEN
+===================================================== -->
+
+<div id="burrowChests">
+
+  <div class="burrow-chest one">
+    <div class="burrow-lock"></div>
+  </div>
+
+  <div class="burrow-chest two">
+    <div class="burrow-lock"></div>
+  </div>
+
+  <div class="burrow-chest three">
+    <div class="burrow-lock"></div>
+  </div>
+
+</div>
+
+
 <div class="peek-fox" id="peekFox">
 
   <div class="peek-ear one"></div>
@@ -6436,336 +6458,6 @@ body.fox-burrow-mode #burrowFoxy {
 
 }
 
-/* =========================================================
-   🧰 SCHRITT 4 – FOXY'S SCHATZKISTEN
-========================================================= */
-
-#burrowChests {
-
-  position: fixed;
-
-  left: 50%;
-
-  bottom: 9vh;
-
-  width: 430px;
-
-  height: 135px;
-
-  z-index: 9995;
-
-  transform:
-    translateX(-50%)
-    translateY(25px);
-
-  opacity: 0;
-
-  transition:
-    opacity 1.4s ease,
-    transform 1.6s ease;
-
-}
-
-
-/* Kisten erscheinen mit dem Fuchsbau */
-
-body.fox-burrow-mode #burrowChests {
-
-  opacity: 1;
-
-  transform:
-    translateX(-50%)
-    translateY(0);
-
-}
-
-
-/* =========================================================
-   📦 GRUNDKISTE
-========================================================= */
-
-.burrow-chest {
-
-  position: absolute;
-
-  width: 112px;
-
-  height: 72px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #8b4a2f,
-      #4d2417
-    );
-
-  border:
-    2px solid
-    rgba(205,137,88,.48);
-
-  border-radius:
-    7px 7px 5px 5px;
-
-  box-shadow:
-
-    0 12px 18px
-      rgba(20,8,4,.48),
-
-    inset 0 4px 7px
-      rgba(245,210,177,.08);
-
-}
-
-
-/* =========================================================
-   🪵 KISTENDECKEL
-========================================================= */
-
-.burrow-chest::before {
-
-  content: "";
-
-  position: absolute;
-
-  left: -2px;
-
-  top: -29px;
-
-  width: 112px;
-
-  height: 31px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #a05a38,
-      #642e1d
-    );
-
-  border:
-    2px solid
-    rgba(205,137,88,.42);
-
-  border-radius:
-    9px 9px 3px 3px;
-
-  transform:
-    perspective(100px)
-    rotateX(-4deg);
-
-}
-
-
-/* =========================================================
-   ✨ GOLDENER BESCHLAG
-========================================================= */
-
-.burrow-chest::after {
-
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-
-  top: -1px;
-
-  width: 13px;
-
-  height: 48px;
-
-  transform:
-    translateX(-50%);
-
-  background:
-    rgba(190,137,62,.72);
-
-  border-radius: 2px;
-
-}
-
-
-/* =========================================================
-   📦 POSITIONEN
-========================================================= */
-
-.burrow-chest.one {
-
-  left: 0;
-
-  bottom: 7px;
-
-  transform:
-    rotate(-4deg);
-
-}
-
-.burrow-chest.two {
-
-  left: 50%;
-
-  bottom: 18px;
-
-  transform:
-    translateX(-50%)
-    rotate(1deg);
-
-  z-index: 2;
-
-}
-
-.burrow-chest.three {
-
-  right: 0;
-
-  bottom: 5px;
-
-  transform:
-    rotate(4deg);
-
-}
-
-
-/* =========================================================
-   🔒 SCHLOSS
-========================================================= */
-
-.burrow-lock {
-
-  position: absolute;
-
-  left: 50%;
-
-  top: 31px;
-
-  width: 18px;
-
-  height: 20px;
-
-  transform:
-    translateX(-50%);
-
-  background:
-    linear-gradient(
-      145deg,
-      #e0b866,
-      #9a6a28
-    );
-
-  border-radius:
-    3px;
-
-  box-shadow:
-    0 0 7px
-    rgba(226,183,99,.65);
-
-  animation:
-    lockGlow 2.4s ease-in-out infinite;
-
-}
-
-
-/* Bügel */
-
-.burrow-lock::before {
-
-  content: "";
-
-  position: absolute;
-
-  left: 4px;
-
-  top: -11px;
-
-  width: 10px;
-
-  height: 13px;
-
-  border:
-    3px solid
-    #c79b50;
-
-  border-bottom:
-    0;
-
-  border-radius:
-    8px 8px 0 0;
-
-}
-
-
-/* Schlüsselloch */
-
-.burrow-lock::after {
-
-  content: "";
-
-  position: absolute;
-
-  left: 7px;
-
-  top: 8px;
-
-  width: 4px;
-
-  height: 6px;
-
-  background:
-    #4a2516;
-
-  border-radius: 50%;
-
-}
-
-
-/* =========================================================
-   ✨ SANFTES SCHLOSS-LEUCHTEN
-========================================================= */
-
-@keyframes lockGlow {
-
-  0%,
-  100% {
-
-    opacity: .72;
-
-    box-shadow:
-      0 0 5px
-      rgba(226,183,99,.45);
-
-  }
-
-  50% {
-
-    opacity: 1;
-
-    box-shadow:
-      0 0 13px
-      rgba(226,183,99,.9);
-
-  }
-
-}
-
-<!-- =====================================================
-     🧰 FOXY'S DREI SCHATZKISTEN
-===================================================== -->
-
-<div id="burrowChests">
-
-  <div class="burrow-chest one">
-    <div class="burrow-lock"></div>
-  </div>
-
-  <div class="burrow-chest two">
-    <div class="burrow-lock"></div>
-  </div>
-
-  <div class="burrow-chest three">
-    <div class="burrow-lock"></div>
-  </div>
-
-</div>
   
 </style>
 
