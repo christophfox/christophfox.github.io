@@ -7013,6 +7013,75 @@ body.fox-burrow-mode #burrowChests {
   }
 
 }
+
+/* =========================================================
+   ✕ FLUCHTWEG AUS DEM FUCHSBAU
+========================================================= */
+
+#burrowClose {
+
+  position: fixed;
+
+  top: 22px;
+  right: 24px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255,250,242,.95);
+
+  color: #74331f;
+
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+
+  line-height: 38px;
+  text-align: center;
+
+  cursor: pointer;
+
+  z-index: 10005;
+
+  opacity: 0;
+  pointer-events: none;
+
+  box-shadow:
+    0 4px 14px
+    rgba(55,24,14,.22);
+
+  transition:
+    opacity .5s ease,
+    transform .2s ease;
+}
+
+
+/* sichtbar, sobald der Fuchsbau offen ist */
+
+body.fox-burrow-mode #burrowClose {
+
+  opacity: 1;
+
+  pointer-events: auto;
+
+}
+
+
+#burrowClose:hover {
+
+  transform: scale(1.08);
+
+}
+
+
+#burrowClose:active {
+
+  transform: scale(.92);
+
+}
   
 </style>
 
@@ -7326,6 +7395,20 @@ secretKey.addEventListener("click", function () {
 
   });
 
+  /* =====================================================
+   ✕ FLUCHT AUS DEM FUCHSBAU
+===================================================== */
+
+const burrowClose =
+  document.getElementById("burrowClose");
+
+burrowClose.addEventListener("click", function () {
+
+  document.body.classList.remove(
+    "fox-burrow-mode"
+  );
+
+});
   
 })();
 
