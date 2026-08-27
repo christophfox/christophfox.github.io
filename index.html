@@ -5819,15 +5819,11 @@ body.fox-burrow-mode::after {
      🦊 FUCHS STARTEN
   ===================================================== */
 
-  function startFox() {
+ function startFox() {
 
-    runCount++;
-document.body.classList.add("fox-burrow-mode");
+  runCount++;
 
-setTimeout(() => {
-  document.body.classList.remove("fox-burrow-mode");
-}, 7000);
-    fox.classList.remove("run");
+  fox.classList.remove("run");
     fox.classList.remove("second-run");
 
     void fox.offsetWidth;
