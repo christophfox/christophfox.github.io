@@ -5060,7 +5060,7 @@ setLanguage(
   <span class="key-tooth one"></span>
   <span class="key-tooth two"></span>
 </div>
-
+<div id="foxBurrowOverlay" aria-hidden="true"></div>
 <style>
 
 <style>
@@ -5699,6 +5699,95 @@ cursor: pointer;
   .literaturhinweis {
   font-size: 0.5rem;
 }
+
+/* =========================================================
+   🦊 GEHEIMER FUCHSBAU – ATMOSPHÄRE
+========================================================= */
+
+#foxBurrowOverlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9990;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 55%,
+      rgba(169,84,53,.18) 0%,
+      rgba(116,51,31,.38) 42%,
+      rgba(55,24,14,.72) 100%
+    );
+
+  backdrop-filter:
+    brightness(.27)
+    saturate(.82);
+
+  -webkit-backdrop-filter:
+    brightness(.27)
+    saturate(.82);
+
+  transition:
+    opacity 1.8s cubic-bezier(.22,.61,.36,1);
+
+}
+
+
+/* Fuchsbau wird betreten */
+
+body.fox-burrow-mode #foxBurrowOverlay {
+
+  opacity: 1;
+
+}
+
+
+/* ganz leichter warmer Lichtschein */
+
+body.fox-burrow-mode::after {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9989;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 50% 58%,
+      rgba(201,113,72,.08),
+      transparent 42%
+    );
+
+  opacity: 1;
+
+  animation:
+    burrowBreath 5s ease-in-out infinite;
+
+}
+
+
+@keyframes burrowBreath {
+
+  0%,
+  100% {
+    opacity: .65;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+}
   
 </style>
 
@@ -5727,7 +5816,7 @@ cursor: pointer;
   function startFox() {
 
     runCount++;
-
+document.body.classList.add("fox-burrow-mode");
     fox.classList.remove("run");
     fox.classList.remove("second-run");
 
