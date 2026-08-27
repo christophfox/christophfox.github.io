@@ -6477,6 +6477,314 @@ body.fox-burrow-mode #burrowFoxy {
 
 }
 
+/* =========================================================
+   🧰 FOXY'S SCHATZKISTEN
+========================================================= */
+
+#burrowChests {
+
+  position: fixed;
+
+  left: 50%;
+
+  bottom: 8vh;
+
+  width: 430px;
+
+  height: 140px;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 10000;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 1.2s ease;
+
+}
+
+
+/* Sobald der Fuchsbau geöffnet wird */
+
+body.fox-burrow-mode #burrowChests {
+
+  opacity: 1;
+
+  pointer-events: auto;
+
+}
+
+
+/* =========================================================
+   📦 KISTE
+========================================================= */
+
+.burrow-chest {
+
+  position: absolute;
+
+  width: 105px;
+
+  height: 65px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #9a5635,
+      #552619
+    );
+
+  border:
+    2px solid
+    rgba(205,137,88,.55);
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 18px
+      rgba(20,8,4,.5);
+
+  animation:
+    chestBreath 4s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   📦 DECKEL
+========================================================= */
+
+.burrow-chest::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: -2px;
+
+  top: -25px;
+
+  width: 105px;
+
+  height: 27px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #aa623d,
+      #682e1d
+    );
+
+  border:
+    2px solid
+    rgba(205,137,88,.5);
+
+  border-radius:
+    8px 8px 3px 3px;
+
+}
+
+
+/* =========================================================
+   ✨ GOLDENER BESCHLAG
+========================================================= */
+
+.burrow-chest::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 0;
+
+  width: 11px;
+
+  height: 43px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    rgba(197,148,69,.8);
+
+}
+
+
+/* =========================================================
+   📍 POSITIONEN
+========================================================= */
+
+.burrow-chest.one {
+
+  left: 0;
+
+  bottom: 5px;
+
+  transform:
+    rotate(-4deg);
+
+}
+
+.burrow-chest.two {
+
+  left: 50%;
+
+  bottom: 18px;
+
+  transform:
+    translateX(-50%)
+    rotate(1deg);
+
+}
+
+.burrow-chest.three {
+
+  right: 0;
+
+  bottom: 4px;
+
+  transform:
+    rotate(4deg);
+
+}
+
+
+/* =========================================================
+   🔒 SCHLOSS
+========================================================= */
+
+.burrow-lock {
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 28px;
+
+  width: 17px;
+
+  height: 19px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    linear-gradient(
+      145deg,
+      #e2bc6c,
+      #956626
+    );
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 0 8px
+    rgba(226,188,108,.7);
+
+  animation:
+    lockGlow 2.5s ease-in-out infinite;
+
+}
+
+
+/* Schlossbügel */
+
+.burrow-lock::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 4px;
+
+  top: -10px;
+
+  width: 9px;
+
+  height: 12px;
+
+  border:
+    3px solid
+    #c99b4e;
+
+  border-bottom: 0;
+
+  border-radius:
+    8px 8px 0 0;
+
+}
+
+
+/* =========================================================
+   🌬️ KISTE ATMET
+========================================================= */
+
+@keyframes chestBreath {
+
+  0%,
+  100% {
+
+    filter:
+      brightness(.96);
+
+    box-shadow:
+      0 10px 18px
+        rgba(20,8,4,.5),
+
+      0 0 5px
+        rgba(205,137,88,.10);
+
+  }
+
+  50% {
+
+    filter:
+      brightness(1.04);
+
+    box-shadow:
+      0 10px 18px
+        rgba(20,8,4,.5),
+
+      0 0 17px
+        rgba(205,137,88,.3);
+
+  }
+
+}
+
+
+/* =========================================================
+   ✨ SCHLOSS LEUCHTET
+========================================================= */
+
+@keyframes lockGlow {
+
+  0%,
+  100% {
+
+    opacity: .7;
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+    box-shadow:
+      0 0 14px
+      rgba(226,188,108,.95);
+
+  }
+
+}
   
 </style>
 
