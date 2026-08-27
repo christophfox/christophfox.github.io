@@ -5183,6 +5183,11 @@ setLanguage(
   <span class="key-tooth one"></span>
   <span class="key-tooth two"></span>
 </div>
+
+<div class="fox-final-message" id="foxFinalMessage">
+  Foxy war hier.
+</div>
+
 <div id="foxBurrowOverlay" aria-hidden="true"></div>
 
 <button id="burrowClose" aria-label="Fuchsbau schließen">×</button>
@@ -7797,6 +7802,194 @@ body.fox-burrow-mode #burrowClose {
   }
 
 }
+
+/* =========================================================
+   🦊 FOXY'S GROSSER ABSCHLUSSMOMENT
+========================================================= */
+
+.babyfox.final-run {
+
+  animation:
+    babyFoxFinalRun 3.8s ease-in-out forwards;
+
+}
+
+
+@keyframes babyFoxFinalRun {
+
+  0% {
+
+    transform:
+      translateX(0)
+      translateY(0)
+      scale(1);
+
+  }
+
+  18% {
+
+    transform:
+      translateX(35px)
+      translateY(-8px)
+      scale(1.02);
+
+  }
+
+  38% {
+
+    transform:
+      translateX(75px)
+      translateY(0)
+      scale(1);
+
+  }
+
+  52% {
+
+    transform:
+      translateX(75px)
+      translateY(-2px)
+      scaleX(-1);
+
+  }
+
+  68% {
+
+    transform:
+      translateX(75px)
+      translateY(-2px)
+      scaleX(-1);
+
+  }
+
+  100% {
+
+    transform:
+      translateX(260px)
+      translateY(-8px)
+      scaleX(-1);
+
+    opacity: 0;
+
+  }
+
+}
+
+
+/* kleine Lichtreflexe in den Augen */
+
+.babyfox.final-run .babyfox-eye {
+
+  animation:
+    finalFoxEyes .8s ease-in-out 1;
+
+}
+
+
+@keyframes finalFoxEyes {
+
+  0%,
+  100% {
+
+    filter:
+      brightness(1);
+
+  }
+
+  50% {
+
+    filter:
+      brightness(2.5);
+
+  }
+
+}
+
+
+/* =========================================================
+   ✨ FOXY WAR HIER
+========================================================= */
+
+.fox-final-message {
+
+  position: absolute;
+
+  left: 50%;
+  top: 22%;
+
+  transform:
+    translateX(-50%);
+
+  color:
+    rgba(245,224,180,.82);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    15px;
+
+  font-style:
+    italic;
+
+  letter-spacing:
+    1px;
+
+  opacity: 0;
+
+  text-shadow:
+    0 0 10px
+    rgba(226,188,108,.45);
+
+  pointer-events: none;
+
+}
+
+
+.fox-final-message.show {
+
+  animation:
+    finalMessage 4s ease forwards;
+
+}
+
+
+@keyframes finalMessage {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(8px);
+
+  }
+
+  20% {
+
+    opacity: .85;
+
+  }
+
+  75% {
+
+    opacity: .85;
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(-5px);
+
+  }
+
+}
   
 </style>
 
@@ -8098,18 +8291,72 @@ secretKey.addEventListener("click", function () {
   ===================================================== */
 
   const treasureChests =
-    document.querySelectorAll(".burrow-chest");
+  document.querySelectorAll(".burrow-chest");
 
-  treasureChests.forEach(function (chest) {
+const foxFinalMessage =
+  document.getElementById("foxFinalMessage");
 
-    chest.addEventListener("click", function () {
+let finalSequenceDone = false;
 
-      chest.classList.toggle("opened");
 
-    });
+treasureChests.forEach(function (chest) {
+
+  chest.addEventListener("click", function () {
+
+    chest.classList.toggle("opened");
+
+
+    /* =====================================================
+       🦊 ALLE DREI SCHÄTZE GEÖFFNET
+    ===================================================== */
+
+    if (
+      !finalSequenceDone &&
+      document.querySelectorAll(
+        ".burrow-chest.opened"
+      ).length === 3
+    ) {
+
+      finalSequenceDone = true;
+
+
+      /* FOXY WAR HIER */
+
+      setTimeout(function () {
+
+        foxFinalMessage.classList.remove("show");
+
+        void foxFinalMessage.offsetWidth;
+
+        foxFinalMessage.classList.add("show");
+
+      }, 700);
+
+
+      /* BABYFOXS STARTET */
+
+      setTimeout(function () {
+
+        const babyFox =
+          document.querySelector(".babyfox");
+
+        if (babyFox) {
+
+          babyFox.classList.remove("final-run");
+
+          void babyFox.offsetWidth;
+
+          babyFox.classList.add("final-run");
+
+        }
+
+      }, 1400);
+
+    }
 
   });
 
+});
   /* =====================================================
    ✕ FLUCHT AUS DEM FUCHSBAU
 ===================================================== */
