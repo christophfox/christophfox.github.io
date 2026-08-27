@@ -5115,9 +5115,15 @@ setLanguage(
    <div class="burrow-chest-inside"></div>
 
 <div class="treasure treasure-coin">
-  <div class="treasure-coin-face">🦊</div>
+  <div class="treasure-coin-face">
+    <div class="mini-fox">
+      <div class="mini-fox-ear one"></div>
+      <div class="mini-fox-ear two"></div>
+      <div class="mini-fox-eye one"></div>
+      <div class="mini-fox-eye two"></div>
+    </div>
+  </div>
 </div>
-
 <div class="burrow-chest-lid"></div>
 <div class="burrow-lock"></div>
 
@@ -5163,9 +5169,10 @@ setLanguage(
 
   <div class="peek-face">
 
-    <div class="peek-eye"></div>
+  <div class="peek-eye"></div>
+  <div class="peek-eye second"></div>
 
-  </div>
+</div>
 
 </div>
 
@@ -5176,6 +5183,11 @@ setLanguage(
   <span class="key-tooth one"></span>
   <span class="key-tooth two"></span>
 </div>
+
+<div class="fox-final-message" id="foxFinalMessage">
+  Foxy war hier.
+</div>
+
 <div id="foxBurrowOverlay" aria-hidden="true"></div>
 
 <button id="burrowClose" aria-label="Fuchsbau schließen">×</button>
@@ -5786,6 +5798,12 @@ cursor: pointer;
   background: #111;
 
   border-radius: 50%;
+
+}
+
+.peek-eye.second {
+
+  left: 31px;
 
 }
 
@@ -7182,6 +7200,145 @@ body.fox-burrow-mode #burrowClose {
 
 }
 
+/* =========================================================
+   🦊 KLEINER FOXY AUF DER MÜNZE
+========================================================= */
+
+.mini-fox {
+
+  position: relative;
+
+  width: 25px;
+  height: 21px;
+
+}
+
+
+/* Kopf */
+
+.mini-fox::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 3px;
+  top: 5px;
+
+  width: 19px;
+  height: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 40%,
+      20% 0,
+      38% 25%,
+      62% 25%,
+      80% 0,
+      100% 40%,
+      75% 88%,
+      50% 100%,
+      25% 88%
+    );
+
+}
+
+
+/* Ohren */
+
+.mini-fox-ear {
+
+  position: absolute;
+
+  top: 1px;
+
+  width: 9px;
+  height: 12px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 75%
+    );
+
+  z-index: 2;
+
+}
+
+.mini-fox-ear.one {
+
+  left: 3px;
+
+}
+
+.mini-fox-ear.two {
+
+  right: 3px;
+
+}
+
+
+/* Augen */
+
+.mini-fox-eye {
+
+  position: absolute;
+
+  top: 11px;
+
+  width: 3px;
+  height: 3px;
+
+  background: #111;
+
+  border-radius: 50%;
+
+  z-index: 3;
+
+}
+
+.mini-fox-eye.one {
+
+  left: 8px;
+
+}
+
+.mini-fox-eye.two {
+
+  right: 8px;
+
+}
+
+
+/* kleine weiße Lichtreflexe */
+
+.mini-fox-eye::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 1px;
+  top: 0;
+
+  width: 1px;
+  height: 1px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+
+}
 
 .burrow-chest.opened .treasure-coin {
 
@@ -7252,36 +7409,116 @@ body.fox-burrow-mode #burrowClose {
 
 .treasure-scroll {
 
-  width: 34px;
-  height: 48px;
+  width: 46px;
+  height: 58px;
+
+  filter:
+    drop-shadow(0 0 7px rgba(255,220,140,.7))
+    drop-shadow(0 0 18px rgba(255,190,80,.35));
 
 }
 
 
+/* Papier der geheimnisvollen Karte */
+
 .scroll-paper {
 
-  width: 34px;
-  height: 48px;
+  position: relative;
+
+  width: 42px;
+  height: 52px;
 
   background:
     linear-gradient(
       90deg,
-      #d8b978,
-      #f4dfaa,
-      #c59a50
+      #b98b45,
+      #f5dfa8 18%,
+      #ead092 50%,
+      #f8e5ad 82%,
+      #b88642
     );
 
   border-radius:
     5px 4px 5px 4px;
 
   box-shadow:
-    0 0 12px rgba(255,220,140,.65),
-    0 0 28px rgba(255,190,80,.25);
-
-  transform-origin:
-    center bottom;
+    0 0 10px rgba(255,220,140,.8),
+    0 0 28px rgba(255,190,80,.35);
 
 }
+
+
+/* gerolltes Ende oben */
+
+.scroll-paper::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: -5px;
+  top: -4px;
+
+  width: 52px;
+  height: 9px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f4d993,
+      #a87435
+    );
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 5px rgba(255,215,120,.5);
+
+}
+
+
+/* gerolltes Ende unten */
+
+.scroll-paper::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: -4px;
+  bottom: -4px;
+
+  width: 50px;
+  height: 9px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #a87435,
+      #f0d18a
+    );
+
+  border-radius: 50%;
+
+}
+
+
+/* Geheimnisvolle Zeichen auf der Karte */
+
+.scroll-paper {
+
+  background-image:
+    linear-gradient(
+      90deg,
+      #b98b45,
+      #f5dfa8 18%,
+      #ead092 50%,
+      #f8e5ad 82%,
+      #b88642
+    );
+
+}
+
 
 
 .burrow-chest.opened .treasure-scroll {
@@ -7561,6 +7798,194 @@ body.fox-burrow-mode #burrowClose {
       translateX(180px)
       translateY(-5px)
       scale(.45);
+
+  }
+
+}
+
+/* =========================================================
+   🦊 FOXY'S GROSSER ABSCHLUSSMOMENT
+========================================================= */
+
+.babyfox.final-run {
+
+  animation:
+    babyFoxFinalRun 3.8s ease-in-out forwards;
+
+}
+
+
+@keyframes babyFoxFinalRun {
+
+  0% {
+
+    transform:
+      translateX(0)
+      translateY(0)
+      scale(1);
+
+  }
+
+  18% {
+
+    transform:
+      translateX(35px)
+      translateY(-8px)
+      scale(1.02);
+
+  }
+
+  38% {
+
+    transform:
+      translateX(75px)
+      translateY(0)
+      scale(1);
+
+  }
+
+  52% {
+
+    transform:
+      translateX(75px)
+      translateY(-2px)
+      scaleX(-1);
+
+  }
+
+  68% {
+
+    transform:
+      translateX(75px)
+      translateY(-2px)
+      scaleX(-1);
+
+  }
+
+  100% {
+
+    transform:
+      translateX(260px)
+      translateY(-8px)
+      scaleX(-1);
+
+    opacity: 0;
+
+  }
+
+}
+
+
+/* kleine Lichtreflexe in den Augen */
+
+.babyfox.final-run .babyfox-eye {
+
+  animation:
+    finalFoxEyes .8s ease-in-out 1;
+
+}
+
+
+@keyframes finalFoxEyes {
+
+  0%,
+  100% {
+
+    filter:
+      brightness(1);
+
+  }
+
+  50% {
+
+    filter:
+      brightness(2.5);
+
+  }
+
+}
+
+
+/* =========================================================
+   ✨ FOXY WAR HIER
+========================================================= */
+
+.fox-final-message {
+
+  position: absolute;
+
+  left: 50%;
+  top: 22%;
+
+  transform:
+    translateX(-50%);
+
+  color:
+    rgba(245,224,180,.82);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    15px;
+
+  font-style:
+    italic;
+
+  letter-spacing:
+    1px;
+
+  opacity: 0;
+
+  text-shadow:
+    0 0 10px
+    rgba(226,188,108,.45);
+
+  pointer-events: none;
+
+}
+
+
+.fox-final-message.show {
+
+  animation:
+    finalMessage 4s ease forwards;
+
+}
+
+
+@keyframes finalMessage {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(8px);
+
+  }
+
+  20% {
+
+    opacity: .85;
+
+  }
+
+  75% {
+
+    opacity: .85;
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(-5px);
 
   }
 
@@ -7861,24 +8286,95 @@ secretKey.addEventListener("click", function () {
   }
 
 
-  /* =====================================================
-     📦 SCHATZKISTEN – KLICKEN
-  ===================================================== */
+/* =====================================================
+   📦 SCHATZKISTEN – KLICKEN
+========================================================= */
 
-  const treasureChests =
-    document.querySelectorAll(".burrow-chest");
+const treasureChests =
+  document.querySelectorAll(".burrow-chest");
 
-  treasureChests.forEach(function (chest) {
+const foxFinalMessage =
+  document.getElementById("foxFinalMessage");
 
-    chest.addEventListener("click", function () {
+let openedChestCount = 0;
+let finalSequenceDone = false;
 
-      chest.classList.toggle("opened");
 
-    });
+treasureChests.forEach(function (chest) {
+
+  chest.addEventListener("click", function () {
+
+    const wasOpened =
+      chest.classList.contains("opened");
+
+    chest.classList.toggle("opened");
+
+
+    /* Nur beim tatsächlichen Öffnen zählen */
+
+    if (!wasOpened) {
+
+      openedChestCount++;
+
+    }
+
+
+    /* =====================================================
+       🦊 ALLE DREI SCHÄTZE GEÖFFNET
+    ===================================================== */
+
+    if (
+      !finalSequenceDone &&
+      openedChestCount === 3
+    ) {
+
+      finalSequenceDone = true;
+
+
+      /* FOXY WAR HIER */
+
+      setTimeout(function () {
+
+        if (foxFinalMessage) {
+
+          foxFinalMessage.classList.remove("show");
+
+          void foxFinalMessage.offsetWidth;
+
+          foxFinalMessage.classList.add("show");
+
+        }
+
+      }, 700);
+
+
+      /* BABYFOXS STARTET */
+
+      setTimeout(function () {
+
+        const babyFox =
+          document.querySelector(".babyfox");
+
+        if (babyFox) {
+
+          babyFox.classList.remove("final-run");
+
+          void babyFox.offsetWidth;
+
+          babyFox.classList.add("final-run");
+
+        }
+
+      }, 1400);
+
+    }
 
   });
 
-  /* =====================================================
+});  
+  
+
+/* =====================================================
    ✕ FLUCHT AUS DEM FUCHSBAU
 ===================================================== */
 
