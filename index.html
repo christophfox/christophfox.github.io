@@ -5788,6 +5788,12 @@ body.fox-burrow-mode::after {
   }
 
 }
+
+.secret-key {
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 10001;
+}
   
 </style>
 
@@ -5817,6 +5823,10 @@ body.fox-burrow-mode::after {
 
     runCount++;
 document.body.classList.add("fox-burrow-mode");
+
+setTimeout(() => {
+  document.body.classList.remove("fox-burrow-mode");
+}, 7000);
     fox.classList.remove("run");
     fox.classList.remove("second-run");
 
