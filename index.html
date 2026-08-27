@@ -7131,50 +7131,26 @@ secretKey.addEventListener("click", function () {
 
   }
 
-/* =========================================================
-   📦 GEÖFFNETE KISTE
-========================================================= */
-
-.burrow-chest.opened {
-
-  animation:
-    chestOpen .7s ease forwards;
-
-}
-
-.burrow-chest.opened::before {
-
-  transform:
-    perspective(100px)
-    rotateX(38deg)
-    translateY(-8px);
-
-  transform-origin:
-    bottom center;
-
-  transition:
-    transform .7s ease;
-
-}
-
-@keyframes chestOpen {
-
-  0% {
-    transform:
-      scale(1);
   }
 
-  60% {
-    transform:
-      scale(1.04);
-  }
 
-  100% {
-    transform:
-      scale(1);
-  }
+  /* =====================================================
+     📦 SCHATZKISTEN – KLICKEN
+  ===================================================== */
 
-}
+  const treasureChests =
+    document.querySelectorAll(".burrow-chest");
+
+  treasureChests.forEach(function (chest) {
+
+    chest.addEventListener("click", function () {
+
+      chest.classList.toggle("opened");
+
+    });
+
+  });
+
   
 })();
 
