@@ -5115,9 +5115,15 @@ setLanguage(
    <div class="burrow-chest-inside"></div>
 
 <div class="treasure treasure-coin">
-  <div class="treasure-coin-face">🦊</div>
+  <div class="treasure-coin-face">
+    <div class="mini-fox">
+      <div class="mini-fox-ear one"></div>
+      <div class="mini-fox-ear two"></div>
+      <div class="mini-fox-eye one"></div>
+      <div class="mini-fox-eye two"></div>
+    </div>
+  </div>
 </div>
-
 <div class="burrow-chest-lid"></div>
 <div class="burrow-lock"></div>
 
@@ -7189,6 +7195,145 @@ body.fox-burrow-mode #burrowClose {
 
 }
 
+/* =========================================================
+   🦊 KLEINER FOXY AUF DER MÜNZE
+========================================================= */
+
+.mini-fox {
+
+  position: relative;
+
+  width: 25px;
+  height: 21px;
+
+}
+
+
+/* Kopf */
+
+.mini-fox::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 3px;
+  top: 5px;
+
+  width: 19px;
+  height: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a95435,
+      #74331f
+    );
+
+  clip-path:
+    polygon(
+      0 40%,
+      20% 0,
+      38% 25%,
+      62% 25%,
+      80% 0,
+      100% 40%,
+      75% 88%,
+      50% 100%,
+      25% 88%
+    );
+
+}
+
+
+/* Ohren */
+
+.mini-fox-ear {
+
+  position: absolute;
+
+  top: 1px;
+
+  width: 9px;
+  height: 12px;
+
+  background: #74331f;
+
+  clip-path:
+    polygon(
+      50% 0,
+      100% 100%,
+      0 75%
+    );
+
+  z-index: 2;
+
+}
+
+.mini-fox-ear.one {
+
+  left: 3px;
+
+}
+
+.mini-fox-ear.two {
+
+  right: 3px;
+
+}
+
+
+/* Augen */
+
+.mini-fox-eye {
+
+  position: absolute;
+
+  top: 11px;
+
+  width: 3px;
+  height: 3px;
+
+  background: #111;
+
+  border-radius: 50%;
+
+  z-index: 3;
+
+}
+
+.mini-fox-eye.one {
+
+  left: 8px;
+
+}
+
+.mini-fox-eye.two {
+
+  right: 8px;
+
+}
+
+
+/* kleine weiße Lichtreflexe */
+
+.mini-fox-eye::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 1px;
+  top: 0;
+
+  width: 1px;
+  height: 1px;
+
+  background: #f5e9db;
+
+  border-radius: 50%;
+
+}
 
 .burrow-chest.opened .treasure-coin {
 
