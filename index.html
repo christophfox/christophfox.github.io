@@ -7259,8 +7259,113 @@ body.fox-burrow-mode #burrowClose {
 
 .treasure-scroll {
 
-  width: 34px;
-  height: 48px;
+  width: 46px;
+  height: 58px;
+
+  filter:
+    drop-shadow(0 0 7px rgba(255,220,140,.7))
+    drop-shadow(0 0 18px rgba(255,190,80,.35));
+
+}
+
+
+/* Papier der geheimnisvollen Karte */
+
+.scroll-paper {
+
+  position: relative;
+
+  width: 42px;
+  height: 52px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b98b45,
+      #f5dfa8 18%,
+      #ead092 50%,
+      #f8e5ad 82%,
+      #b88642
+    );
+
+  border-radius:
+    5px 4px 5px 4px;
+
+  box-shadow:
+    0 0 10px rgba(255,220,140,.8),
+    0 0 28px rgba(255,190,80,.35);
+
+}
+
+
+/* gerolltes Ende oben */
+
+.scroll-paper::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: -5px;
+  top: -4px;
+
+  width: 52px;
+  height: 9px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f4d993,
+      #a87435
+    );
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 5px rgba(255,215,120,.5);
+
+}
+
+
+/* gerolltes Ende unten */
+
+.scroll-paper::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: -4px;
+  bottom: -4px;
+
+  width: 50px;
+  height: 9px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #a87435,
+      #f0d18a
+    );
+
+  border-radius: 50%;
+
+}
+
+
+/* Geheimnisvolle Zeichen auf der Karte */
+
+.scroll-paper {
+
+  background-image:
+    linear-gradient(
+      90deg,
+      #b98b45,
+      #f5dfa8 18%,
+      #ead092 50%,
+      #f8e5ad 82%,
+      #b88642
+    );
 
 }
 
