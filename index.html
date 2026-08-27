@@ -5797,242 +5797,194 @@ body.fox-burrow-mode::after {
 
 /* =========================================================
    🕳️ SCHRITT 2 – FOXY'S FUCHSBAU
+   gezeichnete, warme Erd-Höhle
 ========================================================= */
 
-/* ---------------------------------------------------------
-   DUNKLE ERDWÄNDE – links und rechts
---------------------------------------------------------- */
-
-#foxBurrowOverlay::before {
-
-  content: "";
-
-  position: absolute;
-
-  inset: -8%;
-
-  pointer-events: none;
-
-  background:
-
-    radial-gradient(
-      ellipse at 0% 42%,
-      rgba(43,19,12,.96) 0%,
-      rgba(67,29,18,.88) 22%,
-      rgba(67,29,18,.35) 40%,
-      transparent 58%
-    ),
-
-    radial-gradient(
-      ellipse at 100% 42%,
-      rgba(43,19,12,.96) 0%,
-      rgba(67,29,18,.88) 22%,
-      rgba(67,29,18,.35) 40%,
-      transparent 58%
-    ),
-
-    radial-gradient(
-      ellipse at 50% -8%,
-      rgba(49,21,13,.95) 0%,
-      rgba(76,32,19,.75) 30%,
-      transparent 63%
-    );
-
-  opacity: .95;
-
+body.fox-burrow-mode #foxBurrowOverlay {
+  overflow: hidden;
 }
 
 
-/* ---------------------------------------------------------
-   GEWÖLBTE HÖHLENDECKE
---------------------------------------------------------- */
+/* =========================================================
+   🪨 HÖHLENDECKE
+========================================================= */
 
-#foxBurrowOverlay::after {
+body.fox-burrow-mode #foxBurrowOverlay::before {
 
   content: "";
 
   position: absolute;
 
-  left: 5%;
-  right: 5%;
-  top: -17%;
+  left: -8%;
+  right: -8%;
+  top: -31%;
 
-  height: 48%;
-
-  pointer-events: none;
+  height: 65%;
 
   border-radius:
-    0 0 50% 50% / 0 0 70% 70%;
+    0 0 50% 50% / 0 0 72% 72%;
 
   background:
-
-    radial-gradient(
-      ellipse at 50% 100%,
-      rgba(104,45,27,.30) 0%,
-      rgba(65,27,17,.72) 42%,
-      rgba(38,16,10,.94) 72%,
-      rgba(30,13,8,.98) 100%
+    linear-gradient(
+      180deg,
+      #24100a 0%,
+      #35170e 48%,
+      #4b2114 78%,
+      #642d1b 100%
     );
 
   box-shadow:
 
-    inset 0 -28px 45px rgba(169,84,53,.10),
+    inset 0 -18px 28px
+      rgba(169,84,53,.16),
 
-    0 18px 45px rgba(30,13,8,.55);
+    0 18px 32px
+      rgba(20,8,4,.72);
 
-  opacity: .95;
-
-}
-
-
-/* ---------------------------------------------------------
-   ERDIGER BODEN
---------------------------------------------------------- */
-
-body.fox-burrow-mode #foxBurrowOverlay {
-
-  box-shadow:
-
-    inset 0 -25vh 0
-      rgba(69,29,17,.28),
-
-    inset 0 -8vh 55px
-      rgba(169,84,53,.10),
-
-    inset 0 0 130px
-      rgba(27,11,7,.55);
+  opacity: .98;
 
 }
 
 
-/* ---------------------------------------------------------
-   WARME MITTE – kleiner gemütlicher Lichtplatz
---------------------------------------------------------- */
+/* =========================================================
+   🕳️ INNERE HÖHLENÖFFNUNG
+========================================================= */
 
-body.fox-burrow-mode #foxBurrowOverlay {
-
-  background:
-
-    radial-gradient(
-      ellipse at 50% 61%,
-      rgba(169,84,53,.13) 0%,
-      rgba(135,58,34,.09) 19%,
-      transparent 43%
-    ),
-
-    radial-gradient(
-      ellipse at 50% 100%,
-      rgba(116,51,31,.18) 0%,
-      transparent 48%
-    ),
-
-    radial-gradient(
-      ellipse at 50% 50%,
-      transparent 32%,
-      rgba(28,12,7,.28) 72%,
-      rgba(20,9,5,.48) 100%
-    );
-
-}
-
-
-/* ---------------------------------------------------------
-   SANFTE ERDSTRUKTUR AN DEN SEITEN
---------------------------------------------------------- */
-
-body.fox-burrow-mode #foxBurrowOverlay {
-
-  background-image:
-
-    radial-gradient(
-      ellipse at 7% 18%,
-      rgba(116,51,31,.22) 0%,
-      transparent 13%
-    ),
-
-    radial-gradient(
-      ellipse at 94% 27%,
-      rgba(116,51,31,.18) 0%,
-      transparent 14%
-    ),
-
-    radial-gradient(
-      ellipse at 4% 73%,
-      rgba(116,51,31,.16) 0%,
-      transparent 15%
-    ),
-
-    radial-gradient(
-      ellipse at 96% 70%,
-      rgba(116,51,31,.16) 0%,
-      transparent 15%
-    ),
-
-    radial-gradient(
-      ellipse at 50% 61%,
-      rgba(169,84,53,.13) 0%,
-      rgba(135,58,34,.09) 19%,
-      transparent 43%
-    ),
-
-    radial-gradient(
-      ellipse at 50% 100%,
-      rgba(116,51,31,.18) 0%,
-      transparent 48%
-    ),
-
-    radial-gradient(
-      ellipse at 50% 50%,
-      transparent 32%,
-      rgba(28,12,7,.28) 72%,
-      rgba(20,9,5,.48) 100%
-    );
-
-}
-
-
-/* ---------------------------------------------------------
-   GANZ DEZENTE „ERDE“-KANTEN
---------------------------------------------------------- */
-
-body.fox-burrow-mode #foxBurrowOverlay {
-
-  filter: saturate(.9);
-
-}
-
-
-/* ---------------------------------------------------------
-   WARMER ATMENDER LICHTPLATZ
---------------------------------------------------------- */
-
-body.fox-burrow-mode::after {
+body.fox-burrow-mode #foxBurrowOverlay::after {
 
   content: "";
 
-  position: fixed;
+  position: absolute;
 
-  inset: 0;
+  left: 13%;
+  right: 13%;
+  top: 3%;
 
-  z-index: 9989;
+  height: 76%;
 
-  pointer-events: none;
+  border-radius:
+    50% 50% 42% 42% / 38% 38% 45% 45%;
 
   background:
 
     radial-gradient(
       ellipse at 50% 62%,
-      rgba(205,116,73,.11),
-      transparent 37%
+      rgba(169,84,53,.13) 0%,
+      rgba(116,51,31,.08) 27%,
+      rgba(35,15,9,.28) 65%,
+      rgba(18,7,4,.52) 100%
     );
 
-  opacity: .8;
+  box-shadow:
+
+    inset 0 20px 35px
+      rgba(20,8,4,.55),
+
+    inset 0 -20px 35px
+      rgba(169,84,53,.08);
+
+}
+
+
+/* =========================================================
+   🟤 ERDWÄNDE LINKS UND RECHTS
+========================================================= */
+
+body.fox-burrow-mode #foxBurrowOverlay {
+
+  background:
+
+    radial-gradient(
+      ellipse at -4% 28%,
+      #32150d 0%,
+      #4b2114 30%,
+      transparent 52%
+    ),
+
+    radial-gradient(
+      ellipse at 104% 31%,
+      #32150d 0%,
+      #4b2114 30%,
+      transparent 52%
+    ),
+
+    radial-gradient(
+      ellipse at 2% 88%,
+      #3a190f 0%,
+      #5a2818 27%,
+      transparent 50%
+    ),
+
+    radial-gradient(
+      ellipse at 98% 88%,
+      #3a190f 0%,
+      #5a2818 27%,
+      transparent 50%
+    ),
+
+    radial-gradient(
+      ellipse at 50% 62%,
+      rgba(190,92,54,.10),
+      transparent 43%
+    );
+
+}
+
+
+/* =========================================================
+   🌱 ERDIGER BODEN
+========================================================= */
+
+body.fox-burrow-mode #foxBurrowOverlay {
+
+  box-shadow:
+
+    inset 0 -24vh 0
+      rgba(59,25,15,.52),
+
+    inset 0 -8vh 45px
+      rgba(169,84,53,.12),
+
+    inset 0 0 100px
+      rgba(19,7,4,.55);
+
+}
+
+
+/* =========================================================
+   🪵 KLEINE ERDKANTEN
+========================================================= */
+
+body.fox-burrow-mode #foxBurrowOverlay {
+
+  clip-path:
+    polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+
+}
+
+
+/* =========================================================
+   🕯️ WARMER PLATZ IN DER MITTE
+========================================================= */
+
+body.fox-burrow-mode {
+
+  --fox-burrow-warmth: rgba(205,112,69,.12);
+
+}
+
+
+body.fox-burrow-mode #foxBurrowOverlay {
 
   animation:
     burrowBreath 5s ease-in-out infinite;
 
-}  
-</style>
+}</style>
 
 
 <script>
